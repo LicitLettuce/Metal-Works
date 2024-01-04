@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "metal_works:item/bronze_sword"
+
+  }
+}

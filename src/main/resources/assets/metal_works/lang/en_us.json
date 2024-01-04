@@ -1,0 +1,18 @@
+{
+  "item.metal_works.tin_ingot":"Tin Ingot",
+  "item.metal_works.bronze_ingot":"Bronze Ingot",
+  "item.metal_works.bronze_sword":"Bronze Sword",
+  "item.metal_works.bronze_pickaxe":"Bronze Pickaxe",
+  "item.metal_works.bronze_axe":"Bronze Axe",
+  "item.metal_works.bronze_shovel":"Bronze Shovel",
+  "item.metal_works.bronze_hoe":"Bronze Hoe",
+  "item.metal_works.bronze_shears":"Bronze Shears",
+
+
+  "item.metal_works.rose_gold_ingot":"Rose Gold Ingot",
+  "item.metal_works.raw_tin": "Raw Tin",
+  "item.metal_works.tin_nugget":"Tin Nugget",
+
+  "item.metal_works.rose_gold_apple":"Rose Gold Apple",
+  "item.metal_works.rose_gold_beetroot":"Rose Gold Beetroot"
+}
