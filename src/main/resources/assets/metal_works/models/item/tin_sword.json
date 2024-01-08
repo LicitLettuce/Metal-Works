@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "metal_works:item/rose_gold_pickaxe"
+    "layer0": "metal_works:item/tin_sword"
   }
 }

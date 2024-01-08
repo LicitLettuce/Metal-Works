@@ -1,6 +1,8 @@
 package net.lettuce.metalworks.item.custom;
 
 import net.lettuce.metalworks.MetalWorks;
+import net.lettuce.metalworks.block.ModBlocks;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -8,9 +10,27 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
+
+
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MetalWorks.MOD_ID);
 
+    public static final RegistryObject<BlockItem> GABBRO = ITEMS.register("gabbro",
+            () -> new BlockItem(ModBlocks.GABBRO.get(), new Item.Properties()));
+
+    public static final RegistryObject<BlockItem> POLISHED_GABBRO = ITEMS.register("polished_gabbro",
+            () -> new BlockItem(ModBlocks.POLISHED_GABBRO.get(), new Item.Properties()));
+
+    public static final RegistryObject<BlockItem> TIN_BLOCK = ITEMS.register("tin_block",
+            () -> new BlockItem(ModBlocks.TIN_BLOCK.get(), new Item.Properties()));
+
+    public static final RegistryObject<BlockItem> BRONZE_BLOCK = ITEMS.register("bronze_block",
+            () -> new BlockItem(ModBlocks.BRONZE_BLOCK.get(), new Item.Properties()));
+
+    public static final RegistryObject<BlockItem> ROSE_GOLD_BLOCK = ITEMS.register("rose_gold_block",
+            () -> new BlockItem(ModBlocks.ROSE_GOLD_BLOCK.get(), new Item.Properties()));
+
+// // // // //
     public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot",
             () -> new Item(new Item.Properties()));
 
@@ -46,6 +66,9 @@ public class ModItems {
     public static final RegistryObject<Item> BRONZE_HOE = ITEMS.register("bronze_hoe",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> BRONZE_HORSE_ARMOR = ITEMS.register("bronze_horse_armor",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> BRONZE_SHEARS = ITEMS.register("bronze_shears",
             () -> new Item(new Item.Properties()));
 
@@ -65,6 +88,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ROSE_GOLD_HOE = ITEMS.register("rose_gold_hoe",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ROSE_GOLD_HORSE_ARMOR = ITEMS.register("rose_gold_horse_armor",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> RAW_TIN = ITEMS.register("raw_tin",
