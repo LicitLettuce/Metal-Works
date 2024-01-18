@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "metal_works:block/cut_tin_pressure_plate"
+    },
+    "powered=true": {
+      "model": "metal_works:block/cut_tin_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "metal_works:rose_gold_ingot"
+    },
+    "$": {
+      "item": "minecraft:prismarine_crystals"
+    }
+  },
+  "pattern": [
+    "#$#",
+    "$$$",
+    "#$#"
+  ],
+  "result": {
+    "count": 4,
+    "item": "metal_works:rose_lamp"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "replace": false,
+  "values": [
+    "metal_works:tin_block",
+    "metal_works:raw_tin_block",
+    "metal_works:chiseled_tin",
+    "metal_works:cut_tin",
+    "metal_works:cut_tin_stairs",
+    "metal_works:cut_tin_slab",
+    "metal_works:cut_tin_wall",
+    "metal_works:cut_tin_button",
+    "metal_works:cut_tin_pressure_plate",
+    "metal_works:tin_door",
+    "metal_works:tin_trapdoor",
+    "metal_works:tin_bars",
+    "metal_works:tin_grate",
+    "metal_works:tin_grate_drain",
+    "metal_works:tin_chain",
+    "metal_works:tin_lantern",
+    "metal_works:tin_soul_lantern",
+    "metal_works:tin_ore",
+    "metal_works:deepslate_tin_ore",
+
+    "metal_works:bronze_block",
+    "metal_works:bronze_shingles",
+    "metal_works:bronze_shingle_stairs",
+    "metal_works:bronze_shingle_slab",
+    "metal_works:bronze_bars",
+    "metal_works:bronze_grate",
+    "metal_works:bronze_grate_drain",
+
+    "metal_works:rose_gold_block"
+  ]
+}

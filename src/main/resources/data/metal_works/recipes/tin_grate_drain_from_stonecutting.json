@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "metal_works:tin_block"
+  },
+  "result": "metal_works:tin_grate_drain"
+}

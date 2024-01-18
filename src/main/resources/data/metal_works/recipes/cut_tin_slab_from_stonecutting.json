@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "metal_works:cut_tin"
+  },
+  "result": "metal_works:cut_tin_slab"
+}

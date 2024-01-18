@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "metal_works:tin_sword",
+    "metal_works:tin_pickaxe",
+    "metal_works:tin_axe",
+    "metal_works:tin_shovel",
+    "metal_works:tin_hoe",
+    "metal_works:tin_helmet",
+    "metal_works:tin_chestplate",
+    "metal_works:tin_leggings",
+    "metal_works:tin_boots"
+  ]
+}

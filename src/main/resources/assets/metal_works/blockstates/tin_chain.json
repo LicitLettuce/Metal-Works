@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "metal_works:block/tin_chain",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "metal_works:block/tin_chain"
+    },
+    "axis=z": {
+      "model": "metal_works:block/tin_chain",
+      "x": 90
+    }
+  }
+}

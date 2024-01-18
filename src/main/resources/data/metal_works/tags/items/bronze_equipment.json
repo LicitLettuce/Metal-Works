@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "metal_works:bronze_sword",
+    "metal_works:bronze_pickaxe",
+    "metal_works:bronze_axe",
+    "metal_works:bronze_shovel",
+    "metal_works:bronze_hoe",
+    "metal_works:bronze_helmet",
+    "metal_works:bronze_chestplate",
+    "metal_works:bronze_leggings",
+    "metal_works:bronze_boots",
+    "metal_works:bronze_horse_armor"
+  ]
+}

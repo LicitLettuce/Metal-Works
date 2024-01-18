@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_mountain",
+  "features": "metal_works:extra_tin_ore_generation",
+  "step": "underground_ores"
+}

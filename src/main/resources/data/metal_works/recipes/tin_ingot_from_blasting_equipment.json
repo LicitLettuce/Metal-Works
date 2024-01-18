@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 0.5,
+  "cookingtime": 100,
+  "ingredient": {
+    "tag": "metal_works:tin_equipment"
+  },
+  "result": "metal_works:tin_ingot"
+}

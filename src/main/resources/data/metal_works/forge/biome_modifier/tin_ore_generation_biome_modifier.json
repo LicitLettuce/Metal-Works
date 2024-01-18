@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "features": "metal_works:tin_ore_generation",
+  "step": "underground_ores"
+}
