@@ -80,6 +80,8 @@ public class ModItems {
     public static final RegistryObject<ArmorItem> ROSE_GOLD_LEGGINGS = ITEMS.register("rose_gold_leggings", () -> new ArmorItem(ModArmorMaterials.ROSE_GOLD, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<ArmorItem> ROSE_GOLD_BOOTS = ITEMS.register("rose_gold_boots", () -> new ArmorItem(ModArmorMaterials.ROSE_GOLD, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> ROSE_GOLD_BEETROOT = ITEMS.register("rose_gold_beetroot", () -> new Item(new Item.Properties().food(ModFoods.ROSE_GOLD_BEETROOT)));
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

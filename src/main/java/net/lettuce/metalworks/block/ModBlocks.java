@@ -5,6 +5,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -14,7 +15,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> TIN_BLOCK = BLOCKS.register("tin_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).mapColor(DyeColor.GRAY)));
     public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_ORE)));
     public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = BLOCKS.register("deepslate_tin_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_COPPER_ORE)));
-    public static final RegistryObject<Block> RAW_TIN_BLOCK = BLOCKS.register("raw_tin_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE)));
+    public static final RegistryObject<Block> RAW_TIN_BLOCK = BLOCKS.register("raw_tin_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK).mapColor(MapColor.COLOR_LIGHT_GREEN)));
     public static final RegistryObject<Block> CUT_TIN = BLOCKS.register("cut_tin", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
     public static final RegistryObject<Block> CHISELED_TIN = BLOCKS.register("chiseled_tin", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
     public static final RegistryObject<StairBlock> CUT_TIN_STAIRS = BLOCKS.register("cut_tin_stairs", () -> new StairBlock(() -> ModBlocks.CUT_TIN.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));

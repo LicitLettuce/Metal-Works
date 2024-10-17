@@ -119,6 +119,7 @@ public class MetalWorks
             event.accept(ModBlocks.ROSE_LAMP);
 
             event.getEntries().putAfter(Items.SOUL_LANTERN.getDefaultInstance(), ModItems.TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
             event.getEntries().putAfter(ModItems.TIN_LANTERN.get().getDefaultInstance(), ModItems.TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.CHAIN.getDefaultInstance(), ModItems.TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.SEA_LANTERN.getDefaultInstance(), ModItems.ROSE_LAMP.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -234,6 +235,7 @@ public class MetalWorks
             event.getEntries().putBefore(Items.IRON_INGOT.getDefaultInstance(), ModItems.TIN_INGOT.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.COPPER_INGOT.getDefaultInstance(), ModItems.BRONZE_INGOT.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.GOLD_INGOT.getDefaultInstance(), ModItems.ROSE_GOLD_INGOT.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
             event.getEntries().putAfter(Items.RAW_GOLD.getDefaultInstance(), Items.NETHERITE_SCRAP.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
         }

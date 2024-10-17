@@ -32,6 +32,7 @@
   "block.metal_works.deepslate_tin_ore":"Deepslate Tin Ore",
 
   "block.metal_works.bronze_block": "Block of Bronze",
+  "block.metal_works.bronze_tiles": "Bronze Tiles",
   "block.metal_works.bronze_shingles": "Bronze Shingles",
   "block.metal_works.bronze_shingle_stairs": "Bronze Shingle Stairs",
   "block.metal_works.bronze_shingle_slab": "Bronze Shingle Slab",
@@ -39,6 +40,7 @@
   "block.metal_works.bronze_grate": "Bronze Grate",
   "block.metal_works.bronze_grate_drain": "Bronze Grate Drain",
   "item.metal_works.bronze_ingot":"Bronze Ingot",
+  "item.metal_works.bronze_nugget":"Bronze Nugget",
   "item.metal_works.bronze_sword":"Bronze Sword",
   "item.metal_works.bronze_pickaxe":"Bronze Pickaxe",
   "item.metal_works.bronze_axe":"Bronze Axe",
@@ -54,6 +56,9 @@
   "block.metal_works.rose_gold_block": "Block of Rose Gold",
   "block.metal_works.rose_lamp": "Rose Lamp",
   "item.metal_works.rose_gold_ingot":"Rose Gold Ingot",
+  "item.metal_works.rose_powder":"Rose Powder",
+  "block.metal_works.rose_lantern":"Rose Lantern",
+  "block.metal_works.tin_rose_lantern":"Tin Rose Lantern",
   "item.metal_works.rose_gold_nugget":"Rose Gold Nugget",
   "item.metal_works.rose_gold_apple":"Rose Gold Apple",
   "item.metal_works.rose_gold_beetroot":"Rose Gold Beetroot",
@@ -67,5 +72,4 @@
   "item.metal_works.rose_gold_leggings":"Rose Gold Leggings",
   "item.metal_works.rose_gold_boots":"Rose Gold Boots",
   "item.metal_works.rose_gold_horse_armor":"Rose Gold Horse Armor"
-
 }

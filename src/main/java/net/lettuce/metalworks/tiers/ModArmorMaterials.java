@@ -6,7 +6,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public class ModArmorMaterials {
     public static final ModArmorTiers TIN = new ModArmorTiers (
-            new int[] {220, 232, 230, 223},
+            new int[] {110, 194, 182, 105},
             new int[] {3, 5, 4, 2},
             15,
             SoundEvents.ARMOR_EQUIP_IRON,
@@ -17,7 +17,7 @@ public class ModArmorMaterials {
     );
 
     public static final ModArmorTiers BRONZE = new ModArmorTiers (
-            new int[] {1152, 1164, 1163, 1152},
+            new int[] {290, 472, 410, 392},
             new int[] {4, 6, 6, 3},
             10,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
@@ -28,7 +28,7 @@ public class ModArmorMaterials {
     );
 
     public static final ModArmorTiers ROSE_GOLD = new ModArmorTiers (
-            new int[] {758, 764, 749, 759},
+            new int[] {210, 356, 319, 292},
             new int[] {3, 6, 5, 2},
             21,
             SoundEvents.ARMOR_EQUIP_GOLD,
