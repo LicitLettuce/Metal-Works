@@ -9,6 +9,9 @@
   "block.metal_works.cut_tin_wall": "Cut Tin Wall",
   "block.metal_works.cut_tin_button": "Cut Tin Button",
   "block.metal_works.cut_tin_pressure_plate": "Cut Tin Pressure Plate",
+  "block.metal_works.tin_shingles": "Tin Shingles",
+  "block.metal_works.tin_shingle_stairs": "Tin Shingle Stairs",
+  "block.metal_works.tin_shingle_slab": "Tin Shingle Slab",
   "block.metal_works.tin_door": "Tin Door",
   "block.metal_works.tin_trapdoor": "Tin Trapdoor",
   "block.metal_works.raw_tin_block": "Block of Raw Tin",
@@ -32,6 +35,7 @@
   "block.metal_works.deepslate_tin_ore":"Deepslate Tin Ore",
 
   "block.metal_works.bronze_block": "Block of Bronze",
+  "block.metal_works.bronze_tiles": "Bronze Tiles",
   "block.metal_works.bronze_shingles": "Bronze Shingles",
   "block.metal_works.bronze_shingle_stairs": "Bronze Shingle Stairs",
   "block.metal_works.bronze_shingle_slab": "Bronze Shingle Slab",
@@ -39,6 +43,7 @@
   "block.metal_works.bronze_grate": "Bronze Grate",
   "block.metal_works.bronze_grate_drain": "Bronze Grate Drain",
   "item.metal_works.bronze_ingot":"Bronze Ingot",
+  "item.metal_works.bronze_nugget":"Bronze Nugget",
   "item.metal_works.bronze_sword":"Bronze Sword",
   "item.metal_works.bronze_pickaxe":"Bronze Pickaxe",
   "item.metal_works.bronze_axe":"Bronze Axe",
@@ -54,6 +59,9 @@
   "block.metal_works.rose_gold_block": "Block of Rose Gold",
   "block.metal_works.rose_lamp": "Rose Lamp",
   "item.metal_works.rose_gold_ingot":"Rose Gold Ingot",
+  "item.metal_works.rose_powder":"Rose Powder",
+  "block.metal_works.rose_lantern":"Rose Lantern",
+  "block.metal_works.tin_rose_lantern":"Tin Rose Lantern",
   "item.metal_works.rose_gold_nugget":"Rose Gold Nugget",
   "item.metal_works.rose_gold_apple":"Rose Gold Apple",
   "item.metal_works.rose_gold_beetroot":"Rose Gold Beetroot",
@@ -66,6 +74,13 @@
   "item.metal_works.rose_gold_chestplate":"Rose Gold Chestplate",
   "item.metal_works.rose_gold_leggings":"Rose Gold Leggings",
   "item.metal_works.rose_gold_boots":"Rose Gold Boots",
-  "item.metal_works.rose_gold_horse_armor":"Rose Gold Horse Armor"
+  "item.metal_works.rose_gold_horse_armor":"Rose Gold Horse Armor",
 
+  "painting.metal_works.market.author": "LicitLettuce",
+  "painting.metal_works.prison.title": "Prison",
+  "painting.metal_works.prison.author": "LicitLettuce",
+  "painting.metal_works.market.title": "Market",
+
+  "item.metal_works.music_disc_alloy": "Music Disc",
+  "item.metal_works.music_disc_alloy.desc": "LicitLettuce - Alloy"
 }

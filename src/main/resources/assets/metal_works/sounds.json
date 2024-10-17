@@ -1,0 +1,10 @@
+{
+"music_disc_alloy": {
+"sounds": [
+  {
+    "name": "metal_works:music_disc_alloy",
+    "stream": true
+      }
+    ]
+  }
+}

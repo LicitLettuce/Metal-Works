@@ -1,6 +1,5 @@
-package net.lettuce.metalworks.tiers;
+package net.lettuce.metalworks.core;
 
-import net.lettuce.metalworks.MetalWorks;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
@@ -8,7 +7,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public class ModArmorTiers implements ArmorMaterial {
+public class MWArmorTiers implements ArmorMaterial {
     private final int[] durabilityForType;
     private final int[] defenseForType;
     private final int enchantability;
@@ -18,7 +17,7 @@ public class ModArmorTiers implements ArmorMaterial {
     private final float toughness;
     private final float knockbackResistance;
 
-    public ModArmorTiers(int[] durabilityForType, int[] defenseForType, int enchantability, SoundEvent equipSound, Supplier<Ingredient> repairMaterial, String name, float toughness, float knockbackResistance) {
+    public MWArmorTiers(int[] durabilityForType, int[] defenseForType, int enchantability, SoundEvent equipSound, Supplier<Ingredient> repairMaterial, String name, float toughness, float knockbackResistance) {
         this.durabilityForType = durabilityForType;
         this.defenseForType = defenseForType;
         this.enchantability = enchantability;

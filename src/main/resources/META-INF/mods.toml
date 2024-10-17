@@ -1,20 +1,20 @@
 modLoader="javafml"
 loaderVersion="[47,)"
-license="Lettuce License V1"
+license="MIT License"
 
 [[mods]]
 modId="metal_works"
-version="1.0.0"
+version="1.1.0.1.20.1"
 displayName="Metal Works"
 credits="Mod By Licit Lettuce"
-displayURL="https://legacy.curseforge.com/minecraft/mc-mods/metal-works"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/metal-works"
 logoFile="logo.png"
-authors="Licit Lettuce, The Bubba Guy"
+authors="Licit Lettuce, That Bubba Guy"
 description="Adds vanilla-styled metals with distinct functions and some deco"
 
 [[dependencies.balanced_crates]]
 modId="minecraft"
 mandatory=true
-versionRange="[1.20.1]"
+versionRange="[1.20, 1.20.1]"
 ordering="NONE"
 side="BOTH"

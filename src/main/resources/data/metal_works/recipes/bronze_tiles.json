@@ -1,20 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
+  "category": "building",
   "key": {
     "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
       "item": "metal_works:bronze_ingot"
     }
   },
   "pattern": [
-    "XX",
-    "X#",
-    " #"
+    "##"
   ],
   "result": {
-    "item": "metal_works:bronze_axe"
+    "count": 4,
+    "item": "metal_works:bronze_tiles"
   }
 }
