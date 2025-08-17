@@ -2,11 +2,11 @@
   "replace": false,
   "values": [
 
-    "metal_works:tin_chesplate",
+    "metal_works:tin_chestplate",
 
-    "metal_works:bronze_chesplate",
+    "metal_works:bronze_chestplate",
 
-    "metal_works:rose_gold_chesplate"
+    "metal_works:rose_gold_chestplate"
 
   ]
 }

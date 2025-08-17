@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "metal_works:tin_helmet",
+    "metal_works:tin_chestplate",
+    "metal_works:tin_leggings",
+    "metal_works:tin_boots",
+
+    "metal_works:bronze_helmet",
+    "metal_works:bronze_chestplate",
+    "metal_works:bronze_leggings",
+    "metal_works:bronze_boots",
+
+    "metal_works:rose_gold_helmet",
+    "metal_works:rose_gold_chestplate",
+    "metal_works:rose_gold_leggings",
+    "metal_works:rose_gold_boots"
+  ]
+}

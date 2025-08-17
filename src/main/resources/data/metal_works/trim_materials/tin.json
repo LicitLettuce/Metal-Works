@@ -1,0 +1,9 @@
+{
+  "asset_name": "tin",
+  "ingredient": {
+    "item": "metal_works:tin_ingot"
+  },
+  "item_model_index": 0.2,
+  "override_armor_materials": {},
+  "translation_key": "trim_material.metal_works.tin"
+}
