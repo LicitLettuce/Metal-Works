@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "metal_works:block/bronze_shingles",
-    "side": "metal_works:block/bronze_shingles",
-    "top": "metal_works:block/bronze_shingles"
-  }
-}

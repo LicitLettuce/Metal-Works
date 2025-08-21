@@ -35,6 +35,7 @@ public class MetalWorks
 
 
 
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -46,36 +47,16 @@ public class MetalWorks
 
     }
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            MWWeathering.registerWeatheringChain();
+            MWWeathering.registerWaxables();
+        });
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
 
-            event.accept(MWBlocks.TIN_BLOCK);
-            event.accept(MWBlocks.CHISELED_TIN);
-            event.accept(MWBlocks.CUT_TIN);
-            event.accept(MWBlocks.CUT_TIN_STAIRS);
-            event.accept(MWBlocks.CUT_TIN_SLAB);
-            event.accept(MWBlocks.CUT_TIN_WALL);
-            event.accept(MWBlocks.CUT_TIN_BUTTON);
-            event.accept(MWBlocks.CUT_TIN_PRESSURE_PLATE);
-
-            event.accept(MWBlocks.TIN_GRATE_DRAIN);
-            event.accept(MWBlocks.TIN_GRATE);
-            event.accept(MWBlocks.TIN_BARS);
-            event.accept(MWBlocks.TIN_DOOR);
-            event.accept(MWBlocks.TIN_TRAPDOOR);
-            event.accept(MWBlocks.TIN_CHAIN);
-
-            event.accept(MWBlocks.BRONZE_BLOCK);
-            event.accept(MWBlocks.BRONZE_SHINGLES);
-            event.accept(MWBlocks.BRONZE_SHINGLE_STAIRS);
-            event.accept(MWBlocks.BRONZE_SHINGLE_SLAB);
-            event.accept(MWBlocks.BRONZE_BARS);
-
-            event.accept(MWBlocks.ROSE_GOLD_BLOCK);
 
             event.getEntries().putAfter(Items.COAL_BLOCK.getDefaultInstance(), MWItems.TIN_BLOCK.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(MWItems.TIN_BLOCK.get().getDefaultInstance(), MWItems.CHISELED_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -84,16 +65,13 @@ public class MetalWorks
             event.getEntries().putAfter(MWItems.TIN_GRATE_DRAIN.get().getDefaultInstance(), MWItems.CUT_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(MWItems.CUT_TIN.get().getDefaultInstance(), MWItems.CUT_TIN_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(MWItems.CUT_TIN_STAIRS.get().getDefaultInstance(), MWItems.CUT_TIN_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(MWItems.CUT_TIN_SLAB.get().getDefaultInstance(), MWItems.CUT_TIN_WALL.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(MWItems.CUT_TIN_WALL.get().getDefaultInstance(), MWItems.TIN_SHINGLES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(MWItems.CUT_TIN_SLAB.get().getDefaultInstance(), MWItems.TIN_SHINGLES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(MWItems.TIN_SHINGLES.get().getDefaultInstance(), MWItems.TIN_SHINGLE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(MWItems.TIN_SHINGLE_STAIRS.get().getDefaultInstance(), MWItems.TIN_SHINGLE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(MWItems.TIN_SHINGLE_SLAB.get().getDefaultInstance(), MWItems.TIN_BARS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(MWItems.TIN_BARS.get().getDefaultInstance(), MWItems.TIN_DOOR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(MWItems.TIN_DOOR.get().getDefaultInstance(), MWItems.TIN_TRAPDOOR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(MWItems.TIN_TRAPDOOR.get().getDefaultInstance(), MWItems.CUT_TIN_PRESSURE_PLATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(MWItems.CUT_TIN_PRESSURE_PLATE.get().getDefaultInstance(), MWItems.CUT_TIN_BUTTON.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(MWItems.CUT_TIN_BUTTON.get().getDefaultInstance(), MWItems.TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(MWItems.TIN_TRAPDOOR.get().getDefaultInstance(), MWItems.TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
             event.getEntries().putAfter(Items.CHAIN.getDefaultInstance(), MWItems.BRONZE_BLOCK.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(MWItems.BRONZE_BLOCK.get().getDefaultInstance(), MWItems.BRONZE_GRATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -112,9 +90,6 @@ public class MetalWorks
 
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
 
-            event.accept(MWBlocks.TIN_ORE);
-            event.accept(MWBlocks.DEEPSLATE_TIN_ORE);
-            event.accept(MWBlocks.RAW_TIN_BLOCK);
             event.getEntries().putBefore(Items.RAW_IRON_BLOCK.getDefaultInstance(), MWItems.RAW_TIN_BLOCK.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.DEEPSLATE_COAL_ORE.getDefaultInstance(), MWItems.TIN_ORE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(MWItems.TIN_ORE.get().getDefaultInstance(), MWItems.DEEPSLATE_TIN_ORE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -123,13 +98,7 @@ public class MetalWorks
 
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
 
-            event.accept(MWBlocks.TIN_LANTERN);
-            event.accept(MWBlocks.TIN_SOUL_LANTERN);
-            event.accept(MWBlocks.TIN_CHAIN);
-            event.accept(MWBlocks.ROSE_LANTERN);
-
             event.getEntries().putAfter(Items.SOUL_LANTERN.getDefaultInstance(), MWItems.TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
             event.getEntries().putAfter(MWItems.TIN_LANTERN.get().getDefaultInstance(), MWItems.TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.CHAIN.getDefaultInstance(), MWItems.TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.SEA_LANTERN.getDefaultInstance(), MWItems.ROSE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -144,22 +113,6 @@ public class MetalWorks
         }
 
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-
-            event.accept(MWItems.TIN_SHOVEL);
-            event.accept(MWItems.TIN_PICKAXE);
-            event.accept(MWItems.TIN_AXE);
-            event.accept(MWItems.TIN_HOE);
-
-            event.accept(MWItems.BRONZE_SHOVEL);
-            event.accept(MWItems.BRONZE_PICKAXE);
-            event.accept(MWItems.BRONZE_AXE);
-            event.accept(MWItems.BRONZE_HOE);
-            event.accept(MWItems.BRONZE_SHEARS);
-
-            event.accept(MWItems.ROSE_GOLD_SHOVEl);
-            event.accept(MWItems.ROSE_GOLD_PICKAXE);
-            event.accept(MWItems.ROSE_GOLD_AXE);
-            event.accept(MWItems.ROSE_GOLD_HOE);
 
 
             event.getEntries().putAfter(Items.IRON_HOE.getDefaultInstance(), MWItems.BRONZE_SHOVEL.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -185,30 +138,6 @@ public class MetalWorks
         }
 
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
-
-            event.accept(MWItems.TIN_SWORD);
-            event.accept(MWItems.TIN_AXE);
-            event.accept(MWItems.TIN_HELMET);
-            event.accept(MWItems.TIN_CHESTPLATE);
-            event.accept(MWItems.TIN_LEGGINGS);
-            event.accept(MWItems.TIN_BOOTS);
-
-            event.accept(MWItems.BRONZE_SWORD);
-            event.accept(MWItems.BRONZE_AXE);
-            event.accept(MWItems.BRONZE_HELMET);
-            event.accept(MWItems.BRONZE_CHESTPLATE);
-            event.accept(MWItems.BRONZE_LEGGINGS);
-            event.accept(MWItems.BRONZE_BOOTS);
-
-            event.accept(MWItems.ROSE_GOLD_SWORD);
-            event.accept(MWItems.ROSE_GOLD_AXE);
-            event.accept(MWItems.ROSE_GOLD_HELMET);
-            event.accept(MWItems.ROSE_GOLD_CHESTPLATE);
-            event.accept(MWItems.ROSE_GOLD_LEGGINGS);
-            event.accept(MWItems.ROSE_GOLD_BOOTS);
-
-            event.accept(MWItems.BRONZE_HORSE_ARMOR);
-            event.accept(MWItems.ROSE_GOLD_HORSE_ARMOR);
 
 
             event.getEntries().putAfter(Items.STONE_SWORD.getDefaultInstance(), MWItems.TIN_SWORD.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -236,13 +165,6 @@ public class MetalWorks
 
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 
-            event.accept(MWItems.RAW_TIN);
-            event.accept(MWItems.TIN_NUGGET);
-            event.accept(MWItems.ROSE_GOLD_NUGGET);
-            event.accept(MWItems.TIN_INGOT);
-            event.accept(MWItems.BRONZE_INGOT);
-            event.accept(MWItems.ROSE_GOLD_INGOT);
-            event.accept(MWItems.BRONZE_NUGGET);
 
             event.getEntries().putBefore(Items.RAW_IRON.getDefaultInstance(), MWItems.RAW_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putBefore(Items.IRON_NUGGET.getDefaultInstance(), MWItems.TIN_NUGGET.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -266,6 +188,7 @@ public class MetalWorks
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
+
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)

@@ -4,9 +4,9 @@ license="MIT License"
 
 [[mods]]
 modId="metal_works"
-version="1.2.0-1.20.1"
+version="1.2.0"
 displayName="Metal Works"
-credits="LicitLettuce (Game Design, Artist, Programmer), That_Bubba_Guy (Assets & Models), Im_Dolos (Tester , Concepts, & Contributor), WilliamExists (Contributor), Milo (Contributor)"
+credits="LicitLettuce (Game Design, Artist, Programmer), That_Bubba_Guy (Assets & Models), Im_Dolos (Tester, Concepts, & Contributor), WilliamExists (Contributor), Milo (Contributor)"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/metal-works"
 logoFile="logo.png"
 authors="LicitLettuce, That Bubba Guy, Im_Dolos"

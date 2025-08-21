@@ -1,0 +1,8 @@
+{
+  "ambientocclusion": true,
+  "parent": "minecraft:block/cube_all",
+  "render_type": "cutout",
+  "textures": {
+    "all": "metal_works:block/eroded_tin_grate"
+  }
+}

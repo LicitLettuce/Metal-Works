@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "metal_works:block/bronze_tiles",
-    "side": "metal_works:block/bronze_tiles",
-    "top": "metal_works:block/bronze_tiles"
-  }
-}

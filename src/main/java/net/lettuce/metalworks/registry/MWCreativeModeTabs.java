@@ -13,7 +13,7 @@ public class MWCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MetalWorks.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
+    public static final RegistryObject<CreativeModeTab> METAL_WORKS_TAB = CREATIVE_MODE_TABS.register("metal_works_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MWItems.BRONZE_HELMET.get()))
                     .title(Component.translatable("creativetab.metal_works_tab"))
                     .displayItems((pParameters, pOutput) -> {
@@ -22,20 +22,90 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.DEEPSLATE_TIN_ORE.get());
                         pOutput.accept(MWItems.RAW_TIN_BLOCK.get());
 
-                        // --- BUILDING BLOCKS ---
+// --- BUILDING BLOCKS ---
                         pOutput.accept(MWItems.TIN_BLOCK.get());
+                        pOutput.accept(MWItems.TARNISHED_TIN.get());
+                        pOutput.accept(MWItems.CORRODED_TIN.get());
+                        pOutput.accept(MWItems.ERODED_TIN.get());
+
+                        pOutput.accept(MWItems.WAXED_TIN_BLOCK.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_TIN.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_TIN.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_TIN.get());
+
+// CHISELED TIN
                         pOutput.accept(MWItems.CHISELED_TIN.get());
+                        pOutput.accept(MWItems.TARNISHED_CHISELED_TIN.get());
+                        pOutput.accept(MWItems.CORRODED_CHISELED_TIN.get());
+                        pOutput.accept(MWItems.ERODED_CHISELED_TIN.get());
+
+                        pOutput.accept(MWItems.WAXED_CHISELED_TIN.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_CHISELED_TIN.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_CHISELED_TIN.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_CHISELED_TIN.get());
+
                         pOutput.accept(MWItems.TIN_GRATE.get());
+                        pOutput.accept(MWItems.TARNISHED_TIN_GRATE.get());
+                        pOutput.accept(MWItems.CORRODED_TIN_GRATE.get());
+                        pOutput.accept(MWItems.ERODED_TIN_GRATE.get());
+
+                        pOutput.accept(MWItems.WAXED_TIN_GRATE.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_TIN_GRATE.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_TIN_GRATE.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_TIN_GRATE.get());
+
                         pOutput.accept(MWItems.TIN_GRATE_DRAIN.get());
+                        pOutput.accept(MWItems.TARNISHED_TIN_GRATE_DRAIN.get());
+                        pOutput.accept(MWItems.CORRODED_TIN_GRATE_DRAIN.get());
+                        pOutput.accept(MWItems.ERODED_TIN_GRATE_DRAIN.get());
+
+                        pOutput.accept(MWItems.WAXED_TIN_GRATE_DRAIN.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_TIN_GRATE_DRAIN.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_TIN_GRATE_DRAIN.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_TIN_GRATE_DRAIN.get());
+
+// CUT TIN
                         pOutput.accept(MWItems.CUT_TIN.get());
+                        pOutput.accept(MWItems.TARNISHED_CUT_TIN.get());
+                        pOutput.accept(MWItems.CORRODED_CUT_TIN.get());
+                        pOutput.accept(MWItems.ERODED_CUT_TIN.get());
+
+                        pOutput.accept(MWItems.WAXED_CUT_TIN.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_CUT_TIN.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_CUT_TIN.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_CUT_TIN.get());
+
                         pOutput.accept(MWItems.CUT_TIN_STAIRS.get());
                         pOutput.accept(MWItems.CUT_TIN_SLAB.get());
-                        pOutput.accept(MWItems.CUT_TIN_WALL.get());
-                        pOutput.accept(MWItems.CUT_TIN_BUTTON.get());
-                        pOutput.accept(MWItems.CUT_TIN_PRESSURE_PLATE.get());
+
+// TIN TILES
+                        pOutput.accept(MWItems.TIN_TILES.get());
+                        pOutput.accept(MWItems.TARNISHED_TIN_TILES.get());
+                        pOutput.accept(MWItems.CORRODED_TIN_TILES.get());
+                        pOutput.accept(MWItems.ERODED_TIN_TILES.get());
+
+                        pOutput.accept(MWItems.WAXED_TIN_TILES.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_TIN_TILES.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_TIN_TILES.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_TIN_TILES.get());
+
+                        pOutput.accept(MWItems.TIN_TILE_STAIRS.get());
+                        pOutput.accept(MWItems.TIN_TILE_SLAB.get());
+
+// TIN SHINGLES
                         pOutput.accept(MWItems.TIN_SHINGLES.get());
+                        pOutput.accept(MWItems.TARNISHED_TIN_SHINGLES.get());
+                        pOutput.accept(MWItems.CORRODED_TIN_SHINGLES.get());
+                        pOutput.accept(MWItems.ERODED_TIN_SHINGLES.get());
+
+                        pOutput.accept(MWItems.WAXED_TIN_SHINGLES.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_TIN_SHINGLES.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_TIN_SHINGLES.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_TIN_SHINGLES.get());
+
                         pOutput.accept(MWItems.TIN_SHINGLE_STAIRS.get());
                         pOutput.accept(MWItems.TIN_SHINGLE_SLAB.get());
+
                         pOutput.accept(MWItems.TIN_DOOR.get());
                         pOutput.accept(MWItems.TIN_TRAPDOOR.get());
                         pOutput.accept(MWItems.TIN_BARS.get());
@@ -44,7 +114,24 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.TIN_CHAIN.get());
 
                         pOutput.accept(MWItems.TIN_LANTERN.get());
+                        pOutput.accept(MWItems.TARNISHED_TIN_LANTERN.get());
+                        pOutput.accept(MWItems.CORRODED_TIN_LANTERN.get());
+                        pOutput.accept(MWItems.ERODED_TIN_LANTERN.get());
+
+                        pOutput.accept(MWItems.WAXED_TIN_LANTERN.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_TIN_LANTERN.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_TIN_LANTERN.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_TIN_LANTERN.get());
+
                         pOutput.accept(MWItems.TIN_SOUL_LANTERN.get());
+                        pOutput.accept(MWItems.TARNISHED_TIN_SOUL_LANTERN.get());
+                        pOutput.accept(MWItems.CORRODED_TIN_SOUL_LANTERN.get());
+                        pOutput.accept(MWItems.ERODED_TIN_SOUL_LANTERN.get());
+
+                        pOutput.accept(MWItems.WAXED_TIN_SOUL_LANTERN.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_TIN_SOUL_LANTERN.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_TIN_SOUL_LANTERN.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_TIN_SOUL_LANTERN.get());
 
                         pOutput.accept(MWItems.BRONZE_BLOCK.get());
                         pOutput.accept(MWItems.BRONZE_GRATE.get());
@@ -55,6 +142,8 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.BRONZE_SHINGLES.get());
                         pOutput.accept(MWItems.BRONZE_SHINGLE_STAIRS.get());
                         pOutput.accept(MWItems.BRONZE_SHINGLE_SLAB.get());
+                        pOutput.accept(MWItems.BRONZE_DOOR.get());
+                        pOutput.accept(MWItems.BRONZE_TRAPDOOR.get());
                         pOutput.accept(MWItems.BRONZE_BARS.get());
 
 
