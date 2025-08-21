@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "metal_works:block/tin_lantern"
+    },
+    "hanging=true": {
+      "model": "metal_works:block/tin_lantern_hanging"
+    }
+  }
+}

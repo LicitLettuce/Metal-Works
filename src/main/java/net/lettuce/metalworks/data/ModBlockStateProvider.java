@@ -6,6 +6,7 @@ import net.lettuce.metalworks.registry.MWBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -55,6 +56,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                         blockTexture(MWBlocks.ERODED_TIN.get())
                 )
         );
+
+        //chainBlock(MWBlocks.TIN_CHAIN.get(), "tin_chain");
 
         blockWithItem(MWBlocks.TIN_TILES);
         blockWithItem(MWBlocks.TIN_SHINGLES);
@@ -177,5 +180,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    private void chainBlock(Block chainBlock, String name) {
+        getVariantBuilder(chainBlock)
+                .partialState()
+                .setModels(new ConfiguredModel(models().getExistingFile(modLoc("block/" + name))));
     }
 }

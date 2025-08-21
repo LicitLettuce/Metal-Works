@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "metal_works:block/eroded_tin_soul_lantern"
+    },
+    "hanging=true": {
+      "model": "metal_works:block/eroded_tin_soul_lantern_hanging"
+    }
+  }
+}

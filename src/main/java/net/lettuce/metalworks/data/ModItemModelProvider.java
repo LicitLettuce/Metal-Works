@@ -66,9 +66,40 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
         simpleBlockItem(MWBlocks.TIN_DOOR);
+
         simpleBlockItem(MWBlocks.TIN_LANTERN);
+        simpleBlockItem(MWBlocks.TARNISHED_TIN_LANTERN);
+        simpleBlockItem(MWBlocks.CORRODED_TIN_LANTERN);
+        simpleBlockItem(MWBlocks.ERODED_TIN_LANTERN);
+        withExistingParent(MWItems.WAXED_TIN_LANTERN.getId().getPath(), "item/generated")
+                .texture("layer0", modLoc("item/tin_lantern"));
+        withExistingParent(MWItems.WAXED_TARNISHED_TIN_LANTERN.getId().getPath(), "item/generated")
+                .texture("layer0", modLoc("item/tarnished_tin_lantern"));
+        withExistingParent(MWItems.WAXED_CORRODED_TIN_LANTERN.getId().getPath(), "item/generated")
+                .texture("layer0", modLoc("item/corroded_tin_lantern"));
+        withExistingParent(MWItems.WAXED_ERODED_TIN_LANTERN.getId().getPath(), "item/generated")
+                .texture("layer0", modLoc("item/eroded_tin_lantern"));
+
         simpleBlockItem(MWBlocks.TIN_SOUL_LANTERN);
+        simpleBlockItem(MWBlocks.TARNISHED_TIN_SOUL_LANTERN);
+        simpleBlockItem(MWBlocks.CORRODED_TIN_SOUL_LANTERN);
+        simpleBlockItem(MWBlocks.ERODED_TIN_SOUL_LANTERN);
+        withExistingParent(MWItems.WAXED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated")
+                .texture("layer0", modLoc("item/tin_soul_lantern"));
+        withExistingParent(MWItems.WAXED_TARNISHED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated")
+                .texture("layer0", modLoc("item/tarnished_tin_soul_lantern"));
+        withExistingParent(MWItems.WAXED_CORRODED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated")
+                .texture("layer0", modLoc("item/corroded_tin_soul_lantern"));
+        withExistingParent(MWItems.WAXED_ERODED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated")
+                .texture("layer0", modLoc("item/eroded_tin_soul_lantern"));
+
+        simpleBlockItem(MWBlocks.TARNISHED_TIN_SOUL_LANTERN);
+        simpleBlockItem(MWBlocks.CORRODED_TIN_SOUL_LANTERN);
+        simpleBlockItem(MWBlocks.ERODED_TIN_SOUL_LANTERN);
+
         simpleBlockItem(MWBlocks.TIN_CHAIN);
+
+
 
         simpleBlockItem(MWBlocks.BRONZE_DOOR);
 
@@ -98,6 +129,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         trapdoorItem(MWBlocks.TIN_TRAPDOOR);
         trapdoorItem(MWBlocks.BRONZE_TRAPDOOR);
+
+        withExistingParent(MWItems.TIN_CHAIN.getId().getPath(), "item/generated")
+                .texture("layer0", modLoc("item/tin_chain"));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

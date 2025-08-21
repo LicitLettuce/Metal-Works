@@ -283,7 +283,7 @@ public class MWBlocks {
             (BlockBehaviour.Properties.copy(Blocks.LANTERN)));
 
             //Soul Tin Lantern
-    public static final RegistryObject<Block> TIN_SOUL_LANTERN = BLOCKS.register("tin_soul_lantern", () -> new TinLanternBlock
+    public static final RegistryObject<Block> TIN_SOUL_LANTERN = BLOCKS.register("tin_soul_lantern", () -> new WeatheringTinLanternBlock
             (BlockBehaviour.Properties.copy(Blocks.SOUL_LANTERN)));
 
     public static final RegistryObject<Block> TARNISHED_TIN_SOUL_LANTERN = BLOCKS.register("tarnished_tin_soul_lantern", () -> new WeatheringTinLanternBlock
