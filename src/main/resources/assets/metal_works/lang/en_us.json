@@ -195,10 +195,7 @@
   "block.metal_works.tarnished_tin_shingle_slab": "Tarnished Tin Shingle Slab",
   "block.metal_works.corroded_tin_shingle_slab": "Corroded Tin Shingle Slab",
   "block.metal_works.eroded_tin_shingle_slab": "Eroded Tin Shingle Slab",
-  "block.metal_works.waxed_tin_shingle_slab": "Waxed Tin Shingle Slab",
-  "block.metal_works.waxed_tarnished_tin_shingle_slab": "Waxed Tarnished Tin Shingle Slab",
-  "block.metal_works.waxed_corroded_tin_shingle_slab": "Waxed Corroded Tin Shingle Slab",
-  "block.metal_works.waxed_eroded_tin_shingle_slab": "Waxed Eroded Tin Shingle Slab",
+
 
   "block.minecraft.chain": "Iron Chain",
 
@@ -206,5 +203,25 @@
 
   "trim_material.metal_works.tin": "Tin",
   "trim_material.metal_works.bronze": "Bronze",
-  "trim_material.metal_works.rose_gold": "Rose Gold"
+  "trim_material.metal_works.rose_gold": "Rose Gold",
+
+  "block.metal_works.waxed_cut_tin_stairs": "Waxed Cut Tin Stairs",
+  "block.metal_works.waxed_tarnished_cut_tin_stairs": "Waxed Tarnished Cut Tin Stairs",
+  "block.metal_works.waxed_corroded_cut_tin_stairs": "Waxed Corroded Cut Tin Stairs",
+  "block.metal_works.waxed_eroded_cut_tin_stairs": "Waxed Eroded Cut Tin Stairs",
+
+  "block.metal_works.waxed_cut_tin_slab": "Waxed Cut Tin Slab",
+  "block.metal_works.waxed_tarnished_cut_tin_slab": "Waxed Tarnished Cut Tin Slab",
+  "block.metal_works.waxed_corroded_cut_tin_slab": "Waxed Corroded Cut Tin Slab",
+  "block.metal_works.waxed_eroded_cut_tin_slab": "Waxed Eroded Cut Tin Slab",
+
+
+
+  "block.metal_works.waxed_tin_shingle_slab": "Waxed Tin Shingle Slab",
+  "block.metal_works.waxed_tarnished_tin_shingle_slab": "Waxed Tarnished Tin Shingle Slab",
+  "block.metal_works.waxed_corroded_tin_shingle_slab": "Waxed Corroded Tin Shingle Slab",
+  "block.metal_works.waxed_eroded_tin_shingle_slab": "Waxed Eroded Tin Shingle Slab"
+
+
+
 }

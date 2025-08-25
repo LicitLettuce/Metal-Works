@@ -20,11 +20,10 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.lettuce.metalworks.common.block.WeatheringTin;
 
 import javax.annotation.Nullable;
 
-public class WeatheringTinLanternBlock extends WeatheringTin implements SimpleWaterloggedBlock {
+public class WeatheringTinLanternBlock extends WeatheringTinBlock implements SimpleWaterloggedBlock {
 
     public static final BooleanProperty HANGING = BlockStateProperties.HANGING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;

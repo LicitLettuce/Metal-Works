@@ -19,7 +19,7 @@ public class ToolnteractionsEvent {
         BlockState state = event.getState();
         Block block = state.getBlock();
 
-        if (block == MWBlocks.WAXED_TIN_BlOCK.get()) {
+        if (block == MWBlocks.WAXED_TIN_BLOCK.get()) {
             event.setFinalState(MWBlocks.TIN_BLOCK.get().defaultBlockState());
         } else if (block == MWBlocks.WAXED_TARNISHED_TIN.get()) {
             event.setFinalState(MWBlocks.TARNISHED_TIN.get().defaultBlockState());

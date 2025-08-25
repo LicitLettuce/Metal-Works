@@ -6,9 +6,7 @@ import net.lettuce.metalworks.registry.MWBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -26,7 +24,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(MWBlocks.ERODED_TIN);
 
         simpleBlockWithItem(
-                MWBlocks.WAXED_TIN_BlOCK.get(),
+                MWBlocks.WAXED_TIN_BLOCK.get(),
                 models().cubeAll(
                         "waxed_tin_block",
                         blockTexture(MWBlocks.TIN_BLOCK.get())
@@ -57,7 +55,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 )
         );
 
-        //chainBlock(MWBlocks.TIN_CHAIN.get(), "tin_chain");
 
         blockWithItem(MWBlocks.TIN_TILES);
         blockWithItem(MWBlocks.TIN_SHINGLES);
@@ -146,6 +143,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //Stair Blocks
         stairsBlock(((StairBlock) MWBlocks.CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.CUT_TIN.get()));
+        stairsBlock(((StairBlock) MWBlocks.TARNISHED_CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.TARNISHED_CUT_TIN.get()));
+        stairsBlock(((StairBlock) MWBlocks.CORRODED_CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.CORRODED_CUT_TIN.get()));
+        stairsBlock(((StairBlock) MWBlocks.ERODED_CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.ERODED_CUT_TIN.get()));
+
+
         stairsBlock(((StairBlock) MWBlocks.TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.TIN_TILES.get()));
         stairsBlock(((StairBlock) MWBlocks.TIN_SHINGLE_STAIRS.get()), blockTexture(MWBlocks.TIN_SHINGLES.get()));
 
@@ -154,13 +156,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //Slabs
         slabBlock(((SlabBlock) MWBlocks.CUT_TIN_SLAB.get()), blockTexture(MWBlocks.CUT_TIN.get()), blockTexture(MWBlocks.CUT_TIN.get()));
+        slabBlock(((SlabBlock) MWBlocks.TARNISHED_CUT_TIN_SLAB.get()), blockTexture(MWBlocks.TARNISHED_CUT_TIN.get()), blockTexture(MWBlocks.TARNISHED_CUT_TIN.get()));
+        slabBlock(((SlabBlock) MWBlocks.CORRODED_CUT_TIN_SLAB.get()), blockTexture(MWBlocks.CORRODED_CUT_TIN.get()), blockTexture(MWBlocks.CORRODED_CUT_TIN.get()));
+        slabBlock(((SlabBlock) MWBlocks.ERODED_CUT_TIN_SLAB.get()), blockTexture(MWBlocks.ERODED_CUT_TIN.get()), blockTexture(MWBlocks.ERODED_CUT_TIN.get()));
+
         slabBlock(((SlabBlock) MWBlocks.TIN_TILE_SLAB.get()), blockTexture(MWBlocks.TIN_TILES.get()), blockTexture(MWBlocks.TIN_TILES.get()));
         slabBlock(((SlabBlock) MWBlocks.TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.TIN_SHINGLES.get()), blockTexture(MWBlocks.TIN_SHINGLES.get()));
 
         slabBlock(((SlabBlock) MWBlocks.BRONZE_TILE_SLAB.get()), blockTexture(MWBlocks.BRONZE_TILES.get()), blockTexture(MWBlocks.BRONZE_TILES.get()));
         slabBlock(((SlabBlock) MWBlocks.BRONZE_SHINGLE_SLAB.get()), blockTexture(MWBlocks.BRONZE_SHINGLES.get()), blockTexture(MWBlocks.BRONZE_SHINGLES.get()));
 
-        //Buttons
+        //Chains
 
         //Doors
         doorBlockWithRenderType(((DoorBlock) MWBlocks.TIN_DOOR.get()), modLoc("block/tin_door_bottom"), modLoc("block/tin_door_top"), "cutout");
@@ -168,7 +174,46 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //Trapdoors
         trapdoorBlockWithRenderType(((TrapDoorBlock) MWBlocks.TIN_TRAPDOOR.get()), modLoc("block/tin_trapdoor"), true, "cutout");
+
         trapdoorBlockWithRenderType(((TrapDoorBlock) MWBlocks.BRONZE_TRAPDOOR.get()), modLoc("block/bronze_trapdoor"), true, "translucent");
+
+        // Waxed Cut Tin Stairs
+        stairsBlock(((StairBlock) MWBlocks.WAXED_CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.CUT_TIN.get()));
+        stairsBlock(((StairBlock) MWBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.TARNISHED_CUT_TIN.get()));
+        stairsBlock(((StairBlock) MWBlocks.WAXED_CORRODED_CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.CORRODED_CUT_TIN.get()));
+        stairsBlock(((StairBlock) MWBlocks.WAXED_ERODED_CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.ERODED_CUT_TIN.get()));
+
+// Waxed Tin Tile Stairs
+        stairsBlock(((StairBlock) MWBlocks.WAXED_TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.TIN_TILES.get()));
+        stairsBlock(((StairBlock) MWBlocks.WAXED_TARNISHED_TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.TARNISHED_TIN_TILES.get()));
+        stairsBlock(((StairBlock) MWBlocks.WAXED_CORRODED_TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.CORRODED_TIN_TILES.get()));
+        stairsBlock(((StairBlock) MWBlocks.WAXED_ERODED_TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.ERODED_TIN_TILES.get()));
+
+// Waxed Tin Shingle Stairs
+        stairsBlock(((StairBlock) MWBlocks.WAXED_TIN_SHINGLE_STAIRS.get()), blockTexture(MWBlocks.TIN_SHINGLES.get()));
+        stairsBlock(((StairBlock) MWBlocks.WAXED_TARNISHED_TIN_SHINGLE_STAIRS.get()), blockTexture(MWBlocks.TARNISHED_TIN_SHINGLES.get()));
+        stairsBlock(((StairBlock) MWBlocks.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get()), blockTexture(MWBlocks.CORRODED_TIN_SHINGLES.get()));
+        stairsBlock(((StairBlock) MWBlocks.WAXED_ERODED_TIN_SHINGLE_STAIRS.get()), blockTexture(MWBlocks.ERODED_TIN_SHINGLES.get()));
+
+        // Waxed Cut Tin Slabs
+        slabBlock(((SlabBlock) MWBlocks.WAXED_CUT_TIN_SLAB.get()), blockTexture(MWBlocks.CUT_TIN.get()), blockTexture(MWBlocks.CUT_TIN.get()));
+        slabBlock(((SlabBlock) MWBlocks.WAXED_TARNISHED_CUT_TIN_SLAB.get()), blockTexture(MWBlocks.TARNISHED_CUT_TIN.get()), blockTexture(MWBlocks.TARNISHED_CUT_TIN.get()));
+        slabBlock(((SlabBlock) MWBlocks.WAXED_CORRODED_CUT_TIN_SLAB.get()), blockTexture(MWBlocks.CORRODED_CUT_TIN.get()), blockTexture(MWBlocks.CORRODED_CUT_TIN.get()));
+        slabBlock(((SlabBlock) MWBlocks.WAXED_ERODED_CUT_TIN_SLAB.get()), blockTexture(MWBlocks.ERODED_CUT_TIN.get()), blockTexture(MWBlocks.ERODED_CUT_TIN.get()));
+
+// Waxed Tin Tile Slabs
+        slabBlock(((SlabBlock) MWBlocks.WAXED_TIN_TILE_SLAB.get()), blockTexture(MWBlocks.TIN_TILES.get()), blockTexture(MWBlocks.TIN_TILES.get()));
+        slabBlock(((SlabBlock) MWBlocks.WAXED_TARNISHED_TIN_TILE_SLAB.get()), blockTexture(MWBlocks.TARNISHED_TIN_TILES.get()), blockTexture(MWBlocks.TARNISHED_TIN_TILES.get()));
+        slabBlock(((SlabBlock) MWBlocks.WAXED_CORRODED_TIN_TILE_SLAB.get()), blockTexture(MWBlocks.CORRODED_TIN_TILES.get()), blockTexture(MWBlocks.CORRODED_TIN_TILES.get()));
+        slabBlock(((SlabBlock) MWBlocks.WAXED_ERODED_TIN_TILE_SLAB.get()), blockTexture(MWBlocks.ERODED_TIN_TILES.get()), blockTexture(MWBlocks.ERODED_TIN_TILES.get()));
+
+// Waxed Tin Shingle Slabs
+        slabBlock(((SlabBlock) MWBlocks.WAXED_TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.TIN_SHINGLES.get()), blockTexture(MWBlocks.TIN_SHINGLES.get()));
+        slabBlock(((SlabBlock) MWBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.TARNISHED_TIN_SHINGLES.get()), blockTexture(MWBlocks.TARNISHED_TIN_SHINGLES.get()));
+        slabBlock(((SlabBlock) MWBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.CORRODED_TIN_SHINGLES.get()), blockTexture(MWBlocks.CORRODED_TIN_SHINGLES.get()));
+        slabBlock(((SlabBlock) MWBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.ERODED_TIN_SHINGLES.get()), blockTexture(MWBlocks.ERODED_TIN_SHINGLES.get()));
+
+
 
     }
 
@@ -180,11 +225,5 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
-    }
-
-    private void chainBlock(Block chainBlock, String name) {
-        getVariantBuilder(chainBlock)
-                .partialState()
-                .setModels(new ConfiguredModel(models().getExistingFile(modLoc("block/" + name))));
     }
 }

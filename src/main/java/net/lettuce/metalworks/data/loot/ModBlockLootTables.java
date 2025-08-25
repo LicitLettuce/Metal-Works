@@ -5,10 +5,8 @@ package net.lettuce.metalworks.data.loot;
 import net.lettuce.metalworks.registry.MWBlocks;
 import net.lettuce.metalworks.registry.MWItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -27,53 +25,138 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+
+            //Natural Tin
+        this.dropSelf(MWBlocks.RAW_TIN_BLOCK.get());
+        this.add(MWBlocks.TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.TIN_ORE.get(), MWItems.RAW_TIN.get()));
+        this.add(MWBlocks.DEEPSLATE_TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.DEEPSLATE_TIN_ORE.get(), MWItems.RAW_TIN.get()));
+
+            //Tin Block
         this.dropSelf(MWBlocks.TIN_BLOCK.get());
         this.dropSelf(MWBlocks.TARNISHED_TIN.get());
         this.dropSelf(MWBlocks.CORRODED_TIN.get());
         this.dropSelf(MWBlocks.ERODED_TIN.get());
-        this.dropSelf(MWBlocks.WAXED_TIN_BlOCK.get());
+
+        this.dropSelf(MWBlocks.WAXED_TIN_BLOCK.get());
         this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN.get());
         this.dropSelf(MWBlocks.WAXED_CORRODED_TIN.get());
         this.dropSelf(MWBlocks.WAXED_ERODED_TIN.get());
-        this.dropSelf(MWBlocks.RAW_TIN_BLOCK.get());
 
-        this.dropSelf(MWBlocks.TIN_GRATE.get());
-        this.dropSelf(MWBlocks.TARNISHED_TIN_GRATE.get());
-        this.dropSelf(MWBlocks.CORRODED_TIN_GRATE.get());
-        this.dropSelf(MWBlocks.ERODED_TIN_GRATE.get());
-        this.dropSelf(MWBlocks.WAXED_TIN_GRATE.get());
-        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_GRATE.get());
-        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_GRATE.get());
-        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_GRATE.get());
-
-        this.dropSelf(MWBlocks.TIN_GRATE_DRAIN.get());
-        this.dropSelf(MWBlocks.TARNISHED_TIN_GRATE_DRAIN.get());
-        this.dropSelf(MWBlocks.CORRODED_TIN_GRATE_DRAIN.get());
-        this.dropSelf(MWBlocks.ERODED_TIN_GRATE_DRAIN.get());
-        this.dropSelf(MWBlocks.WAXED_TIN_GRATE_DRAIN.get());
-        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_GRATE_DRAIN.get());
-        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_GRATE_DRAIN.get());
-        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_GRATE_DRAIN.get());
-
+            //Chiseled Tin
         this.dropSelf(MWBlocks.CHISELED_TIN.get());
         this.dropSelf(MWBlocks.TARNISHED_CHISELED_TIN.get());
         this.dropSelf(MWBlocks.CORRODED_CHISELED_TIN.get());
         this.dropSelf(MWBlocks.ERODED_CHISELED_TIN.get());
+
         this.dropSelf(MWBlocks.WAXED_CHISELED_TIN.get());
         this.dropSelf(MWBlocks.WAXED_TARNISHED_CHISELED_TIN.get());
         this.dropSelf(MWBlocks.WAXED_CORRODED_CHISELED_TIN.get());
         this.dropSelf(MWBlocks.WAXED_ERODED_CHISELED_TIN.get());
 
+            //Tin Grates
+        this.dropSelf(MWBlocks.TIN_GRATE.get());
+        this.dropSelf(MWBlocks.TARNISHED_TIN_GRATE.get());
+        this.dropSelf(MWBlocks.CORRODED_TIN_GRATE.get());
+        this.dropSelf(MWBlocks.ERODED_TIN_GRATE.get());
+
+        this.dropSelf(MWBlocks.WAXED_TIN_GRATE.get());
+        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_GRATE.get());
+        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_GRATE.get());
+        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_GRATE.get());
+
+            //Tin Grate Drains
+        this.dropSelf(MWBlocks.TIN_GRATE_DRAIN.get());
+        this.dropSelf(MWBlocks.TARNISHED_TIN_GRATE_DRAIN.get());
+        this.dropSelf(MWBlocks.CORRODED_TIN_GRATE_DRAIN.get());
+        this.dropSelf(MWBlocks.ERODED_TIN_GRATE_DRAIN.get());
+
+        this.dropSelf(MWBlocks.WAXED_TIN_GRATE_DRAIN.get());
+        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_GRATE_DRAIN.get());
+        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_GRATE_DRAIN.get());
+        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_GRATE_DRAIN.get());
+
+            //Cut Tin
         this.dropSelf(MWBlocks.CUT_TIN.get());
-        this.dropSelf(MWBlocks.CUT_TIN_STAIRS.get());
-        this.dropSelf(MWBlocks.CUT_TIN_SLAB.get());
         this.dropSelf(MWBlocks.TARNISHED_CUT_TIN.get());
         this.dropSelf(MWBlocks.CORRODED_CUT_TIN.get());
         this.dropSelf(MWBlocks.ERODED_CUT_TIN.get());
+
         this.dropSelf(MWBlocks.WAXED_CUT_TIN.get());
         this.dropSelf(MWBlocks.WAXED_TARNISHED_CUT_TIN.get());
         this.dropSelf(MWBlocks.WAXED_CORRODED_CUT_TIN.get());
         this.dropSelf(MWBlocks.WAXED_ERODED_CUT_TIN.get());
+
+            //Cut Tin Stairs
+        this.dropSelf(MWBlocks.CUT_TIN_STAIRS.get());
+        this.dropSelf(MWBlocks.TARNISHED_CUT_TIN_STAIRS.get());
+        this.dropSelf(MWBlocks.CORRODED_CUT_TIN_STAIRS.get());
+        this.dropSelf(MWBlocks.ERODED_CUT_TIN_STAIRS.get());
+
+        this.dropSelf(MWBlocks.WAXED_CUT_TIN_STAIRS.get());
+
+            //Cut Tin Slab
+        this.dropSelf(MWBlocks.CUT_TIN_SLAB.get());
+        this.dropSelf(MWBlocks.TARNISHED_CUT_TIN_SLAB.get());
+        this.dropSelf(MWBlocks.CORRODED_CUT_TIN_SLAB.get());
+        this.dropSelf(MWBlocks.ERODED_CUT_TIN_SLAB.get());
+
+        // Cut Tin Stairs - Waxed
+        this.dropSelf(MWBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS.get());
+        this.dropSelf(MWBlocks.WAXED_CORRODED_CUT_TIN_STAIRS.get());
+        this.dropSelf(MWBlocks.WAXED_ERODED_CUT_TIN_STAIRS.get());
+
+// Cut Tin Slabs - Waxed
+        this.dropSelf(MWBlocks.WAXED_CUT_TIN_SLAB.get());
+        this.dropSelf(MWBlocks.WAXED_TARNISHED_CUT_TIN_SLAB.get());
+        this.dropSelf(MWBlocks.WAXED_CORRODED_CUT_TIN_SLAB.get());
+        this.dropSelf(MWBlocks.WAXED_ERODED_CUT_TIN_SLAB.get());
+
+// Tin Tile Stairs - Waxed
+
+        this.dropSelf(MWBlocks.TIN_TILE_STAIRS.get());
+        this.dropSelf(MWBlocks.TARNISHED_TIN_TILE_STAIRS.get());
+        this.dropSelf(MWBlocks.CORRODED_TIN_TILE_STAIRS.get());
+        this.dropSelf(MWBlocks.ERODED_TIN_TILE_STAIRS.get());
+
+        this.dropSelf(MWBlocks.WAXED_TIN_TILE_STAIRS.get());
+        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_TILE_STAIRS.get());
+        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_TILE_STAIRS.get());
+        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_TILE_STAIRS.get());
+
+// Tin Tile Slabs - Waxed
+        this.dropSelf(MWBlocks.TIN_TILE_SLAB.get());
+        this.dropSelf(MWBlocks.TARNISHED_TIN_TILE_SLAB.get());
+        this.dropSelf(MWBlocks.CORRODED_TIN_TILE_SLAB.get());
+        this.dropSelf(MWBlocks.ERODED_TIN_TILE_SLAB.get());
+
+        this.dropSelf(MWBlocks.WAXED_TIN_TILE_SLAB.get());
+        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_TILE_SLAB.get());
+        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_TILE_SLAB.get());
+        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_TILE_SLAB.get());
+
+// Tin Shingle Stairs - Waxed
+        this.dropSelf(MWBlocks.WAXED_TIN_SHINGLE_STAIRS.get());
+        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_SHINGLE_STAIRS.get());
+        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get());
+        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_SHINGLE_STAIRS.get());
+
+        this.dropSelf(MWBlocks.TIN_SHINGLE_STAIRS.get());
+        this.dropSelf(MWBlocks.TARNISHED_TIN_SHINGLE_STAIRS.get());
+        this.dropSelf(MWBlocks.CORRODED_TIN_SHINGLE_STAIRS.get());
+        this.dropSelf(MWBlocks.ERODED_TIN_SHINGLE_STAIRS.get());
+
+// Tin Shingle Slabs - Waxed
+        this.dropSelf(MWBlocks.WAXED_TIN_SHINGLE_SLAB.get());
+        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get());
+        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB.get());
+        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB.get());
+
+        this.dropSelf(MWBlocks.TIN_SHINGLE_SLAB.get());
+        this.dropSelf(MWBlocks.TARNISHED_TIN_SHINGLE_SLAB.get());
+        this.dropSelf(MWBlocks.CORRODED_TIN_SHINGLE_SLAB.get());
+        this.dropSelf(MWBlocks.ERODED_TIN_SHINGLE_SLAB.get());
+
+
 
         this.dropSelf(MWBlocks.TIN_TILES.get());
         this.dropSelf(MWBlocks.TIN_TILE_STAIRS.get());
@@ -100,7 +183,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.TIN_GRATE.get());
         this.dropSelf(MWBlocks.TIN_GRATE_DRAIN.get());
         this.dropSelf(MWBlocks.TIN_BARS.get());
+
         this.dropSelf(MWBlocks.TIN_DOOR.get());
+
         this.dropSelf(MWBlocks.TIN_TRAPDOOR.get());
         this.dropSelf(MWBlocks.TIN_CHAIN.get());
 // Tin Lanterns
@@ -124,26 +209,31 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.WAXED_ERODED_TIN_SOUL_LANTERN.get());
 
         this.dropSelf(MWBlocks.BRONZE_BLOCK.get());
+
         this.dropSelf(MWBlocks.BRONZE_TILES.get());
         this.dropSelf(MWBlocks.BRONZE_TILE_STAIRS.get());
         this.dropSelf(MWBlocks.BRONZE_TILE_SLAB.get());
+
         this.dropSelf(MWBlocks.BRONZE_SHINGLES.get());
         this.dropSelf(MWBlocks.BRONZE_SHINGLE_STAIRS.get());
         this.dropSelf(MWBlocks.BRONZE_SHINGLE_SLAB.get());
+
         this.dropSelf(MWBlocks.BRONZE_DOOR.get());
+
         this.dropSelf(MWBlocks.BRONZE_TRAPDOOR.get());
+
         this.dropSelf(MWBlocks.BRONZE_BARS.get());
+
         this.dropSelf(MWBlocks.BRONZE_GRATE.get());
+
         this.dropSelf(MWBlocks.BRONZE_GRATE_DRAIN.get());
 
         this.dropSelf(MWBlocks.ROSE_GOLD_BLOCK.get());
+
         this.dropSelf(MWBlocks.ROSE_LANTERN.get());
 
 
-        this.add(MWBlocks.TIN_ORE.get(),
-                block -> createCopperLikeOreDrops(MWBlocks.TIN_ORE.get(), MWItems.RAW_TIN.get()));
-        this.add(MWBlocks.DEEPSLATE_TIN_ORE.get(),
-                block -> createCopperLikeOreDrops(MWBlocks.DEEPSLATE_TIN_ORE.get(), MWItems.RAW_TIN.get()));
+
 
     }
 
