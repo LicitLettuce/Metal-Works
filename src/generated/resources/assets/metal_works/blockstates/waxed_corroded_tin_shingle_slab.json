@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "metal_works:block/waxed_corroded_tin_shingle_slab"
+    },
+    "type=double": {
+      "model": "metal_works:block/corroded_tin_shingles"
+    },
+    "type=top": {
+      "model": "metal_works:block/waxed_corroded_tin_shingle_slab_top"
+    }
+  }
+}

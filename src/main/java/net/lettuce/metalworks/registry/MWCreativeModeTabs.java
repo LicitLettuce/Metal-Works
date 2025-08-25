@@ -132,7 +132,7 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.WAXED_CORRODED_TIN_TILE_SLAB.get());
                         pOutput.accept(MWItems.WAXED_ERODED_TIN_TILE_SLAB.get());
 
-// TIN SHINGLES
+// TIN SHINGLESS
                         pOutput.accept(MWItems.TIN_SHINGLES.get());
                         pOutput.accept(MWItems.TARNISHED_TIN_SHINGLES.get());
                         pOutput.accept(MWItems.CORRODED_TIN_SHINGLES.get());

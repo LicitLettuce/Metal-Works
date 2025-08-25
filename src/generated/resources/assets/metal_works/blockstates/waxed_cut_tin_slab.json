@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "metal_works:block/waxed_cut_tin_slab"
+    },
+    "type=double": {
+      "model": "metal_works:block/cut_tin"
+    },
+    "type=top": {
+      "model": "metal_works:block/waxed_cut_tin_slab_top"
+    }
+  }
+}

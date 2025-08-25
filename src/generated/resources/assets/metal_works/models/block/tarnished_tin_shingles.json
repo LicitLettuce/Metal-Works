@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "metal_works:block/tarnished_tin_shingles"
+  }
+}

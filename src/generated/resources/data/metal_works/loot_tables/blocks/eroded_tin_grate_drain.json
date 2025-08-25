@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:eroded_tin_grate_drain"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "metal_works:blocks/eroded_tin_grate_drain"
+}

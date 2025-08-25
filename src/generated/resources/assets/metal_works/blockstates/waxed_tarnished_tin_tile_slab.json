@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "metal_works:block/waxed_tarnished_tin_tile_slab"
+    },
+    "type=double": {
+      "model": "metal_works:block/tarnished_tin_tiles"
+    },
+    "type=top": {
+      "model": "metal_works:block/waxed_tarnished_tin_tile_slab_top"
+    }
+  }
+}
