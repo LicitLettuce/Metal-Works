@@ -187,7 +187,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.TIN_DOOR.get());
 
         this.dropSelf(MWBlocks.TIN_TRAPDOOR.get());
+
         this.dropSelf(MWBlocks.TIN_CHAIN.get());
+        this.dropSelf(MWBlocks.TARNISHED_TIN_CHAIN.get());
+        this.dropSelf(MWBlocks.CORRODED_TIN_CHAIN.get());
+        this.dropSelf(MWBlocks.ERODED_TIN_CHAIN.get());
+
+        this.dropSelf(MWBlocks.WAXED_TIN_CHAIN.get());
+        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_CHAIN.get());
+        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_CHAIN.get());
+        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_CHAIN.get());
+
 // Tin Lanterns
         this.dropSelf(MWBlocks.TIN_LANTERN.get());
         this.dropSelf(MWBlocks.TARNISHED_TIN_LANTERN.get());
@@ -224,6 +234,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(MWBlocks.BRONZE_BARS.get());
 
+        this.dropSelf(MWBlocks.TARNISHED_TIN_BARS.get());
+        this.dropSelf(MWBlocks.CORRODED_TIN_BARS.get());
+        this.dropSelf(MWBlocks.ERODED_TIN_BARS.get());
+
+        this.dropSelf(MWBlocks.WAXED_TIN_BARS.get());
+        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_BARS.get());
+        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_BARS.get());
+        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_BARS.get());
+
+        this.dropSelf(MWBlocks.BRONZE_BARS.get());
+        this.dropSelf(MWBlocks.BRONZE_BARS.get());
+
         this.dropSelf(MWBlocks.BRONZE_GRATE.get());
 
         this.dropSelf(MWBlocks.BRONZE_GRATE_DRAIN.get());
@@ -231,8 +253,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.ROSE_GOLD_BLOCK.get());
 
         this.dropSelf(MWBlocks.ROSE_LANTERN.get());
-
-
 
 
     }

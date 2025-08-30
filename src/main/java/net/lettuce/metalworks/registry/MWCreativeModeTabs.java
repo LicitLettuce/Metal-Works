@@ -169,12 +169,24 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.TIN_TRAPDOOR.get());
 
                         pOutput.accept(MWItems.TIN_BARS.get());
-                        //pOutput.accept(MWItems.WAXED_TIN_BARS.get());
-                        //pOutput.accept(MWItems.WAXED_TARNISHED_TIN_BARS.get());
-                        //pOutput.accept(MWItems.WAXED_CORRODED_TIN_BARS.get());
-                        //pOutput.accept(MWItems.WAXED_ERODED_TIN_BARS.get());
+                        pOutput.accept(MWItems.TARNISHED_TIN_BARS.get());
+                        pOutput.accept(MWItems.CORRODED_TIN_BARS.get());
+                        pOutput.accept(MWItems.ERODED_TIN_BARS.get());
+
+                        pOutput.accept(MWItems.WAXED_TIN_BARS.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_TIN_BARS.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_TIN_BARS.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_TIN_BARS.get());
 
                         pOutput.accept(MWItems.TIN_CHAIN.get());
+                        pOutput.accept(MWItems.TARNISHED_TIN_CHAIN.get());
+                        pOutput.accept(MWItems.CORRODED_TIN_CHAIN.get());
+                        pOutput.accept(MWItems.ERODED_TIN_CHAIN.get());
+
+                        pOutput.accept(MWItems.WAXED_TIN_CHAIN.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_TIN_CHAIN.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_TIN_CHAIN.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_TIN_CHAIN.get());
 
 // LANTERNS
                         pOutput.accept(MWItems.TIN_LANTERN.get());

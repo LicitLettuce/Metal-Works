@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[47,)"
-license="MIT License"
+license="Lettuce License – see LICENSE file"
 
 [[mods]]
 modId="metal_works"

@@ -11,17 +11,14 @@ import net.lettuce.metalworks.registry.MWWeathering;
 
 public class WeatheringTinBarsBlock extends IronBarsBlock {
 
-    private final Block parentBlock;
-
-    public WeatheringTinBarsBlock(Block parentBlock, BlockBehaviour.Properties properties) {
+    public WeatheringTinBarsBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        this.parentBlock = parentBlock;
     }
 
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (random.nextInt(300) == 0) {
-            Block next = MWWeathering.getNext(this.parentBlock);
+            Block next = MWWeathering.getNext(this);
             if (next instanceof IronBarsBlock nextBars) {
                 level.setBlock(pos, nextBars.defaultBlockState()
                         .setValue(NORTH, state.getValue(NORTH))
@@ -34,7 +31,8 @@ public class WeatheringTinBarsBlock extends IronBarsBlock {
 
     @Override
     public boolean isRandomlyTicking(BlockState state) {
-        return MWWeathering.getNext(this.parentBlock) != null;
+        return MWWeathering.getNext(this) != null;
     }
 }
+
 

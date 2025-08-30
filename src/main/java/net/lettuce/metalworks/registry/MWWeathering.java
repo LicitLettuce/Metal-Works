@@ -81,9 +81,14 @@ public class MWWeathering {
         TIN_WEATHERING_CHAIN.put(MWBlocks.CORRODED_TIN_SHINGLE_SLAB.get(), MWBlocks.ERODED_TIN_SHINGLE_SLAB.get());
 
         // Tin Bars
-        //TIN_WEATHERING_CHAIN.put(MWBlocks.TIN_BARS.get(), MWBlocks.TARNISHED_TIN_BARS.get());
-        //TIN_WEATHERING_CHAIN.put(MWBlocks.TARNISHED_TIN_BARS.get(), MWBlocks.CORRODED_TIN_BARS.get());
-        //TIN_WEATHERING_CHAIN.put(MWBlocks.CORRODED_TIN_BARS.get(), MWBlocks.ERODED_TIN_BARS.get());
+        TIN_WEATHERING_CHAIN.put(MWBlocks.TIN_BARS.get(), MWBlocks.TARNISHED_TIN_BARS.get());
+        TIN_WEATHERING_CHAIN.put(MWBlocks.TARNISHED_TIN_BARS.get(), MWBlocks.CORRODED_TIN_BARS.get());
+        TIN_WEATHERING_CHAIN.put(MWBlocks.CORRODED_TIN_BARS.get(), MWBlocks.ERODED_TIN_BARS.get());
+
+        //Tin Chains
+        TIN_WEATHERING_CHAIN.put(MWBlocks.TIN_CHAIN.get(), MWBlocks.TARNISHED_TIN_CHAIN.get());
+        TIN_WEATHERING_CHAIN.put(MWBlocks.TARNISHED_TIN_CHAIN.get(), MWBlocks.CORRODED_TIN_CHAIN.get());
+        TIN_WEATHERING_CHAIN.put(MWBlocks.CORRODED_TIN_CHAIN.get(), MWBlocks.ERODED_TIN_CHAIN.get());
 
         // Tin Lanterns
         TIN_WEATHERING_CHAIN.put(MWBlocks.TIN_LANTERN.get(), MWBlocks.TARNISHED_TIN_LANTERN.get());
@@ -185,10 +190,16 @@ public class MWWeathering {
             newMap.put(MWBlocks.ERODED_TIN_SHINGLE_SLAB.get(), MWBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB.get());
 
             // Tin Bars
-            //newMap.put(MWBlocks.TIN_BARS.get(), MWBlocks.WAXED_TIN_BARS.get());
-            //newMap.put(MWBlocks.TARNISHED_TIN_BARS.get(), MWBlocks.WAXED_TARNISHED_TIN_BARS.get());
-            //newMap.put(MWBlocks.CORRODED_TIN_BARS.get(), MWBlocks.WAXED_CORRODED_TIN_BARS.get());
-            //newMap.put(MWBlocks.ERODED_TIN_BARS.get(), MWBlocks.WAXED_ERODED_TIN_BARS.get());
+            newMap.put(MWBlocks.TIN_BARS.get(), MWBlocks.WAXED_TIN_BARS.get());
+            newMap.put(MWBlocks.TARNISHED_TIN_BARS.get(), MWBlocks.WAXED_TARNISHED_TIN_BARS.get());
+            newMap.put(MWBlocks.CORRODED_TIN_BARS.get(), MWBlocks.WAXED_CORRODED_TIN_BARS.get());
+            newMap.put(MWBlocks.ERODED_TIN_BARS.get(), MWBlocks.WAXED_ERODED_TIN_BARS.get());
+
+            // Tin Chains
+            newMap.put(MWBlocks.TIN_CHAIN.get(), MWBlocks.WAXED_TIN_CHAIN.get());
+            newMap.put(MWBlocks.TARNISHED_TIN_CHAIN.get(), MWBlocks.WAXED_TARNISHED_TIN_CHAIN.get());
+            newMap.put(MWBlocks.CORRODED_TIN_CHAIN.get(), MWBlocks.WAXED_CORRODED_TIN_CHAIN.get());
+            newMap.put(MWBlocks.ERODED_TIN_CHAIN.get(), MWBlocks.WAXED_ERODED_TIN_CHAIN.get());
 
             // Tin Lanterns
             newMap.put(MWBlocks.TIN_LANTERN.get(), MWBlocks.WAXED_TIN_LANTERN.get());

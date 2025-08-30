@@ -1,0 +1,36 @@
+{
+  "render_type": "cutout",
+  "textures": {
+    "particle": "metal_works:block/corroded_tin_chain",
+    "chain": "metal_works:block/corroded_tin_chain"
+  },
+  "elements": [
+    {
+      "from": [5.5, 0, 8],
+      "to": [10.5, 16, 8],
+      "rotation": {"angle": 45, "axis": "y", "origin": [8, 0, 8]},
+      "faces": {
+        "north": {"uv": [0, 0, 5, 16], "texture": "#chain"},
+        "east": {"uv": [0, 0, 0, 16], "texture": "#chain"},
+        "south": {"uv": [0, 0, 5, 16], "texture": "#chain"},
+        "west": {"uv": [0, 0, 0, 16], "texture": "#chain"},
+        "up": {"uv": [0, 0, 0, 3], "rotation": 270, "texture": "#chain"},
+        "down": {"uv": [0, 0, 0, 3], "rotation": 90, "texture": "#chain"}
+      }
+    },
+    {
+      "from": [8, 0, 5.5],
+      "to": [8, 16, 10.5],
+      "rotation": {"angle": 45, "axis": "y", "origin": [8, 0, 8]},
+      "faces": {
+        "north": {"uv": [0, 0, 0, 16], "texture": "#chain"},
+        "east": {"uv": [5, 0, 10, 16], "texture": "#chain"},
+        "south": {"uv": [0, 0, 0, 16], "texture": "#chain"},
+        "west": {"uv": [5, 0, 10, 16], "texture": "#chain"},
+        "up": {"uv": [0, 0, 0, 3], "texture": "#chain"},
+        "down": {"uv": [0, 0, 0, 3], "texture": "#chain"}
+      }
+    }
+  ],
+  "display": {}
+}

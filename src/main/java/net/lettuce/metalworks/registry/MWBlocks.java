@@ -266,7 +266,7 @@ public class MWBlocks {
         // Tin Shingle Slabs
 
     public static final RegistryObject<Block> TIN_SHINGLE_SLAB = BLOCKS.register("tin_shingle_slab", () -> new WeatheringTinSlabBlock
-            (MWBlocks.CUT_TIN_SLAB, BlockBehaviour.Properties.copy(MWBlocks.CUT_TIN.get())));
+            (MWBlocks.TIN_SHINGLE_SLAB, BlockBehaviour.Properties.copy(MWBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> TARNISHED_TIN_SHINGLE_SLAB = BLOCKS.register("tarnished_tin_shingle_slab", () -> new WeatheringTinSlabBlock
             (MWBlocks.TARNISHED_TIN_SHINGLE_SLAB, BlockBehaviour.Properties.copy(MWBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> CORRODED_TIN_SHINGLE_SLAB = BLOCKS.register("corroded_tin_shingle_slab", () -> new WeatheringTinSlabBlock
@@ -295,12 +295,42 @@ public class MWBlocks {
 
         // Tin Bars
 
-    public static final RegistryObject<Block> TIN_BARS = BLOCKS.register("tin_bars", () -> new IronBarsBlock
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).noOcclusion()));
+    public static final RegistryObject<Block> TIN_BARS = BLOCKS.register("tin_bars", () ->
+            new WeatheringTinBarsBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BARS).noOcclusion().randomTicks()));
+    public static final RegistryObject<Block> TARNISHED_TIN_BARS = BLOCKS.register("tarnished_tin_bars", () -> new WeatheringTinBarsBlock
+            (BlockBehaviour.Properties.copy(MWBlocks.TIN_BARS.get()).noOcclusion().randomTicks()));
+    public static final RegistryObject<Block> CORRODED_TIN_BARS = BLOCKS.register("corroded_tin_bars", () -> new WeatheringTinBarsBlock
+            (BlockBehaviour.Properties.copy(MWBlocks.TIN_BARS.get()).noOcclusion().randomTicks()));
+    public static final RegistryObject<Block> ERODED_TIN_BARS = BLOCKS.register("eroded_tin_bars", () -> new IronBarsBlock
+            (BlockBehaviour.Properties.copy(MWBlocks.TIN_BARS.get()).noOcclusion()));
 
-        //Tin Chain
+    public static final RegistryObject<Block> WAXED_TIN_BARS = BLOCKS.register("waxed_tin_bars", () -> new IronBarsBlock
+            (BlockBehaviour.Properties.copy(MWBlocks.TIN_BARS.get()).noOcclusion()));
+    public static final RegistryObject<Block> WAXED_TARNISHED_TIN_BARS = BLOCKS.register("waxed_tarnished_tin_bars", () -> new IronBarsBlock
+            (BlockBehaviour.Properties.copy(MWBlocks.TIN_BARS.get()).noOcclusion()));
+    public static final RegistryObject<Block> WAXED_CORRODED_TIN_BARS = BLOCKS.register("waxed_corroded_tin_bars", () -> new IronBarsBlock
+            (BlockBehaviour.Properties.copy(MWBlocks.TIN_BARS.get()).noOcclusion()));
+    public static final RegistryObject<Block> WAXED_ERODED_TIN_BARS = BLOCKS.register("waxed_eroded_tin_bars", () ->
+           new IronBarsBlock(BlockBehaviour.Properties.copy(MWBlocks.TIN_BARS.get()).noOcclusion()));
 
-    public static final RegistryObject<Block> TIN_CHAIN = BLOCKS.register("tin_chain", () -> new ChainBlock
+        //Tin Chains
+
+    public static final RegistryObject<Block> TIN_CHAIN = BLOCKS.register("tin_chain", () -> new WeatheringTinChainBlock
+            (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion()));
+    public static final RegistryObject<Block> TARNISHED_TIN_CHAIN = BLOCKS.register("tarnished_tin_chain", () -> new WeatheringTinChainBlock
+            (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion()));
+    public static final RegistryObject<Block> CORRODED_TIN_CHAIN = BLOCKS.register("corroded_tin_chain", () -> new WeatheringTinChainBlock
+            (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion()));
+    public static final RegistryObject<Block> ERODED_TIN_CHAIN = BLOCKS.register("eroded_tin_chain", () -> new ChainBlock
+            (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion()));
+
+    public static final RegistryObject<Block> WAXED_TIN_CHAIN = BLOCKS.register("waxed_tin_chain", () -> new WeatheringTinChainBlock
+            (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion()));
+    public static final RegistryObject<Block> WAXED_TARNISHED_TIN_CHAIN = BLOCKS.register("waxed_tarnished_tin_chain", () -> new WeatheringTinChainBlock
+            (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion()));
+    public static final RegistryObject<Block> WAXED_CORRODED_TIN_CHAIN = BLOCKS.register("waxed_corroded_tin_chain", () -> new WeatheringTinChainBlock
+            (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion()));
+    public static final RegistryObject<Block> WAXED_ERODED_TIN_CHAIN = BLOCKS.register("waxed_eroded_tin_chain", () -> new ChainBlock
             (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion()));
 
         //Tin Lantern

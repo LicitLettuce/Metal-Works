@@ -1,0 +1,8 @@
+{
+  "render_type": "cutout",
+  "variants": {
+    "": {
+      "model": "metal_works:block/tarnished_tin_chain"
+    }
+  }
+}

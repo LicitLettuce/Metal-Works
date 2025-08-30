@@ -17,52 +17,29 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        //Basic Blocks
+            //Natural Tin Blocks
+        blockWithItem(MWBlocks.RAW_TIN_BLOCK);
+        blockWithItem(MWBlocks.TIN_ORE);
+        blockWithItem(MWBlocks.DEEPSLATE_TIN_ORE);
+
+            //Tin Blocks
         blockWithItem(MWBlocks.TIN_BLOCK);
         blockWithItem(MWBlocks.TARNISHED_TIN);
         blockWithItem(MWBlocks.CORRODED_TIN);
         blockWithItem(MWBlocks.ERODED_TIN);
 
-        simpleBlockWithItem(
-                MWBlocks.WAXED_TIN_BLOCK.get(),
-                models().cubeAll(
-                        "waxed_tin_block",
-                        blockTexture(MWBlocks.TIN_BLOCK.get())
-                )
-        );
+        simpleBlockWithItem(MWBlocks.WAXED_TIN_BLOCK.get(), models().cubeAll("waxed_tin_block", blockTexture(MWBlocks.TIN_BLOCK.get())));
+        simpleBlockWithItem(MWBlocks.WAXED_TARNISHED_TIN.get(), models().cubeAll("waxed_tarnished_tin", blockTexture(MWBlocks.TARNISHED_TIN.get())));
+        simpleBlockWithItem(MWBlocks.WAXED_CORRODED_TIN.get(), models().cubeAll("waxed_corroded_tin", blockTexture(MWBlocks.CORRODED_TIN.get())));
+        simpleBlockWithItem(MWBlocks.WAXED_ERODED_TIN.get(), models().cubeAll("waxed_eroded_tin", blockTexture(MWBlocks.ERODED_TIN.get())));
 
-        simpleBlockWithItem(
-                MWBlocks.WAXED_TARNISHED_TIN.get(),
-                models().cubeAll(
-                        "waxed_tarnished_tin",
-                        blockTexture(MWBlocks.TARNISHED_TIN.get())
-                )
-        );
-
-        simpleBlockWithItem(
-                MWBlocks.WAXED_CORRODED_TIN.get(),
-                models().cubeAll(
-                        "waxed_corroded_tin",
-                        blockTexture(MWBlocks.CORRODED_TIN.get())
-                )
-        );
-
-        simpleBlockWithItem(
-                MWBlocks.WAXED_ERODED_TIN.get(),
-                models().cubeAll(
-                        "waxed_eroded_tin",
-                        blockTexture(MWBlocks.ERODED_TIN.get())
-                )
-        );
-
-
+            //Chiseled Tin
         blockWithItem(MWBlocks.TIN_TILES);
         blockWithItem(MWBlocks.TIN_SHINGLES);
         blockWithItem(MWBlocks.CUT_TIN);
-        blockWithItem(MWBlocks.RAW_TIN_BLOCK);
+
         blockWithItem(MWBlocks.CHISELED_TIN);
-        blockWithItem(MWBlocks.TIN_ORE);
-        blockWithItem(MWBlocks.DEEPSLATE_TIN_ORE);
+
 
         blockWithItem(MWBlocks.BRONZE_BLOCK);
         blockWithItem(MWBlocks.BRONZE_TILES);
@@ -178,18 +155,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
         trapdoorBlockWithRenderType(((TrapDoorBlock) MWBlocks.BRONZE_TRAPDOOR.get()), modLoc("block/bronze_trapdoor"), true, "translucent");
 
         // Waxed Cut Tin Stairs
+
         stairsBlock(((StairBlock) MWBlocks.WAXED_CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.CUT_TIN.get()));
         stairsBlock(((StairBlock) MWBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.TARNISHED_CUT_TIN.get()));
         stairsBlock(((StairBlock) MWBlocks.WAXED_CORRODED_CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.CORRODED_CUT_TIN.get()));
         stairsBlock(((StairBlock) MWBlocks.WAXED_ERODED_CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.ERODED_CUT_TIN.get()));
 
 // Waxed Tin Tile Stairs
+
+        stairsBlock(((StairBlock) MWBlocks.TARNISHED_TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.TARNISHED_TIN_TILES.get()));
+        stairsBlock(((StairBlock) MWBlocks.CORRODED_TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.CORRODED_TIN_TILES.get()));
+        stairsBlock(((StairBlock) MWBlocks.ERODED_TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.ERODED_TIN_TILES.get()));
         stairsBlock(((StairBlock) MWBlocks.WAXED_TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.TIN_TILES.get()));
         stairsBlock(((StairBlock) MWBlocks.WAXED_TARNISHED_TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.TARNISHED_TIN_TILES.get()));
         stairsBlock(((StairBlock) MWBlocks.WAXED_CORRODED_TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.CORRODED_TIN_TILES.get()));
         stairsBlock(((StairBlock) MWBlocks.WAXED_ERODED_TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.ERODED_TIN_TILES.get()));
 
 // Waxed Tin Shingle Stairs
+        stairsBlock(((StairBlock) MWBlocks.TARNISHED_TIN_SHINGLE_STAIRS.get()), blockTexture(MWBlocks.TARNISHED_TIN_SHINGLES.get()));
+        stairsBlock(((StairBlock) MWBlocks.CORRODED_TIN_SHINGLE_STAIRS.get()), blockTexture(MWBlocks.CORRODED_TIN_SHINGLES.get()));
+        stairsBlock(((StairBlock) MWBlocks.ERODED_TIN_SHINGLE_STAIRS.get()), blockTexture(MWBlocks.ERODED_TIN_SHINGLES.get()));
+
         stairsBlock(((StairBlock) MWBlocks.WAXED_TIN_SHINGLE_STAIRS.get()), blockTexture(MWBlocks.TIN_SHINGLES.get()));
         stairsBlock(((StairBlock) MWBlocks.WAXED_TARNISHED_TIN_SHINGLE_STAIRS.get()), blockTexture(MWBlocks.TARNISHED_TIN_SHINGLES.get()));
         stairsBlock(((StairBlock) MWBlocks.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get()), blockTexture(MWBlocks.CORRODED_TIN_SHINGLES.get()));
@@ -202,12 +188,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(((SlabBlock) MWBlocks.WAXED_ERODED_CUT_TIN_SLAB.get()), blockTexture(MWBlocks.ERODED_CUT_TIN.get()), blockTexture(MWBlocks.ERODED_CUT_TIN.get()));
 
 // Waxed Tin Tile Slabs
+        slabBlock(((SlabBlock) MWBlocks.TARNISHED_TIN_TILE_SLAB.get()), blockTexture(MWBlocks.TARNISHED_TIN_TILES.get()), blockTexture(MWBlocks.TARNISHED_TIN_TILES.get()));
+        slabBlock(((SlabBlock) MWBlocks.CORRODED_TIN_TILE_SLAB.get()), blockTexture(MWBlocks.CORRODED_TIN_TILES.get()), blockTexture(MWBlocks.CORRODED_TIN_TILES.get()));
+        slabBlock(((SlabBlock) MWBlocks.ERODED_TIN_TILE_SLAB.get()), blockTexture(MWBlocks.ERODED_TIN_TILES.get()), blockTexture(MWBlocks.ERODED_TIN_TILES.get()));
+
         slabBlock(((SlabBlock) MWBlocks.WAXED_TIN_TILE_SLAB.get()), blockTexture(MWBlocks.TIN_TILES.get()), blockTexture(MWBlocks.TIN_TILES.get()));
         slabBlock(((SlabBlock) MWBlocks.WAXED_TARNISHED_TIN_TILE_SLAB.get()), blockTexture(MWBlocks.TARNISHED_TIN_TILES.get()), blockTexture(MWBlocks.TARNISHED_TIN_TILES.get()));
         slabBlock(((SlabBlock) MWBlocks.WAXED_CORRODED_TIN_TILE_SLAB.get()), blockTexture(MWBlocks.CORRODED_TIN_TILES.get()), blockTexture(MWBlocks.CORRODED_TIN_TILES.get()));
         slabBlock(((SlabBlock) MWBlocks.WAXED_ERODED_TIN_TILE_SLAB.get()), blockTexture(MWBlocks.ERODED_TIN_TILES.get()), blockTexture(MWBlocks.ERODED_TIN_TILES.get()));
 
 // Waxed Tin Shingle Slabs
+        slabBlock(((SlabBlock) MWBlocks.TARNISHED_TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.TARNISHED_TIN_SHINGLES.get()), blockTexture(MWBlocks.TARNISHED_TIN_SHINGLES.get()));
+        slabBlock(((SlabBlock) MWBlocks.CORRODED_TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.CORRODED_TIN_SHINGLES.get()), blockTexture(MWBlocks.CORRODED_TIN_SHINGLES.get()));
+        slabBlock(((SlabBlock) MWBlocks.ERODED_TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.ERODED_TIN_SHINGLES.get()), blockTexture(MWBlocks.ERODED_TIN_SHINGLES.get()));
+
         slabBlock(((SlabBlock) MWBlocks.WAXED_TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.TIN_SHINGLES.get()), blockTexture(MWBlocks.TIN_SHINGLES.get()));
         slabBlock(((SlabBlock) MWBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.TARNISHED_TIN_SHINGLES.get()), blockTexture(MWBlocks.TARNISHED_TIN_SHINGLES.get()));
         slabBlock(((SlabBlock) MWBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.CORRODED_TIN_SHINGLES.get()), blockTexture(MWBlocks.CORRODED_TIN_SHINGLES.get()));

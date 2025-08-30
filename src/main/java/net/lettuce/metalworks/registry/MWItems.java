@@ -303,11 +303,41 @@ public class MWItems {
 
     public static final RegistryObject<BlockItem> TIN_BARS = ITEMS.register("tin_bars", () -> new BlockItem
             (MWBlocks.TIN_BARS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> TARNISHED_TIN_BARS = ITEMS.register("tarnished_tin_bars", () -> new BlockItem
+            (MWBlocks.TARNISHED_TIN_BARS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CORRODED_TIN_BARS = ITEMS.register("corroded_tin_bars", () -> new BlockItem
+            (MWBlocks.CORRODED_TIN_BARS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> ERODED_TIN_BARS = ITEMS.register("eroded_tin_bars", () -> new BlockItem
+            (MWBlocks.ERODED_TIN_BARS.get(), new Item.Properties()));
+
+    public static final RegistryObject<BlockItem> WAXED_TIN_BARS = ITEMS.register("waxed_tin_bars", () -> new BlockItem
+            (MWBlocks.WAXED_TIN_BARS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_BARS = ITEMS.register("waxed_tarnished_tin_bars", () -> new BlockItem
+            (MWBlocks.WAXED_TARNISHED_TIN_BARS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_BARS = ITEMS.register("waxed_corroded_tin_bars", () -> new BlockItem
+            (MWBlocks.WAXED_CORRODED_TIN_BARS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_BARS = ITEMS.register("waxed_eroded_tin_bars", () -> new BlockItem
+            (MWBlocks.WAXED_ERODED_TIN_BARS.get(), new Item.Properties()));
 
         // Tin Chain Items
 
     public static final RegistryObject<BlockItem> TIN_CHAIN = ITEMS.register("tin_chain", () -> new BlockItem
             (MWBlocks.TIN_CHAIN.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> TARNISHED_TIN_CHAIN = ITEMS.register("tarnished_tin_chain", () -> new BlockItem
+            (MWBlocks.TARNISHED_TIN_CHAIN.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CORRODED_TIN_CHAIN = ITEMS.register("corroded_tin_chain", () -> new BlockItem
+            (MWBlocks.CORRODED_TIN_CHAIN.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> ERODED_TIN_CHAIN = ITEMS.register("eroded_tin_chain", () -> new BlockItem
+            (MWBlocks.ERODED_TIN_CHAIN.get(), new Item.Properties()));
+
+    public static final RegistryObject<BlockItem> WAXED_TIN_CHAIN = ITEMS.register("waxed_tin_chain", () -> new BlockItem
+            (MWBlocks.WAXED_TIN_CHAIN.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_CHAIN = ITEMS.register("waxed_tarnished_tin_chain", () -> new BlockItem
+            (MWBlocks.WAXED_TARNISHED_TIN_CHAIN.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_CHAIN = ITEMS.register("waxed_corroded_in_chain", () -> new BlockItem
+            (MWBlocks.WAXED_CORRODED_TIN_CHAIN.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_CHAIN = ITEMS.register("waxed_eroded_tin_chain", () -> new BlockItem
+            (MWBlocks.WAXED_ERODED_TIN_CHAIN.get(), new Item.Properties()));
 
         // Tin Lantern Items
 
