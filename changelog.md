@@ -1,4 +1,29 @@
-# Changelog
+# Metal Works Changelog
+
+## 1.2.0
+
+### Additions
+#### Tin Additions
+ - Tin Blocks Now Weather Like Copper Blocks
+   - Tin weathers in 3 stages: tarnished, corroded, and eroded 
+   - As tin weathers it slowly turns more purple
+   - Tin weathers 1.5x the speed of copper, being slightly slower
+   - Tin blocks and be waxed and un-waxed with honeycombs and axes respectively
+   - Un-waxed weathered tin blocks can be scraped to go to the previous stage of weathering
+- Tin Tiles
+- Tin Tile Stairs
+- Tin Tile Slabs
+#### Bronze Additions
+- Bronze Doors
+- Bronze Trapdoors
+
+### Removed
+- Cut Tin Wall
+- Cut Tin Pressure Plate
+- Cut Tin Button
+
+      NOTE: I did not feel these fit the mod going foward as they felt liked adding
+        blocks for the sake of adding blocks... They did not make sense to keep in my opinion -Lettuce
 
 ## 1.1.3
 
@@ -17,18 +42,18 @@
 
 ## 1.1.2
 
-    Skipped for some reason :(
+    NOTE: Skipped for some reason, I Think we forgot :( -Lettuce
 
 ## 1.1.1
 
 ### Translations
-Added following translations:
+- Added following translations:
 
-    English - (UK, Australia, Canada, and New Zealand)
-    Spanish (Spain, Mexico, Uruguay, Venezuela, Argentina, Chile. and Ecuador)
-    French (France, Canada)
-    German (Germany)
-    Russian (Russia)
+  - English (UK, Australia, Canada, and New Zealand)
+  - Spanish (Spain, Mexico, Uruguay, Venezuela, Argentina, Chile. and Ecuador)
+  - French (France, Canada)
+  - German (Germany)
+  - Russian (Russia)
 
 ### Fixes
 - Fixed game breaking tag bugs (tags were named incorrectly)

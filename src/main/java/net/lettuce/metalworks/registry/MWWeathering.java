@@ -135,6 +135,18 @@ public class MWWeathering {
             newMap.put(MWBlocks.CORRODED_CHISELED_TIN.get(), MWBlocks.WAXED_CORRODED_CHISELED_TIN.get());
             newMap.put(MWBlocks.ERODED_CHISELED_TIN.get(), MWBlocks.WAXED_ERODED_CHISELED_TIN.get());
 
+            // Tin Grates
+            newMap.put(MWBlocks.TIN_GRATE.get(), MWBlocks.WAXED_TIN_GRATE.get());
+            newMap.put(MWBlocks.TARNISHED_TIN_GRATE.get(), MWBlocks.WAXED_TARNISHED_TIN_GRATE.get());
+            newMap.put(MWBlocks.CORRODED_TIN_GRATE.get(), MWBlocks.WAXED_CORRODED_TIN_GRATE.get());
+            newMap.put(MWBlocks.ERODED_TIN_GRATE.get(), MWBlocks.WAXED_ERODED_TIN_GRATE.get());
+
+            // Tin Grates Drains
+            newMap.put(MWBlocks.TIN_GRATE_DRAIN.get(), MWBlocks.WAXED_TIN_GRATE_DRAIN.get());
+            newMap.put(MWBlocks.TARNISHED_TIN_GRATE_DRAIN.get(), MWBlocks.WAXED_TARNISHED_TIN_GRATE_DRAIN.get());
+            newMap.put(MWBlocks.CORRODED_TIN_GRATE_DRAIN.get(), MWBlocks.WAXED_CORRODED_TIN_GRATE_DRAIN.get());
+            newMap.put(MWBlocks.ERODED_TIN_GRATE_DRAIN.get(), MWBlocks.WAXED_ERODED_TIN_GRATE_DRAIN.get());
+
             // Cut Tin
             newMap.put(MWBlocks.CUT_TIN.get(), MWBlocks.WAXED_CUT_TIN.get());
             newMap.put(MWBlocks.TARNISHED_CUT_TIN.get(), MWBlocks.WAXED_TARNISHED_CUT_TIN.get());
