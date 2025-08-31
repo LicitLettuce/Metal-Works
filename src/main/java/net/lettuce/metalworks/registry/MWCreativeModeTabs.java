@@ -223,9 +223,9 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.BRONZE_TRAPDOOR.get());
                         pOutput.accept(MWItems.BRONZE_BARS.get());
 
-
-
                         pOutput.accept(MWItems.ROSE_GOLD_BLOCK.get());
+                        pOutput.accept(MWItems.MEDIUM_WEIGHTED_PRESSURE_PLATE.get());
+
                         pOutput.accept(MWItems.ROSE_LANTERN.get());
 
 
@@ -270,6 +270,7 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.TIN_CHESTPLATE.get());
                         pOutput.accept(MWItems.TIN_LEGGINGS.get());
                         pOutput.accept(MWItems.TIN_BOOTS.get());
+                        pOutput.accept(MWItems.TIN_HORSE_ARMOR.get());
 
                         pOutput.accept(MWItems.BRONZE_HELMET.get());
                         pOutput.accept(MWItems.BRONZE_CHESTPLATE.get());

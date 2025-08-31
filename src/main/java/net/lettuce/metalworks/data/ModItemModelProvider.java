@@ -28,6 +28,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(MWItems.TIN_CHESTPLATE);
         simpleItem(MWItems.TIN_LEGGINGS);
         simpleItem(MWItems.TIN_BOOTS);
+        simpleItem(MWItems.TIN_HORSE_ARMOR);
         handheldItem(MWItems.TIN_SWORD);
         handheldItem(MWItems.TIN_PICKAXE);
         handheldItem(MWItems.TIN_AXE);

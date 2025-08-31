@@ -7,6 +7,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import static net.lettuce.metalworks.registry.MWBlocks.TOGGLE_PRESSURE_PLATE;
+
 public class MWItems {
 
     public static final DeferredRegister<Item> ITEMS =
@@ -412,6 +414,9 @@ public class MWItems {
     public static final RegistryObject<Item> TIN_BOOTS = ITEMS.register("tin_boots", () -> new ArmorItem
             (MWArmorMaterials.TIN, ArmorItem.Type.BOOTS, new Item.Properties()));
 
+    public static final RegistryObject<Item> TIN_HORSE_ARMOR = ITEMS.register("tin_horse_armor", () -> new HorseArmorItem
+            ( 4, "tin", new Item.Properties().stacksTo(1)));
+
         // Bronze Block Item
 
     public static final RegistryObject<BlockItem> BRONZE_BLOCK = ITEMS.register("bronze_block", () -> new BlockItem
@@ -460,6 +465,11 @@ public class MWItems {
     public static final RegistryObject<BlockItem> BRONZE_TRAPDOOR = ITEMS.register("bronze_trapdoor", () -> new BlockItem
             (MWBlocks.BRONZE_TRAPDOOR.get(), new Item.Properties()));
 
+        //Toggle Pressure Plate
+
+    public static final RegistryObject<Item> TOGGLE_PRESSURE_PLATE = ITEMS.register("toggle_pressure_plate", () -> new BlockItem
+            (MWBlocks.TOGGLE_PRESSURE_PLATE.get(), new Item.Properties()));
+
         // Bronze Ingredients
 
     public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot", () -> new Item
@@ -504,6 +514,11 @@ public class MWItems {
 
     public static final RegistryObject<BlockItem> ROSE_LANTERN = ITEMS.register("rose_lantern", () -> new BlockItem
             (MWBlocks.ROSE_LANTERN.get(), new Item.Properties()));
+
+        // Medium Weighted Pressure Plate Item
+
+    public static final RegistryObject<BlockItem> MEDIUM_WEIGHTED_PRESSURE_PLATE = ITEMS.register("medium_weighted_pressure_plate", () -> new BlockItem
+            (MWBlocks.MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), new Item.Properties()));
 
         // Rose Gold Ingredients
 

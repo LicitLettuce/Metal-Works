@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-27T01:59:50.1259709	Item Models: metal_works
+// 1.20.1	2025-08-30T15:57:21.7346933	Item Models: metal_works
 3a80a545789b30f683dff01f83bc2d7fece1a491 assets/metal_works/models/item/bronze_axe.json
 f208e9dd0dc55049e77383969fd637ed7a4325d8 assets/metal_works/models/item/bronze_boots.json
 a4d28b0c97dc737aa5ec26a4ff36bea725e479b7 assets/metal_works/models/item/bronze_chestplate.json
@@ -68,6 +68,7 @@ d151087da59f6194236a95ad597e2be4782377dd assets/metal_works/models/item/tin_ches
 b201625efdf5763672b7b6d6668406675d7c1144 assets/metal_works/models/item/tin_door.json
 2f8aa6ad1752470ac42b0cd737eda39c583c4b3c assets/metal_works/models/item/tin_helmet.json
 3005e352322d8aa38bd2f1550cb1244ce438184a assets/metal_works/models/item/tin_hoe.json
+5e9158eebb83939da5af0a4e1709d16533d40e22 assets/metal_works/models/item/tin_horse_armor.json
 bbd0ca04db6e99a7781d9adcb306853422f832c8 assets/metal_works/models/item/tin_ingot.json
 3fb3f31c9be56a17b165eaca3926c525eece63e4 assets/metal_works/models/item/tin_lantern.json
 2d309d5543fbf88c73087dc7ad99183049c0ef77 assets/metal_works/models/item/tin_leggings.json

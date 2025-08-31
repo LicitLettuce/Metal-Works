@@ -254,6 +254,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(MWBlocks.ROSE_LANTERN.get());
 
+        this.dropSelf(MWBlocks.MEDIUM_WEIGHTED_PRESSURE_PLATE.get());
+
 
     }
 

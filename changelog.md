@@ -1,6 +1,6 @@
 # Metal Works Changelog
 
-## 1.2.0
+## 1.2.0 "The Big Update"
 
 ### Additions
 #### Tin Additions
@@ -13,6 +13,9 @@
 - Tin Tiles
 - Tin Tile Stairs
 - Tin Tile Slabs
+- Tin Horse Armor
+  - Tin Horse Armor has 4 protection points (1 less than iron) 
+
 #### Bronze Additions
 - Bronze Doors
 - Bronze Trapdoors
@@ -38,11 +41,9 @@
 - Updated Tin Shingle Textures
 - Renamed Rose Lamp to Rose Lantern
 
-
-
 ## 1.1.2
 
-    NOTE: Skipped for some reason, I Think we forgot :( -Lettuce
+    NOTE: Skipped for some reason, I think we forgot :( -Lettuce
 
 ## 1.1.1
 
@@ -86,7 +87,7 @@
 - Fixed Armor Durability for all Armors
 - Fixed Creative Tab Bugs
 
-## 1.0.0 INITIAL RELEASE
+## 1.0.0 Initial Release
 Metal Works is a vanilla-styled mod that adds three unique metals, each with their own distinct functions. Each metal serves a unique purpose and is designed to complement different playstyles — no metal is strictly superior to another. Depending on how you play, your hotbar might feature tools made from a mix of materials.
 
 ### Additions

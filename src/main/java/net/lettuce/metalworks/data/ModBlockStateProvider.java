@@ -118,6 +118,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 models().cubeAll("waxed_eroded_chiseled_tin", blockTexture(MWBlocks.ERODED_CHISELED_TIN.get()))
         );
 
+
         //Stair Blocks
         stairsBlock(((StairBlock) MWBlocks.CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.CUT_TIN.get()));
         stairsBlock(((StairBlock) MWBlocks.TARNISHED_CUT_TIN_STAIRS.get()), blockTexture(MWBlocks.TARNISHED_CUT_TIN.get()));
@@ -213,9 +214,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     //Manual JSON Files
 
-    //TIN BARS, LANTERNS, GRATE, GRATE DRAIN, CHAIN
+    //TIN BARS, LANTERNS, GRATE, GRATE DRAINS, CHAINS
     //BRONZE BARS, GRATE, GRATE DRAIN
     //ROSE GOLD LANTERN
+    //Medium Weighted Pressure Plate
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
