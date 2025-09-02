@@ -7,8 +7,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static net.lettuce.metalworks.registry.MWBlocks.TOGGLE_PRESSURE_PLATE;
-
 public class MWItems {
 
     public static final DeferredRegister<Item> ITEMS =
@@ -464,11 +462,6 @@ public class MWItems {
 
     public static final RegistryObject<BlockItem> BRONZE_TRAPDOOR = ITEMS.register("bronze_trapdoor", () -> new BlockItem
             (MWBlocks.BRONZE_TRAPDOOR.get(), new Item.Properties()));
-
-        //Toggle Pressure Plate
-
-    public static final RegistryObject<Item> TOGGLE_PRESSURE_PLATE = ITEMS.register("toggle_pressure_plate", () -> new BlockItem
-            (MWBlocks.TOGGLE_PRESSURE_PLATE.get(), new Item.Properties()));
 
         // Bronze Ingredients
 

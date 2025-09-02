@@ -1,8 +1,16 @@
 {
-  "render_type": "cutout",
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "metal_works:block/corroded_tin_chain",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "metal_works:block/corroded_tin_chain"
+    },
+    "axis=z": {
+      "model": "metal_works:block/corroded_tin_chain",
+      "x": 90
     }
   }
 }

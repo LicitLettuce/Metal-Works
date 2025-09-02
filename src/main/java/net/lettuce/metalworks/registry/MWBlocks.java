@@ -412,8 +412,8 @@ public class MWBlocks {
     public static final RegistryObject<Block> BRONZE_TRAPDOOR = BLOCKS.register("bronze_trapdoor", () -> new TrapDoorBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
 
-    public static final RegistryObject<Block> TOGGLE_PRESSURE_PLATE = BLOCKS.register("toggle_pressure_plate",
-            () -> new TogglePressurePlateBlock(BlockBehaviour.Properties.copy(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE)));
+    //public static final RegistryObject<Block> TOGGLE_PRESSURE_PLATE = BLOCKS.register("toggle_pressure_plate",
+            //() -> new TogglePressurePlateBlock(BlockBehaviour.Properties.copy(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE)));
 
         //Rose Gold Blocks
 
