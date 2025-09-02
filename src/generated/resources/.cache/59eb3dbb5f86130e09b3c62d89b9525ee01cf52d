@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-01T21:20:38.8381076	Loot Tables
+// 1.20.1	2025-09-01T22:12:06.5243243	Loot Tables
 bed80fee4830c7a39213eb2e2513e97d7f2862b5 data/metal_works/loot_tables/blocks/bronze_bars.json
 e6ffce43a097e0773c2891bd48e6d7592da0ec73 data/metal_works/loot_tables/blocks/bronze_block.json
 94a62d1a35628e47b5190e076246b0735e464d45 data/metal_works/loot_tables/blocks/bronze_door.json
@@ -149,9 +149,9 @@ ed30bad5b0e285f60f902e4a2835bc0d11778736 data/metal_works/loot_tables/blocks/wax
 982a719ce6ec733c58b65e9c9a95c753f596533a data/metal_works/loot_tables/blocks/waxed_tin_grate_drain.json
 c1ac228b6e7663e74604a325bce678a7e2078fe3 data/metal_works/loot_tables/blocks/waxed_tin_lantern.json
 1a46ac7588ad41ed667681cff6a2494dc3231539 data/metal_works/loot_tables/blocks/waxed_tin_shingles.json
-19759ddd1097b00b5d13579f7f4cbb47b00c06ff data/metal_works/loot_tables/blocks/waxed_tin_shingle_slab.json
+3995e1d48944f3bd09b8209a3fcd7c32574a1b62 data/metal_works/loot_tables/blocks/waxed_tin_shingle_slab.json
 409e5b05fba93eb3b373d6a75ed693d2629d66ca data/metal_works/loot_tables/blocks/waxed_tin_shingle_stairs.json
 9db8b3dbdd3afd80ad05903f13266b8f30057058 data/metal_works/loot_tables/blocks/waxed_tin_soul_lantern.json
 3ff36965401ecfbecc08d7d57a55bebe3d43f15a data/metal_works/loot_tables/blocks/waxed_tin_tiles.json
-659e487cf513dcc7760e6b4db5499a5d180d23bb data/metal_works/loot_tables/blocks/waxed_tin_tile_slab.json
+64d9243cba03093cf4f27a1075f26c76fb865bf9 data/metal_works/loot_tables/blocks/waxed_tin_tile_slab.json
 96d325979797ced087a4e1c016f8d5a15ea56a63 data/metal_works/loot_tables/blocks/waxed_tin_tile_stairs.json
