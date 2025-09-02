@@ -1,7 +1,7 @@
-// 1.20.1	2025-08-31T01:40:54.5914693	Loot Tables
+// 1.20.1	2025-09-01T21:20:38.8381076	Loot Tables
 bed80fee4830c7a39213eb2e2513e97d7f2862b5 data/metal_works/loot_tables/blocks/bronze_bars.json
 e6ffce43a097e0773c2891bd48e6d7592da0ec73 data/metal_works/loot_tables/blocks/bronze_block.json
-407591df2d68bd3730a2f538eda59c13cbe8a2b7 data/metal_works/loot_tables/blocks/bronze_door.json
+94a62d1a35628e47b5190e076246b0735e464d45 data/metal_works/loot_tables/blocks/bronze_door.json
 153659f21e1e14e2fdab96cab4e727bb01f87191 data/metal_works/loot_tables/blocks/bronze_grate.json
 4276698acad6b4b21ca34ff16dbe84ab8bb5d072 data/metal_works/loot_tables/blocks/bronze_grate_drain.json
 40305f9f9fc1845d5834710727a9e0309a1fd6f2 data/metal_works/loot_tables/blocks/bronze_shingles.json
@@ -74,7 +74,7 @@ f6b26b5d87682f9f6847a669b0ee6bc5c44849c9 data/metal_works/loot_tables/blocks/tar
 443f2e4478a6ab98067d04f11046a952e4040218 data/metal_works/loot_tables/blocks/tin_bars.json
 9c048b4af16f7c4c70f6d6f82c3ed1b491482d3c data/metal_works/loot_tables/blocks/tin_block.json
 0cbc1997139f196bfd4889130f72fe474d5fb292 data/metal_works/loot_tables/blocks/tin_chain.json
-9a3dedf656ef16fb6fdcad93b5d036513fc0cd24 data/metal_works/loot_tables/blocks/tin_door.json
+b5c70efb049b1ec4d3cc9fecb33ca99f39dd165e data/metal_works/loot_tables/blocks/tin_door.json
 b46800a4fca13a1c9015aeac993280af56ff22ac data/metal_works/loot_tables/blocks/tin_grate.json
 21950c1a90d42597fdd7f50f7d3884f7244750c2 data/metal_works/loot_tables/blocks/tin_grate_drain.json
 82ca807bafd7da01934325dcbd9a64b1f7f0c8b3 data/metal_works/loot_tables/blocks/tin_lantern.json

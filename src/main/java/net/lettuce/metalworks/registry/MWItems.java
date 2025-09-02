@@ -218,7 +218,7 @@ public class MWItems {
 
 
     public static final RegistryObject<BlockItem> WAXED_TIN_TILE_SLAB = ITEMS.register("waxed_tin_tile_slab", () -> new BlockItem
-            (MWBlocks.WAXED_TARNISHED_TIN_TILE_SLAB.get(), new Item.Properties()));
+            (MWBlocks.WAXED_TIN_TILE_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_TILE_SLAB = ITEMS.register("waxed_tarnished_tin_tile_slab", () -> new BlockItem
             (MWBlocks.WAXED_TARNISHED_TIN_TILE_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_TILE_SLAB = ITEMS.register("waxed_corroded_tin_tile_slab", () -> new BlockItem
@@ -280,7 +280,7 @@ public class MWItems {
             (MWBlocks.ERODED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_SHINGLE_SLAB = ITEMS.register("waxed_tin_shingle_slab", () -> new BlockItem
-            (MWBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
+            (MWBlocks.WAXED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_SHINGLE_SLAB = ITEMS.register("waxed_tarnished_tin_shingle_slab", () -> new BlockItem
             (MWBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_SHINGLE_SLAB = ITEMS.register("waxed_corroded_tin_shingle_slab", () -> new BlockItem

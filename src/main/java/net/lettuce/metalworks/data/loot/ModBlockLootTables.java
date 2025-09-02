@@ -184,7 +184,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.TIN_GRATE_DRAIN.get());
         this.dropSelf(MWBlocks.TIN_BARS.get());
 
-        this.dropSelf(MWBlocks.TIN_DOOR.get());
+        this.add(MWBlocks.TIN_DOOR.get(),
+                block -> createDoorTable(MWBlocks.TIN_DOOR.get()));
 
         this.dropSelf(MWBlocks.TIN_TRAPDOOR.get());
 
@@ -228,7 +229,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.BRONZE_SHINGLE_STAIRS.get());
         this.dropSelf(MWBlocks.BRONZE_SHINGLE_SLAB.get());
 
-        this.dropSelf(MWBlocks.BRONZE_DOOR.get());
+        this.add(MWBlocks.BRONZE_DOOR.get(),
+                block -> createDoorTable(MWBlocks.BRONZE_DOOR.get()));
 
         this.dropSelf(MWBlocks.BRONZE_TRAPDOOR.get());
 
