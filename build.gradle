@@ -29,6 +29,8 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property "mixin.env.remapRefMap", "true"
+            property "mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
                 "${mod_id}" {
@@ -71,6 +73,11 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    repositories {
+        maven {
+            url = "https://maven.teamabnormals.com"
+        }
+    }
     maven {
         name = "Progwml6's maven"
         url = "https://dvs1.progwml6.com/files/maven/"
@@ -89,6 +96,7 @@ repositories {
 // Dependencies
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    implementation fg.deobf("com.teamabnormals:blueprint:${blueprint_version}")
 
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))

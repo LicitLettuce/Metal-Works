@@ -1,0 +1,9 @@
+{
+  "asset_name": "bronze",
+  "description": {
+    "color": "#e0b07b",
+    "translate": "Bronze Material"
+  },
+  "ingredient": "metal_works:bronze_ingot",
+  "item_model_index": -1.0
+}
