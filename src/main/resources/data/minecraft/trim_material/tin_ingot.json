@@ -1,9 +1,0 @@
-{
-  "asset_name": "tin",
-  "description": {
-    "color": "#96a096",
-    "translate": "Tin Material"
-  },
-  "ingredient": "metal_works:tin_ingot",
-  "item_model_index": -1.0
-}

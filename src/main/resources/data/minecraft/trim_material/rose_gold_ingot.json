@@ -1,9 +1,0 @@
-{
-  "asset_name": "rose_gold",
-  "description": {
-    "color": "#f27378",
-    "translate": "Rose Gold Material"
-  },
-  "ingredient": "metal_works:rose_gold_ingot",
-  "item_model_index": -1.0
-}
