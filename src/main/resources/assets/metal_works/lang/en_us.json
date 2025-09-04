@@ -3,10 +3,18 @@
 
   "creativetab.metal_works_tab": "Metal Works",
 
+  "block.metal_works.casserite": "Casserite",
+  "block.metal_works.casserite_stairs": "Casserite Stairs",
+  "block.metal_works.casserite_slab": "Casserite Slab",
+  "block.metal_works.casserite_wall": "Casserite Wall",
+  "block.metal_works.polished_casserite": "Polished Casserite",
+  "block.metal_works.polished_casserite_stairs": "Polished Casserite Stairs",
+  "block.metal_works.polished_casserite_slab": "Polished Casserite Slab",
+
   "block.metal_works.raw_tin_block": "Block of Raw Tin",
   "block.metal_works.tin_ore": "Tin Ore",
   "block.metal_works.deepslate_tin_ore": "Deepslate Tin Ore",
-
+  "block.metal_works.casserite_tin_ore": "Casserite Tin Ore",
   "block.metal_works.tin_block": "Block of Tin",
   "block.metal_works.tarnished_tin": "Tarnished Tin",
   "block.metal_works.corroded_tin": "Corroded Tin",
@@ -15,7 +23,6 @@
   "block.metal_works.waxed_tarnished_tin": "Waxed Tarnished Tin",
   "block.metal_works.waxed_corroded_tin": "Waxed Corroded Tin",
   "block.metal_works.waxed_eroded_tin": "Waxed Eroded Tin",
-
   "block.metal_works.chiseled_tin": "Chiseled Tin",
   "block.metal_works.tarnished_chiseled_tin": "Tarnished Chiseled Tin",
   "block.metal_works.corroded_chiseled_tin": "Corroded Chiseled Tin",
@@ -24,7 +31,6 @@
   "block.metal_works.waxed_tarnished_chiseled_tin": "Waxed Tarnished Chiseled Tin",
   "block.metal_works.waxed_corroded_chiseled_tin": "Waxed Corroded Chiseled Tin",
   "block.metal_works.waxed_eroded_chiseled_tin": "Waxed Eroded Chiseled Tin",
-
   "block.metal_works.tin_grate": "Tin Grate",
   "block.metal_works.tarnished_tin_grate": "Tarnished Tin Grate",
   "block.metal_works.corroded_tin_grate": "Corroded Tin Grate",
@@ -33,7 +39,6 @@
   "block.metal_works.waxed_tarnished_tin_grate": "Waxed Tarnished Tin Grate",
   "block.metal_works.waxed_corroded_tin_grate": "Waxed Corroded Tin Grate",
   "block.metal_works.waxed_eroded_tin_grate": "Waxed Eroded Tin Grate",
-
   "block.metal_works.tin_grate_drain": "Tin Grate Drain",
   "block.metal_works.tarnished_tin_grate_drain": "Tarnished Tin Grate Drain",
   "block.metal_works.corroded_tin_grate_drain": "Corroded Tin Grate Drain",
@@ -42,7 +47,6 @@
   "block.metal_works.waxed_tarnished_tin_grate_drain": "Waxed Tarnished Tin Grate Drain",
   "block.metal_works.waxed_corroded_tin_grate_drain": "Waxed Corroded Tin Grate Drain",
   "block.metal_works.waxed_eroded_tin_grate_drain": "Waxed Eroded Tin Grate Drain",
-
   "block.metal_works.cut_tin": "Cut Tin",
   "block.metal_works.tarnished_cut_tin": "Tarnished Cut Tin",
   "block.metal_works.corroded_cut_tin": "Corroded Cut Tin",
@@ -51,7 +55,6 @@
   "block.metal_works.waxed_tarnished_cut_tin": "Waxed Tarnished Cut Tin",
   "block.metal_works.waxed_corroded_cut_tin": "Waxed Corroded Cut Tin",
   "block.metal_works.waxed_eroded_cut_tin": "Waxed Eroded Cut Tin",
-
   "block.metal_works.cut_tin_stairs": "Cut Tin Stairs",
   "block.metal_works.tarnished_cut_tin_stairs": "Tarnished Cut Tin Stairs",
   "block.metal_works.corroded_cut_tin_stairs": "Corroded Cut Tin Stairs",
@@ -60,7 +63,6 @@
   "block.metal_works.waxed_tarnished_cut_tin_stairs": "Waxed Tarnished Cut Tin Stairs",
   "block.metal_works.waxed_corroded_cut_tin_stairs": "Waxed Corroded Cut Tin Stairs",
   "block.metal_works.waxed_eroded_cut_tin_stairs": "Waxed Eroded Cut Tin Stairs",
-
   "block.metal_works.cut_tin_slab": "Cut Tin Slab",
   "block.metal_works.tarnished_cut_tin_slab": "Tarnished Cut Tin Slab",
   "block.metal_works.corroded_cut_tin_slab": "Corroded Cut Tin Slab",
@@ -69,7 +71,6 @@
   "block.metal_works.waxed_tarnished_cut_tin_slab": "Waxed Tarnished Cut Tin Slab",
   "block.metal_works.waxed_corroded_cut_tin_slab": "Waxed Corroded Cut Tin Slab",
   "block.metal_works.waxed_eroded_cut_tin_slab": "Waxed Eroded Cut Tin Slab",
-
   "block.metal_works.tin_tiles": "Tin Tiles",
   "block.metal_works.tarnished_tin_tiles": "Tarnished Tin Tiles",
   "block.metal_works.corroded_tin_tiles": "Corroded Tin Tiles",
@@ -78,7 +79,6 @@
   "block.metal_works.waxed_tarnished_tin_tiles": "Waxed Tarnished Tin Tiles",
   "block.metal_works.waxed_corroded_tin_tiles": "Waxed Corroded Tin Tiles",
   "block.metal_works.waxed_eroded_tin_tiles": "Waxed Eroded Tin Tiles",
-
   "block.metal_works.tin_tile_stairs": "Tin Tile Stairs",
   "block.metal_works.tarnished_tin_tile_stairs": "Tarnished Tin Tile Stairs",
   "block.metal_works.corroded_tin_tile_stairs": "Corroded Tin Tile Stairs",
@@ -87,7 +87,6 @@
   "block.metal_works.waxed_tarnished_tin_tile_stairs": "Waxed Tarnished Tin Tile Stairs",
   "block.metal_works.waxed_corroded_tin_tile_stairs": "Waxed Corroded Tin Tile Stairs",
   "block.metal_works.waxed_eroded_tin_tile_stairs": "Waxed Eroded Tin Tile Stairs",
-
   "block.metal_works.tin_tile_slab": "Tin Tile Slab",
   "block.metal_works.tarnished_tin_tile_slab": "Tarnished Tin Tile Slab",
   "block.metal_works.corroded_tin_tile_slab": "Corroded Tin Tile Slab",
@@ -96,7 +95,6 @@
   "block.metal_works.waxed_tarnished_tin_tile_slab": "Waxed Tarnished Tin Tile Slab",
   "block.metal_works.waxed_corroded_tin_tile_slab": "Waxed Corroded Tin Tile Slab",
   "block.metal_works.waxed_eroded_tin_tile_slab": "Waxed Eroded Tin Tile Slab",
-
   "block.metal_works.tin_shingles": "Tin Shingles",
   "block.metal_works.tarnished_tin_shingles": "Tarnished Tin Shingles",
   "block.metal_works.corroded_tin_shingles": "Corroded Tin Shingles",
@@ -105,7 +103,6 @@
   "block.metal_works.waxed_tarnished_tin_shingles": "Waxed Tarnished Tin Shingles",
   "block.metal_works.waxed_corroded_tin_shingles": "Waxed Corroded Tin Shingles",
   "block.metal_works.waxed_eroded_tin_shingles": "Waxed Eroded Tin Shingles",
-
   "block.metal_works.tin_shingle_stairs": "Tin Shingle Stairs",
   "block.metal_works.tarnished_tin_shingle_stairs": "Tarnished Tin Shingle Stairs",
   "block.metal_works.corroded_tin_shingle_stairs": "Corroded Tin Shingle Stairs",
@@ -114,7 +111,6 @@
   "block.metal_works.waxed_tarnished_tin_shingle_stairs": "Waxed Tarnished Tin Shingle Stairs",
   "block.metal_works.waxed_corroded_tin_shingle_stairs": "Waxed Corroded Tin Shingle Stairs",
   "block.metal_works.waxed_eroded_tin_shingle_stairs": "Waxed Eroded Tin Shingle Stairs",
-
   "block.metal_works.tin_shingle_slab": "Tin Shingle Slab",
   "block.metal_works.tarnished_tin_shingle_slab": "Tarnished Tin Shingle Slab",
   "block.metal_works.corroded_tin_shingle_slab": "Corroded Tin Shingle Slab",
@@ -123,11 +119,8 @@
   "block.metal_works.waxed_tarnished_tin_shingle_slab": "Waxed Tarnished Tin Shingle Slab",
   "block.metal_works.waxed_corroded_tin_shingle_slab": "Waxed Corroded Tin Shingle Slab",
   "block.metal_works.waxed_eroded_tin_shingle_slab": "Waxed Eroded Tin Shingle Slab",
-
   "block.metal_works.tin_door": "Tin Door",
-
   "block.metal_works.tin_trapdoor": "Tin Trapdoor",
-
   "block.metal_works.tin_bars": "Tin Bars",
   "block.metal_works.tarnished_tin_bars": "Tarnished Tin Bars",
   "block.metal_works.corroded_tin_bars": "Corroded Tin Bars",
@@ -136,7 +129,6 @@
   "block.metal_works.waxed_tarnished_tin_bars": "Waxed Tarnished Tin Bars",
   "block.metal_works.waxed_corroded_tin_bars": "Waxed Corroded Tin Bars",
   "block.metal_works.waxed_eroded_tin_bars": "Waxed Eroded Tin Bars",
-
   "block.metal_works.tin_chain": "Tin Chain",
   "block.metal_works.tarnished_tin_chain": "Tarnished Tin Chain",
   "block.metal_works.corroded_tin_chain": "Corroded Tin Chain",
@@ -145,7 +137,6 @@
   "block.metal_works.waxed_tarnished_tin_chain": "Waxed Tarnished Tin Chain",
   "block.metal_works.waxed_corroded_in_chain": "Waxed Corroded Tin Chain",
   "block.metal_works.waxed_eroded_tin_chain": "Waxed Eroded Tin Chain",
-
   "block.metal_works.tin_lantern": "Tin Lantern",
   "block.metal_works.tarnished_tin_lantern": "Tarnished Tin Lantern",
   "block.metal_works.corroded_tin_lantern": "Corroded Tin Lantern",
@@ -154,7 +145,6 @@
   "block.metal_works.waxed_tarnished_tin_lantern": "Waxed Tarnished Tin Lantern",
   "block.metal_works.waxed_corroded_tin_lantern": "Waxed Corroded Tin Lantern",
   "block.metal_works.waxed_eroded_tin_lantern": "Waxed Eroded Tin Lantern",
-
   "block.metal_works.tin_soul_lantern": "Tin Soul Lantern",
   "block.metal_works.tarnished_tin_soul_lantern": "Tarnished Tin Soul Lantern",
   "block.metal_works.corroded_tin_soul_lantern": "Corroded Tin Soul Lantern",
@@ -167,13 +157,11 @@
   "item.metal_works.tin_ingot": "Tin Ingot",
   "item.metal_works.tin_nugget": "Tin Nugget",
   "item.metal_works.raw_tin": "Raw Tin",
-
   "item.metal_works.tin_sword": "Tin Sword",
   "item.metal_works.tin_pickaxe": "Tin Pickaxe",
   "item.metal_works.tin_axe": "Tin Axe",
   "item.metal_works.tin_shovel": "Tin Shovel",
   "item.metal_works.tin_hoe": "Tin Hoe",
-
   "item.metal_works.tin_helmet": "Tin Helmet",
   "item.metal_works.tin_chestplate": "Tin Chestplate",
   "item.metal_works.tin_leggings": "Tin Leggings",
@@ -183,29 +171,25 @@
   "block.metal_works.bronze_block": "Block of Bronze",
   "block.metal_works.bronze_grate": "Bronze Grate",
   "block.metal_works.bronze_grate_drain": "Bronze Grate Drain",
-
   "block.metal_works.bronze_tiles": "Bronze Tiles",
   "block.metal_works.bronze_tile_stairs": "Bronze Tile Stairs",
   "block.metal_works.bronze_tile_slab": "Bronze Tile Slab",
-
   "block.metal_works.bronze_shingles": "Bronze Shingles",
   "block.metal_works.bronze_shingle_stairs": "Bronze Shingle Stairs",
   "block.metal_works.bronze_shingle_slab": "Bronze Shingle Slab",
-
   "block.metal_works.bronze_bars": "Bronze Bars",
   "block.metal_works.bronze_door": "Bronze Door",
   "block.metal_works.bronze_trapdoor": "Bronze Trapdoor",
+  "block.metal_works.mechanical_pressure_plate": "Mechanical Pressure Plate",
 
   "item.metal_works.bronze_ingot": "Bronze Ingot",
   "item.metal_works.bronze_nugget": "Bronze Nugget",
-
   "item.metal_works.bronze_sword": "Bronze Sword",
   "item.metal_works.bronze_pickaxe": "Bronze Pickaxe",
   "item.metal_works.bronze_axe": "Bronze Axe",
   "item.metal_works.bronze_shovel": "Bronze Shovel",
   "item.metal_works.bronze_hoe": "Bronze Hoe",
   "item.metal_works.bronze_shears": "Bronze Shears",
-
   "item.metal_works.bronze_helmet": "Bronze Helmet",
   "item.metal_works.bronze_chestplate": "Bronze Chestplate",
   "item.metal_works.bronze_leggings": "Bronze Leggings",
@@ -213,20 +197,20 @@
   "item.metal_works.bronze_horse_armor": "Bronze Horse Armor",
 
   "block.metal_works.rose_gold_block": "Block of Rose Gold",
+  "block.metal_works.rose_gold_mosaic": "Rose Gold Mosaic",
+  "block.metal_works.rose_gold_mosaic_stairs": "Rose Gold Mosaic Stairs",
+  "block.metal_works.rose_gold_mosaic_slab": "Rose Gold Mosaic Slab",
   "block.metal_works.rose_lantern": "Rose Lantern",
-
   "block.metal_works.medium_weighted_pressure_plate": "Medium Weighted Pressure Plate",
 
   "item.metal_works.rose_gold_ingot": "Rose Gold Ingot",
   "item.metal_works.rose_gold_nugget": "Rose Gold Nugget",
   "item.metal_works.rose_gold_beetroot": "Rose Gold Beetroot",
-
   "item.metal_works.rose_gold_sword": "Rose Gold Sword",
   "item.metal_works.rose_gold_pickaxe": "Rose Gold Pickaxe",
   "item.metal_works.rose_gold_axe": "Rose Gold Axe",
   "item.metal_works.rose_gold_shovel": "Rose Gold Shovel",
   "item.metal_works.rose_gold_hoe": "Rose Gold Hoe",
-
   "item.metal_works.rose_gold_helmet": "Rose Gold Helmet",
   "item.metal_works.rose_gold_chestplate": "Rose Gold Chestplate",
   "item.metal_works.rose_gold_leggings": "Rose Gold Leggings",

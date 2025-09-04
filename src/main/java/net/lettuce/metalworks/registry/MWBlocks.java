@@ -15,12 +15,32 @@ import net.minecraftforge.registries.RegistryObject;
 public class MWBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MetalWorks.MOD_ID);
 
+        // Casserite
+
+    public static final RegistryObject<Block> CASSERITE = BLOCKS.register("casserite", () -> new Block
+            (BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+    public static final RegistryObject<Block> CASSERITE_STAIRS = BLOCKS.register("casserite_stairs", () -> new StairBlock
+            (() -> MWBlocks.CASSERITE.get().defaultBlockState(), BlockBehaviour.Properties.copy(MWBlocks.CASSERITE.get())));
+    public static final RegistryObject<Block> CASSERITE_SLAB = BLOCKS.register("casserite_slab", () -> new SlabBlock
+            (BlockBehaviour.Properties.copy(MWBlocks.CASSERITE.get())));
+    public static final RegistryObject<Block> CASSERITE_WALL = BLOCKS.register("casserite_wall", () -> new WallBlock(
+            BlockBehaviour.Properties.copy(MWBlocks.CASSERITE.get())));
+
+    public static final RegistryObject<Block> POLISHED_CASSERITE = BLOCKS.register("polished_casserite", () -> new Block
+            (BlockBehaviour.Properties.copy(MWBlocks.CASSERITE.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+    public static final RegistryObject<Block> POLISHED_CASSERITE_STAIRS = BLOCKS.register("polished_casserite_stairs", () -> new StairBlock
+            (() -> MWBlocks.CASSERITE.get().defaultBlockState(), BlockBehaviour.Properties.copy(MWBlocks.CASSERITE.get())));
+    public static final RegistryObject<Block> POLISHED_CASSERITE_SLAB = BLOCKS.register("polished_casserite_slab", () -> new SlabBlock
+            (BlockBehaviour.Properties.copy(MWBlocks.CASSERITE.get())));
+
         // Natural Tin
 
     public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore", () -> new Block
             (BlockBehaviour.Properties.copy(Blocks.COPPER_ORE)));
     public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = BLOCKS.register("deepslate_tin_ore", () -> new Block
             (BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_COPPER_ORE)));
+    public static final RegistryObject<Block> CASSERITE_TIN_ORE = BLOCKS.register("casserite_tin_ore", () -> new Block
+            (BlockBehaviour.Properties.copy(MWBlocks.TIN_ORE.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final RegistryObject<Block> RAW_TIN_BLOCK = BLOCKS.register("raw_tin_block", () -> new Block
             (BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK)));
 
@@ -412,8 +432,8 @@ public class MWBlocks {
     public static final RegistryObject<Block> BRONZE_TRAPDOOR = BLOCKS.register("bronze_trapdoor", () -> new TrapDoorBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
 
-    //public static final RegistryObject<Block> TOGGLE_PRESSURE_PLATE = BLOCKS.register("toggle_pressure_plate",
-            //() -> new TogglePressurePlateBlock(BlockBehaviour.Properties.copy(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE)));
+    public static final RegistryObject<Block> MECHANICAL_PRESSURE_PLATE = BLOCKS.register("mechanical_pressure_plate",
+            () -> new MechanicalPressurePlateBlock());
 
         //Rose Gold Blocks
 
@@ -422,6 +442,15 @@ public class MWBlocks {
 
     public static final RegistryObject<Block> ROSE_LANTERN = BLOCKS.register("rose_lantern", () -> new Block
             (BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN).mapColor(DyeColor.PINK).noOcclusion()));
+
+    public static final RegistryObject<Block> ROSE_GOLD_MOSAIC = BLOCKS.register("rose_gold_mosaic", () -> new Block
+            (BlockBehaviour.Properties.copy(MWBlocks.ROSE_GOLD_BLOCK.get())));
+
+    public static final RegistryObject<Block> ROSE_GOLD_MOSAIC_STAIRS = BLOCKS.register("rose_gold_mosaic_stairs", () -> new StairBlock
+            (() -> MWBlocks.ROSE_GOLD_MOSAIC.get().defaultBlockState(), BlockBehaviour.Properties.copy(MWBlocks.CASSERITE.get())));
+
+    public static final RegistryObject<Block> ROSE_GOLD_MOSAIC_SLAB = BLOCKS.register("rose_gold_mosaic_slab", () -> new SlabBlock
+            (BlockBehaviour.Properties.copy(MWBlocks.ROSE_GOLD_MOSAIC.get())));
 
     public static final RegistryObject<WeightedPressurePlateBlock> MEDIUM_WEIGHTED_PRESSURE_PLATE = BLOCKS.register("medium_weighted_pressure_plate", () -> new WeightedPressurePlateBlock
             (75, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).forceSolidOn().requiresCorrectToolForDrops().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY), BlockSetType.IRON));

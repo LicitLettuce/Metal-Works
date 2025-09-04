@@ -26,10 +26,27 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
 
-            //Natural Tin
+        this.dropSelf(MWBlocks.CASSERITE.get());
+        this.dropSelf(MWBlocks.CASSERITE_STAIRS.get());
+        this.add(MWBlocks.CASSERITE_SLAB.get(), createSlabItemTable(MWBlocks.CASSERITE_SLAB.get()));
+        this.dropSelf(MWBlocks.CASSERITE_WALL.get());
+
+        this.dropSelf(MWBlocks.POLISHED_CASSERITE.get());
+        this.dropSelf(MWBlocks.POLISHED_CASSERITE_STAIRS.get());
+        this.add(MWBlocks.POLISHED_CASSERITE_SLAB.get(), createSlabItemTable(MWBlocks.POLISHED_CASSERITE_SLAB.get()));
+
+
+
+        //Natural Tin
         this.dropSelf(MWBlocks.RAW_TIN_BLOCK.get());
         this.add(MWBlocks.TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.TIN_ORE.get(), MWItems.RAW_TIN.get()));
         this.add(MWBlocks.DEEPSLATE_TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.DEEPSLATE_TIN_ORE.get(), MWItems.RAW_TIN.get()));
+
+        this.add(MWBlocks.CASSERITE_TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.CASSERITE_TIN_ORE.get(), MWItems.RAW_TIN.get()));
+
+
+        this.dropSelf(MWBlocks.MECHANICAL_PRESSURE_PLATE.get());
+
 
             //Tin Block
         this.dropSelf(MWBlocks.TIN_BLOCK.get());
@@ -253,6 +270,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.BRONZE_GRATE_DRAIN.get());
 
         this.dropSelf(MWBlocks.ROSE_GOLD_BLOCK.get());
+        this.dropSelf(MWBlocks.ROSE_GOLD_MOSAIC.get());
+        this.dropSelf(MWBlocks.ROSE_GOLD_MOSAIC_STAIRS.get());
+        this.add(MWBlocks.ROSE_GOLD_MOSAIC_SLAB.get(), createSlabItemTable(MWBlocks.ROSE_GOLD_MOSAIC_SLAB.get()));
 
         this.dropSelf(MWBlocks.ROSE_LANTERN.get());
 

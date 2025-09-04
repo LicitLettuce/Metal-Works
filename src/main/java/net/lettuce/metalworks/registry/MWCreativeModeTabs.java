@@ -17,10 +17,23 @@ public class MWCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MWItems.BRONZE_HELMET.get()))
                     .title(Component.translatable("creativetab.metal_works_tab"))
                     .displayItems((pParameters, pOutput) -> {
+
+                        //  Casserite
+
+                        pOutput.accept(MWItems.CASSERITE.get());
+                        pOutput.accept(MWItems.CASSERITE_STAIRS.get());
+                        pOutput.accept(MWItems.CASSERITE_SLAB.get());
+                        pOutput.accept(MWItems.CASSERITE_WALL.get());
+                        pOutput.accept(MWItems.POLISHED_CASSERITE.get());
+                        pOutput.accept(MWItems.POLISHED_CASSERITE_STAIRS.get());
+                        pOutput.accept(MWItems.POLISHED_CASSERITE_SLAB.get());
+
 // TIN ORES
                         pOutput.accept(MWItems.TIN_ORE.get());
                         pOutput.accept(MWItems.DEEPSLATE_TIN_ORE.get());
                         pOutput.accept(MWItems.RAW_TIN_BLOCK.get());
+                        pOutput.accept(MWItems.CASSERITE_TIN_ORE.get());
+
 
 // --- BUILDING BLOCKS ---
                         pOutput.accept(MWItems.TIN_BLOCK.get());
@@ -223,7 +236,12 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.BRONZE_TRAPDOOR.get());
                         pOutput.accept(MWItems.BRONZE_BARS.get());
 
+                        pOutput.accept(MWItems.MECHANICAL_PRESSURE_PLATE.get());
+
                         pOutput.accept(MWItems.ROSE_GOLD_BLOCK.get());
+                        pOutput.accept(MWItems.ROSE_GOLD_MOSAIC.get());
+                        pOutput.accept(MWItems.ROSE_GOLD_MOSAIC_STAIRS.get());
+                        pOutput.accept(MWItems.ROSE_GOLD_MOSAIC_SLAB.get());
                         pOutput.accept(MWItems.MEDIUM_WEIGHTED_PRESSURE_PLATE.get());
 
                         pOutput.accept(MWItems.ROSE_LANTERN.get());

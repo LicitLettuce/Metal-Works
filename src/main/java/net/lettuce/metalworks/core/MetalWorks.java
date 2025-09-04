@@ -134,7 +134,6 @@ public class MetalWorks
 
             //event.getEntries().putBefore(MWItems.MUSIC_DISC_ALLOY.get().getDefaultInstance(), Items.MUSIC_DISC_RELIC.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
-
         }
 
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {

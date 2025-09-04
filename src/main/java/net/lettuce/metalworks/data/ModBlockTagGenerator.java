@@ -25,11 +25,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(MWBlocks.TIN_BLOCK.get());
 
-
+        this.tag(BlockTags.WALLS)
+                .add(MWBlocks.CASSERITE_WALL.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(MWBlocks.TIN_ORE.get(),
-                MWBlocks.DEEPSLATE_TIN_ORE.get()
+                MWBlocks.DEEPSLATE_TIN_ORE.get(),
+                MWBlocks.CASSERITE_TIN_ORE.get()
 
                 );
 

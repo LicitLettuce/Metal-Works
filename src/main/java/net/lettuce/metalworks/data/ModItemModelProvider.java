@@ -42,7 +42,21 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-         simpleItem(MWItems.TIN_INGOT);
+
+        // Casserite
+        evenSimplerBlockItem(MWBlocks.CASSERITE_STAIRS);
+        evenSimplerBlockItem(MWBlocks.CASSERITE_SLAB);
+        wallItem(MWBlocks.CASSERITE_WALL, MWBlocks.CASSERITE);
+
+// Polished Casserite
+        evenSimplerBlockItem(MWBlocks.POLISHED_CASSERITE_STAIRS);
+        evenSimplerBlockItem(MWBlocks.POLISHED_CASSERITE_SLAB);
+
+        evenSimplerBlockItem(MWBlocks.ROSE_GOLD_MOSAIC_STAIRS);
+        evenSimplerBlockItem(MWBlocks.ROSE_GOLD_MOSAIC_SLAB);
+
+
+        simpleItem(MWItems.TIN_INGOT);
          simpleItem(MWItems.TIN_NUGGET);
          simpleItem(MWItems.RAW_TIN);
         trimmedArmorItem(MWItems.TIN_HELMET);

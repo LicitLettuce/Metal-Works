@@ -17,7 +17,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-            //Natural Tin Blocks
+            // Casserite Blocks
+        blockWithItem(MWBlocks.CASSERITE);
+        stairsBlock(((StairBlock) MWBlocks.CASSERITE_STAIRS.get()), blockTexture(MWBlocks.CASSERITE.get()));
+        slabBlock(((SlabBlock) MWBlocks.CASSERITE_SLAB.get()), blockTexture(MWBlocks.CASSERITE.get()), blockTexture(MWBlocks.CASSERITE.get()));
+        wallBlock(((WallBlock) MWBlocks.CASSERITE_WALL.get()), blockTexture(MWBlocks.CASSERITE.get()));
+
+            // Polished Casserite
+        blockWithItem(MWBlocks.POLISHED_CASSERITE);
+        stairsBlock(((StairBlock) MWBlocks.POLISHED_CASSERITE_STAIRS.get()), blockTexture(MWBlocks.POLISHED_CASSERITE.get()));
+        slabBlock(((SlabBlock) MWBlocks.POLISHED_CASSERITE_SLAB.get()), blockTexture(MWBlocks.POLISHED_CASSERITE.get()), blockTexture(MWBlocks.POLISHED_CASSERITE.get()));
+
+            // Casserite Ore
+        blockWithItem(MWBlocks.CASSERITE_TIN_ORE);
+
+
+        //Natural Tin Blocks
         blockWithItem(MWBlocks.RAW_TIN_BLOCK);
         blockWithItem(MWBlocks.TIN_ORE);
         blockWithItem(MWBlocks.DEEPSLATE_TIN_ORE);
@@ -46,6 +61,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(MWBlocks.BRONZE_SHINGLES);
 
         blockWithItem(MWBlocks.ROSE_GOLD_BLOCK);
+        blockWithItem(MWBlocks.ROSE_GOLD_MOSAIC);
+        stairsBlock(((StairBlock) MWBlocks.ROSE_GOLD_MOSAIC_STAIRS.get()), blockTexture(MWBlocks.ROSE_GOLD_MOSAIC.get()));
+        slabBlock(((SlabBlock) MWBlocks.ROSE_GOLD_MOSAIC_SLAB.get()), blockTexture(MWBlocks.ROSE_GOLD_MOSAIC.get()), blockTexture(MWBlocks.ROSE_GOLD_MOSAIC.get()));
 
         blockWithItem(MWBlocks.TARNISHED_TIN_TILES);
         blockWithItem(MWBlocks.CORRODED_TIN_TILES);
@@ -208,18 +226,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(((SlabBlock) MWBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.CORRODED_TIN_SHINGLES.get()), blockTexture(MWBlocks.CORRODED_TIN_SHINGLES.get()));
         slabBlock(((SlabBlock) MWBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB.get()), blockTexture(MWBlocks.ERODED_TIN_SHINGLES.get()), blockTexture(MWBlocks.ERODED_TIN_SHINGLES.get()));
 
-
-
     }
 
     //Manual JSON Files
 
-    //TIN BARS, LANTERNS, GRATE, GRATE DRAINS, CHAINS
-    //BRONZE BARS, GRATE, GRATE DRAIN
-    //ROSE GOLD LANTERN
+    //Tin Bars, Tin Lanterns, Tin Grates, Tin Grate Drains, and Tin Bars
+    //Bronze Bars, Bronze Grate, and Bronze Grate Drain
+    //Rose Gold Lantern
     //Medium Weighted Pressure Plate
+    //Mechanical Pressure Plate
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
+
+
 }

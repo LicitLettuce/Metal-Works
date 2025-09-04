@@ -12,16 +12,33 @@ public class MWItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MetalWorks.MOD_ID);
 
-        // Natural Tin Items
+    // Casserite Items
+
+    public static final RegistryObject<BlockItem> CASSERITE = ITEMS.register("casserite", () -> new BlockItem
+            (MWBlocks.CASSERITE.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CASSERITE_STAIRS = ITEMS.register("casserite_stairs", () -> new BlockItem
+            (MWBlocks.CASSERITE_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CASSERITE_SLAB = ITEMS.register("casserite_slab", () -> new BlockItem
+            (MWBlocks.CASSERITE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CASSERITE_WALL = ITEMS.register("casserite_wall", () -> new BlockItem
+            (MWBlocks.CASSERITE_WALL.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> POLISHED_CASSERITE = ITEMS.register("polished_casserite", () -> new BlockItem
+            (MWBlocks.POLISHED_CASSERITE.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> POLISHED_CASSERITE_STAIRS = ITEMS.register("polished_casserite_stairs", () -> new BlockItem
+            (MWBlocks.POLISHED_CASSERITE_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> POLISHED_CASSERITE_SLAB = ITEMS.register("polished_casserite_slab", () -> new BlockItem
+            (MWBlocks.POLISHED_CASSERITE_SLAB.get(), new Item.Properties()));
+
+    // Natural Tin Items
 
     public static final RegistryObject<BlockItem> RAW_TIN_BLOCK = ITEMS.register("raw_tin_block", () -> new BlockItem
             (MWBlocks.RAW_TIN_BLOCK.get(), new Item.Properties()));
-
     public static final RegistryObject<BlockItem> TIN_ORE = ITEMS.register("tin_ore", () -> new BlockItem
             (MWBlocks.TIN_ORE.get(), new Item.Properties()));
-
     public static final RegistryObject<BlockItem> DEEPSLATE_TIN_ORE = ITEMS.register("deepslate_tin_ore", () -> new BlockItem
             (MWBlocks.DEEPSLATE_TIN_ORE.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CASSERITE_TIN_ORE = ITEMS.register("casserite_tin_ore", () -> new BlockItem
+            (MWBlocks.CASSERITE_TIN_ORE.get(), new Item.Properties()));
 
         // Tin Blocks Items
 
@@ -463,6 +480,11 @@ public class MWItems {
     public static final RegistryObject<BlockItem> BRONZE_TRAPDOOR = ITEMS.register("bronze_trapdoor", () -> new BlockItem
             (MWBlocks.BRONZE_TRAPDOOR.get(), new Item.Properties()));
 
+    // Toggle Pressure Plate Item
+
+    public static final RegistryObject<BlockItem> MECHANICAL_PRESSURE_PLATE = ITEMS.register("mechanical_pressure_plate", () -> new BlockItem
+            (MWBlocks.MECHANICAL_PRESSURE_PLATE.get(), new Item.Properties()));
+
         // Bronze Ingredients
 
     public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot", () -> new Item
@@ -507,6 +529,15 @@ public class MWItems {
 
     public static final RegistryObject<BlockItem> ROSE_LANTERN = ITEMS.register("rose_lantern", () -> new BlockItem
             (MWBlocks.ROSE_LANTERN.get(), new Item.Properties()));
+
+        // Rose Gold Mosaic Items
+
+    public static final RegistryObject<BlockItem> ROSE_GOLD_MOSAIC = ITEMS.register("rose_gold_mosaic", () -> new BlockItem
+            (MWBlocks.ROSE_GOLD_MOSAIC.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> ROSE_GOLD_MOSAIC_STAIRS = ITEMS.register("rose_gold_mosaic_stairs", () -> new BlockItem
+            (MWBlocks.ROSE_GOLD_MOSAIC_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> ROSE_GOLD_MOSAIC_SLAB = ITEMS.register("rose_gold_mosaic_slab", () -> new BlockItem
+            (MWBlocks.ROSE_GOLD_MOSAIC_SLAB.get(), new Item.Properties()));
 
         // Medium Weighted Pressure Plate Item
 
