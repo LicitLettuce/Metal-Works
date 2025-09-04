@@ -55,8 +55,6 @@
 
 > **Note:** Skipped for unknown reasons — likely an oversight. :( – *Lettuce*
 
----
-
 ## 1.1.1
 
 ### Translations
