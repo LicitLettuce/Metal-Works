@@ -1,7 +1,5 @@
 # Metal Works Changelog
 
----
-
 ## 1.2.0 "The Big Update"
 
 ### Additions
@@ -39,8 +37,6 @@
 
 > **Note:** I removed these because they did not fit the direction of the mod. They felt like filler blocks added for the sake of variety, without much purpose. – *Lettuce*
 
----
-
 ## 1.1.3
 
 ### Additions
@@ -54,8 +50,6 @@
 - Updated Tin Shingle textures
 - Renamed Rose Lamp to Rose Lantern
 - Updated Tin Nugget texture
-
----
 
 ## 1.1.2
 
@@ -78,8 +72,6 @@
 - Removed a music disc tag that broke jukebox functionality.
     - *Credits to Im_Dolos & Rololow for reporting these bugs.*
 
----
-
 ## 1.1.0
 
 ### Additions
@@ -96,22 +88,16 @@
 - New texture for Bronze Shingles
 - Updated Creative Tab ordering
 
----
-
 ## 1.0.11
 
 ### Fixes
 - Crafting a bronze axe will no longer output a bronze pickaxe
-
----
 
 ## 1.0.1
 
 ### Fixes
 - Fixed durability values for all armor sets
 - Fixed Creative Tab bugs
-
----
 
 ## 1.0.0 Initial Release
 **Metal Works** is a vanilla-styled mod that adds three unique metals, each with distinct functions. No metal is strictly superior — each one complements different playstyles. Depending on how you play, your hotbar may feature tools crafted from multiple materials.
