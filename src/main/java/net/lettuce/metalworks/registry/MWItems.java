@@ -1,5 +1,6 @@
 package net.lettuce.metalworks.registry;
 
+import net.lettuce.metalworks.common.item.PowerHammerItem;
 import net.lettuce.metalworks.core.MetalWorks;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -160,7 +161,6 @@ public class MWItems {
     public static final RegistryObject<BlockItem> WAXED_ERODED_CUT_TIN_STAIRS = ITEMS.register("waxed_eroded_cut_tin_stairs", () -> new BlockItem(
             MWBlocks.WAXED_ERODED_CUT_TIN_STAIRS.get(), new Item.Properties()));
 
-
         // Cut Tin Slab Items
 
     public static final RegistryObject<BlockItem> CUT_TIN_SLAB = ITEMS.register("cut_tin_slab", () -> new BlockItem
@@ -221,7 +221,6 @@ public class MWItems {
     public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_TILE_STAIRS = ITEMS.register("waxed_eroded_tin_tile_stairs", () -> new BlockItem
             (MWBlocks.WAXED_ERODED_TIN_TILE_STAIRS.get(), new Item.Properties()));
 
-
         // Tin Tile Slab Items
 
     public static final RegistryObject<BlockItem> TIN_TILE_SLAB = ITEMS.register("tin_tile_slab", () -> new BlockItem
@@ -242,7 +241,6 @@ public class MWItems {
             (MWBlocks.WAXED_CORRODED_TIN_TILE_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_TILE_SLAB = ITEMS.register("waxed_eroded_tin_tile_slab", () -> new BlockItem
             (MWBlocks.WAXED_ERODED_TIN_TILE_SLAB.get(), new Item.Properties()));
-
 
         // Tin Shingle Items
 
@@ -284,7 +282,6 @@ public class MWItems {
     public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_SHINGLE_STAIRS = ITEMS.register("waxed_eroded_tin_shingle_stairs", () -> new BlockItem
             (MWBlocks.WAXED_ERODED_TIN_SHINGLE_STAIRS.get(), new Item.Properties()));
 
-
         // Tin Shingle Slab Items
 
     public static final RegistryObject<BlockItem> TIN_SHINGLE_SLAB = ITEMS.register("tin_shingle_slab", () -> new BlockItem
@@ -304,7 +301,6 @@ public class MWItems {
             (MWBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_SHINGLE_SLAB = ITEMS.register("waxed_eroded_tin_shingle_slab", () -> new BlockItem
             (MWBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
-
 
         // Tin Door Items
 
@@ -507,6 +503,10 @@ public class MWItems {
             (MWToolTiers.BRONZE, -2,-1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> BRONZE_SHEARS = ITEMS.register("bronze_shears", () -> new ShearsItem
             (new Item.Properties().stacksTo(1).durability(964).fireResistant()));
+
+    public static final RegistryObject<Item> POWER_HAMMER = ITEMS.register("power_hammer", () -> new PowerHammerItem
+            (MWToolTiers.BRONZE, new Item.Properties().durability(321).fireResistant()));
+
 
     public static final RegistryObject<Item> BRONZE_HELMET = ITEMS.register("bronze_helmet", () -> new ArmorItem
             (MWArmorMaterials.BRONZE, ArmorItem.Type.HELMET, new Item.Properties().fireResistant()));

@@ -276,6 +276,7 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.BRONZE_SHOVEL.get());
                         pOutput.accept(MWItems.BRONZE_HOE.get());
                         pOutput.accept(MWItems.BRONZE_SHEARS.get());
+                        pOutput.accept(MWItems.POWER_HAMMER.get());
 
                         pOutput.accept(MWItems.ROSE_GOLD_SWORD.get());
                         pOutput.accept(MWItems.ROSE_GOLD_PICKAXE.get());
