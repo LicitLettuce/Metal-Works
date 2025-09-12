@@ -2,6 +2,7 @@ package net.lettuce.metalworks.registry;
 
 import net.lettuce.metalworks.common.block.*;
 import net.lettuce.metalworks.core.MetalWorks;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -11,6 +12,8 @@ import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import static net.minecraft.world.level.block.Blocks.SOUL_TORCH;
 
 public class MWBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MetalWorks.MOD_ID);
@@ -455,4 +458,11 @@ public class MWBlocks {
     public static final RegistryObject<WeightedPressurePlateBlock> MEDIUM_WEIGHTED_PRESSURE_PLATE = BLOCKS.register("medium_weighted_pressure_plate", () -> new WeightedPressurePlateBlock
             (75, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).forceSolidOn().requiresCorrectToolForDrops().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY), BlockSetType.IRON));
 
+        // Mage Fire Blocks
+
+        public static final RegistryObject<Block> MAGE_TORCH = BLOCKS.register("mage_torch", () -> new ModdedTorchBlock
+                (BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(s -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
+
+        public static final RegistryObject<Block> MAGE_WALL_TORCH = BLOCKS.register("mage_wall_torch", () -> new WallTorchBlock
+                (BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(s -> 14).sound(SoundType.WOOD).dropsLike(MAGE_TORCH.get()), ParticleTypes.FLAME));
 }

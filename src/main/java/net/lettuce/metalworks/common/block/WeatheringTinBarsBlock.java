@@ -1,5 +1,6 @@
 package net.lettuce.metalworks.common.block;
 
+import net.lettuce.metalworks.registry.MWWeathering;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -7,7 +8,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.lettuce.metalworks.registry.MWWeathering;
 
 public class WeatheringTinBarsBlock extends IronBarsBlock {
 

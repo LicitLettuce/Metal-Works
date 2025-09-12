@@ -245,6 +245,7 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.MEDIUM_WEIGHTED_PRESSURE_PLATE.get());
 
                         pOutput.accept(MWItems.ROSE_LANTERN.get());
+                        pOutput.accept(MWItems.MAGE_TORCH.get());
 
 
 

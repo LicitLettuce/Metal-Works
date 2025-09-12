@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_torch",
+  "textures": {
+    "torch": "metal_works:block/mage_torch"
+  }
+}

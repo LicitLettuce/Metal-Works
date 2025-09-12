@@ -3,6 +3,8 @@ package net.lettuce.metalworks.core;
 import com.mojang.logging.LogUtils;
 import net.lettuce.metalworks.registry.*;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
@@ -17,6 +19,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+
+import static net.lettuce.metalworks.registry.MWBlocks.MAGE_TORCH;
+import static net.lettuce.metalworks.registry.MWBlocks.MAGE_WALL_TORCH;
 
 @Mod(MetalWorks.MOD_ID)
 public class MetalWorks
@@ -192,6 +197,8 @@ public class MetalWorks
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            ItemBlockRenderTypes.setRenderLayer(MAGE_TORCH.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(MAGE_WALL_TORCH.get(), RenderType.cutout());
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }

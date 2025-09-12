@@ -2,11 +2,17 @@ package net.lettuce.metalworks.registry;
 
 import net.lettuce.metalworks.common.item.PowerHammerItem;
 import net.lettuce.metalworks.core.MetalWorks;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import static net.lettuce.metalworks.registry.MWBlocks.MAGE_TORCH;
+import static net.lettuce.metalworks.registry.MWBlocks.MAGE_WALL_TORCH;
+import static net.minecraft.world.item.Items.registerBlock;
 
 public class MWItems {
 
@@ -543,6 +549,14 @@ public class MWItems {
 
     public static final RegistryObject<BlockItem> MEDIUM_WEIGHTED_PRESSURE_PLATE = ITEMS.register("medium_weighted_pressure_plate", () -> new BlockItem
             (MWBlocks.MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> MAGE_TORCH = ITEMS.register("mage_torch",
+            () -> new StandingAndWallBlockItem(
+                    MWBlocks.MAGE_TORCH.get(),
+                    MWBlocks.MAGE_WALL_TORCH.get(),
+                    new Item.Properties(),
+                    Direction.DOWN
+            ));
 
         // Rose Gold Ingredients
 
