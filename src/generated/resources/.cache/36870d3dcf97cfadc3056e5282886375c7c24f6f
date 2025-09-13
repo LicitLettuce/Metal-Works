@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-04T15:07:06.8742396	Tags for minecraft:block mod id metal_works
+// 1.20.1	2025-09-12T21:53:01.3037129	Tags for minecraft:block mod id metal_works
 2e8f784300732d32e46feaf01baea2da653b82b2 data/minecraft/tags/blocks/mineable/pickaxe.json
-2643e878d734086c53b92ae845781341338d3820 data/minecraft/tags/blocks/needs_stone_tool.json
-96b23913272e603f51a58b1c3943af6d713acc4b data/minecraft/tags/blocks/walls.json
+ac392e1f381fa2d8d9c9ea1f3a6c3cc715343299 data/minecraft/tags/blocks/needs_stone_tool.json
+4f101f616580006335087c1cb136665400061302 data/minecraft/tags/blocks/walls.json

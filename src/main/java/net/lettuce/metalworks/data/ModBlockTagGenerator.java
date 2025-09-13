@@ -2,11 +2,9 @@ package net.lettuce.metalworks.data;
 
 import net.lettuce.metalworks.core.MetalWorks;
 import net.lettuce.metalworks.registry.MWBlocks;
-import net.lettuce.metalworks.registry.MWTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -26,12 +24,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(MWBlocks.TIN_BLOCK.get());
 
         this.tag(BlockTags.WALLS)
-                .add(MWBlocks.CASSERITE_WALL.get());
+                .add(MWBlocks.CASSITERITE_WALL.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(MWBlocks.TIN_ORE.get(),
                 MWBlocks.DEEPSLATE_TIN_ORE.get(),
-                MWBlocks.CASSERITE_TIN_ORE.get()
+                MWBlocks.CASSITERITE_TIN_ORE.get()
 
                 );
 

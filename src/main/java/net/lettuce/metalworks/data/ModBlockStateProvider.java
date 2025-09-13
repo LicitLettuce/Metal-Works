@@ -18,21 +18,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
 
             // Casserite Blocks
-        blockWithItem(MWBlocks.CASSERITE);
-        stairsBlock(((StairBlock) MWBlocks.CASSERITE_STAIRS.get()), blockTexture(MWBlocks.CASSERITE.get()));
-        slabBlock(((SlabBlock) MWBlocks.CASSERITE_SLAB.get()), blockTexture(MWBlocks.CASSERITE.get()), blockTexture(MWBlocks.CASSERITE.get()));
-        wallBlock(((WallBlock) MWBlocks.CASSERITE_WALL.get()), blockTexture(MWBlocks.CASSERITE.get()));
+        blockWithItem(MWBlocks.CASSITERITE);
+        stairsBlock(((StairBlock) MWBlocks.CASSITERITE_STAIRS.get()), blockTexture(MWBlocks.CASSITERITE.get()));
+        slabBlock(((SlabBlock) MWBlocks.CASSITERITE_SLAB.get()), blockTexture(MWBlocks.CASSITERITE.get()), blockTexture(MWBlocks.CASSITERITE.get()));
+        wallBlock(((WallBlock) MWBlocks.CASSITERITE_WALL.get()), blockTexture(MWBlocks.CASSITERITE.get()));
 
             // Polished Casserite
-        blockWithItem(MWBlocks.POLISHED_CASSERITE);
-        stairsBlock(((StairBlock) MWBlocks.POLISHED_CASSERITE_STAIRS.get()), blockTexture(MWBlocks.POLISHED_CASSERITE.get()));
-        slabBlock(((SlabBlock) MWBlocks.POLISHED_CASSERITE_SLAB.get()), blockTexture(MWBlocks.POLISHED_CASSERITE.get()), blockTexture(MWBlocks.POLISHED_CASSERITE.get()));
+        blockWithItem(MWBlocks.POLISHED_CASSITERITE);
+        stairsBlock(((StairBlock) MWBlocks.POLISHED_CASSITERITE_STAIRS.get()), blockTexture(MWBlocks.POLISHED_CASSITERITE.get()));
+        slabBlock(((SlabBlock) MWBlocks.POLISHED_CASSITERITE_SLAB.get()), blockTexture(MWBlocks.POLISHED_CASSITERITE.get()), blockTexture(MWBlocks.POLISHED_CASSITERITE.get()));
 
             // Natural Tin Blocks
         blockWithItem(MWBlocks.RAW_TIN_BLOCK);
         blockWithItem(MWBlocks.TIN_ORE);
         blockWithItem(MWBlocks.DEEPSLATE_TIN_ORE);
-        blockWithItem(MWBlocks.CASSERITE_TIN_ORE);
+        blockWithItem(MWBlocks.CASSITERITE_TIN_ORE);
 
             // Tin Blocks
         blockWithItem(MWBlocks.TIN_BLOCK);
@@ -44,6 +44,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(MWBlocks.WAXED_TARNISHED_TIN.get(), models().cubeAll("waxed_tarnished_tin", blockTexture(MWBlocks.TARNISHED_TIN.get())));
         simpleBlockWithItem(MWBlocks.WAXED_CORRODED_TIN.get(), models().cubeAll("waxed_corroded_tin", blockTexture(MWBlocks.CORRODED_TIN.get())));
         simpleBlockWithItem(MWBlocks.WAXED_ERODED_TIN.get(), models().cubeAll("waxed_eroded_tin", blockTexture(MWBlocks.ERODED_TIN.get())));
+
+            // Tin Plates
+        blockWithItem(MWBlocks.TIN_PLATE);
+        blockWithItem(MWBlocks.TARNISHED_TIN_PLATE);
+        blockWithItem(MWBlocks.CORRODED_TIN_PLATE);
+        blockWithItem(MWBlocks.ERODED_TIN_PLATE);
+
+        simpleBlockWithItem(MWBlocks.WAXED_TIN_PLATE.get(), models().cubeAll("waxed_tin_plate", blockTexture(MWBlocks.TIN_PLATE.get())));
+        simpleBlockWithItem(MWBlocks.WAXED_TARNISHED_TIN_PLATE.get(), models().cubeAll("waxed_tarnished_tin_plate", blockTexture(MWBlocks.TARNISHED_TIN_PLATE.get())));
+        simpleBlockWithItem(MWBlocks.WAXED_CORRODED_TIN_PLATE.get(), models().cubeAll("waxed_corroded_tin_plate", blockTexture(MWBlocks.CORRODED_TIN_PLATE.get())));
+        simpleBlockWithItem(MWBlocks.WAXED_ERODED_TIN_PLATE.get(), models().cubeAll("waxed_eroded_tin_plate", blockTexture(MWBlocks.ERODED_TIN_PLATE.get())));
 
             // Chiseled Tin
         blockWithItem(MWBlocks.CHISELED_TIN);

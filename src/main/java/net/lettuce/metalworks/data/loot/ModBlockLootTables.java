@@ -13,6 +13,7 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -27,20 +28,20 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
 
             // Casserite Loot Tables
-        this.dropSelf(MWBlocks.CASSERITE.get());
-        this.dropSelf(MWBlocks.CASSERITE_STAIRS.get());
-        this.add(MWBlocks.CASSERITE_SLAB.get(), createSlabItemTable(MWBlocks.CASSERITE_SLAB.get()));
-        this.dropSelf(MWBlocks.CASSERITE_WALL.get());
+        this.dropSelf(MWBlocks.CASSITERITE.get());
+        this.dropSelf(MWBlocks.CASSITERITE_STAIRS.get());
+        this.add(MWBlocks.CASSITERITE_SLAB.get(), createSlabItemTable(MWBlocks.CASSITERITE_SLAB.get()));
+        this.dropSelf(MWBlocks.CASSITERITE_WALL.get());
 
-        this.dropSelf(MWBlocks.POLISHED_CASSERITE.get());
-        this.dropSelf(MWBlocks.POLISHED_CASSERITE_STAIRS.get());
-        this.add(MWBlocks.POLISHED_CASSERITE_SLAB.get(), createSlabItemTable(MWBlocks.POLISHED_CASSERITE_SLAB.get()));
+        this.dropSelf(MWBlocks.POLISHED_CASSITERITE.get());
+        this.dropSelf(MWBlocks.POLISHED_CASSITERITE_STAIRS.get());
+        this.add(MWBlocks.POLISHED_CASSITERITE_SLAB.get(), createSlabItemTable(MWBlocks.POLISHED_CASSITERITE_SLAB.get()));
 
             // Natural Tin Loot Tables
         this.dropSelf(MWBlocks.RAW_TIN_BLOCK.get());
         this.add(MWBlocks.TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.TIN_ORE.get(), MWItems.RAW_TIN.get()));
         this.add(MWBlocks.DEEPSLATE_TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.DEEPSLATE_TIN_ORE.get(), MWItems.RAW_TIN.get()));
-        this.add(MWBlocks.CASSERITE_TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.CASSERITE_TIN_ORE.get(), MWItems.RAW_TIN.get()));
+        this.add(MWBlocks.CASSITERITE_TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.CASSITERITE_TIN_ORE.get(), MWItems.RAW_TIN.get()));
 
             // Tin Block Loot Tables
         this.dropSelf(MWBlocks.TIN_BLOCK.get());
@@ -52,6 +53,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN.get());
         this.dropSelf(MWBlocks.WAXED_CORRODED_TIN.get());
         this.dropSelf(MWBlocks.WAXED_ERODED_TIN.get());
+
+            // Tin Block Loot Tables
+        this.dropSelf(MWBlocks.TIN_PLATE.get());
+        this.dropSelf(MWBlocks.TARNISHED_TIN_PLATE.get());
+        this.dropSelf(MWBlocks.CORRODED_TIN_PLATE.get());
+        this.dropSelf(MWBlocks.ERODED_TIN_PLATE.get());
+
+        this.dropSelf(MWBlocks.WAXED_TIN_PLATE.get());
+        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_PLATE.get());
+        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_PLATE.get());
+        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_PLATE.get());
 
             // Chiseled Tin Loot Tables
         this.dropSelf(MWBlocks.CHISELED_TIN.get());
@@ -236,6 +248,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_SOUL_LANTERN.get());
         this.dropSelf(MWBlocks.WAXED_ERODED_TIN_SOUL_LANTERN.get());
 
+            // Tin Mage Lantern Loot Tables
+        this.dropSelf(MWBlocks.TIN_MAGE_LANTERN.get());
+        this.dropSelf(MWBlocks.TARNISHED_TIN_MAGE_LANTERN.get());
+        this.dropSelf(MWBlocks.CORRODED_TIN_MAGE_LANTERN.get());
+        this.dropSelf(MWBlocks.ERODED_TIN_MAGE_LANTERN.get());
+
+        this.dropSelf(MWBlocks.WAXED_TIN_MAGE_LANTERN.get());
+        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_MAGE_LANTERN.get());
+        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_MAGE_LANTERN.get());
+        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_MAGE_LANTERN.get());
+
             // Bronze Block Loot Table
         this.dropSelf(MWBlocks.BRONZE_BLOCK.get());
 
@@ -266,7 +289,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.BRONZE_GRATE_DRAIN.get());
 
             // Mechanical Pressure Plate Loot Table
-        this.dropSelf(MWBlocks.MECHANICAL_PRESSURE_PLATE.get());
+        this.dropSelf(MWBlocks.LOOPING_PRESSURE_PLATE.get());
 
             // Rose Gold Block Loot Table
         this.dropSelf(MWBlocks.ROSE_GOLD_BLOCK.get());
@@ -281,6 +304,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
             // Medium Weighted Pressure Plate Loot Table
         this.dropSelf(MWBlocks.MEDIUM_WEIGHTED_PRESSURE_PLATE.get());
+
+            // Mage Fire Blocks
+        this.dropSelf(MWBlocks.MAGE_TORCH.get());
+
+        this.dropSelf(MWBlocks.MAGE_LANTERN.get());
+
+        this.add(MWBlocks.MAGE_CAMPFIRE.get(), block -> createCampfireLikeDrop(MWBlocks.MAGE_CAMPFIRE.get()));
+
+
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {
@@ -289,6 +321,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         LootItem.lootTableItem(item)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 5.0F)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+    }
+
+    protected LootTable.Builder createCampfireLikeDrop(Block block) {
+        return createSilkTouchDispatchTable(block,
+                applyExplosionDecay(block,
+                        LootItem.lootTableItem(net.minecraft.world.item.Items.CHARCOAL)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2)))
+                )
+        );
     }
 
     @Override

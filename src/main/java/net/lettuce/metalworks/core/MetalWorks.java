@@ -37,19 +37,9 @@ public class MetalWorks
         MWPaintings.REGISTRY.register(modEventBus);
         MWSounds.register(modEventBus);
 
-
-
-
-
         modEventBus.addListener(this::commonSetup);
-
         MinecraftForge.EVENT_BUS.register(this);
-
         modEventBus.addListener(this::addCreative);
-
-
-
-
     }
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
@@ -199,8 +189,6 @@ public class MetalWorks
         {
             ItemBlockRenderTypes.setRenderLayer(MAGE_TORCH.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(MAGE_WALL_TORCH.get(), RenderType.cutout());
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
 }

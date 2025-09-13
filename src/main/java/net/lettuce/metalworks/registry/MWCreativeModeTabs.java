@@ -20,19 +20,20 @@ public class MWCreativeModeTabs {
 
                         //  Casserite
 
-                        pOutput.accept(MWItems.CASSERITE.get());
-                        pOutput.accept(MWItems.CASSERITE_STAIRS.get());
-                        pOutput.accept(MWItems.CASSERITE_SLAB.get());
-                        pOutput.accept(MWItems.CASSERITE_WALL.get());
-                        pOutput.accept(MWItems.POLISHED_CASSERITE.get());
-                        pOutput.accept(MWItems.POLISHED_CASSERITE_STAIRS.get());
-                        pOutput.accept(MWItems.POLISHED_CASSERITE_SLAB.get());
+                        pOutput.accept(MWItems.CASSITERITE.get());
+                        pOutput.accept(MWItems.CASSITERITE_STAIRS.get());
+                        pOutput.accept(MWItems.CASSITERITE_SLAB.get());
+                        pOutput.accept(MWItems.CASSITERITE_WALL.get());
+                        pOutput.accept(MWItems.POLISHED_CASSITERITE.get());
+                        pOutput.accept(MWItems.POLISHED_CASSITERITE_STAIRS.get());
+                        pOutput.accept(MWItems.POLISHED_CASSITERITE_SLAB.get());
 
 // TIN ORES
                         pOutput.accept(MWItems.TIN_ORE.get());
                         pOutput.accept(MWItems.DEEPSLATE_TIN_ORE.get());
+                        pOutput.accept(MWItems.CASSITERITE_TIN_ORE.get());
+
                         pOutput.accept(MWItems.RAW_TIN_BLOCK.get());
-                        pOutput.accept(MWItems.CASSERITE_TIN_ORE.get());
 
 
 // --- BUILDING BLOCKS ---
@@ -46,6 +47,15 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.WAXED_CORRODED_TIN.get());
                         pOutput.accept(MWItems.WAXED_ERODED_TIN.get());
 
+                        pOutput.accept(MWItems.TIN_PLATE.get());
+                        pOutput.accept(MWItems.TARNISHED_TIN_PLATE.get());
+                        pOutput.accept(MWItems.CORRODED_TIN_PLATE.get());
+                        pOutput.accept(MWItems.ERODED_TIN_PLATE.get());
+
+                        pOutput.accept(MWItems.WAXED_TIN_PLATE.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_TIN_PLATE.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_TIN_PLATE.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_TIN_PLATE.get());
 // CHISELED TIN
                         pOutput.accept(MWItems.CHISELED_TIN.get());
                         pOutput.accept(MWItems.TARNISHED_CHISELED_TIN.get());
@@ -223,6 +233,16 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.WAXED_CORRODED_TIN_SOUL_LANTERN.get());
                         pOutput.accept(MWItems.WAXED_ERODED_TIN_SOUL_LANTERN.get());
 
+                        pOutput.accept(MWItems.TIN_MAGE_LANTERN.get());
+                        pOutput.accept(MWItems.TARNISHED_TIN_MAGE_LANTERN.get());
+                        pOutput.accept(MWItems.CORRODED_TIN_MAGE_LANTERN.get());
+                        pOutput.accept(MWItems.ERODED_TIN_MAGE_LANTERN.get());
+
+                        pOutput.accept(MWItems.WAXED_TIN_MAGE_LANTERN.get());
+                        pOutput.accept(MWItems.WAXED_TARNISHED_TIN_MAGE_LANTERN.get());
+                        pOutput.accept(MWItems.WAXED_CORRODED_TIN_MAGE_LANTERN.get());
+                        pOutput.accept(MWItems.WAXED_ERODED_TIN_MAGE_LANTERN.get());
+
                         pOutput.accept(MWItems.BRONZE_BLOCK.get());
                         pOutput.accept(MWItems.BRONZE_GRATE.get());
                         pOutput.accept(MWItems.BRONZE_GRATE_DRAIN.get());
@@ -236,7 +256,7 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.BRONZE_TRAPDOOR.get());
                         pOutput.accept(MWItems.BRONZE_BARS.get());
 
-                        pOutput.accept(MWItems.MECHANICAL_PRESSURE_PLATE.get());
+                        pOutput.accept(MWItems.LOOPING_PRESSURE_PLATE.get());
 
                         pOutput.accept(MWItems.ROSE_GOLD_BLOCK.get());
                         pOutput.accept(MWItems.ROSE_GOLD_MOSAIC.get());
@@ -245,7 +265,10 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.MEDIUM_WEIGHTED_PRESSURE_PLATE.get());
 
                         pOutput.accept(MWItems.ROSE_LANTERN.get());
+
                         pOutput.accept(MWItems.MAGE_TORCH.get());
+                        pOutput.accept(MWItems.MAGE_LANTERN.get());
+                        pOutput.accept(MWItems.MAGE_CAMPFIRE.get());
 
 
 
@@ -260,6 +283,7 @@ public class MWCreativeModeTabs {
 
                         pOutput.accept(MWItems.ROSE_GOLD_INGOT.get());
                         pOutput.accept(MWItems.ROSE_GOLD_NUGGET.get());
+                        pOutput.accept(MWItems.ROSE_POWDER.get());
 
                         // --- FOOD ---
                         pOutput.accept(MWItems.ROSE_GOLD_BEETROOT.get());
@@ -277,7 +301,6 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.BRONZE_SHOVEL.get());
                         pOutput.accept(MWItems.BRONZE_HOE.get());
                         pOutput.accept(MWItems.BRONZE_SHEARS.get());
-                        pOutput.accept(MWItems.POWER_HAMMER.get());
 
                         pOutput.accept(MWItems.ROSE_GOLD_SWORD.get());
                         pOutput.accept(MWItems.ROSE_GOLD_PICKAXE.get());

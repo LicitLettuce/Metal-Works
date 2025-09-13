@@ -21,15 +21,18 @@
     - Tin Horse Armor has 4 protection points (1 less than iron).
 - Added Bronze Doors
 - Added Bronze Trapdoors
-- Added Toggle Pressure Plate
+- Added Looping Pressure Plate
     - Activates when stepped on.
-    - Stays on until an entity steps on it again.
+    - Loops between on and off when an entity is standing on it
 - Added Rose Gold Mosaic
 - Added Mage Fire Items
     - Mage Fire is a new pink flame variant that can be crafted into torches, lanterns, tin lanterns, and campfires.
 - Added Rose Powder
     - Rose Powder is the crafting ingredient used to make Mage Fire items.
-
+### Changes
+- Changed Rose Lantern center texture to be opaque
+  - The center texture is now opaque to prevent rendering errors 
+- Rose Gold Beetroots now have a 40% chance to give the player Regeneration upon consumption
 ### Removed
 - Cut Tin Wall
 - Cut Tin Pressure Plate

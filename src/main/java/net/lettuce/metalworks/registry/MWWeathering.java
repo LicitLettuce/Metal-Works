@@ -20,6 +20,11 @@ public class MWWeathering {
         WEATHERING_CHAIN.put(MWBlocks.TARNISHED_TIN.get(), MWBlocks.CORRODED_TIN.get());
         WEATHERING_CHAIN.put(MWBlocks.CORRODED_TIN.get(), MWBlocks.ERODED_TIN.get());
 
+        // Tin Plates
+        WEATHERING_CHAIN.put(MWBlocks.TIN_PLATE.get(), MWBlocks.TARNISHED_TIN_PLATE.get());
+        WEATHERING_CHAIN.put(MWBlocks.TARNISHED_TIN_PLATE.get(), MWBlocks.CORRODED_TIN_PLATE.get());
+        WEATHERING_CHAIN.put(MWBlocks.CORRODED_TIN_PLATE.get(), MWBlocks.ERODED_TIN_PLATE.get());
+
         // Chiseled
         WEATHERING_CHAIN.put(MWBlocks.CHISELED_TIN.get(), MWBlocks.TARNISHED_CHISELED_TIN.get());
         WEATHERING_CHAIN.put(MWBlocks.TARNISHED_CHISELED_TIN.get(), MWBlocks.CORRODED_CHISELED_TIN.get());
@@ -99,6 +104,11 @@ public class MWWeathering {
         WEATHERING_CHAIN.put(MWBlocks.TIN_SOUL_LANTERN.get(), MWBlocks.TARNISHED_TIN_SOUL_LANTERN.get());
         WEATHERING_CHAIN.put(MWBlocks.TARNISHED_TIN_SOUL_LANTERN.get(), MWBlocks.CORRODED_TIN_SOUL_LANTERN.get());
         WEATHERING_CHAIN.put(MWBlocks.CORRODED_TIN_SOUL_LANTERN.get(), MWBlocks.ERODED_TIN_SOUL_LANTERN.get());
+
+        // Tin Mage Lanterns
+        WEATHERING_CHAIN.put(MWBlocks.TIN_MAGE_LANTERN.get(), MWBlocks.TARNISHED_TIN_MAGE_LANTERN.get());
+        WEATHERING_CHAIN.put(MWBlocks.TARNISHED_TIN_MAGE_LANTERN.get(), MWBlocks.CORRODED_TIN_MAGE_LANTERN.get());
+        WEATHERING_CHAIN.put(MWBlocks.CORRODED_TIN_MAGE_LANTERN.get(), MWBlocks.ERODED_TIN_MAGE_LANTERN.get());
     }
 
     public static Block getNext(Block block) {
@@ -128,6 +138,12 @@ public class MWWeathering {
             newMap.put(MWBlocks.TARNISHED_TIN.get(), MWBlocks.WAXED_TARNISHED_TIN.get());
             newMap.put(MWBlocks.CORRODED_TIN.get(), MWBlocks.WAXED_CORRODED_TIN.get());
             newMap.put(MWBlocks.ERODED_TIN.get(), MWBlocks.WAXED_ERODED_TIN.get());
+
+            // Tin Plates
+            newMap.put(MWBlocks.TIN_PLATE.get(), MWBlocks.WAXED_TIN_PLATE.get());
+            newMap.put(MWBlocks.TARNISHED_TIN_PLATE.get(), MWBlocks.WAXED_TARNISHED_TIN_PLATE.get());
+            newMap.put(MWBlocks.CORRODED_TIN_PLATE.get(), MWBlocks.WAXED_CORRODED_TIN_PLATE.get());
+            newMap.put(MWBlocks.ERODED_TIN_PLATE.get(), MWBlocks.WAXED_ERODED_TIN_PLATE.get());
 
             // Chiseled
             newMap.put(MWBlocks.CHISELED_TIN.get(), MWBlocks.WAXED_CHISELED_TIN.get());
@@ -224,6 +240,12 @@ public class MWWeathering {
             newMap.put(MWBlocks.TARNISHED_TIN_SOUL_LANTERN.get(), MWBlocks.WAXED_TARNISHED_TIN_SOUL_LANTERN.get());
             newMap.put(MWBlocks.CORRODED_TIN_SOUL_LANTERN.get(), MWBlocks.WAXED_CORRODED_TIN_SOUL_LANTERN.get());
             newMap.put(MWBlocks.ERODED_TIN_SOUL_LANTERN.get(), MWBlocks.WAXED_ERODED_TIN_SOUL_LANTERN.get());
+
+            // Tin Mage Lanterns
+            newMap.put(MWBlocks.TIN_MAGE_LANTERN.get(), MWBlocks.WAXED_TIN_MAGE_LANTERN.get());
+            newMap.put(MWBlocks.TARNISHED_TIN_MAGE_LANTERN.get(), MWBlocks.WAXED_TARNISHED_TIN_MAGE_LANTERN.get());
+            newMap.put(MWBlocks.CORRODED_TIN_MAGE_LANTERN.get(), MWBlocks.WAXED_CORRODED_TIN_MAGE_LANTERN.get());
+            newMap.put(MWBlocks.ERODED_TIN_MAGE_LANTERN.get(), MWBlocks.WAXED_ERODED_TIN_MAGE_LANTERN.get());
 
             Supplier<BiMap<Block, Block>> newSupplier = () -> newMap;
             unsafe.putObject(staticBase, staticOffset, newSupplier);
