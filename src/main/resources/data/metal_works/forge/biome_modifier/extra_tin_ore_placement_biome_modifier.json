@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "frozen_peaks",
+    "jagged_peaks",
+    "stony_peaks"
+  ],
+  "features": "metal_works:extra_tin_ore_placement",
+  "step": "underground_decoration"
+}
