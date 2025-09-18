@@ -14,6 +14,12 @@ public class MWTags {
     public static final TagKey<Block> NEEDS_ROSE_GOLD_TOOL = tag
             ("needs_rose_gold_tool");
 
+    public static final TagKey<Block> TIN_ORE = tag
+            ("tin_ores");
+
+    public static final TagKey<Block> CASSITERITE_ORE_REPLACEABLES = tag
+            ("cassiterite_ore_replaceables");
+
     private static TagKey<Block> tag(String name) {
         return BlockTags.create(new ResourceLocation(MetalWorks.MOD_ID, name));
     }

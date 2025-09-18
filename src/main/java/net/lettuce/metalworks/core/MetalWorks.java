@@ -2,13 +2,13 @@ package net.lettuce.metalworks.core;
 
 import com.mojang.logging.LogUtils;
 import net.lettuce.metalworks.registry.*;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -189,6 +189,7 @@ public class MetalWorks
         {
             ItemBlockRenderTypes.setRenderLayer(MAGE_TORCH.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(MAGE_WALL_TORCH.get(), RenderType.cutout());
+
         }
     }
 }

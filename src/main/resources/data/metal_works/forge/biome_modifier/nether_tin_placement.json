@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "nether_wastes"
+  ],
+  "features": [
+    "metal_works:ore_nether_tin"
+  ],
+  "step": "underground_ores"
+}

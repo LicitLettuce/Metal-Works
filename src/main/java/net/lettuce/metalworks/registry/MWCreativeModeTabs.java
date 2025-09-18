@@ -32,6 +32,7 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.TIN_ORE.get());
                         pOutput.accept(MWItems.DEEPSLATE_TIN_ORE.get());
                         pOutput.accept(MWItems.CASSITERITE_TIN_ORE.get());
+                        pOutput.accept(MWItems.NETHER_TIN_ORE.get());
 
                         pOutput.accept(MWItems.RAW_TIN_BLOCK.get());
 

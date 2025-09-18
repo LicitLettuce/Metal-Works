@@ -1,4 +1,7 @@
-// 1.20.1	2025-09-12T21:53:01.3037129	Tags for minecraft:block mod id metal_works
+// 1.20.1	2025-09-17T15:01:56.4014846	Tags for minecraft:block mod id metal_works
+38950c1091b234e7d911dd5b20249b419956f518 data/metal_works/tags/blocks/cassiterite_ore_replaceables.json
+87269c533442068cf89ed86cb238ef50c43eccc9 data/metal_works/tags/blocks/tin_ores.json
+d58379b650bb3e79d8a8ffcfb703750d171b706f data/minecraft/tags/blocks/enchantment_power_provider.json
 2e8f784300732d32e46feaf01baea2da653b82b2 data/minecraft/tags/blocks/mineable/pickaxe.json
-ac392e1f381fa2d8d9c9ea1f3a6c3cc715343299 data/minecraft/tags/blocks/needs_stone_tool.json
+87269c533442068cf89ed86cb238ef50c43eccc9 data/minecraft/tags/blocks/needs_stone_tool.json
 4f101f616580006335087c1cb136665400061302 data/minecraft/tags/blocks/walls.json

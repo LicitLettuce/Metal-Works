@@ -33,6 +33,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(MWBlocks.TIN_ORE);
         blockWithItem(MWBlocks.DEEPSLATE_TIN_ORE);
         blockWithItem(MWBlocks.CASSITERITE_TIN_ORE);
+        blockWithItem(MWBlocks.NETHER_TIN_ORE);
 
             // Tin Blocks
         blockWithItem(MWBlocks.TIN_BLOCK);

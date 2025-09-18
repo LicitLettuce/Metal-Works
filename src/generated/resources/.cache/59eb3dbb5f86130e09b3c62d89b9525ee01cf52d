@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-12T21:53:01.3027047	Loot Tables
+// 1.20.1	2025-09-15T00:39:20.4895678	Loot Tables
 bed80fee4830c7a39213eb2e2513e97d7f2862b5 data/metal_works/loot_tables/blocks/bronze_bars.json
 e6ffce43a097e0773c2891bd48e6d7592da0ec73 data/metal_works/loot_tables/blocks/bronze_block.json
 94a62d1a35628e47b5190e076246b0735e464d45 data/metal_works/loot_tables/blocks/bronze_door.json
@@ -64,6 +64,7 @@ b41b2147078ceaff462040122cfbcac883f07dee data/metal_works/loot_tables/blocks/ero
 c5b07a6f495290ab17fa0355ab131b20127b8b5d data/metal_works/loot_tables/blocks/mage_lantern.json
 bf8da8e6458a710d46c41c8da895785f37f0007e data/metal_works/loot_tables/blocks/mage_torch.json
 5d5f9e0e693b6c48667677952f30351723cf5817 data/metal_works/loot_tables/blocks/medium_weighted_pressure_plate.json
+dc4e431b26451de99066c8481a4a0dd438574eb5 data/metal_works/loot_tables/blocks/nether_tin_ore.json
 7061eddf3118a5354112467552b60935215d6d07 data/metal_works/loot_tables/blocks/polished_cassiterite.json
 16f5334d8ad8b4da291793b203dfe02c19251c81 data/metal_works/loot_tables/blocks/polished_cassiterite_slab.json
 70841aef5c81e4caf61a87b9d19a49d99329e932 data/metal_works/loot_tables/blocks/polished_cassiterite_stairs.json

@@ -42,6 +42,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(MWBlocks.TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.TIN_ORE.get(), MWItems.RAW_TIN.get()));
         this.add(MWBlocks.DEEPSLATE_TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.DEEPSLATE_TIN_ORE.get(), MWItems.RAW_TIN.get()));
         this.add(MWBlocks.CASSITERITE_TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.CASSITERITE_TIN_ORE.get(), MWItems.RAW_TIN.get()));
+        this.add(MWBlocks.NETHER_TIN_ORE.get(), block -> createNetherLikeOreDrops(MWBlocks.NETHER_TIN_ORE.get(), MWItems.TIN_NUGGET.get()));
 
             // Tin Block Loot Tables
         this.dropSelf(MWBlocks.TIN_BLOCK.get());
@@ -322,6 +323,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 5.0F)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
     }
+
+    protected LootTable.Builder createNetherLikeOreDrops(Block pBlock, Item item) {
+        return createSilkTouchDispatchTable(pBlock,
+                this.applyExplosionDecay(pBlock,
+                        LootItem.lootTableItem(item)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 6.0F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+    }
+
 
     protected LootTable.Builder createCampfireLikeDrop(Block block) {
         return createSilkTouchDispatchTable(block,

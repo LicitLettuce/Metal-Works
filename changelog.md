@@ -5,13 +5,18 @@
 ### Additions
 - Added Cassiterite
     - A new bluish stone type with a block family similar to granite, diorite, and andesite.
-    - Cassiterite boulders spawn in plains biomes and contain large amounts of tin.
-    - Cassiterite also generates near Y-level 0.
+    - Cassiterite generates between y-level 0 to 120 in the following biomes
+      - Stony Peaks
+      - Jagged Peaks
+      - Frozen Peaks
 - Added Cassiterite Tin Ore
+- Added Nether Tin Ore
+  - Drops 2-6 Tin Nuggets
+  - Generates in Nether Waste Biomes between y-level 0 to 128
 - Tin Blocks now weather like Copper Blocks
     - Tin weathers in 3 stages: tarnished, corroded, and eroded.
     - As tin weathers, it slowly turns more purple.
-    - Tin weathers 1.5x the speed of copper, making it slightly faster.
+    - Tin weathers 75% the speed of copper, making it slightly slower.
     - Tin blocks can be waxed and unwaxed with honeycombs and axes, respectively.
     - Unwaxed weathered tin blocks can be scraped back to the previous stage of weathering.
 - Added Tin Tiles
@@ -21,24 +26,36 @@
     - Tin Horse Armor has 4 protection points (1 less than iron).
 - Added Bronze Doors
 - Added Bronze Trapdoors
+- Added Medium Weighted Pressure Plate
+  - Outputs 1 redstone signal for every 5 entities on top of it
+  - Made from Rose Gold
 - Added Looping Pressure Plate
-    - Activates when stepped on.
+    - Activates when stepped on
     - Loops between on and off when an entity is standing on it
 - Added Rose Gold Mosaic
 - Added Mage Fire Items
     - Mage Fire is a new pink flame variant that can be crafted into torches, lanterns, tin lanterns, and campfires.
 - Added Rose Powder
-    - Rose Powder is the crafting ingredient used to make Mage Fire items.
+    - Rose Powder is the crafting ingredient used to make Mage Fire items
 ### Changes
 - Changed Rose Lantern center texture to be opaque
   - The center texture is now opaque to prevent rendering errors 
+- Changed Block of Raw Tin texture
 - Rose Gold Beetroots now have a 40% chance to give the player Regeneration upon consumption
+- __Tin Ore Generation has now been overhauled__
+  - Tin ore generates between y-level -10 to 10
+  - Extra tin ore generates in larger amounts between y-level -10 to 255 in the following biomes
+    - Stony Peaks
+    - Jagged Peaks
+    - Frozen Peaks
+  - Tin Ore will generate as Cassiterite Tin Ore when it generates in Cassiterie clumps
 ### Removed
 - Cut Tin Wall
 - Cut Tin Pressure Plate
 - Cut Tin Button
-
 > **Note:** I removed these because they did not fit the direction of the mod. They felt like filler blocks added for the sake of variety, without much purpose. – *Lettuce*
+### Translations
+- Added the following translations:
 
 ## 1.1.3
 

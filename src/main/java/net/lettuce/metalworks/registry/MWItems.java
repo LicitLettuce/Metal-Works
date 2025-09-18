@@ -38,6 +38,8 @@ public class MWItems {
             (MWBlocks.DEEPSLATE_TIN_ORE.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> CASSITERITE_TIN_ORE = ITEMS.register("cassiterite_tin_ore", () -> new BlockItem
             (MWBlocks.CASSITERITE_TIN_ORE.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> NETHER_TIN_ORE = ITEMS.register("nether_tin_ore", () -> new BlockItem
+            (MWBlocks.NETHER_TIN_ORE.get(), new Item.Properties()));
 
         // Tin Blocks Items
     public static final RegistryObject<BlockItem> TIN_BLOCK = ITEMS.register("tin_block", () -> new BlockItem
