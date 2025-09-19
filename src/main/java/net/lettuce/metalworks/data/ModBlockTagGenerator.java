@@ -41,8 +41,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(MWTags.CASSITERITE_ORE_REPLACEABLES)
                 .add(MWBlocks.CASSITERITE.get());
 
+        this.tag(MWTags.MAGE_FIRE_BASE_BLOCKS)
+                .add(MWBlocks.ROSE_GOLD_BLOCK.get(),
+                        MWBlocks.ROSE_GOLD_MOSAIC.get());
+
         this.tag(BlockTags.ENCHANTMENT_POWER_PROVIDER)
-                .add(MWBlocks.MAGE_TORCH.get(),
+                .add(MWBlocks.MAGE_FIRE.get(),
+                        MWBlocks.MAGE_TORCH.get(),
                         MWBlocks.MAGE_LANTERN.get(),
                         MWBlocks.MAGE_CAMPFIRE.get(),
                         MWBlocks.TIN_MAGE_LANTERN.get(),

@@ -1,0 +1,90 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "metal_works:block/mage_fire_floor0"
+        },
+        {
+          "model": "metal_works:block/mage_fire_floor1"
+        }
+      ]
+    },
+    {
+      "apply": [
+        {
+          "model": "metal_works:block/mage_fire_side0"
+        },
+        {
+          "model": "metal_works:block/mage_fire_side1"
+        },
+        {
+          "model": "metal_works:block/mage_fire_side_alt0"
+        },
+        {
+          "model": "metal_works:block/mage_fire_side_alt1"
+        }
+      ]
+    },
+    {
+      "apply": [
+        {
+          "model": "metal_works:block/mage_fire_side0",
+          "y": 90
+        },
+        {
+          "model": "metal_works:block/mage_fire_side1",
+          "y": 90
+        },
+        {
+          "model": "metal_works:block/mage_fire_side_alt0",
+          "y": 90
+        },
+        {
+          "model": "metal_works:block/mage_fire_side_alt1",
+          "y": 90
+        }
+      ]
+    },
+    {
+      "apply": [
+        {
+          "model": "metal_works:block/mage_fire_side0",
+          "y": 180
+        },
+        {
+          "model": "metal_works:block/mage_fire_side1",
+          "y": 180
+        },
+        {
+          "model": "metal_works:block/mage_fire_side_alt0",
+          "y": 180
+        },
+        {
+          "model": "metal_works:block/mage_fire_side_alt1",
+          "y": 180
+        }
+      ]
+    },
+    {
+      "apply": [
+        {
+          "model": "metal_works:block/mage_fire_side0",
+          "y": 270
+        },
+        {
+          "model": "metal_works:block/mage_fire_side1",
+          "y": 270
+        },
+        {
+          "model": "metal_works:block/mage_fire_side_alt0",
+          "y": 270
+        },
+        {
+          "model": "metal_works:block/mage_fire_side_alt1",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

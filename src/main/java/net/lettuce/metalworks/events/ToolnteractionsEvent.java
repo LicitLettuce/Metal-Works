@@ -2,9 +2,18 @@ package net.lettuce.metalworks.events;
 
 import net.lettuce.metalworks.core.MetalWorks;
 import net.lettuce.metalworks.registry.MWBlocks;
+import net.lettuce.metalworks.registry.MWTags;
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolActions;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -190,6 +199,37 @@ public class ToolnteractionsEvent {
             setWeatheredState(event, MWBlocks.TARNISHED_TIN_MAGE_LANTERN.get());
         } else if (block == MWBlocks.TARNISHED_TIN_MAGE_LANTERN.get()) {
             setWeatheredState(event, MWBlocks.TIN_MAGE_LANTERN.get());
+        }
+    }
+    @Mod.EventBusSubscriber(modid = "metal_works")
+    public class CommonEvents {
+
+        @SubscribeEvent
+        public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+            Level level = event.getLevel();
+            BlockPos pos = event.getPos();
+            ItemStack item = event.getItemStack();
+
+            if (item.getItem() == Items.FLINT_AND_STEEL) {
+                BlockState base = level.getBlockState(pos);
+
+                if (base.is(MWTags.MAGE_FIRE_BASE_BLOCKS)) {
+                    BlockPos above = pos.above();
+                    if (level.getBlockState(above).isAir()) {
+                        level.setBlockAndUpdate(above, MWBlocks.MAGE_FIRE.get().defaultBlockState());
+
+                        item.hurtAndBreak(1, event.getEntity(), (p) ->
+                                p.broadcastBreakEvent(event.getHand()));
+
+                        level.playSound(null, above, SoundEvents.FLINTANDSTEEL_USE,
+                                SoundSource.BLOCKS, 1.0F,
+                                level.getRandom().nextFloat() * 0.4F + 0.8F);
+
+                        event.setCanceled(true);
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                    }
+                }
+            }
         }
     }
 

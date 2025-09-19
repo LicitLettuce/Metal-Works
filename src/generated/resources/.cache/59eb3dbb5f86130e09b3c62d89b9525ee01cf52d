@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-15T00:39:20.4895678	Loot Tables
+// 1.20.1	2025-09-18T19:52:30.4094616	Loot Tables
 bed80fee4830c7a39213eb2e2513e97d7f2862b5 data/metal_works/loot_tables/blocks/bronze_bars.json
 e6ffce43a097e0773c2891bd48e6d7592da0ec73 data/metal_works/loot_tables/blocks/bronze_block.json
 94a62d1a35628e47b5190e076246b0735e464d45 data/metal_works/loot_tables/blocks/bronze_door.json
@@ -61,6 +61,7 @@ b41b2147078ceaff462040122cfbcac883f07dee data/metal_works/loot_tables/blocks/ero
 5a33a9f3e938d82595913e987f96a5d3218372b4 data/metal_works/loot_tables/blocks/eroded_tin_tile_stairs.json
 0963ae523cdaea64185c4f7e0939bc8d564cf15b data/metal_works/loot_tables/blocks/looping_pressure_plate.json
 7eb0c1ece676680804ff52d87ac585575f4a779f data/metal_works/loot_tables/blocks/mage_campfire.json
+179bb3f1a68d0f514e70693f424ec9c68d8f603a data/metal_works/loot_tables/blocks/mage_fire.json
 c5b07a6f495290ab17fa0355ab131b20127b8b5d data/metal_works/loot_tables/blocks/mage_lantern.json
 bf8da8e6458a710d46c41c8da895785f37f0007e data/metal_works/loot_tables/blocks/mage_torch.json
 5d5f9e0e693b6c48667677952f30351723cf5817 data/metal_works/loot_tables/blocks/medium_weighted_pressure_plate.json

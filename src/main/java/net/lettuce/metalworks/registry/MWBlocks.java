@@ -2,14 +2,12 @@ package net.lettuce.metalworks.registry;
 
 import net.lettuce.metalworks.common.block.*;
 import net.lettuce.metalworks.core.MetalWorks;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
@@ -461,17 +459,40 @@ public class MWBlocks {
             (75, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).forceSolidOn().requiresCorrectToolForDrops().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY), BlockSetType.IRON));
 
         // Mage Fire Blocks
-    public static final RegistryObject<Block> MAGE_TORCH = BLOCKS.register("mage_torch", () -> new ModdedTorchBlock
-            (BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(s -> 12).sound(SoundType.WOOD), ParticleTypes.WITCH));
 
-    public static final RegistryObject<Block> MAGE_WALL_TORCH = BLOCKS.register("mage_wall_torch", () -> new WallTorchBlock
-            (BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(s -> 12).sound(SoundType.WOOD).dropsLike(MAGE_TORCH.get()), ParticleTypes.WITCH));
+    public static final RegistryObject<Block> MAGE_FIRE = BLOCKS.register("mage_fire", () ->
+            new MageFireBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .replaceable()
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+                    .lightLevel(s -> 10)
+                    .sound(SoundType.WOOL))  // Optional: change sound
+    );
+
+        public static final RegistryObject<Block> MAGE_TORCH = BLOCKS.register("mage_torch", () ->
+                new MageTorchBlock(BlockBehaviour.Properties.of()
+                        .noCollission()
+                        .instabreak()
+                        .lightLevel(s -> 12)
+                        .sound(SoundType.WOOD))
+        );
+
+    public static final RegistryObject<Block> MAGE_WALL_TORCH = BLOCKS.register("mage_wall_torch", () ->
+            new MageWallTorchBlock(BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .instabreak()
+                    .lightLevel(s -> 12)
+                    .sound(SoundType.WOOD)
+                    .dropsLike(MAGE_TORCH.get()))
+    );
 
     public static final RegistryObject<Block> MAGE_LANTERN = BLOCKS.register("mage_lantern", () -> new LanternBlock
             (BlockBehaviour.Properties.of().mapColor(MapColor.METAL).forceSolidOn().requiresCorrectToolForDrops().strength(3.5F).sound(SoundType.LANTERN).lightLevel((p_187433_) -> 12).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
-    public static final RegistryObject<Block> MAGE_CAMPFIRE = BLOCKS.register("mage_campfire", () -> new CampfireBlock
-            (false, 2, BlockBehaviour.Properties.of().mapColor(MapColor.PODZOL).instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).lightLevel(litBlockEmission(12)).noOcclusion().ignitedByLava()));
+    public static final RegistryObject<Block> MAGE_CAMPFIRE =
+            BLOCKS.register("mage_campfire", MageCampfireBlock::new);
 
     // Tin Mage Lantern
     public static final RegistryObject<Block> TIN_MAGE_LANTERN = BLOCKS.register("tin_mage_lantern", () -> new WeatheringTinLanternBlock

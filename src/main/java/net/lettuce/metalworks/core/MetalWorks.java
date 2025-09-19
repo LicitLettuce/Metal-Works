@@ -2,6 +2,7 @@ package net.lettuce.metalworks.core;
 
 import com.mojang.logging.LogUtils;
 import net.lettuce.metalworks.registry.*;
+import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,8 +21,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
-import static net.lettuce.metalworks.registry.MWBlocks.MAGE_TORCH;
-import static net.lettuce.metalworks.registry.MWBlocks.MAGE_WALL_TORCH;
+import static net.lettuce.metalworks.registry.MWBlocks.*;
 
 @Mod(MetalWorks.MOD_ID)
 public class MetalWorks
@@ -32,8 +32,12 @@ public class MetalWorks
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         MWCreativeModeTabs.register(modEventBus);
+
         MWItems.register(modEventBus);
+        MWParticles.PARTICLES.register(modEventBus);
         MWBlocks.BLOCKS.register(modEventBus);
+        MWBlockEntities.register(); // ✅ THIS IS REQUIRED
+
         MWPaintings.REGISTRY.register(modEventBus);
         MWSounds.register(modEventBus);
 
@@ -174,6 +178,15 @@ public class MetalWorks
 
     }
 
+    @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public class MetalWorksClient {
+
+        @SubscribeEvent
+        public static void registerParticles(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(MWParticles.MAGE_FLAME.get(), FlameParticle.Provider::new);
+        }
+    }
+
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
@@ -189,6 +202,7 @@ public class MetalWorks
         {
             ItemBlockRenderTypes.setRenderLayer(MAGE_TORCH.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(MAGE_WALL_TORCH.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(MAGE_FIRE.get(), RenderType.cutout());
 
         }
     }

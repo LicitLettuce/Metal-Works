@@ -33,10 +33,12 @@
     - Activates when stepped on
     - Loops between on and off when an entity is standing on it
 - Added Rose Gold Mosaic
-- Added Mage Fire Items
+- Added Mage Fire
+    - Mage fire can be created when Flint and Steel is used on Rose Gold Blocks
     - Mage Fire is a new pink flame variant that can be crafted into torches, lanterns, tin lanterns, and campfires.
 - Added Rose Powder
     - Rose Powder is the crafting ingredient used to make Mage Fire items
+    - Crafted from one Gunpowder and one Rose Gold Nugget
 ### Changes
 - Changed Rose Lantern center texture to be opaque
   - The center texture is now opaque to prevent rendering errors 
@@ -49,6 +51,7 @@
     - Jagged Peaks
     - Frozen Peaks
   - Tin Ore will generate as Cassiterite Tin Ore when it generates in Cassiterie clumps
+  - Tin Lantern texture framerate has been updated, now being identical to traditional Lanterns
 ### Removed
 - Cut Tin Wall
 - Cut Tin Pressure Plate

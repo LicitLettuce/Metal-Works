@@ -20,6 +20,9 @@ public class MWTags {
     public static final TagKey<Block> CASSITERITE_ORE_REPLACEABLES = tag
             ("cassiterite_ore_replaceables");
 
+    public static final TagKey<Block> MAGE_FIRE_BASE_BLOCKS = tag
+            ("mage_fire_base_blocks");
+
     private static TagKey<Block> tag(String name) {
         return BlockTags.create(new ResourceLocation(MetalWorks.MOD_ID, name));
     }

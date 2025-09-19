@@ -9,6 +9,7 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
@@ -310,6 +311,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.MAGE_TORCH.get());
 
         this.dropSelf(MWBlocks.MAGE_LANTERN.get());
+
+        this.dropOther(MWBlocks.MAGE_FIRE.get(), Blocks.AIR);
 
         this.add(MWBlocks.MAGE_CAMPFIRE.get(), block -> createCampfireLikeDrop(MWBlocks.MAGE_CAMPFIRE.get()));
 
