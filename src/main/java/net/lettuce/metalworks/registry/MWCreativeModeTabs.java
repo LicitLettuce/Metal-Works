@@ -327,6 +327,7 @@ public class MWCreativeModeTabs {
                         pOutput.accept(MWItems.ROSE_GOLD_LEGGINGS.get());
                         pOutput.accept(MWItems.ROSE_GOLD_BOOTS.get());
                         pOutput.accept(MWItems.ROSE_GOLD_HORSE_ARMOR.get());
+                        pOutput.accept(MWItems.MAGE_GOLEM_SPAWN_EGG.get());
 
                     })
                     .build());

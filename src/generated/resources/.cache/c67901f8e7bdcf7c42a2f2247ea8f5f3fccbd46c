@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-12T21:53:01.304718	Item Models: metal_works
+// 1.20.1	2025-09-23T03:01:06.9637854	Item Models: metal_works
 3a80a545789b30f683dff01f83bc2d7fece1a491 assets/metal_works/models/item/bronze_axe.json
 c4395b8b2f1fa8d47915c6579177a1abd3e51f08 assets/metal_works/models/item/bronze_boots.json
 1684750ce46e2f7b8e313dd58280b90aaa9b7611 assets/metal_works/models/item/bronze_boots_amethyst_trim.json
@@ -84,6 +84,7 @@ df895608b40535eb896f70703376ae69b1f6f305 assets/metal_works/models/item/eroded_t
 4732fb84e238a6eca6248daeafd97dcf067946b1 assets/metal_works/models/item/eroded_tin_tile_slab.json
 c547066ea1692260ae0a6b30e69cf4c3ac22add3 assets/metal_works/models/item/eroded_tin_tile_stairs.json
 260685b5fb84f0f2e526ea6974beaf315447be0f assets/metal_works/models/item/mage_campfire.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/metal_works/models/item/mage_golem_spawn_egg.json
 7e7512303887cdea6c10638d038e9ed269ff643d assets/metal_works/models/item/mage_lantern.json
 8e3a6806ae49bba193c3f3c2802dfe071ed6ee30 assets/metal_works/models/item/polished_cassiterite_slab.json
 513979d9565f8006f429918052b19ab72fd6bd36 assets/metal_works/models/item/polished_cassiterite_stairs.json

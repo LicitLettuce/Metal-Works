@@ -1,10 +1,14 @@
 package net.lettuce.metalworks.core;
 
 import com.mojang.logging.LogUtils;
+import net.lettuce.metalworks.registry.MWEntities;
+import net.lettuce.metalworks.entity.client.magegolem.MageGolemRenderer;
+import net.lettuce.metalworks.events.WaxingEvent;
 import net.lettuce.metalworks.registry.*;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
@@ -19,6 +23,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
 import static net.lettuce.metalworks.registry.MWBlocks.*;
@@ -36,10 +41,10 @@ public class MetalWorks
         MWItems.register(modEventBus);
         MWParticles.PARTICLES.register(modEventBus);
         MWBlocks.BLOCKS.register(modEventBus);
-        MWBlockEntities.register(); // ✅ THIS IS REQUIRED
-
+        MWBlockEntities.register();
         MWPaintings.REGISTRY.register(modEventBus);
         MWSounds.register(modEventBus);
+        MWEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -48,7 +53,11 @@ public class MetalWorks
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             MWWeathering.registerWeatheringChain();
-            MWWeathering.registerWaxables();
+            WaxingEvent.initWaxables();
+            var type = MWEntities.MAGE_GOLEM.get();
+            var key = ForgeRegistries.ENTITY_TYPES.getKey(type);
+            MetalWorks.LOGGER.info("Mage Golem registered with ID: {}", key);
+
         });
     }
 
@@ -203,7 +212,7 @@ public class MetalWorks
             ItemBlockRenderTypes.setRenderLayer(MAGE_TORCH.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(MAGE_WALL_TORCH.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(MAGE_FIRE.get(), RenderType.cutout());
-
+            EntityRenderers.register(MWEntities.MAGE_GOLEM.get(), MageGolemRenderer::new);
         }
     }
 }

@@ -3,6 +3,21 @@
 ## 1.2.0 "The Big Update"
 
 ### Additions
+- Added Mage Golem
+  - The Mage Golem is a new golem type that is made with 2 Rose Gold Blocks and 1 Pumpkin
+  - It does not go after entities, instead it blocks hostile mob spawns within a 32 block radius by default which includes:
+    - Monster Spawners
+    - Most Hostile Entities
+    - Spawn Eggs
+    - Wither Spawns (Yes, Wither Spawns)
+    - Portal Spawns (Zombified Piglins)
+    - Zombification of Villagers (Dissapear)
+    - Zombification of Piglins/Hoglins (Dissapear)
+    - 
+  - It does not block the spawns of the following:
+    - Ghasts
+    - Phantoms
+    - Hoglins
 - Added Cassiterite
     - A new bluish stone type with a block family similar to granite, diorite, and andesite.
     - Cassiterite generates between y-level 0 to 120 in the following biomes

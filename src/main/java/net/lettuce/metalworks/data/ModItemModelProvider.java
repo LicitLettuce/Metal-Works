@@ -245,6 +245,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         withExistingParent(MWItems.TIN_CHAIN.getId().getPath(), "item/generated")
                 .texture("layer0", modLoc("item/tin_chain"));
+        withExistingParent(MWItems.MAGE_GOLEM_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

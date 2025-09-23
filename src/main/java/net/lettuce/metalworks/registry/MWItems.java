@@ -3,6 +3,7 @@ package net.lettuce.metalworks.registry;
 import net.lettuce.metalworks.core.MetalWorks;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -589,6 +590,9 @@ public class MWItems {
 
     public static final RegistryObject<Item> ROSE_GOLD_HORSE_ARMOR = ITEMS.register("rose_gold_horse_armor", () -> new HorseArmorItem
             ( 8, "rose_gold", new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<ForgeSpawnEggItem> MAGE_GOLEM_SPAWN_EGG = ITEMS.register("mage_golem_spawn_egg", () -> new ForgeSpawnEggItem
+            (MWEntities.MAGE_GOLEM, 0xbc355e, 0xffcbc8, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
