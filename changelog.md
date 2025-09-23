@@ -13,9 +13,8 @@
     - Portal Spawns (Zombified Piglins)
     - Zombification of Villagers (Dissapear)
     - Zombification of Piglins/Hoglins (Dissapear)
-    - 
+
   - It does not block the spawns of the following:
-    - Ghasts
     - Phantoms
     - Hoglins
 - Added Cassiterite
