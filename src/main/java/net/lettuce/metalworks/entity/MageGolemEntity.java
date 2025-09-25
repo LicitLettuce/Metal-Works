@@ -12,9 +12,14 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.AbstractGolem;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
 
 public class MageGolemEntity extends AbstractGolem {
@@ -89,5 +94,16 @@ public class MageGolemEntity extends AbstractGolem {
     @Nullable
     protected SoundEvent getDeathSound() {
         return SoundEvents.IRON_GOLEM_DEATH;
+    }
+    @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+    public class ModTargetingEvents {
+
+        @SubscribeEvent
+        public static void onEntityJoin(EntityJoinLevelEvent event) {
+            if (!(event.getEntity() instanceof Monster monster)) return;
+
+            monster.targetSelector.addGoal(2,
+                    new NearestAttackableTargetGoal<>(monster, MageGolemEntity.class, true));
+        }
     }
 }

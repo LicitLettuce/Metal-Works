@@ -20,6 +20,7 @@
     - Hoglins
     - Illagers
   - Mage Golems Drop 1-2 Rose Gold Ingots Upon Being Killed
+  - Monsters will attack Mage Golems, even though they do not attack back.
 - Added Cassiterite
     - A new bluish stone type with a block family similar to granite, diorite, and andesite.
     - Cassiterite generates between y-level 0 to 120 in the following biomes
