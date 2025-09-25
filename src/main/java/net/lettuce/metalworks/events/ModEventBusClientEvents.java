@@ -2,7 +2,7 @@ package net.lettuce.metalworks.events;
 
 import net.lettuce.metalworks.core.MetalWorks;
 import net.lettuce.metalworks.entity.client.magegolem.MageGolemModel;
-import net.lettuce.metalworks.entity.client.MWModelLayers;
+import net.lettuce.metalworks.entity.model.MWModelLayers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

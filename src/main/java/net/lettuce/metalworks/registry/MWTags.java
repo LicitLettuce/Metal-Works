@@ -7,6 +7,8 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
 public class MWTags {
+
+    //Blocks
     public static final TagKey<Block> NEEDS_TIN_TOOL = tag
             ("needs_tin_tool");
 
@@ -27,6 +29,8 @@ public class MWTags {
 
     public static final TagKey<Block> MAGE_POWER_TRANSMITTERS = tag
             ("mage_power_transmitters");
+
+    //Items
 
     private static TagKey<Block> tag(String name) {
         return BlockTags.create(new ResourceLocation(MetalWorks.MOD_ID, name));

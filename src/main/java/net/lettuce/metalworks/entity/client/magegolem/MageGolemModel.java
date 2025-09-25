@@ -5,7 +5,7 @@ package net.lettuce.metalworks.entity.client.magegolem;// Made with Blockbench 4
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.lettuce.metalworks.entity.MWAnimationDefinitions;
+import net.lettuce.metalworks.registry.MWAnimationDefinitions;
 import net.lettuce.metalworks.entity.MageGolemEntity;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;

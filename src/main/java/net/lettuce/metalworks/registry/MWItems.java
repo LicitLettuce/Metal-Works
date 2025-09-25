@@ -592,7 +592,7 @@ public class MWItems {
             ( 8, "rose_gold", new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<ForgeSpawnEggItem> MAGE_GOLEM_SPAWN_EGG = ITEMS.register("mage_golem_spawn_egg", () -> new ForgeSpawnEggItem
-            (MWEntities.MAGE_GOLEM, 0xbc355e, 0xffcbc8, new Item.Properties()));
+            (MWEntities.MAGE_GOLEM, 0xf25e63, 0xffcbc8, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

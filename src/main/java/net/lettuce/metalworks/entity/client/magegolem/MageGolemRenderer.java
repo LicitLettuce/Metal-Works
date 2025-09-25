@@ -2,7 +2,7 @@ package net.lettuce.metalworks.entity.client.magegolem;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.entity.client.MWModelLayers;
+import net.lettuce.metalworks.entity.model.MWModelLayers;
 import net.lettuce.metalworks.entity.MageGolemEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

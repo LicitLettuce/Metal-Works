@@ -1,4 +1,4 @@
-package net.lettuce.metalworks.entity.client;
+package net.lettuce.metalworks.entity.model;
 
 import net.lettuce.metalworks.core.MetalWorks;
 import net.minecraft.client.model.geom.ModelLayerLocation;

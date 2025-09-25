@@ -1,4 +1,4 @@
-package net.lettuce.metalworks.entity;
+package net.lettuce.metalworks.registry;
 
 import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;

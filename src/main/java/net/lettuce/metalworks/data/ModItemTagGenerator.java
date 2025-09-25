@@ -21,7 +21,6 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
 
-        // Trimmable Armor
         this.tag(ItemTags.TRIMMABLE_ARMOR)
                 .add(MWItems.TIN_HELMET.get(),
                 MWItems.TIN_CHESTPLATE.get(),
@@ -35,7 +34,6 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 MWItems.ROSE_GOLD_CHESTPLATE.get(),
                 MWItems.ROSE_GOLD_LEGGINGS.get(),
                 MWItems.ROSE_GOLD_BOOTS.get());
-
 
     }
 }
