@@ -22,7 +22,6 @@ public class WeatheringTinBlock extends Block {
             if (nextBlock != null) {
                 BlockState nextState = nextBlock.defaultBlockState();
 
-                // Copy all properties that exist in both current and next state
                 for (Property<?> property : state.getProperties()) {
                     if (nextState.hasProperty(property)) {
                         nextState = copyProperty(state, nextState, property);
@@ -45,7 +44,7 @@ public class WeatheringTinBlock extends Block {
             Comparable value = fromState.getValue(property);
             return toState.setValue(property, value);
         } catch (Exception e) {
-            // Skip properties with mismatched types or errors
+
             return toState;
         }
     }

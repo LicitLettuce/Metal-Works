@@ -14,7 +14,6 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        // ✅ Call .get() here INSIDE the event — this is safe
         event.registerBlockEntityRenderer(
                 MWBlockEntities.MAGE_CAMPFIRE.get(),  // <-- VALID here
                 context -> new CampfireRenderer(context)

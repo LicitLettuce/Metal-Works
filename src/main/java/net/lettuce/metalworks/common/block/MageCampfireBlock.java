@@ -3,10 +3,8 @@ package net.lettuce.metalworks.common.block;
 import net.lettuce.metalworks.common.blockentity.MageCampfireBlockEntity;
 import net.lettuce.metalworks.registry.MWBlockEntities;
 import net.minecraft.core.BlockPos;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -16,7 +14,6 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.CampfireBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -35,7 +32,6 @@ public class MageCampfireBlock extends CampfireBlock {
                 .noOcclusion()
                 .ignitedByLava());
     }
-
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {

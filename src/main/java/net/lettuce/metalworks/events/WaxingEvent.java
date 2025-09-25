@@ -28,12 +28,12 @@ public class WaxingEvent {
     );
 
     private static final Map<Block, Block> WAXABLES = new HashMap<>();
-    public static final Map<Block, Block> UNWAXABLES = new HashMap<>(); // Shared with de-waxing
+    public static final Map<Block, Block> UNWAXABLES = new HashMap<>();
 
     public static void initWaxables() {
         waxablePairs.forEach((from, to) -> {
             WAXABLES.put(from.get(), to.get());
-            UNWAXABLES.put(to.get(), from.get()); // populate reverse map
+            UNWAXABLES.put(to.get(), from.get());
         });
     }
 
@@ -49,14 +49,13 @@ public class WaxingEvent {
 
         Block currentBlock = state.getBlock();
 
-        // Waxing logic
         if (heldItem.getItem() instanceof HoneycombItem) {
             Block waxed = WAXABLES.get(currentBlock);
             if (waxed != null) {
                 BlockState newState = waxed.defaultBlockState();
 
                 level.setBlock(pos, newState, 11);
-                level.levelEvent(3003, pos, 0); // Wax on particles
+                level.levelEvent(3003, pos, 0);
 
                 if (!player.isCreative()) {
                     heldItem.shrink(1);

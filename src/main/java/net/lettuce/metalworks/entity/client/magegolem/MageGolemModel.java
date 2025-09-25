@@ -22,7 +22,6 @@ public class MageGolemModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart left_leg;
 	private final ModelPart right_leg;
 
-
 	public MageGolemModel(ModelPart root) {
 		this.mage_golem = root.getChild("mage_golem");
 		this.head = mage_golem.getChild("body").getChild("head");

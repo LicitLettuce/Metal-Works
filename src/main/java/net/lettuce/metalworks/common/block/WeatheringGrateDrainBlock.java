@@ -56,6 +56,4 @@ public class WeatheringGrateDrainBlock extends WeatheringTinBlock implements Sim
         FluidState fluidState = context.getLevel().getFluidState(context.getClickedPos());
         return this.defaultBlockState().setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
     }
-
-    // No need to override randomTick() or isRandomlyTicking() — it's already inherited from WeatheringTin
 }

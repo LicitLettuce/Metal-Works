@@ -23,7 +23,6 @@ public class MageFireBlock extends BaseFireBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        // Only survives on top of your custom base block
         return canSurviveOnBlock(level.getBlockState(pos.below()));
     }
 
@@ -41,7 +40,6 @@ public class MageFireBlock extends BaseFireBlock {
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource rand) {
         super.animateTick(state, level, pos, rand);
-        // Optional: custom flame/spark particles
         level.addParticle(ParticleTypes.SMOKE,
                 pos.getX() + 0.5 + (rand.nextDouble() - 0.5) * 0.3,
                 pos.getY() + 0.7,

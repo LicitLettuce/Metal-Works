@@ -31,7 +31,6 @@ public class DeWaxingEvent {
         Block currentBlock = state.getBlock();
         Map<Block, Block> unwaxables = WaxingEvent.UNWAXABLES;
 
-        // Check if block is de-waxable and held item is an axe
         if (heldItem.getItem() instanceof AxeItem && unwaxables.containsKey(currentBlock)) {
             Block unwaxed = unwaxables.get(currentBlock);
             BlockState newState = unwaxed.defaultBlockState();

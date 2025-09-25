@@ -436,8 +436,7 @@ public class MWBlocks {
     public static final RegistryObject<Block> BRONZE_TRAPDOOR = BLOCKS.register("bronze_trapdoor", () -> new TrapDoorBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
 
-    public static final RegistryObject<Block> LOOPING_PRESSURE_PLATE = BLOCKS.register("looping_pressure_plate",
-            () -> new LoopingPressurePlateBlock());
+    public static final RegistryObject<Block> LOOPING_PRESSURE_PLATE = BLOCKS.register("looping_pressure_plate", () -> new LoopingPressurePlateBlock());
 
         //Rose Gold Blocks
     public static final RegistryObject<Block> ROSE_GOLD_BLOCK = BLOCKS.register("rose_gold_block", () -> new Block
@@ -459,40 +458,19 @@ public class MWBlocks {
             (75, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).forceSolidOn().requiresCorrectToolForDrops().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY), BlockSetType.IRON));
 
         // Mage Fire Blocks
+    public static final RegistryObject<Block> MAGE_FIRE = BLOCKS.register("mage_fire", () -> new MageFireBlock
+            (BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).replaceable().noCollission().randomTicks().instabreak().lightLevel(s -> 10).sound(SoundType.WOOL)));
 
-    public static final RegistryObject<Block> MAGE_FIRE = BLOCKS.register("mage_fire", () ->
-            new MageFireBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_PURPLE)
-                    .replaceable()
-                    .noCollission()
-                    .randomTicks()
-                    .instabreak()
-                    .lightLevel(s -> 10)
-                    .sound(SoundType.WOOL))  // Optional: change sound
-    );
+    public static final RegistryObject<Block> MAGE_TORCH = BLOCKS.register("mage_torch", () -> new MageTorchBlock
+            (BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(s -> 12).sound(SoundType.WOOD));
 
-        public static final RegistryObject<Block> MAGE_TORCH = BLOCKS.register("mage_torch", () ->
-                new MageTorchBlock(BlockBehaviour.Properties.of()
-                        .noCollission()
-                        .instabreak()
-                        .lightLevel(s -> 12)
-                        .sound(SoundType.WOOD))
-        );
-
-    public static final RegistryObject<Block> MAGE_WALL_TORCH = BLOCKS.register("mage_wall_torch", () ->
-            new MageWallTorchBlock(BlockBehaviour.Properties.of()
-                    .noCollission()
-                    .instabreak()
-                    .lightLevel(s -> 12)
-                    .sound(SoundType.WOOD)
-                    .dropsLike(MAGE_TORCH.get()))
-    );
+    public static final RegistryObject<Block> MAGE_WALL_TORCH = BLOCKS.register("mage_wall_torch", () -> new MageWallTorchBlock
+            (BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(s -> 12).sound(SoundType.WOOD).dropsLike(MAGE_TORCH.get())));
 
     public static final RegistryObject<Block> MAGE_LANTERN = BLOCKS.register("mage_lantern", () -> new LanternBlock
             (BlockBehaviour.Properties.of().mapColor(MapColor.METAL).forceSolidOn().requiresCorrectToolForDrops().strength(3.5F).sound(SoundType.LANTERN).lightLevel((p_187433_) -> 12).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
-    public static final RegistryObject<Block> MAGE_CAMPFIRE =
-            BLOCKS.register("mage_campfire", MageCampfireBlock::new);
+    public static final RegistryObject<Block> MAGE_CAMPFIRE = BLOCKS.register("mage_campfire", MageCampfireBlock::new);
 
     // Tin Mage Lantern
     public static final RegistryObject<Block> TIN_MAGE_LANTERN = BLOCKS.register("tin_mage_lantern", () -> new WeatheringTinLanternBlock

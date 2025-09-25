@@ -1,6 +1,5 @@
 package net.lettuce.metalworks.common.block;
 
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;

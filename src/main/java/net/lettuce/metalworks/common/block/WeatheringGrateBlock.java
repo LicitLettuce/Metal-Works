@@ -56,6 +56,4 @@ public class WeatheringGrateBlock extends WeatheringTinBlock implements SimpleWa
         FluidState fluidState = context.getLevel().getFluidState(context.getClickedPos());
         return this.defaultBlockState().setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
     }
-
-    // No need to override randomTick() or isRandomlyTicking() — it's already inherited from WeatheringTin
 }

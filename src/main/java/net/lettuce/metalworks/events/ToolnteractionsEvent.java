@@ -234,7 +234,6 @@ public class ToolnteractionsEvent {
     }
 
     // This is VERYYY important do not delete \/\/\/\/
-
     private static BlockState copyProperties(BlockState fromState, BlockState toState) {
         for (Property<?> property : fromState.getProperties()) {
             if (toState.hasProperty(property)) {
