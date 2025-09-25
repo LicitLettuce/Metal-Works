@@ -2,7 +2,10 @@ package net.lettuce.metalworks.events;
 
 import net.lettuce.metalworks.core.MetalWorks;
 import net.lettuce.metalworks.entity.MageGolemEntity;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Phantom;
+import net.minecraft.world.entity.monster.warden.Warden;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraft.world.entity.monster.Ghast;
@@ -11,7 +14,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class ModSpawnEvents {
+public class MageGolemBlockSpawnEvents {
 
     @SubscribeEvent
     public static void blockHostilesNearGolem(EntityJoinLevelEvent event) {
@@ -23,12 +26,17 @@ public class ModSpawnEvents {
                 || event.getEntity() instanceof Slime)) {
             return;
         }
+        if (event.getEntity() instanceof Warden
+                || event.getEntity() instanceof Phantom
+                || event.getEntity() instanceof EnderDragon) {
+            return;
+        }
 
         Level level = (Level) event.getLevel();
 
         if (!level.getEntitiesOfClass(
                 MageGolemEntity.class,
-                event.getEntity().getBoundingBox().inflate(64) // 64-block ward radius
+                event.getEntity().getBoundingBox().inflate(32)
         ).isEmpty()) {
             event.setCanceled(true);
         }

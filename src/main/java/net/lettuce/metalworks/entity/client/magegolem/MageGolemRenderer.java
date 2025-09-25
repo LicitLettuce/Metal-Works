@@ -25,8 +25,6 @@ public class MageGolemRenderer extends MobRenderer<MageGolemEntity, MageGolemMod
             new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame7.png"),
     };
 
-
-
     @Override
     public ResourceLocation getTextureLocation(MageGolemEntity entity) {
         int tick = (int)(entity.tickCount / 2 % FRAMES.length); // switch every 5 ticks

@@ -5,7 +5,7 @@
 
     "particle": "metal_works:block/bronze_bars",
     "bars": "metal_works:block/bronze_bars",
-    "edge": "metal_works:block/bronze_bars"
+    "edge": "metal_works:block/bronze_bars_edge"
   },
   "elements": [
     {   "from": [ 8, 0, 8 ],

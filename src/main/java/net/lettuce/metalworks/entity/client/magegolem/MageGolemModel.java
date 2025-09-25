@@ -63,12 +63,14 @@ public class MageGolemModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount,
+						  float ageInTicks, float netHeadYaw, float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 		this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
 
-		this.animateWalk(MWAnimationDefinitions.MAGE_GOLEM_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
-		this.animate(((MageGolemEntity) entity).idleAnimationState, MWAnimationDefinitions.MAGE_GOLEM_IDLE, ageInTicks, 1f);
+		if (entity instanceof MageGolemEntity golem) {
+			this.animate(golem.idleAnimationState, MWAnimationDefinitions.MAGE_GOLEM_IDLE, ageInTicks, 1f);
+		}
 	}
 
 	private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {

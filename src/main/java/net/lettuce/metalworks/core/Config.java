@@ -1,4 +1,4 @@
 package net.lettuce.metalworks.core;
 
-public class MWConfig {
+public class Config {
 }

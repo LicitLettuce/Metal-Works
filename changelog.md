@@ -5,7 +5,8 @@
 ### Additions
 - Added Mage Golem
   - The Mage Golem is a new golem type that is made with 2 Rose Gold Blocks and 1 Pumpkin
-  - It does not go after entities, instead it blocks hostile mob spawns within a 32 block radius by default which includes:
+  - It does not go after entities, instead it blocks hostile mob spawns within a 32 block radius
+  - By default it blocks the following:
     - Monster Spawners
     - Most Hostile Entities
     - Spawn Eggs
@@ -13,10 +14,12 @@
     - Portal Spawns (Zombified Piglins)
     - Zombification of Villagers (Dissapear)
     - Zombification of Piglins/Hoglins (Dissapear)
-
-  - It does not block the spawns of the following:
+  - It does not block the spawns of the following by default:
     - Phantoms
+    - Wardens
     - Hoglins
+    - Illagers
+  - Mage Golems Drop 1-2 Rose Gold Ingots Upon Being Killed
 - Added Cassiterite
     - A new bluish stone type with a block family similar to granite, diorite, and andesite.
     - Cassiterite generates between y-level 0 to 120 in the following biomes
@@ -66,6 +69,7 @@
     - Frozen Peaks
   - Tin Ore will generate as Cassiterite Tin Ore when it generates in Cassiterie clumps
   - Tin Lantern texture framerate has been updated, now being identical to traditional Lanterns
+  - Bronze Bars now have a solid edge texture
 ### Removed
 - Cut Tin Wall
 - Cut Tin Pressure Plate
