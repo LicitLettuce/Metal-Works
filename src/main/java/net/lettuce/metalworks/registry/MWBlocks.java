@@ -462,7 +462,7 @@ public class MWBlocks {
             (BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).replaceable().noCollission().randomTicks().instabreak().lightLevel(s -> 10).sound(SoundType.WOOL)));
 
     public static final RegistryObject<Block> MAGE_TORCH = BLOCKS.register("mage_torch", () -> new MageTorchBlock
-            (BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(s -> 12).sound(SoundType.WOOD));
+            (BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(s -> 12).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> MAGE_WALL_TORCH = BLOCKS.register("mage_wall_torch", () -> new MageWallTorchBlock
             (BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(s -> 12).sound(SoundType.WOOD).dropsLike(MAGE_TORCH.get())));
