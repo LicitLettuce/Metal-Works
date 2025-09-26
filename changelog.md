@@ -20,28 +20,28 @@
     - Hoglins
     - Illagers
   - Mage Golems Drop 1-2 Rose Gold Ingots Upon Being Killed
-  - Monsters will attack Mage Golems, even though they do not attack back.
+  - Monsters will attack Mage Golems, even though they do not attack back
 - Added Cassiterite
-    - A new bluish stone type with a block family similar to granite, diorite, and andesite.
+    - A new bluish stone type with a block family similar to granite, diorite, and andesite
     - Cassiterite generates between y-level 0 to 120 in the following biomes
       - Stony Peaks
       - Jagged Peaks
       - Frozen Peaks
-- Added Cassiterite Tin Ore
+    - Cassiterite can be smelted down into Tin Nuggets, making it useful to mine in large quantities
 - Added Nether Tin Ore
   - Drops 2-6 Tin Nuggets
   - Generates in Nether Waste Biomes between y-level 0 to 128
 - Tin Blocks now weather like Copper Blocks
-    - Tin weathers in 3 stages: tarnished, corroded, and eroded.
+    - Tin weathers in 3 stages: tarnished, corroded, and eroded
     - As tin weathers, it slowly turns more purple.
-    - Tin weathers 75% the speed of copper, making it slightly slower.
-    - Tin blocks can be waxed and unwaxed with honeycombs and axes, respectively.
-    - Unwaxed weathered tin blocks can be scraped back to the previous stage of weathering.
+    - Tin weathers 75% the speed of copper, making it slightly slower
+    - Tin blocks can be waxed and unwaxed with honeycombs and axes, respectively
+    - Unwaxed weathered tin blocks can be scraped back to the previous stage of weathering
 - Added Tin Tiles
 - Added Tin Tile Stairs
 - Added Tin Tile Slabs
 - Added Tin Horse Armor
-    - Tin Horse Armor has 4 protection points (1 less than iron).
+    - Tin Horse Armor has 4 protection points (1 less than iron)
 - Added Bronze Doors
 - Added Bronze Trapdoors
 - Added Medium Weighted Pressure Plate
@@ -53,7 +53,7 @@
 - Added Rose Gold Mosaic
 - Added Mage Fire
     - Mage fire can be created when Flint and Steel is used on Rose Gold Blocks
-    - Mage Fire is a new pink flame variant that can be crafted into torches, lanterns, tin lanterns, and campfires.
+    - Mage Fire is a new pink flame variant that can be crafted into torches, lanterns, tin lanterns, and campfires
 - Added Rose Powder
     - Rose Powder is the crafting ingredient used to make Mage Fire items
     - Crafted from one Gunpowder and one Rose Gold Nugget
@@ -68,9 +68,10 @@
     - Stony Peaks
     - Jagged Peaks
     - Frozen Peaks
-  - Tin Ore will generate as Cassiterite Tin Ore when it generates in Cassiterie clumps
-  - Tin Lantern texture framerate has been updated, now being identical to traditional Lanterns
-  - Bronze Bars now have a solid edge texture
+- Tin Lantern texture framerate has been updated, now being identical to traditional Lanterns
+- Bronze Bars now have a solid edge texture
+- New vanilla creative tab ordering:
+  - Tin items now appear after Copper items
 ### Removed
 - Cut Tin Wall
 - Cut Tin Pressure Plate
