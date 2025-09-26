@@ -1,6 +1,6 @@
 # Metal Works Changelog
 
-## 1.2.0 "The Big Update"
+## 1.2.0 "The Revival Update"
 
 ### Additions
 - Added Mage Golem
@@ -56,7 +56,7 @@
     - Mage Fire is a new pink flame variant that can be crafted into torches, lanterns, tin lanterns, and campfires
 - Added Rose Powder
     - Rose Powder is the crafting ingredient used to make Mage Fire items
-    - Crafted from one Gunpowder and one Rose Gold Nugget
+    - Crafted from 4 Gunpowder and 4 Rose Gold Nugget
 ### Changes
 - Changed Rose Lantern center texture to be opaque
   - The center texture is now opaque to prevent rendering errors 
@@ -70,6 +70,14 @@
     - Frozen Peaks
 - Tin Lantern texture framerate has been updated, now being identical to traditional Lanterns
 - Bronze Bars now have a solid edge texture
+### Config Additions
+- __Configuration has been added to Metal Works!__
+- Creative tab configurations:
+  - populateVanillaTabs
+    - If true, Metal Works items will be added to existing vanilla Creative Mode tabs
+  - tinVariantTab
+    - If true, a separate creative tab will be created for Weathered & Waxed Tin Blocks
+> **Note:** I am planning on adding much configuration after this including allowing players decide equipment values. – *Lettuce*
 ### Removed
 - Cut Tin Wall
 - Cut Tin Pressure Plate
