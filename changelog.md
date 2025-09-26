@@ -70,8 +70,6 @@
     - Frozen Peaks
 - Tin Lantern texture framerate has been updated, now being identical to traditional Lanterns
 - Bronze Bars now have a solid edge texture
-- New vanilla creative tab ordering:
-  - Tin items now appear after Copper items
 ### Removed
 - Cut Tin Wall
 - Cut Tin Pressure Plate
