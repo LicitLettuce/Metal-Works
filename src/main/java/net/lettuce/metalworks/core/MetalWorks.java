@@ -1,10 +1,9 @@
 package net.lettuce.metalworks.core;
 
 import com.mojang.logging.LogUtils;
-import net.lettuce.metalworks.registry.MWEntities;
-import net.lettuce.metalworks.entity.client.magegolem.MageGolemRenderer;
-import net.lettuce.metalworks.events.WaxingEvent;
-import net.lettuce.metalworks.registry.*;
+import net.lettuce.metalworks.common.registry.*;
+import net.lettuce.metalworks.client.renderer.MageGolemRenderer;
+import net.lettuce.metalworks.client.events.WaxingEvent;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -26,7 +25,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
-import static net.lettuce.metalworks.registry.MWBlocks.*;
+import static net.lettuce.metalworks.common.registry.MWBlocks.*;
 
 @Mod(MetalWorks.MOD_ID)
 public class MetalWorks
@@ -64,7 +63,13 @@ public class MetalWorks
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-
+            event.getEntries().putAfter(Items.POLISHED_ANDESITE_SLAB.getDefaultInstance(), MWItems.CASSITERITE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(MWItems.CASSITERITE.get().getDefaultInstance(), MWItems.CASSITERITE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(MWItems.CASSITERITE_STAIRS.get().getDefaultInstance(), MWItems.CASSITERITE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(MWItems.CASSITERITE_SLAB.get().getDefaultInstance(), MWItems.CASSITERITE_WALL.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(MWItems.CASSITERITE_WALL.get().getDefaultInstance(), MWItems.POLISHED_CASSITERITE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(MWItems.POLISHED_CASSITERITE.get().getDefaultInstance(), MWItems.POLISHED_CASSITERITE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(MWItems.POLISHED_CASSITERITE_STAIRS.get().getDefaultInstance(), MWItems.POLISHED_CASSITERITE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
             event.getEntries().putAfter(Items.COAL_BLOCK.getDefaultInstance(), MWItems.TIN_BLOCK.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(MWItems.TIN_BLOCK.get().getDefaultInstance(), MWItems.CHISELED_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -97,9 +102,10 @@ public class MetalWorks
         }
 
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.getEntries().putAfter(Items.ANDESITE.getDefaultInstance(), MWItems.CASSITERITE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
-            event.getEntries().putBefore(Items.RAW_IRON_BLOCK.getDefaultInstance(), MWItems.RAW_TIN_BLOCK.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(Items.DEEPSLATE_COAL_ORE.getDefaultInstance(), MWItems.TIN_ORE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(Items.RAW_COPPER_BLOCK.getDefaultInstance(), MWItems.RAW_TIN_BLOCK.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(Items.DEEPSLATE_COPPER_ORE.getDefaultInstance(), MWItems.TIN_ORE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(MWItems.TIN_ORE.get().getDefaultInstance(), MWItems.DEEPSLATE_TIN_ORE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
         }

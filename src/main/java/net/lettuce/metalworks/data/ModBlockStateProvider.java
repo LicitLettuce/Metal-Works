@@ -2,7 +2,7 @@ package net.lettuce.metalworks.data;
 
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.registry.MWBlocks;
+import net.lettuce.metalworks.common.registry.MWBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;

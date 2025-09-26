@@ -1,7 +1,7 @@
 package net.lettuce.metalworks.data;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.registry.MWItems;
+import net.lettuce.metalworks.common.registry.MWItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;

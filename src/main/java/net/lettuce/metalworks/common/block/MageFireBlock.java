@@ -1,7 +1,6 @@
 package net.lettuce.metalworks.common.block;
 
-import net.lettuce.metalworks.registry.MWParticles;
-import net.lettuce.metalworks.registry.MWTags;
+import net.lettuce.metalworks.common.registry.MWTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;

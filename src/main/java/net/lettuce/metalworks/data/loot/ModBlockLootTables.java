@@ -2,8 +2,8 @@ package net.lettuce.metalworks.data.loot;
 
 
 
-import net.lettuce.metalworks.registry.MWBlocks;
-import net.lettuce.metalworks.registry.MWItems;
+import net.lettuce.metalworks.common.registry.MWBlocks;
+import net.lettuce.metalworks.common.registry.MWItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;

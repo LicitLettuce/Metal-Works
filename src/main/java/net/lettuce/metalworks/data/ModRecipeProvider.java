@@ -1,8 +1,8 @@
 package net.lettuce.metalworks.data;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.registry.MWBlocks;
-import net.lettuce.metalworks.registry.MWItems;
+import net.lettuce.metalworks.common.registry.MWBlocks;
+import net.lettuce.metalworks.common.registry.MWItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -29,10 +29,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pWriter, TIN_SMELTABLES, RecipeCategory.MISC, MWItems.TIN_INGOT.get(), 0.25f, 100, "tin");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MWBlocks.TIN_BLOCK.get())
-                .pattern("SSS")
-                .pattern("SSS")
-                .pattern("SSS")
-                .define('S', MWItems.TIN_INGOT.get())
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', MWItems.TIN_INGOT.get())
                 .unlockedBy(getHasName(MWItems.TIN_INGOT.get()), has(MWItems.TIN_INGOT.get()))
                 .save(pWriter);
 

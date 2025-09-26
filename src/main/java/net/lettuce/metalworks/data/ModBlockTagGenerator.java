@@ -1,8 +1,8 @@
 package net.lettuce.metalworks.data;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.registry.MWBlocks;
-import net.lettuce.metalworks.registry.MWTags;
+import net.lettuce.metalworks.common.registry.MWBlocks;
+import net.lettuce.metalworks.common.registry.MWTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;

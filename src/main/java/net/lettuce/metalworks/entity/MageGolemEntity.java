@@ -1,7 +1,7 @@
 package net.lettuce.metalworks.entity;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.registry.MWParticles;
+import net.lettuce.metalworks.common.registry.MWParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
