@@ -42,7 +42,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.RAW_TIN_BLOCK.get());
         this.add(MWBlocks.TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.TIN_ORE.get(), MWItems.RAW_TIN.get()));
         this.add(MWBlocks.DEEPSLATE_TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.DEEPSLATE_TIN_ORE.get(), MWItems.RAW_TIN.get()));
-        this.add(MWBlocks.CASSITERITE_TIN_ORE.get(), block -> createCopperLikeOreDrops(MWBlocks.CASSITERITE_TIN_ORE.get(), MWItems.RAW_TIN.get()));
         this.add(MWBlocks.NETHER_TIN_ORE.get(), block -> createNetherLikeOreDrops(MWBlocks.NETHER_TIN_ORE.get(), MWItems.TIN_NUGGET.get()));
 
             // Tin Block Loot Tables

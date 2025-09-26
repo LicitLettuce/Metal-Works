@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-18T19:52:30.4094616	Loot Tables
+// 1.20.1	2025-09-26T00:20:17.9480076	Loot Tables
 bed80fee4830c7a39213eb2e2513e97d7f2862b5 data/metal_works/loot_tables/blocks/bronze_bars.json
 e6ffce43a097e0773c2891bd48e6d7592da0ec73 data/metal_works/loot_tables/blocks/bronze_block.json
 94a62d1a35628e47b5190e076246b0735e464d45 data/metal_works/loot_tables/blocks/bronze_door.json
@@ -14,7 +14,6 @@ b4ffaac945ca1ffcbefa3e2aeb97c77692ba222a data/metal_works/loot_tables/blocks/bro
 004ecb9708b6200c86e671f7b41fc40e05eb216a data/metal_works/loot_tables/blocks/cassiterite.json
 b718441a06732b11fdacdebbc41d0f30a6e46fc4 data/metal_works/loot_tables/blocks/cassiterite_slab.json
 844a30c1990455e670ddf1bdf1361f83be1330f8 data/metal_works/loot_tables/blocks/cassiterite_stairs.json
-107eeff9dc58b5505f298ac4267c264a519efa62 data/metal_works/loot_tables/blocks/cassiterite_tin_ore.json
 e5a08089373ed10ce11583d8b4207eac1637a790 data/metal_works/loot_tables/blocks/cassiterite_wall.json
 02d42e854239fc8a0be18037eb426279241cce1a data/metal_works/loot_tables/blocks/chiseled_tin.json
 9d2e9e94fc79f1b226de90b219a7c97709dc27e4 data/metal_works/loot_tables/blocks/corroded_chiseled_tin.json

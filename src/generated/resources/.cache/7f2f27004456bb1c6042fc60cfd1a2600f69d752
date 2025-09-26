@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-15T00:42:01.8194131	Block States: metal_works
+// 1.20.1	2025-09-26T00:20:17.9421765	Block States: metal_works
 fdc7ff8a5b678d2deeb3b2c320080032736a78a2 assets/metal_works/blockstates/bronze_block.json
 93e28132719b015d6056407b4e2e0c6e3954252d assets/metal_works/blockstates/bronze_door.json
 dc4bbb16ea03822c861922260971d349cff06c7c assets/metal_works/blockstates/bronze_shingles.json
@@ -11,7 +11,6 @@ d06d9f43b84bca698ba56191833261d0e0f38b3e assets/metal_works/blockstates/bronze_t
 bb85b1bb16308e49e3419da2b0bedd8014477e34 assets/metal_works/blockstates/cassiterite.json
 c46848a42369e0217adde11d7e14edc215032ce4 assets/metal_works/blockstates/cassiterite_slab.json
 91cc5860444f87cf1a934972a702843dcc81f64c assets/metal_works/blockstates/cassiterite_stairs.json
-201eba0b9afa56941fa201a7c411623a001c8cb2 assets/metal_works/blockstates/cassiterite_tin_ore.json
 0eced04f7b5abe27cc569fba2bd359d6f06b6831 assets/metal_works/blockstates/cassiterite_wall.json
 ba9e7b54ae163b69b90fc94089e3865ceceb1a80 assets/metal_works/blockstates/chiseled_tin.json
 8706edff89c563458378c27ee9be98a5dae54173 assets/metal_works/blockstates/corroded_chiseled_tin.json
@@ -152,7 +151,6 @@ c63babc90d5564daca0fec3ebfed9d3a23e206e8 assets/metal_works/models/block/cassite
 a9591fcbbdd64e7d869838d10207eb11389200cb assets/metal_works/models/block/cassiterite_stairs.json
 0d43c53da45f8638190d1034764be3fc02f9757f assets/metal_works/models/block/cassiterite_stairs_inner.json
 1040d558e932c1e814d9825a9b43fb6073fbc147 assets/metal_works/models/block/cassiterite_stairs_outer.json
-4d92eda83bd847923ce500c13c251955bb62f960 assets/metal_works/models/block/cassiterite_tin_ore.json
 ed9b53f742a87c195c564380ef7974e65330df96 assets/metal_works/models/block/cassiterite_wall_post.json
 f57ac2b0adcb86f834fdc8b69e9c35f37f9a7090 assets/metal_works/models/block/cassiterite_wall_side.json
 83a639a14e1cbfbfbb75cf42a34f56104517cb09 assets/metal_works/models/block/cassiterite_wall_side_tall.json
@@ -352,7 +350,6 @@ d211184bea6d8ed7024e1d1878136069411f4ed1 assets/metal_works/models/block/waxed_t
 7f034382249526cd8f134edd9d210449cc47b69a assets/metal_works/models/item/bronze_shingles.json
 2abf2ea25222d68c5b0ab9d2dc5ac453482f4de1 assets/metal_works/models/item/bronze_tiles.json
 76d31c11d383e42537f974ffbc8e5e5fe5b55d59 assets/metal_works/models/item/cassiterite.json
-f6a4cba00148e681198944eb0af177679ea3dea0 assets/metal_works/models/item/cassiterite_tin_ore.json
 39e7d524792a5f98dc8c7015728bcc311ac4256d assets/metal_works/models/item/chiseled_tin.json
 c4c3692a9566185ca417c7641b57df7c3067fee7 assets/metal_works/models/item/corroded_chiseled_tin.json
 1f433b099c33e92f6ecaeedd30c8f687fb1737ad assets/metal_works/models/item/corroded_cut_tin.json

@@ -21,15 +21,6 @@
         "state": {
           "Name": "metal_works:deepslate_tin_ore"
         }
-      },
-      {
-        "target": {
-          "predicate_type": "tag_match",
-          "tag": "metal_works:cassiterite_ore_replaceables"
-        },
-        "state": {
-          "Name": "metal_works:cassiterite_tin_ore"
-        }
       }
     ]
   }

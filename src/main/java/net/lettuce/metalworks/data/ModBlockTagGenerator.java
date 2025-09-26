@@ -20,11 +20,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
 
+        // Mineable w/Pickaxe
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(MWBlocks.TIN_ORE.get(),
                         MWBlocks.DEEPSLATE_TIN_ORE.get(),
-                        MWBlocks.CASSITERITE_TIN_ORE.get(),
                         MWBlocks.NETHER_TIN_ORE.get(),
+                        MWBlocks.RAW_TIN_BLOCK.get(),
                         MWBlocks.CASSITERITE.get(),
                         MWBlocks.CASSITERITE_STAIRS.get(),
                         MWBlocks.CASSITERITE_SLAB.get(),
@@ -93,30 +94,144 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         MWBlocks.WAXED_CUT_TIN_SLAB.get(),
                         MWBlocks.WAXED_TARNISHED_CUT_TIN_SLAB.get(),
                         MWBlocks.WAXED_CORRODED_CUT_TIN_SLAB.get(),
-                        MWBlocks.WAXED_ERODED_CUT_TIN_SLAB.get());
+                        MWBlocks.WAXED_ERODED_CUT_TIN_SLAB.get(),
+                        MWBlocks.TIN_TILES.get(),
+                        MWBlocks.TARNISHED_TIN_TILES.get(),
+                        MWBlocks.CORRODED_TIN_TILES.get(),
+                        MWBlocks.ERODED_TIN_TILES.get(),
+                        MWBlocks.WAXED_TIN_TILES.get(),
+                        MWBlocks.WAXED_TARNISHED_TIN_TILES.get(),
+                        MWBlocks.WAXED_CORRODED_TIN_TILES.get(),
+                        MWBlocks.WAXED_ERODED_TIN_TILES.get(),
+                        MWBlocks.TIN_TILE_STAIRS.get(),
+                        MWBlocks.TARNISHED_TIN_TILE_STAIRS.get(),
+                        MWBlocks.CORRODED_TIN_TILE_STAIRS.get(),
+                        MWBlocks.ERODED_TIN_TILE_STAIRS.get(),
+                        MWBlocks.WAXED_TIN_TILE_STAIRS.get(),
+                        MWBlocks.WAXED_TARNISHED_TIN_TILE_STAIRS.get(),
+                        MWBlocks.WAXED_CORRODED_TIN_TILE_STAIRS.get(),
+                        MWBlocks.WAXED_ERODED_TIN_TILE_STAIRS.get(),
+                        MWBlocks.TIN_TILE_SLAB.get(),
+                        MWBlocks.TARNISHED_TIN_TILE_SLAB.get(),
+                        MWBlocks.CORRODED_TIN_TILE_SLAB.get(),
+                        MWBlocks.ERODED_TIN_TILE_SLAB.get(),
+                        MWBlocks.WAXED_TIN_TILE_SLAB.get(),
+                        MWBlocks.WAXED_TARNISHED_TIN_TILE_SLAB.get(),
+                        MWBlocks.WAXED_CORRODED_TIN_TILE_SLAB.get(),
+                        MWBlocks.WAXED_ERODED_TIN_TILE_SLAB.get(),
+                        MWBlocks.TIN_SHINGLES.get(),
+                        MWBlocks.TARNISHED_TIN_SHINGLES.get(),
+                        MWBlocks.CORRODED_TIN_SHINGLES.get(),
+                        MWBlocks.ERODED_TIN_SHINGLES.get(),
+                        MWBlocks.WAXED_TIN_SHINGLES.get(),
+                        MWBlocks.WAXED_TARNISHED_TIN_SHINGLES.get(),
+                        MWBlocks.WAXED_CORRODED_TIN_SHINGLES.get(),
+                        MWBlocks.WAXED_ERODED_TIN_SHINGLES.get(),
+                        MWBlocks.TIN_SHINGLE_STAIRS.get(),
+                        MWBlocks.TARNISHED_TIN_SHINGLE_STAIRS.get(),
+                        MWBlocks.CORRODED_TIN_SHINGLE_STAIRS.get(),
+                        MWBlocks.ERODED_TIN_SHINGLE_STAIRS.get(),
+                        MWBlocks.WAXED_TIN_SHINGLE_STAIRS.get(),
+                        MWBlocks.WAXED_TARNISHED_TIN_SHINGLE_STAIRS.get(),
+                        MWBlocks.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get(),
+                        MWBlocks.WAXED_ERODED_TIN_SHINGLE_STAIRS.get(),
+                        MWBlocks.TIN_SHINGLE_SLAB.get(),
+                        MWBlocks.TARNISHED_TIN_SHINGLE_SLAB.get(),
+                        MWBlocks.CORRODED_TIN_SHINGLE_SLAB.get(),
+                        MWBlocks.ERODED_TIN_SHINGLE_SLAB.get(),
+                        MWBlocks.WAXED_TIN_SHINGLE_SLAB.get(),
+                        MWBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get(),
+                        MWBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB.get(),
+                        MWBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB.get(),
+                        MWBlocks.TIN_DOOR.get(),
+                        MWBlocks.TIN_TRAPDOOR.get(),
+                        MWBlocks.TIN_BARS.get(),
+                        MWBlocks.TARNISHED_TIN_BARS.get(),
+                        MWBlocks.CORRODED_TIN_BARS.get(),
+                        MWBlocks.ERODED_TIN_BARS.get(),
+                        MWBlocks.WAXED_TIN_BARS.get(),
+                        MWBlocks.WAXED_TARNISHED_TIN_BARS.get(),
+                        MWBlocks.WAXED_CORRODED_TIN_BARS.get(),
+                        MWBlocks.WAXED_ERODED_TIN_BARS.get(),
+                        MWBlocks.TIN_CHAIN.get(),
+                        MWBlocks.TARNISHED_TIN_CHAIN.get(),
+                        MWBlocks.CORRODED_TIN_CHAIN.get(),
+                        MWBlocks.ERODED_TIN_CHAIN.get(),
+                        MWBlocks.WAXED_TIN_CHAIN.get(),
+                        MWBlocks.WAXED_TARNISHED_TIN_CHAIN.get(),
+                        MWBlocks.WAXED_CORRODED_TIN_CHAIN.get(),
+                        MWBlocks.WAXED_ERODED_TIN_CHAIN.get(),
+                        MWBlocks.TIN_LANTERN.get(),
+                        MWBlocks.TARNISHED_TIN_LANTERN.get(),
+                        MWBlocks.CORRODED_TIN_LANTERN.get(),
+                        MWBlocks.ERODED_TIN_LANTERN.get(),
+                        MWBlocks.WAXED_TIN_LANTERN.get(),
+                        MWBlocks.WAXED_TARNISHED_TIN_LANTERN.get(),
+                        MWBlocks.WAXED_CORRODED_TIN_LANTERN.get(),
+                        MWBlocks.WAXED_ERODED_TIN_LANTERN.get(),
+                        MWBlocks.TIN_SOUL_LANTERN.get(),
+                        MWBlocks.TARNISHED_TIN_SOUL_LANTERN.get(),
+                        MWBlocks.CORRODED_TIN_SOUL_LANTERN.get(),
+                        MWBlocks.ERODED_TIN_SOUL_LANTERN.get(),
+                        MWBlocks.WAXED_TIN_SOUL_LANTERN.get(),
+                        MWBlocks.WAXED_TARNISHED_TIN_SOUL_LANTERN.get(),
+                        MWBlocks.WAXED_CORRODED_TIN_SOUL_LANTERN.get(),
+                        MWBlocks.WAXED_ERODED_TIN_SOUL_LANTERN.get(),
+                        MWBlocks.TIN_MAGE_LANTERN.get(),
+                        MWBlocks.TARNISHED_TIN_MAGE_LANTERN.get(),
+                        MWBlocks.CORRODED_TIN_MAGE_LANTERN.get(),
+                        MWBlocks.ERODED_TIN_MAGE_LANTERN.get(),
+                        MWBlocks.WAXED_TIN_MAGE_LANTERN.get(),
+                        MWBlocks.WAXED_TARNISHED_TIN_MAGE_LANTERN.get(),
+                        MWBlocks.WAXED_CORRODED_TIN_MAGE_LANTERN.get(),
+                        MWBlocks.WAXED_ERODED_TIN_MAGE_LANTERN.get(),
+                        MWBlocks.BRONZE_BLOCK.get(),
+                        MWBlocks.BRONZE_GRATE.get(),
+                        MWBlocks.BRONZE_GRATE_DRAIN.get(),
+                        MWBlocks.BRONZE_TILES.get(),
+                        MWBlocks.BRONZE_TILE_STAIRS.get(),
+                        MWBlocks.BRONZE_TILE_SLAB.get(),
+                        MWBlocks.BRONZE_SHINGLES.get(),
+                        MWBlocks.BRONZE_SHINGLE_STAIRS.get(),
+                        MWBlocks.BRONZE_SHINGLE_SLAB.get(),
+                        MWBlocks.BRONZE_DOOR.get(),
+                        MWBlocks.BRONZE_TRAPDOOR.get(),
+                        MWBlocks.BRONZE_BARS.get(),
+                        MWBlocks.LOOPING_PRESSURE_PLATE.get(),
+                        MWBlocks.ROSE_GOLD_BLOCK.get(),
+                        MWBlocks.ROSE_GOLD_MOSAIC.get(),
+                        MWBlocks.ROSE_GOLD_MOSAIC_STAIRS.get(),
+                        MWBlocks.ROSE_GOLD_MOSAIC_SLAB.get(),
+                        MWBlocks.MEDIUM_WEIGHTED_PRESSURE_PLATE.get(),
+                        MWBlocks.ROSE_LANTERN.get(),
+                        MWBlocks.MAGE_LANTERN.get());
 
+        // Mineable w/AXe
+        this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(MWBlocks.MAGE_TORCH.get(),
+                        MWBlocks.MAGE_CAMPFIRE.get());
+
+        // Needs Stone Tool
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(MWBlocks.TIN_ORE.get(),
-                MWBlocks.DEEPSLATE_TIN_ORE.get(),
-                MWBlocks.CASSITERITE_TIN_ORE.get(),
-                MWBlocks.NETHER_TIN_ORE.get());
+                    MWBlocks.DEEPSLATE_TIN_ORE.get(),
+                    MWBlocks.NETHER_TIN_ORE.get());
 
+        // Walls
         this.tag(BlockTags.WALLS)
                 .add(MWBlocks.CASSITERITE_WALL.get());
 
-        this.tag(MWTags.TIN_ORE)
+        this.tag(MWTags.TIN_ORES)
                 .add(MWBlocks.TIN_ORE.get(),
-        MWBlocks.DEEPSLATE_TIN_ORE.get(),
-        MWBlocks.CASSITERITE_TIN_ORE.get(),
-        MWBlocks.NETHER_TIN_ORE.get());
+                    MWBlocks.DEEPSLATE_TIN_ORE.get(),
+                    MWBlocks.NETHER_TIN_ORE.get());
 
-        this.tag(MWTags.CASSITERITE_ORE_REPLACEABLES)
-                .add(MWBlocks.CASSITERITE.get());
-
+        // Mage Fire Base Blocks
         this.tag(MWTags.MAGE_FIRE_BASE_BLOCKS)
                 .add(MWBlocks.ROSE_GOLD_BLOCK.get(),
                         MWBlocks.ROSE_GOLD_MOSAIC.get());
 
+        // Enchantment Power Provider
         this.tag(BlockTags.ENCHANTMENT_POWER_PROVIDER)
                 .add(MWBlocks.MAGE_FIRE.get(),
                         MWBlocks.MAGE_TORCH.get(),

@@ -41,8 +41,6 @@ public class MWBlocks {
             (BlockBehaviour.Properties.copy(Blocks.COPPER_ORE)));
     public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = BLOCKS.register("deepslate_tin_ore", () -> new Block
             (BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_COPPER_ORE)));
-    public static final RegistryObject<Block> CASSITERITE_TIN_ORE = BLOCKS.register("cassiterite_tin_ore", () -> new Block
-            (BlockBehaviour.Properties.copy(MWBlocks.TIN_ORE.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final RegistryObject<Block> NETHER_TIN_ORE = BLOCKS.register("nether_tin_ore", () -> new DropExperienceBlock
             (BlockBehaviour.Properties.copy(Blocks.NETHER_GOLD_ORE), UniformInt.of(0, 1)));
     public static final RegistryObject<Block> RAW_TIN_BLOCK = BLOCKS.register("raw_tin_block", () -> new Block

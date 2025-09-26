@@ -12,6 +12,8 @@ import net.minecraft.resources.ResourceLocation;
 public class MageGolemRenderer extends MobRenderer<MageGolemEntity, MageGolemModel<MageGolemEntity>> {
     public MageGolemRenderer(EntityRendererProvider.Context pContext) {
         super(pContext, new MageGolemModel<>(pContext.bakeLayer(MWModelLayers.MAGE_GOLEM_LAYER)), 0.5f);
+
+        this.addLayer(new MageGolemEmissiveLayer(this, GLOW_FRAMES));
     }
 
     private static final ResourceLocation[] FRAMES = {
@@ -23,6 +25,17 @@ public class MageGolemRenderer extends MobRenderer<MageGolemEntity, MageGolemMod
             new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame5.png"),
             new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame6.png"),
             new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame7.png"),
+    };
+
+    private static final ResourceLocation[] GLOW_FRAMES = {
+            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame0_glow.png"),
+            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame1_glow.png"),
+            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame2_glow.png"),
+            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame3_glow.png"),
+            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame4_glow.png"),
+            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame5_glow.png"),
+            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame6_glow.png"),
+            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame7_glow.png"),
     };
 
     @Override
