@@ -3,7 +3,7 @@
 ## 1.2.0 "The Revival Update"
 
 ### Additions
-- Added Mage Golem
+- __Added Mage Golem__
   - The Mage Golem is a new golem type that is made with 2 Rose Gold Blocks and 1 Pumpkin
   - It does not go after entities, instead it blocks hostile mob spawns within a 32 block radius
   - By default it blocks the following:
@@ -21,62 +21,62 @@
     - Illagers
   - Mage Golems Drop 1-2 Rose Gold Ingots Upon Being Killed
   - Monsters will attack Mage Golems, even though they do not attack back
-- Added Cassiterite
+- __Added Cassiterite__
     - A new bluish stone type with a block family similar to granite, diorite, and andesite
     - Cassiterite generates between y-level 0 to 120 in the following biomes
       - Stony Peaks
       - Jagged Peaks
       - Frozen Peaks
     - Cassiterite can be smelted down into Tin Nuggets, making it useful to mine in large quantities
-- Added Nether Tin Ore
+- __Added Nether Tin Ore__
   - Drops 2-6 Tin Nuggets
   - Generates in Nether Waste Biomes between y-level 0 to 128
-- Tin Blocks now weather like Copper Blocks
+- __Tin Blocks now weather like Copper Blocks__
     - Tin weathers in 3 stages: tarnished, corroded, and eroded
     - As tin weathers, it slowly turns more purple.
     - Tin weathers 75% the speed of copper, making it slightly slower
     - Tin blocks can be waxed and unwaxed with honeycombs and axes, respectively
     - Unwaxed weathered tin blocks can be scraped back to the previous stage of weathering
-- Added Tin Tiles
-- Added Tin Tile Stairs
-- Added Tin Tile Slabs
-- Added Tin Horse Armor
+- __Added Tin Tiles__
+- __Added Tin Tile Stairs__
+- __Added Tin Tile Slabs__
+- __Added Tin Horse Armor__
     - Tin Horse Armor has 4 protection points (1 less than iron)
-- Added Bronze Doors
-- Added Bronze Trapdoors
-- Added Medium Weighted Pressure Plate
+- __Added Bronze Doors__
+- __Added Bronze Trapdoors__
+- __Added Medium Weighted Pressure Plate__
   - Outputs 1 redstone signal for every 5 entities on top of it
   - Made from Rose Gold
-- Added Looping Pressure Plate
+- __Added Looping Pressure Plate__
     - Activates when stepped on
     - Loops between on and off when an entity is standing on it
-- Added Rose Gold Mosaic
-- Added Mage Fire
+- __Added Rose Gold Mosaic__
+- __Added Mage Fire__
     - Mage fire can be created when Flint and Steel is used on Rose Gold Blocks
     - Mage Fire is a new pink flame variant that can be crafted into torches, lanterns, tin lanterns, and campfires
-- Added Rose Powder
+- __Added Rose Powder__
     - Rose Powder is the crafting ingredient used to make Mage Fire items
     - Crafted from 4 Gunpowder and 4 Rose Gold Nugget
 ### Changes
-- Changed Rose Lantern center texture to be opaque
+- __Changed Rose Lantern center texture to be opaque__
   - The center texture is now opaque to prevent rendering errors 
-- Changed Block of Raw Tin texture
-- Rose Gold Beetroots now have a 40% chance to give the player Regeneration upon consumption
+- __Changed Block of Raw Tin texture__
+- __Rose Gold Beetroots now have a 40% chance to give the player Regeneration upon consumption__
 - __Tin Ore Generation has now been overhauled__
   - Tin ore generates between y-level -10 to 10
   - Extra tin ore generates in larger amounts between y-level -10 to 255 in the following biomes
     - Stony Peaks
     - Jagged Peaks
     - Frozen Peaks
-- Tin Lantern texture framerate has been updated, now being identical to traditional Lanterns
+- __Tin Lantern texture framerate has been updated, now being identical to traditional Lanterns__
 - Bronze Bars now have a solid edge texture
 ### Config Additions
 - __Configuration has been added to Metal Works!__
-- Creative tab configurations:
-  - populateVanillaTabs
-    - If true, Metal Works items will be added to existing vanilla Creative Mode tabs
-  - tinVariantTab
-    - If true, a separate creative tab will be created for Weathered & Waxed Tin Blocks
+  - Creative tab configurations:
+    - populateVanillaTabs
+      - If true, Metal Works items will be added to existing vanilla Creative Mode tabs
+    - tinVariantTab
+      - If true, a separate creative tab will be created for Weathered & Waxed Tin Blocks
 > **Note:** I am planning on adding much configuration after this including allowing players decide equipment values. – *Lettuce*
 ### Removed
 - Cut Tin Wall
