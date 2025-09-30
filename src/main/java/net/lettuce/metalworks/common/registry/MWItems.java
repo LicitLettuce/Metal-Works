@@ -459,15 +459,15 @@ public class MWItems {
 
         // Bronze Door Item
     public static final RegistryObject<BlockItem> BRONZE_DOOR = ITEMS.register("bronze_door", () -> new BlockItem
-            (MWBlocks.BRONZE_DOOR.get(), new Item.Properties()));
+            (MWBlocks.BRONZE_DOOR.get(), new Item.Properties().fireResistant()));
 
         // Bronze Trapdoor Item
     public static final RegistryObject<BlockItem> BRONZE_TRAPDOOR = ITEMS.register("bronze_trapdoor", () -> new BlockItem
-            (MWBlocks.BRONZE_TRAPDOOR.get(), new Item.Properties()));
+            (MWBlocks.BRONZE_TRAPDOOR.get(), new Item.Properties().fireResistant()));
 
         // Looping Pressure Plate Item
     public static final RegistryObject<BlockItem> LOOPING_PRESSURE_PLATE = ITEMS.register("looping_pressure_plate", () -> new BlockItem
-            (MWBlocks.LOOPING_PRESSURE_PLATE.get(), new Item.Properties()));
+            (MWBlocks.LOOPING_PRESSURE_PLATE.get(), new Item.Properties().fireResistant()));
 
         // Bronze Ingredients
     public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot", () -> new Item
