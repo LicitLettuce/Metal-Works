@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "metal_works:block/waxed_tin_shingles"
+      "model": "metal_works:block/waxed_tin_tiles"
     }
   }
 }

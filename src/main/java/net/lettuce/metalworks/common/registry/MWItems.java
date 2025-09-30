@@ -59,25 +59,6 @@ public class MWItems {
     public static final RegistryObject<BlockItem> WAXED_ERODED_TIN = ITEMS.register("waxed_eroded_tin", () -> new BlockItem
             (MWBlocks.WAXED_ERODED_TIN.get(), new Item.Properties()));
 
-        // Tin Plate Items
-    public static final RegistryObject<BlockItem> TIN_PLATE = ITEMS.register("tin_plate", () -> new BlockItem
-            (MWBlocks.TIN_PLATE.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> TARNISHED_TIN_PLATE = ITEMS.register("tarnished_tin_plate", () -> new BlockItem
-            (MWBlocks.TARNISHED_TIN_PLATE.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_PLATE = ITEMS.register("corroded_tin_plate", () -> new BlockItem
-            (MWBlocks.CORRODED_TIN_PLATE.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_PLATE = ITEMS.register("eroded_tin_plate", () -> new BlockItem
-            (MWBlocks.ERODED_TIN_PLATE.get(), new Item.Properties()));
-
-    public static final RegistryObject<BlockItem> WAXED_TIN_PLATE = ITEMS.register("waxed_tin_plate", () -> new BlockItem
-            (MWBlocks.WAXED_TIN_PLATE.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_PLATE = ITEMS.register("waxed_tarnished_tin_plate", () -> new BlockItem
-            (MWBlocks.WAXED_TARNISHED_TIN_PLATE.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_PLATE = ITEMS.register("waxed_corroded_tin_plate", () -> new BlockItem
-            (MWBlocks.WAXED_CORRODED_TIN_PLATE.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_PLATE = ITEMS.register("waxed_eroded_tin_plate", () -> new BlockItem
-            (MWBlocks.WAXED_ERODED_TIN_PLATE.get(), new Item.Properties()));
-
         // Chiseled Tin Items
     public static final RegistryObject<BlockItem> CHISELED_TIN = ITEMS.register("chiseled_tin", () -> new BlockItem
             (MWBlocks.CHISELED_TIN.get(), new Item.Properties()));

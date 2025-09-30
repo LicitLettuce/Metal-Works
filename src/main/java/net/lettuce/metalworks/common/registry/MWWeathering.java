@@ -14,11 +14,6 @@ public class MWWeathering {
         WEATHERING_CHAIN.put(MWBlocks.TARNISHED_TIN.get(), MWBlocks.CORRODED_TIN.get());
         WEATHERING_CHAIN.put(MWBlocks.CORRODED_TIN.get(), MWBlocks.ERODED_TIN.get());
 
-        // Tin Plates
-        WEATHERING_CHAIN.put(MWBlocks.TIN_PLATE.get(), MWBlocks.TARNISHED_TIN_PLATE.get());
-        WEATHERING_CHAIN.put(MWBlocks.TARNISHED_TIN_PLATE.get(), MWBlocks.CORRODED_TIN_PLATE.get());
-        WEATHERING_CHAIN.put(MWBlocks.CORRODED_TIN_PLATE.get(), MWBlocks.ERODED_TIN_PLATE.get());
-
         // Chiseled
         WEATHERING_CHAIN.put(MWBlocks.CHISELED_TIN.get(), MWBlocks.TARNISHED_CHISELED_TIN.get());
         WEATHERING_CHAIN.put(MWBlocks.TARNISHED_CHISELED_TIN.get(), MWBlocks.CORRODED_CHISELED_TIN.get());

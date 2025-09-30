@@ -39,14 +39,6 @@ public class ToolnteractionsEvent {
         } else if (block == MWBlocks.TARNISHED_TIN.get()) {
             setWeatheredState(event, MWBlocks.TIN_BLOCK.get());
         }
-        // Tin Plate
-        if (block == MWBlocks.ERODED_TIN_PLATE.get()) {
-            setWeatheredState(event, MWBlocks.CORRODED_TIN_PLATE.get());
-        } else if (block == MWBlocks.CORRODED_TIN_PLATE.get()) {
-            setWeatheredState(event, MWBlocks.TARNISHED_TIN_PLATE.get());
-        } else if (block == MWBlocks.TARNISHED_TIN_PLATE.get()) {
-            setWeatheredState(event, MWBlocks.TIN_PLATE.get());
-        }
 
         // Chiseled Tin
         if (block == MWBlocks.ERODED_CHISELED_TIN.get()) {

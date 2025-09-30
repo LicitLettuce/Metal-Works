@@ -39,16 +39,6 @@ public class MWCreativeModeTabs {
                                     pOutput.accept(MWItems.WAXED_CORRODED_TIN.get());
                                     pOutput.accept(MWItems.WAXED_ERODED_TIN.get());
                             }
-                                pOutput.accept(MWItems.TIN_PLATE.get());
-                            if (!MWConfig.COMMON.tinVariantTab.get()) {
-                                    pOutput.accept(MWItems.TARNISHED_TIN_PLATE.get());
-                                    pOutput.accept(MWItems.CORRODED_TIN_PLATE.get());
-                                    pOutput.accept(MWItems.ERODED_TIN_PLATE.get());
-                                    pOutput.accept(MWItems.WAXED_TIN_PLATE.get());
-                                    pOutput.accept(MWItems.WAXED_TARNISHED_TIN_PLATE.get());
-                                    pOutput.accept(MWItems.WAXED_CORRODED_TIN_PLATE.get());
-                                    pOutput.accept(MWItems.WAXED_ERODED_TIN_PLATE.get());
-                            }
                                 pOutput.accept(MWItems.CHISELED_TIN.get());
                             if (!MWConfig.COMMON.tinVariantTab.get()) {
                                     pOutput.accept(MWItems.TARNISHED_CHISELED_TIN.get());
@@ -306,7 +296,7 @@ public class MWCreativeModeTabs {
 
 
     public static final RegistryObject<CreativeModeTab> TIN_VARIANTS_TAB = CREATIVE_MODE_TABS.register("tin_variants_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MWItems.TIN_PLATE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MWItems.TIN_BLOCK.get()))
                     .title(Component.translatable("creativetab.tin_variants_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         if (MWConfig.COMMON.tinVariantTab.get()) {
@@ -318,14 +308,6 @@ public class MWCreativeModeTabs {
                             pOutput.accept(MWItems.WAXED_TARNISHED_TIN.get());
                             pOutput.accept(MWItems.WAXED_CORRODED_TIN.get());
                             pOutput.accept(MWItems.WAXED_ERODED_TIN.get());
-                            pOutput.accept(MWItems.TIN_PLATE.get());
-                            pOutput.accept(MWItems.TARNISHED_TIN_PLATE.get());
-                            pOutput.accept(MWItems.CORRODED_TIN_PLATE.get());
-                            pOutput.accept(MWItems.ERODED_TIN_PLATE.get());
-                            pOutput.accept(MWItems.WAXED_TIN_PLATE.get());
-                            pOutput.accept(MWItems.WAXED_TARNISHED_TIN_PLATE.get());
-                            pOutput.accept(MWItems.WAXED_CORRODED_TIN_PLATE.get());
-                            pOutput.accept(MWItems.WAXED_ERODED_TIN_PLATE.get());
                             pOutput.accept(MWItems.CHISELED_TIN.get());
                             pOutput.accept(MWItems.TARNISHED_CHISELED_TIN.get());
                             pOutput.accept(MWItems.CORRODED_CHISELED_TIN.get());

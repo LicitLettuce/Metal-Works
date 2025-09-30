@@ -65,25 +65,6 @@ public class MWBlocks {
     public static final RegistryObject<Block> WAXED_ERODED_TIN = BLOCKS.register("waxed_eroded_tin", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER)));
 
-    // Tin Plate Blocks
-    public static final RegistryObject<Block> TIN_PLATE = BLOCKS.register("tin_plate", () -> new WeatheringTinBlock
-            (BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).strength(3.0F)));
-    public static final RegistryObject<Block> TARNISHED_TIN_PLATE = BLOCKS.register("tarnished_tin_plate", () -> new WeatheringTinBlock
-            (BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).strength(3.0F)));
-    public static final RegistryObject<Block> CORRODED_TIN_PLATE = BLOCKS.register("corroded_tin_plate", () -> new WeatheringTinBlock
-            (BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).strength(3.0F)));
-    public static final RegistryObject<Block> ERODED_TIN_PLATE = BLOCKS.register("eroded_tin_plate", () -> new Block
-            (BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).strength(3.0F)));
-
-    public static final RegistryObject<Block> WAXED_TIN_PLATE = BLOCKS.register("waxed_tin_plate", () ->
-            new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)));
-    public static final RegistryObject<Block> WAXED_TARNISHED_TIN_PLATE = BLOCKS.register("waxed_tarnished_tin_plate", () ->
-            new Block(BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER)));
-    public static final RegistryObject<Block> WAXED_CORRODED_TIN_PLATE = BLOCKS.register("waxed_corroded_tin_plate", () ->
-            new Block(BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER)));
-    public static final RegistryObject<Block> WAXED_ERODED_TIN_PLATE = BLOCKS.register("waxed_eroded_tin_plate", () ->
-            new Block(BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER)));
-
         // Chiseled Tin
     public static final RegistryObject<Block> CHISELED_TIN = BLOCKS.register("chiseled_tin", () -> new WeatheringTinBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));

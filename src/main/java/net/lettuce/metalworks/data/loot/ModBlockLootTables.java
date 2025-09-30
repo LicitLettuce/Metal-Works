@@ -55,17 +55,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(MWBlocks.WAXED_CORRODED_TIN.get());
         this.dropSelf(MWBlocks.WAXED_ERODED_TIN.get());
 
-            // Tin Block Loot Tables
-        this.dropSelf(MWBlocks.TIN_PLATE.get());
-        this.dropSelf(MWBlocks.TARNISHED_TIN_PLATE.get());
-        this.dropSelf(MWBlocks.CORRODED_TIN_PLATE.get());
-        this.dropSelf(MWBlocks.ERODED_TIN_PLATE.get());
-
-        this.dropSelf(MWBlocks.WAXED_TIN_PLATE.get());
-        this.dropSelf(MWBlocks.WAXED_TARNISHED_TIN_PLATE.get());
-        this.dropSelf(MWBlocks.WAXED_CORRODED_TIN_PLATE.get());
-        this.dropSelf(MWBlocks.WAXED_ERODED_TIN_PLATE.get());
-
             // Chiseled Tin Loot Tables
         this.dropSelf(MWBlocks.CHISELED_TIN.get());
         this.dropSelf(MWBlocks.TARNISHED_CHISELED_TIN.get());

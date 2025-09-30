@@ -45,17 +45,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(MWBlocks.WAXED_CORRODED_TIN.get(), models().cubeAll("waxed_corroded_tin", blockTexture(MWBlocks.CORRODED_TIN.get())));
         simpleBlockWithItem(MWBlocks.WAXED_ERODED_TIN.get(), models().cubeAll("waxed_eroded_tin", blockTexture(MWBlocks.ERODED_TIN.get())));
 
-            // Tin Plates
-        blockWithItem(MWBlocks.TIN_PLATE);
-        blockWithItem(MWBlocks.TARNISHED_TIN_PLATE);
-        blockWithItem(MWBlocks.CORRODED_TIN_PLATE);
-        blockWithItem(MWBlocks.ERODED_TIN_PLATE);
-
-        simpleBlockWithItem(MWBlocks.WAXED_TIN_PLATE.get(), models().cubeAll("waxed_tin_plate", blockTexture(MWBlocks.TIN_PLATE.get())));
-        simpleBlockWithItem(MWBlocks.WAXED_TARNISHED_TIN_PLATE.get(), models().cubeAll("waxed_tarnished_tin_plate", blockTexture(MWBlocks.TARNISHED_TIN_PLATE.get())));
-        simpleBlockWithItem(MWBlocks.WAXED_CORRODED_TIN_PLATE.get(), models().cubeAll("waxed_corroded_tin_plate", blockTexture(MWBlocks.CORRODED_TIN_PLATE.get())));
-        simpleBlockWithItem(MWBlocks.WAXED_ERODED_TIN_PLATE.get(), models().cubeAll("waxed_eroded_tin_plate", blockTexture(MWBlocks.ERODED_TIN_PLATE.get())));
-
             // Chiseled Tin
         blockWithItem(MWBlocks.CHISELED_TIN);
         blockWithItem(MWBlocks.TARNISHED_CHISELED_TIN);
@@ -106,10 +95,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(MWBlocks.CORRODED_TIN_TILES);
         blockWithItem(MWBlocks.ERODED_TIN_TILES);
 
-        simpleBlockWithItem(MWBlocks.WAXED_TIN_TILES.get(), models().cubeAll("waxed_tin_shingles", blockTexture(MWBlocks.TIN_TILES.get())));
-        simpleBlockWithItem(MWBlocks.WAXED_TARNISHED_TIN_TILES.get(), models().cubeAll("waxed_tarnished_tin_shingles", blockTexture(MWBlocks.TARNISHED_TIN_TILES.get())));
-        simpleBlockWithItem(MWBlocks.WAXED_CORRODED_TIN_TILES.get(), models().cubeAll("waxed_corroded_tin_shingles", blockTexture(MWBlocks.CORRODED_TIN_TILES.get())));
-        simpleBlockWithItem(MWBlocks.WAXED_ERODED_TIN_TILES.get(), models().cubeAll("waxed_eroded_tin_shingles", blockTexture(MWBlocks.ERODED_TIN_TILES.get())));
+        simpleBlockWithItem(MWBlocks.WAXED_TIN_TILES.get(), models().cubeAll("waxed_tin_tiles", blockTexture(MWBlocks.TIN_TILES.get())));
+        simpleBlockWithItem(MWBlocks.WAXED_TARNISHED_TIN_TILES.get(), models().cubeAll("waxed_tarnished_tin_tiles", blockTexture(MWBlocks.TARNISHED_TIN_TILES.get())));
+        simpleBlockWithItem(MWBlocks.WAXED_CORRODED_TIN_TILES.get(), models().cubeAll("waxed_corroded_tin_stiles", blockTexture(MWBlocks.CORRODED_TIN_TILES.get())));
+        simpleBlockWithItem(MWBlocks.WAXED_ERODED_TIN_TILES.get(), models().cubeAll("waxed_eroded_tiles", blockTexture(MWBlocks.ERODED_TIN_TILES.get())));
 
             // Tin Tile Stair
         stairsBlock(((StairBlock) MWBlocks.TIN_TILE_STAIRS.get()), blockTexture(MWBlocks.TIN_TILES.get()));
