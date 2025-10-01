@@ -1,6 +1,6 @@
 package net.lettuce.metalworks.common.block;
 
-import net.lettuce.metalworks.common.registry.MWWeathering;
+import net.lettuce.metalworks.client.events.tin.WeatheringChain;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -18,7 +18,7 @@ public class WeatheringTinBlock extends Block {
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (random.nextInt(300) == 0) {
-            Block nextBlock = MWWeathering.getNext(state.getBlock());
+            Block nextBlock = WeatheringChain.getNext(state.getBlock());
             if (nextBlock != null) {
                 BlockState nextState = nextBlock.defaultBlockState();
 
@@ -35,7 +35,7 @@ public class WeatheringTinBlock extends Block {
 
     @Override
     public boolean isRandomlyTicking(BlockState state) {
-        return MWWeathering.getNext(state.getBlock()) != null;
+        return WeatheringChain.getNext(state.getBlock()) != null;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

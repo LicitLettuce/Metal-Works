@@ -8,7 +8,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public class MWArmorTiers implements ArmorMaterial {
+public class ModArmorTiers implements ArmorMaterial {
     private final int[] durabilityForType;
     private final int[] defenseForType;
     private final int enchantability;
@@ -18,7 +18,7 @@ public class MWArmorTiers implements ArmorMaterial {
     private final float toughness;
     private final float knockbackResistance;
 
-    public MWArmorTiers(int[] durabilityForType, int[] defenseForType, int enchantability, SoundEvent equipSound, Supplier<Ingredient> repairMaterial, String name, float toughness, float knockbackResistance) {
+    public ModArmorTiers(int[] durabilityForType, int[] defenseForType, int enchantability, SoundEvent equipSound, Supplier<Ingredient> repairMaterial, String name, float toughness, float knockbackResistance) {
         this.durabilityForType = durabilityForType;
         this.defenseForType = defenseForType;
         this.enchantability = enchantability;

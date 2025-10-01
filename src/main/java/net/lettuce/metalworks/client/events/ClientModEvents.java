@@ -1,7 +1,7 @@
 package net.lettuce.metalworks.client.events;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.MWBlockEntities;
+import net.lettuce.metalworks.common.registry.ModBlockEntities;
 import net.minecraft.client.renderer.blockentity.CampfireRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -14,7 +14,7 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(
-                MWBlockEntities.MAGE_CAMPFIRE.get(),  // <-- VALID here
+                ModBlockEntities.MAGE_CAMPFIRE.get(),  // <-- VALID here
                 context -> new CampfireRenderer(context)
         );
     }

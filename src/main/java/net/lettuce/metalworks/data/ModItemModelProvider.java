@@ -2,8 +2,8 @@ package net.lettuce.metalworks.data;
 
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.MWBlocks;
-import net.lettuce.metalworks.common.registry.MWItems;
+import net.lettuce.metalworks.common.registry.ModBlocks;
+import net.lettuce.metalworks.common.registry.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -44,208 +44,208 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
 
             // Casserite
-        evenSimplerBlockItem(MWBlocks.CASSITERITE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.CASSITERITE_SLAB);
-        wallItem(MWBlocks.CASSITERITE_WALL, MWBlocks.CASSITERITE);
+        evenSimplerBlockItem(ModBlocks.CASSITERITE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CASSITERITE_SLAB);
+        wallItem(ModBlocks.CASSITERITE_WALL, ModBlocks.CASSITERITE);
 
             // Polished Casserite
-        evenSimplerBlockItem(MWBlocks.POLISHED_CASSITERITE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.POLISHED_CASSITERITE_SLAB);
+        evenSimplerBlockItem(ModBlocks.POLISHED_CASSITERITE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.POLISHED_CASSITERITE_SLAB);
 
-        evenSimplerBlockItem(MWBlocks.ROSE_GOLD_MOSAIC_STAIRS);
-        evenSimplerBlockItem(MWBlocks.ROSE_GOLD_MOSAIC_SLAB);
-
-
-        simpleItem(MWItems.TIN_INGOT);
-        simpleItem(MWItems.TIN_NUGGET);
-        simpleItem(MWItems.RAW_TIN);
-        trimmedArmorItem(MWItems.TIN_HELMET);
-        trimmedArmorItem(MWItems.TIN_CHESTPLATE);
-        trimmedArmorItem(MWItems.TIN_LEGGINGS);
-        trimmedArmorItem(MWItems.TIN_BOOTS);
-        simpleItem(MWItems.TIN_HORSE_ARMOR);
-        handheldItem(MWItems.TIN_SWORD);
-        handheldItem(MWItems.TIN_PICKAXE);
-        handheldItem(MWItems.TIN_AXE);
-        handheldItem(MWItems.TIN_SHOVEL);
-        handheldItem(MWItems.TIN_HOE);
-
-        simpleItem(MWItems.BRONZE_INGOT);
-        simpleItem(MWItems.BRONZE_NUGGET);
-        trimmedArmorItem(MWItems.BRONZE_HELMET);
-        trimmedArmorItem(MWItems.BRONZE_CHESTPLATE);
-        trimmedArmorItem(MWItems.BRONZE_LEGGINGS);
-        trimmedArmorItem(MWItems.BRONZE_BOOTS);
-        simpleItem(MWItems.BRONZE_HORSE_ARMOR);
-        handheldItem(MWItems.BRONZE_SWORD);
-        handheldItem(MWItems.BRONZE_PICKAXE);
-        handheldItem(MWItems.BRONZE_AXE);
-        handheldItem(MWItems.BRONZE_SHOVEL);
-        handheldItem(MWItems.BRONZE_HOE);
-        simpleItem(MWItems.BRONZE_SHEARS);
-
-        simpleItem(MWItems.ROSE_GOLD_INGOT);
-        simpleItem(MWItems.ROSE_GOLD_NUGGET);
-        simpleItem(MWItems.ROSE_POWDER);
-        trimmedArmorItem(MWItems.ROSE_GOLD_HELMET);
-        trimmedArmorItem(MWItems.ROSE_GOLD_CHESTPLATE);
-        trimmedArmorItem(MWItems.ROSE_GOLD_LEGGINGS);
-        trimmedArmorItem(MWItems.ROSE_GOLD_BOOTS);
-        simpleItem(MWItems.ROSE_GOLD_HORSE_ARMOR);
-
-        simpleItem(MWItems.ROSE_GOLD_BEETROOT);
-        handheldItem(MWItems.ROSE_GOLD_SWORD);
-        handheldItem(MWItems.ROSE_GOLD_PICKAXE);
-        handheldItem(MWItems.ROSE_GOLD_AXE);
-        handheldItem(MWItems.ROSE_GOLD_SHOVEl);
-        handheldItem(MWItems.ROSE_GOLD_HOE);
+        evenSimplerBlockItem(ModBlocks.ROSE_GOLD_MOSAIC_STAIRS);
+        evenSimplerBlockItem(ModBlocks.ROSE_GOLD_MOSAIC_SLAB);
 
 
+        simpleItem(ModItems.TIN_INGOT);
+        simpleItem(ModItems.TIN_NUGGET);
+        simpleItem(ModItems.RAW_TIN);
+        trimmedArmorItem(ModItems.TIN_HELMET);
+        trimmedArmorItem(ModItems.TIN_CHESTPLATE);
+        trimmedArmorItem(ModItems.TIN_LEGGINGS);
+        trimmedArmorItem(ModItems.TIN_BOOTS);
+        simpleItem(ModItems.TIN_HORSE_ARMOR);
+        handheldItem(ModItems.TIN_SWORD);
+        handheldItem(ModItems.TIN_PICKAXE);
+        handheldItem(ModItems.TIN_AXE);
+        handheldItem(ModItems.TIN_SHOVEL);
+        handheldItem(ModItems.TIN_HOE);
 
+        simpleItem(ModItems.BRONZE_INGOT);
+        simpleItem(ModItems.BRONZE_NUGGET);
+        trimmedArmorItem(ModItems.BRONZE_HELMET);
+        trimmedArmorItem(ModItems.BRONZE_CHESTPLATE);
+        trimmedArmorItem(ModItems.BRONZE_LEGGINGS);
+        trimmedArmorItem(ModItems.BRONZE_BOOTS);
+        simpleItem(ModItems.BRONZE_HORSE_ARMOR);
+        handheldItem(ModItems.BRONZE_SWORD);
+        handheldItem(ModItems.BRONZE_PICKAXE);
+        handheldItem(ModItems.BRONZE_AXE);
+        handheldItem(ModItems.BRONZE_SHOVEL);
+        handheldItem(ModItems.BRONZE_HOE);
+        simpleItem(ModItems.BRONZE_SHEARS);
 
-        simpleBlockItem(MWBlocks.TIN_DOOR);
+        simpleItem(ModItems.ROSE_GOLD_INGOT);
+        simpleItem(ModItems.ROSE_GOLD_NUGGET);
+        simpleItem(ModItems.MAGE_POWDER);
+        trimmedArmorItem(ModItems.ROSE_GOLD_HELMET);
+        trimmedArmorItem(ModItems.ROSE_GOLD_CHESTPLATE);
+        trimmedArmorItem(ModItems.ROSE_GOLD_LEGGINGS);
+        trimmedArmorItem(ModItems.ROSE_GOLD_BOOTS);
+        simpleItem(ModItems.ROSE_GOLD_HORSE_ARMOR);
 
-        simpleBlockItem(MWBlocks.TIN_LANTERN);
-        simpleBlockItem(MWBlocks.MAGE_LANTERN);
-        simpleBlockItem(MWBlocks.MAGE_CAMPFIRE);
-
-        simpleBlockItem(MWBlocks.TARNISHED_TIN_LANTERN);
-        simpleBlockItem(MWBlocks.CORRODED_TIN_LANTERN);
-        simpleBlockItem(MWBlocks.ERODED_TIN_LANTERN);
-        withExistingParent(MWItems.WAXED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_lantern"));
-        withExistingParent(MWItems.WAXED_TARNISHED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_lantern"));
-        withExistingParent(MWItems.WAXED_CORRODED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_lantern"));
-        withExistingParent(MWItems.WAXED_ERODED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_lantern"));
-
-        simpleBlockItem(MWBlocks.TIN_SOUL_LANTERN);
-        simpleBlockItem(MWBlocks.TARNISHED_TIN_SOUL_LANTERN);
-        simpleBlockItem(MWBlocks.CORRODED_TIN_SOUL_LANTERN);
-        simpleBlockItem(MWBlocks.ERODED_TIN_SOUL_LANTERN);
-        withExistingParent(MWItems.WAXED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_soul_lantern"));
-        withExistingParent(MWItems.WAXED_TARNISHED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_soul_lantern"));
-        withExistingParent(MWItems.WAXED_CORRODED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_soul_lantern"));
-        withExistingParent(MWItems.WAXED_ERODED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_soul_lantern"));
-
-        simpleBlockItem(MWBlocks.TIN_MAGE_LANTERN);
-        simpleBlockItem(MWBlocks.TARNISHED_TIN_MAGE_LANTERN);
-        simpleBlockItem(MWBlocks.CORRODED_TIN_MAGE_LANTERN);
-        simpleBlockItem(MWBlocks.ERODED_TIN_MAGE_LANTERN);
-        withExistingParent(MWItems.WAXED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_mage_lantern"));
-        withExistingParent(MWItems.WAXED_TARNISHED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_mage_lantern"));
-        withExistingParent(MWItems.WAXED_CORRODED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_mage_lantern"));
-        withExistingParent(MWItems.WAXED_ERODED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_mage_lantern"));
-
-        simpleBlockItem(MWBlocks.TARNISHED_TIN_SOUL_LANTERN);
-        simpleBlockItem(MWBlocks.CORRODED_TIN_SOUL_LANTERN);
-        simpleBlockItem(MWBlocks.ERODED_TIN_SOUL_LANTERN);
-
-        simpleBlockItem(MWBlocks.TIN_CHAIN);
-        simpleBlockItem(MWBlocks.TARNISHED_TIN_CHAIN);
-        simpleBlockItem(MWBlocks.CORRODED_TIN_CHAIN);
-        simpleBlockItem(MWBlocks.ERODED_TIN_CHAIN);
-
-        withExistingParent(MWItems.WAXED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_chain"));
-        withExistingParent(MWItems.WAXED_TARNISHED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_chain"));
-        withExistingParent(MWItems.WAXED_CORRODED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_chain"));
-        withExistingParent(MWItems.WAXED_ERODED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_chain"));
+        simpleItem(ModItems.ROSE_GOLD_BEETROOT);
+        handheldItem(ModItems.ROSE_GOLD_SWORD);
+        handheldItem(ModItems.ROSE_GOLD_PICKAXE);
+        handheldItem(ModItems.ROSE_GOLD_AXE);
+        handheldItem(ModItems.ROSE_GOLD_SHOVEl);
+        handheldItem(ModItems.ROSE_GOLD_HOE);
 
 
 
-        simpleBlockItem(MWBlocks.BRONZE_DOOR);
+
+        simpleBlockItem(ModBlocks.TIN_DOOR);
+
+        simpleBlockItem(ModBlocks.TIN_LANTERN);
+        simpleBlockItem(ModBlocks.MAGE_LANTERN);
+        simpleBlockItem(ModBlocks.MAGE_CAMPFIRE);
+
+        simpleBlockItem(ModBlocks.TARNISHED_TIN_LANTERN);
+        simpleBlockItem(ModBlocks.CORRODED_TIN_LANTERN);
+        simpleBlockItem(ModBlocks.ERODED_TIN_LANTERN);
+        withExistingParent(ModItems.WAXED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_lantern"));
+        withExistingParent(ModItems.WAXED_TARNISHED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_lantern"));
+        withExistingParent(ModItems.WAXED_CORRODED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_lantern"));
+        withExistingParent(ModItems.WAXED_ERODED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_lantern"));
+
+        simpleBlockItem(ModBlocks.TIN_SOUL_LANTERN);
+        simpleBlockItem(ModBlocks.TARNISHED_TIN_SOUL_LANTERN);
+        simpleBlockItem(ModBlocks.CORRODED_TIN_SOUL_LANTERN);
+        simpleBlockItem(ModBlocks.ERODED_TIN_SOUL_LANTERN);
+        withExistingParent(ModItems.WAXED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_soul_lantern"));
+        withExistingParent(ModItems.WAXED_TARNISHED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_soul_lantern"));
+        withExistingParent(ModItems.WAXED_CORRODED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_soul_lantern"));
+        withExistingParent(ModItems.WAXED_ERODED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_soul_lantern"));
+
+        simpleBlockItem(ModBlocks.TIN_MAGE_LANTERN);
+        simpleBlockItem(ModBlocks.TARNISHED_TIN_MAGE_LANTERN);
+        simpleBlockItem(ModBlocks.CORRODED_TIN_MAGE_LANTERN);
+        simpleBlockItem(ModBlocks.ERODED_TIN_MAGE_LANTERN);
+        withExistingParent(ModItems.WAXED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_mage_lantern"));
+        withExistingParent(ModItems.WAXED_TARNISHED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_mage_lantern"));
+        withExistingParent(ModItems.WAXED_CORRODED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_mage_lantern"));
+        withExistingParent(ModItems.WAXED_ERODED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_mage_lantern"));
+
+        simpleBlockItem(ModBlocks.TARNISHED_TIN_SOUL_LANTERN);
+        simpleBlockItem(ModBlocks.CORRODED_TIN_SOUL_LANTERN);
+        simpleBlockItem(ModBlocks.ERODED_TIN_SOUL_LANTERN);
+
+        simpleBlockItem(ModBlocks.TIN_CHAIN);
+        simpleBlockItem(ModBlocks.TARNISHED_TIN_CHAIN);
+        simpleBlockItem(ModBlocks.CORRODED_TIN_CHAIN);
+        simpleBlockItem(ModBlocks.ERODED_TIN_CHAIN);
+
+        withExistingParent(ModItems.WAXED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_chain"));
+        withExistingParent(ModItems.WAXED_TARNISHED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_chain"));
+        withExistingParent(ModItems.WAXED_CORRODED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_chain"));
+        withExistingParent(ModItems.WAXED_ERODED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_chain"));
+
+
+
+        simpleBlockItem(ModBlocks.BRONZE_DOOR);
 
 
 
 
         //Stairs
-        evenSimplerBlockItem(MWBlocks.CUT_TIN_STAIRS);
-        evenSimplerBlockItem(MWBlocks.TARNISHED_CUT_TIN_STAIRS);
-        evenSimplerBlockItem(MWBlocks.CORRODED_CUT_TIN_STAIRS);
-        evenSimplerBlockItem(MWBlocks.ERODED_CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.TARNISHED_CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CORRODED_CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.ERODED_CUT_TIN_STAIRS);
 
 
-        evenSimplerBlockItem(MWBlocks.TIN_TILE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.TIN_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.TIN_SHINGLE_STAIRS);
 
-        evenSimplerBlockItem(MWBlocks.BRONZE_SHINGLE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.BRONZE_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.BRONZE_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.BRONZE_TILE_STAIRS);
 
 
 
         //Slabs
-        evenSimplerBlockItem(MWBlocks.CUT_TIN_SLAB);
-        evenSimplerBlockItem(MWBlocks.TARNISHED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(MWBlocks.CORRODED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(MWBlocks.ERODED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.TARNISHED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.CORRODED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.ERODED_CUT_TIN_SLAB);
 
 
-        evenSimplerBlockItem(MWBlocks.TIN_TILE_SLAB);
-        evenSimplerBlockItem(MWBlocks.TIN_SHINGLE_SLAB);
+        evenSimplerBlockItem(ModBlocks.TIN_TILE_SLAB);
+        evenSimplerBlockItem(ModBlocks.TIN_SHINGLE_SLAB);
 
 
-        evenSimplerBlockItem(MWBlocks.BRONZE_SHINGLE_SLAB);
-        evenSimplerBlockItem(MWBlocks.BRONZE_TILE_SLAB);
+        evenSimplerBlockItem(ModBlocks.BRONZE_SHINGLE_SLAB);
+        evenSimplerBlockItem(ModBlocks.BRONZE_TILE_SLAB);
 
 
 
-        trapdoorItem(MWBlocks.TIN_TRAPDOOR);
+        trapdoorItem(ModBlocks.TIN_TRAPDOOR);
 
-        trapdoorItem(MWBlocks.BRONZE_TRAPDOOR);
+        trapdoorItem(ModBlocks.BRONZE_TRAPDOOR);
 
         // Waxed Cut Tin Stairs
-        evenSimplerBlockItem(MWBlocks.WAXED_CUT_TIN_STAIRS);
-        evenSimplerBlockItem(MWBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS);
-        evenSimplerBlockItem(MWBlocks.WAXED_CORRODED_CUT_TIN_STAIRS);
-        evenSimplerBlockItem(MWBlocks.WAXED_ERODED_CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_CUT_TIN_STAIRS);
 
 // Waxed Tin Tile Stairs
-        evenSimplerBlockItem(MWBlocks.TARNISHED_TIN_TILE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.CORRODED_TIN_TILE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.ERODED_TIN_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CORRODED_TIN_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.ERODED_TIN_TILE_STAIRS);
 
-        evenSimplerBlockItem(MWBlocks.WAXED_TIN_TILE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.WAXED_TARNISHED_TIN_TILE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.WAXED_CORRODED_TIN_TILE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.WAXED_ERODED_TIN_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_TIN_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_TILE_STAIRS);
 
 // Waxed Tin Shingle Stairs
-        evenSimplerBlockItem(MWBlocks.TARNISHED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.CORRODED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.ERODED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CORRODED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.ERODED_TIN_SHINGLE_STAIRS);
 
-        evenSimplerBlockItem(MWBlocks.WAXED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.WAXED_TARNISHED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.WAXED_CORRODED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(MWBlocks.WAXED_ERODED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_SHINGLE_STAIRS);
 
         // Waxed Cut Tin Slabs
-        evenSimplerBlockItem(MWBlocks.WAXED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(MWBlocks.WAXED_TARNISHED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(MWBlocks.WAXED_CORRODED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(MWBlocks.WAXED_ERODED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_CUT_TIN_SLAB);
 
 // Waxed Tin Tile Slabs
-        evenSimplerBlockItem(MWBlocks.TARNISHED_TIN_TILE_SLAB);
-        evenSimplerBlockItem(MWBlocks.CORRODED_TIN_TILE_SLAB);
-        evenSimplerBlockItem(MWBlocks.ERODED_TIN_TILE_SLAB);
+        evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_TILE_SLAB);
+        evenSimplerBlockItem(ModBlocks.CORRODED_TIN_TILE_SLAB);
+        evenSimplerBlockItem(ModBlocks.ERODED_TIN_TILE_SLAB);
 
-        evenSimplerBlockItem(MWBlocks.WAXED_TIN_TILE_SLAB);
-        evenSimplerBlockItem(MWBlocks.WAXED_TARNISHED_TIN_TILE_SLAB);
-        evenSimplerBlockItem(MWBlocks.WAXED_CORRODED_TIN_TILE_SLAB);
-        evenSimplerBlockItem(MWBlocks.WAXED_ERODED_TIN_TILE_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_TIN_TILE_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_TILE_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_TILE_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_TILE_SLAB);
 
 // Waxed Tin Shingle Slabs
-        evenSimplerBlockItem(MWBlocks.TARNISHED_TIN_SHINGLE_SLAB);
-        evenSimplerBlockItem(MWBlocks.CORRODED_TIN_SHINGLE_SLAB);
-        evenSimplerBlockItem(MWBlocks.ERODED_TIN_SHINGLE_SLAB);
+        evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_SHINGLE_SLAB);
+        evenSimplerBlockItem(ModBlocks.CORRODED_TIN_SHINGLE_SLAB);
+        evenSimplerBlockItem(ModBlocks.ERODED_TIN_SHINGLE_SLAB);
 
-        evenSimplerBlockItem(MWBlocks.WAXED_TIN_SHINGLE_SLAB);
-        evenSimplerBlockItem(MWBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB);
-        evenSimplerBlockItem(MWBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB);
-        evenSimplerBlockItem(MWBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_TIN_SHINGLE_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB);
 
-        withExistingParent(MWItems.TIN_CHAIN.getId().getPath(), "item/generated")
+        withExistingParent(ModItems.TIN_CHAIN.getId().getPath(), "item/generated")
                 .texture("layer0", modLoc("item/tin_chain"));
-        withExistingParent(MWItems.MAGE_GOLEM_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.MAGE_GOLEM_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

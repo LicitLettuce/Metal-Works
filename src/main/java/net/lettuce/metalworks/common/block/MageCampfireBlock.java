@@ -1,7 +1,7 @@
 package net.lettuce.metalworks.common.block;
 
 import net.lettuce.metalworks.common.blockentity.MageCampfireBlockEntity;
-import net.lettuce.metalworks.common.registry.MWBlockEntities;
+import net.lettuce.metalworks.common.registry.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
@@ -43,7 +43,7 @@ public class MageCampfireBlock extends CampfireBlock {
     @Override
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return level.isClientSide ? null : createTickerHelper(type, MWBlockEntities.MAGE_CAMPFIRE.get(), CampfireBlockEntity::cookTick);
+        return level.isClientSide ? null : createTickerHelper(type, ModBlockEntities.MAGE_CAMPFIRE.get(), CampfireBlockEntity::cookTick);
     }
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {

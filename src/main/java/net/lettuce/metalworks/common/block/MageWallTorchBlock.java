@@ -1,6 +1,6 @@
 package net.lettuce.metalworks.common.block;
 
-import net.lettuce.metalworks.common.registry.MWParticles;
+import net.lettuce.metalworks.common.registry.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -23,7 +23,7 @@ public class MageWallTorchBlock extends WallTorchBlock {
         double y = pos.getY() + 0.9;
         double z = pos.getZ() + 0.5 - 0.27 * direction.getStepZ();
 
-        level.addParticle(MWParticles.MAGE_FLAME.get(), x, y, z, 0.0, 0.0, 0.0);
+        level.addParticle(ModParticles.MAGE_FLAME.get(), x, y, z, 0.0, 0.0, 0.0);
         level.addParticle(ParticleTypes.SMOKE, x, y, z, 0.0, 0.0, 0.0);
     }
 }

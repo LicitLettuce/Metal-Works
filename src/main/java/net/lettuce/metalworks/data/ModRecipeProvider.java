@@ -1,8 +1,8 @@
 package net.lettuce.metalworks.data;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.MWBlocks;
-import net.lettuce.metalworks.common.registry.MWItems;
+import net.lettuce.metalworks.common.registry.ModBlocks;
+import net.lettuce.metalworks.common.registry.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -15,9 +15,9 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    private static final List<ItemLike> TIN_SMELTABLES = List.of(MWItems.RAW_TIN.get(),
-            MWBlocks.TIN_ORE.get(),
-            MWBlocks.DEEPSLATE_TIN_ORE.get());
+    private static final List<ItemLike> TIN_SMELTABLES = List.of(ModItems.RAW_TIN.get(),
+            ModBlocks.TIN_ORE.get(),
+            ModBlocks.DEEPSLATE_TIN_ORE.get());
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -25,20 +25,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-        oreSmelting(pWriter, TIN_SMELTABLES, RecipeCategory.MISC, MWItems.TIN_INGOT.get(), 0.25f, 200, "tin");
-        oreBlasting(pWriter, TIN_SMELTABLES, RecipeCategory.MISC, MWItems.TIN_INGOT.get(), 0.25f, 100, "tin");
+        oreSmelting(pWriter, TIN_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 0.25f, 200, "tin");
+        oreBlasting(pWriter, TIN_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 0.25f, 100, "tin");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MWBlocks.TIN_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TIN_BLOCK.get())
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .define('#', MWItems.TIN_INGOT.get())
-                .unlockedBy(getHasName(MWItems.TIN_INGOT.get()), has(MWItems.TIN_INGOT.get()))
+                .define('#', ModItems.TIN_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MWItems.TIN_INGOT.get(), 9)
-                .requires(MWBlocks.TIN_BLOCK.get())
-                .unlockedBy(getHasName(MWBlocks.TIN_BLOCK.get()), has(MWBlocks.TIN_BLOCK.get()))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 9)
+                .requires(ModBlocks.TIN_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.TIN_BLOCK.get()), has(ModBlocks.TIN_BLOCK.get()))
                 .save(pWriter);
     }
 

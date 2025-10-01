@@ -1,4 +1,4 @@
-package net.lettuce.metalworks.client.events;
+package net.lettuce.metalworks.client.events.tin;
 
 
 import net.minecraft.core.BlockPos;

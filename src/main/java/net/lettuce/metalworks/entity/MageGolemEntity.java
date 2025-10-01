@@ -1,7 +1,7 @@
 package net.lettuce.metalworks.entity;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.MWParticles;
+import net.lettuce.metalworks.common.registry.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
@@ -98,7 +98,7 @@ public class MageGolemEntity extends AbstractGolem {
             double offsetZ = (this.random.nextDouble() - 0.5D) * this.getBbWidth();
 
             this.level().addParticle(
-                    MWParticles.MAGE_FLAME.get(),
+                    ModParticles.MAGE_FLAME.get(),
                     this.getX() + offsetX,
                     this.getY() + offsetY,
                     this.getZ() + offsetZ,

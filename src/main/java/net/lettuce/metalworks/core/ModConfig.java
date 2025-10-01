@@ -3,7 +3,7 @@ package net.lettuce.metalworks.core;
 import net.minecraftforge.common.ForgeConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
-public class MWConfig {
+public class ModConfig {
     public static final ForgeConfigSpec COMMON_SPEC;
     public static final Common COMMON;
 

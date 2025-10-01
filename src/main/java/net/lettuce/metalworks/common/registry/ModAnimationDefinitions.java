@@ -5,7 +5,7 @@ import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.animation.Keyframe;
 import net.minecraft.client.animation.KeyframeAnimations;
 
-public class MWAnimationDefinitions {
+public class ModAnimationDefinitions {
 
     public static final AnimationDefinition MAGE_GOLEM_IDLE = AnimationDefinition.Builder.withLength(18.0F).looping()
 		.addAnimation("head", new AnimationChannel(AnimationChannel.Targets.ROTATION,

@@ -5,7 +5,7 @@ package net.lettuce.metalworks.client.model;// Made with Blockbench 4.12.6
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.lettuce.metalworks.common.registry.MWAnimationDefinitions;
+import net.lettuce.metalworks.common.registry.ModAnimationDefinitions;
 import net.lettuce.metalworks.entity.MageGolemEntity;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
@@ -68,7 +68,7 @@ public class MageGolemModel<T extends Entity> extends HierarchicalModel<T> {
 		this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
 
 		if (entity instanceof MageGolemEntity golem) {
-			this.animate(golem.idleAnimationState, MWAnimationDefinitions.MAGE_GOLEM_IDLE, ageInTicks, 1f);
+			this.animate(golem.idleAnimationState, ModAnimationDefinitions.MAGE_GOLEM_IDLE, ageInTicks, 1f);
 		}
 	}
 

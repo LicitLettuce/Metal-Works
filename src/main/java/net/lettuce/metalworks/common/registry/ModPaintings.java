@@ -6,7 +6,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.entity.decoration.PaintingVariant;
 
-public class MWPaintings {
+public class ModPaintings {
     public static final DeferredRegister<PaintingVariant> REGISTRY = DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS, MetalWorks.MOD_ID);
 
     public static final RegistryObject<PaintingVariant> MARKET = REGISTRY.register("market", () -> new PaintingVariant

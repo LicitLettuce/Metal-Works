@@ -4,7 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import net.lettuce.metalworks.client.model.MageGolemEmissiveLayer;
 import net.lettuce.metalworks.client.model.MageGolemModel;
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.MWModelLayers;
+import net.lettuce.metalworks.common.registry.ModModelLayers;
 import net.lettuce.metalworks.entity.MageGolemEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -13,7 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class MageGolemRenderer extends MobRenderer<MageGolemEntity, MageGolemModel<MageGolemEntity>> {
     public MageGolemRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new MageGolemModel<>(pContext.bakeLayer(MWModelLayers.MAGE_GOLEM_LAYER)), 0.5f);
+        super(pContext, new MageGolemModel<>(pContext.bakeLayer(ModModelLayers.MAGE_GOLEM_LAYER)), 0.5f);
 
         this.addLayer(new MageGolemEmissiveLayer(this, GLOW_FRAMES));
     }

@@ -1,6 +1,6 @@
 package net.lettuce.metalworks.common.block;
 
-import net.lettuce.metalworks.common.registry.MWTags;
+import net.lettuce.metalworks.common.registry.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -26,7 +26,7 @@ public class MageFireBlock extends BaseFireBlock {
     }
 
     private boolean canSurviveOnBlock(BlockState blockState) {
-        return blockState.is(MWTags.MAGE_FIRE_BASE_BLOCKS); // Use a block tag
+        return blockState.is(ModTags.MAGE_FIRE_BASE_BLOCKS); // Use a block tag
     }
 
     @Override

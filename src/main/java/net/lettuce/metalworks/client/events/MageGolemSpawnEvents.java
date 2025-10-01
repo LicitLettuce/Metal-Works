@@ -1,8 +1,8 @@
 package net.lettuce.metalworks.client.events;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.MWBlocks;
-import net.lettuce.metalworks.common.registry.MWEntities;
+import net.lettuce.metalworks.common.registry.ModBlocks;
+import net.lettuce.metalworks.common.registry.ModEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
@@ -35,8 +35,8 @@ public class MageGolemSpawnEvents {
         BlockState middleState = level.getBlockState(middle);
         BlockState bottomState = level.getBlockState(bottom);
 
-        if (middleState.is(MWBlocks.ROSE_GOLD_BLOCK.get()) &&
-                bottomState.is(MWBlocks.ROSE_GOLD_BLOCK.get())) {
+        if (middleState.is(ModBlocks.ROSE_GOLD_BLOCK.get()) &&
+                bottomState.is(ModBlocks.ROSE_GOLD_BLOCK.get())) {
 
             level.removeBlock(pumpkinPos, false);
             level.removeBlock(middle, false);
@@ -44,12 +44,12 @@ public class MageGolemSpawnEvents {
 
             if (level instanceof ServerLevel serverLevel) {
                 serverLevel.levelEvent(2001, pumpkinPos, Block.getId(Blocks.CARVED_PUMPKIN.defaultBlockState()));
-                serverLevel.levelEvent(2001, middle, Block.getId(MWBlocks.ROSE_GOLD_BLOCK.get().defaultBlockState()));
-                serverLevel.levelEvent(2001, bottom, Block.getId(MWBlocks.ROSE_GOLD_BLOCK.get().defaultBlockState()));
+                serverLevel.levelEvent(2001, middle, Block.getId(ModBlocks.ROSE_GOLD_BLOCK.get().defaultBlockState()));
+                serverLevel.levelEvent(2001, bottom, Block.getId(ModBlocks.ROSE_GOLD_BLOCK.get().defaultBlockState()));
             }
 
                 if (level instanceof ServerLevel serverLevel) {
-                var golem = MWEntities.MAGE_GOLEM.get().create(serverLevel);
+                var golem = ModEntities.MAGE_GOLEM.get().create(serverLevel);
                 if (golem != null) {
                     golem.moveTo(
                             bottom.getX() + 0.5,

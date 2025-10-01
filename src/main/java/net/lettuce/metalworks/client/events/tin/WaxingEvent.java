@@ -1,4 +1,4 @@
-package net.lettuce.metalworks.client.events;
+package net.lettuce.metalworks.client.events.tin;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
@@ -12,7 +12,7 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
-import net.lettuce.metalworks.common.registry.MWBlocks;
+import net.lettuce.metalworks.common.registry.ModBlocks;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,10 +21,10 @@ import java.util.Map;
 public class WaxingEvent {
 
     private static final Map<RegistryObject<Block>, RegistryObject<Block>> waxablePairs = Map.ofEntries(
-            Map.entry(MWBlocks.TIN_BLOCK, MWBlocks.WAXED_TIN_BLOCK),
-            Map.entry(MWBlocks.TARNISHED_TIN, MWBlocks.WAXED_TARNISHED_TIN),
-            Map.entry(MWBlocks.CORRODED_TIN, MWBlocks.WAXED_CORRODED_TIN),
-            Map.entry(MWBlocks.ERODED_TIN, MWBlocks.WAXED_ERODED_TIN)
+            Map.entry(ModBlocks.TIN_BLOCK, ModBlocks.WAXED_TIN_BLOCK),
+            Map.entry(ModBlocks.TARNISHED_TIN, ModBlocks.WAXED_TARNISHED_TIN),
+            Map.entry(ModBlocks.CORRODED_TIN, ModBlocks.WAXED_CORRODED_TIN),
+            Map.entry(ModBlocks.ERODED_TIN, ModBlocks.WAXED_ERODED_TIN)
     );
 
     private static final Map<Block, Block> WAXABLES = new HashMap<>();

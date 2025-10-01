@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[47,)"
-license="Lettuce License – see LICENSE file"
+license="Lettuce License v2.1 https://github.com/LicitLettuce/Metal-Works?tab=License-1-ov-file"
 
 [[mods]]
 modId="metal_works"

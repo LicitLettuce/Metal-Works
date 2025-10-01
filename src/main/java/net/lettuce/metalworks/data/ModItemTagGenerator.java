@@ -1,7 +1,7 @@
 package net.lettuce.metalworks.data;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.MWItems;
+import net.lettuce.metalworks.common.registry.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -22,18 +22,18 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
 
         this.tag(ItemTags.TRIMMABLE_ARMOR)
-                .add(MWItems.TIN_HELMET.get(),
-                MWItems.TIN_CHESTPLATE.get(),
-                MWItems.TIN_LEGGINGS.get(),
-                MWItems.TIN_BOOTS.get(),
-                MWItems.BRONZE_HELMET.get(),
-                MWItems.BRONZE_CHESTPLATE.get(),
-                MWItems.BRONZE_LEGGINGS.get(),
-                MWItems.BRONZE_BOOTS.get(),
-                MWItems.ROSE_GOLD_HELMET.get(),
-                MWItems.ROSE_GOLD_CHESTPLATE.get(),
-                MWItems.ROSE_GOLD_LEGGINGS.get(),
-                MWItems.ROSE_GOLD_BOOTS.get());
+                .add(ModItems.TIN_HELMET.get(),
+                ModItems.TIN_CHESTPLATE.get(),
+                ModItems.TIN_LEGGINGS.get(),
+                ModItems.TIN_BOOTS.get(),
+                ModItems.BRONZE_HELMET.get(),
+                ModItems.BRONZE_CHESTPLATE.get(),
+                ModItems.BRONZE_LEGGINGS.get(),
+                ModItems.BRONZE_BOOTS.get(),
+                ModItems.ROSE_GOLD_HELMET.get(),
+                ModItems.ROSE_GOLD_CHESTPLATE.get(),
+                ModItems.ROSE_GOLD_LEGGINGS.get(),
+                ModItems.ROSE_GOLD_BOOTS.get());
 
     }
 }

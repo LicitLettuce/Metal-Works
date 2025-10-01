@@ -6,7 +6,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
-public class MWTags {
+public class ModTags {
 
     //Blocks
     public static final TagKey<Block> NEEDS_TIN_TOOL = tag
