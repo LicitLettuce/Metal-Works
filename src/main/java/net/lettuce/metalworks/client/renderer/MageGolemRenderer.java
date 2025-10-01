@@ -42,7 +42,7 @@ public class MageGolemRenderer extends MobRenderer<MageGolemEntity, MageGolemMod
 
     @Override
     public ResourceLocation getTextureLocation(MageGolemEntity entity) {
-        int tick = (int)(entity.tickCount / 2 % FRAMES.length); // switch every 5 ticks
+        int tick = (int)(entity.tickCount / 2 % FRAMES.length);
         return FRAMES[tick];
     }
 
