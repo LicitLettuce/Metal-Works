@@ -4,6 +4,9 @@ import net.lettuce.metalworks.core.MetalWorks;
 import net.lettuce.metalworks.common.registry.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -26,17 +29,29 @@ import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
 
 public class MageGolemEntity extends AbstractGolem {
+    // Synced data key for golem level
+    private static final EntityDataAccessor<Integer> DATA_GOLEM_LEVEL =
+            SynchedEntityData.defineId(MageGolemEntity.class, EntityDataSerializers.INT);
+
+    // Server-side copy (authoritative)
+    private int golemLevel = 0;
+
+    public final AnimationState idleAnimationState = new AnimationState();
+
     public MageGolemEntity(EntityType<? extends AbstractGolem> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
-    private int golemLevel = 0;
-
-    public int getGolemLevel() {
-        return golemLevel;
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(DATA_GOLEM_LEVEL, 0);
     }
 
-    public final AnimationState idleAnimationState = new AnimationState();
+    public int getGolemLevel() {
+        // On client, use synced data; on server, use local field
+        return this.level().isClientSide ? this.entityData.get(DATA_GOLEM_LEVEL) : this.golemLevel;
+    }
 
     @Override
     public void tick() {
@@ -70,14 +85,20 @@ public class MageGolemEntity extends AbstractGolem {
             }
         }
 
+        int newLevel;
         if (powerBlocks >= 18) {
-            golemLevel = 3;
+            newLevel = 3;
         } else if (powerBlocks >= 9) {
-            golemLevel = 2;
+            newLevel = 2;
         } else if (powerBlocks >= 3) {
-            golemLevel = 1;
+            newLevel = 1;
         } else {
-            golemLevel = 0;
+            newLevel = 0;
+        }
+
+        if (newLevel != golemLevel) {
+            golemLevel = newLevel;
+            this.entityData.set(DATA_GOLEM_LEVEL, newLevel); // sync to client
         }
     }
 
@@ -93,43 +114,49 @@ public class MageGolemEntity extends AbstractGolem {
         super.aiStep();
 
         if (this.level().isClientSide) {
-            double offsetX = (this.random.nextDouble() - 0.5D) * this.getBbWidth();
-            double offsetY = this.random.nextDouble() * this.getBbHeight();
-            double offsetZ = (this.random.nextDouble() - 0.5D) * this.getBbWidth();
+            spawnMageFlameParticles();
 
-            this.level().addParticle(
-                    ModParticles.MAGE_FLAME.get(),
-                    this.getX() + offsetX,
-                    this.getY() + offsetY,
-                    this.getZ() + offsetZ,
-                    0, 0.01, 0
-            );
-            if (this.level().isClientSide) {
-                BlockPos golemPos = this.blockPosition();
+            BlockPos golemPos = this.blockPosition();
 
-                for (int dx = -3; dx <= 3; dx++) {
-                    for (int dy = -3; dy <= 3; dy++) {
-                        for (int dz = -3; dz <= 3; dz++) {
-                            BlockPos checkPos = golemPos.offset(dx, dy, dz);
+            for (int dx = -3; dx <= 3; dx++) {
+                for (int dy = -3; dy <= 3; dy++) {
+                    for (int dz = -3; dz <= 3; dz++) {
+                        BlockPos checkPos = golemPos.offset(dx, dy, dz);
 
-                            if (this.level().getBlockState(checkPos).is(BlockTags.ENCHANTMENT_POWER_PROVIDER)) {
-                                if (this.level().random.nextInt(16) == 0) {
-                                    this.level().addParticle(
-                                            ParticleTypes.ENCHANT,
-                                            checkPos.getX() + 0.5,
-                                            checkPos.getY() + 1.75,
-                                            checkPos.getZ() + 0.5,
-                                            this.getX() - (checkPos.getX() + 0.5),
-                                            this.getY() + this.getBbHeight() * 0.5 - (checkPos.getY() + 1.75),
-                                            this.getZ() - (checkPos.getZ() + 0.5)
-                                    );
-                                }
+                        if (this.level().getBlockState(checkPos).is(BlockTags.ENCHANTMENT_POWER_PROVIDER)) {
+                            if (this.level().random.nextInt(16) == 0) {
+                                this.level().addParticle(
+                                        ParticleTypes.ENCHANT,
+                                        checkPos.getX() + 0.5,
+                                        checkPos.getY() + 1.75,
+                                        checkPos.getZ() + 0.5,
+                                        this.getX() - (checkPos.getX() + 0.5),
+                                        this.getY() + this.getBbHeight() * 0.5 - (checkPos.getY() + 1.75),
+                                        this.getZ() - (checkPos.getZ() + 0.5)
+                                );
                             }
                         }
                     }
                 }
             }
         }
+    }
+
+    private void spawnMageFlameParticles() {
+        int syncedLevel = this.entityData.get(DATA_GOLEM_LEVEL); // synced value
+        if (syncedLevel <= 0) return; // only spawn when level > 0
+
+        double offsetX = (this.random.nextDouble() - 0.5D) * this.getBbWidth();
+        double offsetY = this.random.nextDouble() * this.getBbHeight();
+        double offsetZ = (this.random.nextDouble() - 0.5D) * this.getBbWidth();
+
+        this.level().addParticle(
+                ModParticles.MAGE_FLAME.get(),
+                this.getX() + offsetX,
+                this.getY() + offsetY,
+                this.getZ() + offsetZ,
+                0, 0.01, 0
+        );
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -148,19 +175,18 @@ public class MageGolemEntity extends AbstractGolem {
     }
 
     @Override
-    protected ResourceLocation getDefaultLootTable() {
-        return new ResourceLocation(MetalWorks.MOD_ID, "entities/mage_golem");
-    }
-
-    @Override
     @Nullable
     protected SoundEvent getDeathSound() {
         return SoundEvents.IRON_GOLEM_DEATH;
     }
 
-    @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
-    public class ModTargetingEvents {
+    @Override
+    protected ResourceLocation getDefaultLootTable() {
+        return new ResourceLocation(MetalWorks.MOD_ID, "entities/mage_golem");
+    }
 
+    @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+    public static class ModTargetingEvents {
         @SubscribeEvent
         public static void onEntityJoin(EntityJoinLevelEvent event) {
             if (!(event.getEntity() instanceof Monster monster)) return;
@@ -170,4 +196,5 @@ public class MageGolemEntity extends AbstractGolem {
         }
     }
 }
+
 

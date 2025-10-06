@@ -115,6 +115,16 @@ public class LoopingPressurePlateBlock extends Block {
     }
 
     @Override
+    public void onRemove(BlockState oldState, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
+        super.onRemove(oldState, level, pos, newState, isMoving);
+
+        if (!level.isClientSide && oldState.getValue(POWERED)) {
+            level.updateNeighborsAt(pos, this);
+            level.updateNeighborsAt(pos.below(), this);
+        }
+    }
+
+    @Override
     public VoxelShape getVisualShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return getShape(state, level, pos, context);
     }

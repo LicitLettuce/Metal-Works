@@ -15,11 +15,6 @@ public class WeatheringChain {
         WEATHERING_CHAIN.put(ModBlocks.TARNISHED_TIN.get(), ModBlocks.CORRODED_TIN.get());
         WEATHERING_CHAIN.put(ModBlocks.CORRODED_TIN.get(), ModBlocks.ERODED_TIN.get());
 
-        // Chiseled
-        WEATHERING_CHAIN.put(ModBlocks.CHISELED_TIN.get(), ModBlocks.TARNISHED_CHISELED_TIN.get());
-        WEATHERING_CHAIN.put(ModBlocks.TARNISHED_CHISELED_TIN.get(), ModBlocks.CORRODED_CHISELED_TIN.get());
-        WEATHERING_CHAIN.put(ModBlocks.CORRODED_CHISELED_TIN.get(), ModBlocks.ERODED_CHISELED_TIN.get());
-
         // Grates
         WEATHERING_CHAIN.put(ModBlocks.TIN_GRATE.get(), ModBlocks.TARNISHED_TIN_GRATE.get());
         WEATHERING_CHAIN.put(ModBlocks.TARNISHED_TIN_GRATE.get(), ModBlocks.CORRODED_TIN_GRATE.get());

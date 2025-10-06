@@ -26,11 +26,11 @@ public class MageGolemEmissiveLayer extends RenderLayer<MageGolemEntity, MageGol
         int tick = (int)(entity.tickCount / 2 % glowFrames.length);
         ResourceLocation glowTex = glowFrames[tick];
 
-        var vc = buffer.getBuffer(RenderType.entityCutoutNoCull(glowTex)); // Works if texture is opaque + glowing
+        var vc = buffer.getBuffer(RenderType.entityCutoutNoCull(glowTex));
 
         this.getParentModel().renderToBuffer(poseStack, vc,
-                0xF000F0, // Fullbright
-                OverlayTexture.NO_OVERLAY, // No damage flashes, etc.
-                1.0F, 1.0F, 1.0F, 0.0F); // Let alpha channel from texture do the work
+                0xF000F0,
+                OverlayTexture.NO_OVERLAY,
+                1.0F, 1.0F, 1.0F, 0.0F);
     }
 }

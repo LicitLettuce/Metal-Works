@@ -290,10 +290,8 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.ROSE_GOLD_BOOTS.get());
                                 pOutput.accept(ModItems.ROSE_GOLD_HORSE_ARMOR.get());
                                 pOutput.accept(ModItems.MAGE_GOLEM_SPAWN_EGG.get());
-
                         })
                     .build());
-
 
     public static final RegistryObject<CreativeModeTab> TIN_VARIANTS_TAB = CREATIVE_MODE_TABS.register("tin_variants_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TIN_BLOCK.get()))
