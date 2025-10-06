@@ -29,11 +29,9 @@ import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
 
 public class MageGolemEntity extends AbstractGolem {
-    // Synced data key for golem level
     private static final EntityDataAccessor<Integer> DATA_GOLEM_LEVEL =
             SynchedEntityData.defineId(MageGolemEntity.class, EntityDataSerializers.INT);
 
-    // Server-side copy (authoritative)
     private int golemLevel = 0;
 
     public final AnimationState idleAnimationState = new AnimationState();
@@ -49,7 +47,6 @@ public class MageGolemEntity extends AbstractGolem {
     }
 
     public int getGolemLevel() {
-        // On client, use synced data; on server, use local field
         return this.level().isClientSide ? this.entityData.get(DATA_GOLEM_LEVEL) : this.golemLevel;
     }
 
@@ -98,7 +95,7 @@ public class MageGolemEntity extends AbstractGolem {
 
         if (newLevel != golemLevel) {
             golemLevel = newLevel;
-            this.entityData.set(DATA_GOLEM_LEVEL, newLevel); // sync to client
+            this.entityData.set(DATA_GOLEM_LEVEL, newLevel);
         }
     }
 
