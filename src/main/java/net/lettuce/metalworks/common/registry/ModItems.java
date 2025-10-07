@@ -553,7 +553,7 @@ public class ModItems {
             (ModToolTiers.ROSE_GOLD, 1, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> ROSE_GOLD_AXE = ITEMS.register("rose_gold_axe", () -> new AxeItem
             (ModToolTiers.ROSE_GOLD, 6, -3.1F, new Item.Properties()));
-    public static final RegistryObject<Item> ROSE_GOLD_SHOVEl = ITEMS.register("rose_gold_shovel", () -> new ShovelItem
+    public static final RegistryObject<Item> ROSE_GOLD_SHOVEL = ITEMS.register("rose_gold_shovel", () -> new ShovelItem
             (ModToolTiers.ROSE_GOLD, 1.5F, -3.0F, new Item.Properties()));
     public static final RegistryObject<Item> ROSE_GOLD_HOE = ITEMS.register("rose_gold_hoe", () -> new HoeItem
             (ModToolTiers.ROSE_GOLD, -2, -1.0F, new Item.Properties()));

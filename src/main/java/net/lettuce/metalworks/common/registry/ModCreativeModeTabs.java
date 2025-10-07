@@ -272,7 +272,7 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.ROSE_GOLD_SWORD.get());
                                 pOutput.accept(ModItems.ROSE_GOLD_PICKAXE.get());
                                 pOutput.accept(ModItems.ROSE_GOLD_AXE.get());
-                                pOutput.accept(ModItems.ROSE_GOLD_SHOVEl.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_SHOVEL.get());
                                 pOutput.accept(ModItems.ROSE_GOLD_HOE.get());
                                 pOutput.accept(ModItems.TIN_HELMET.get());
                                 pOutput.accept(ModItems.TIN_CHESTPLATE.get());

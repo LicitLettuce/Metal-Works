@@ -190,7 +190,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ROSE_GOLD_SWORD);
         handheldItem(ModItems.ROSE_GOLD_PICKAXE);
         handheldItem(ModItems.ROSE_GOLD_AXE);
-        handheldItem(ModItems.ROSE_GOLD_SHOVEl);
+        handheldItem(ModItems.ROSE_GOLD_SHOVEL);
         handheldItem(ModItems.ROSE_GOLD_HOE);
         evenSimplerBlockItem(ModBlocks.ROSE_GOLD_MOSAIC_STAIRS);
         evenSimplerBlockItem(ModBlocks.ROSE_GOLD_MOSAIC_SLAB);
