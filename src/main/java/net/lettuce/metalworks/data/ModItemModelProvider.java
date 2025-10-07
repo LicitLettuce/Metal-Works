@@ -43,7 +43,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
-            // Casserite Items
+            // Cassiterite Items
         evenSimplerBlockItem(ModBlocks.CASSITERITE_STAIRS);
         evenSimplerBlockItem(ModBlocks.CASSITERITE_SLAB);
         wallItem(ModBlocks.CASSITERITE_WALL, ModBlocks.CASSITERITE);
@@ -64,14 +64,25 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.TIN_AXE);
         handheldItem(ModItems.TIN_SHOVEL);
         handheldItem(ModItems.TIN_HOE);
-        evenSimplerBlockItem(ModBlocks.WAXED_CUT_TIN_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_CUT_TIN_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_CUT_TIN_STAIRS);
+
         evenSimplerBlockItem(ModBlocks.CUT_TIN_STAIRS);
         evenSimplerBlockItem(ModBlocks.TARNISHED_CUT_TIN_STAIRS);
         evenSimplerBlockItem(ModBlocks.CORRODED_CUT_TIN_STAIRS);
         evenSimplerBlockItem(ModBlocks.ERODED_CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_CUT_TIN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.TARNISHED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.CORRODED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.ERODED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_CUT_TIN_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.TIN_TILE_STAIRS);
         evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_TILE_STAIRS);
         evenSimplerBlockItem(ModBlocks.CORRODED_TIN_TILE_STAIRS);
         evenSimplerBlockItem(ModBlocks.ERODED_TIN_TILE_STAIRS);
@@ -79,17 +90,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_TILE_STAIRS);
         evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_TILE_STAIRS);
         evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_TILE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.CORRODED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.ERODED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_CUT_TIN_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.TIN_TILE_SLAB);
         evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_TILE_SLAB);
         evenSimplerBlockItem(ModBlocks.CORRODED_TIN_TILE_SLAB);
         evenSimplerBlockItem(ModBlocks.ERODED_TIN_TILE_SLAB);
@@ -97,6 +99,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_TILE_SLAB);
         evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_TILE_SLAB);
         evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_TILE_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CORRODED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.ERODED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_SHINGLE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_SHINGLE_STAIRS);
+
+        evenSimplerBlockItem(ModBlocks.TIN_SHINGLE_SLAB);
         evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_SHINGLE_SLAB);
         evenSimplerBlockItem(ModBlocks.CORRODED_TIN_SHINGLE_SLAB);
         evenSimplerBlockItem(ModBlocks.ERODED_TIN_SHINGLE_SLAB);
@@ -104,18 +117,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB);
         evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB);
         evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB);
-        evenSimplerBlockItem(ModBlocks.TIN_TILE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.BRONZE_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.BRONZE_TILE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.CUT_TIN_SLAB);
-        evenSimplerBlockItem(ModBlocks.TARNISHED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(ModBlocks.CORRODED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(ModBlocks.ERODED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(ModBlocks.TIN_TILE_SLAB);
-        evenSimplerBlockItem(ModBlocks.TIN_SHINGLE_SLAB);
+
         simpleBlockItem(ModBlocks.TIN_DOOR);
         trapdoorItem(ModBlocks.TIN_TRAPDOOR);
+
         simpleBlockItem(ModBlocks.TIN_CHAIN);
         simpleBlockItem(ModBlocks.TARNISHED_TIN_CHAIN);
         simpleBlockItem(ModBlocks.CORRODED_TIN_CHAIN);
@@ -124,6 +129,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.WAXED_TARNISHED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_chain"));
         withExistingParent(ModItems.WAXED_CORRODED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_chain"));
         withExistingParent(ModItems.WAXED_ERODED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_chain"));
+
         simpleBlockItem(ModBlocks.TARNISHED_TIN_LANTERN);
         simpleBlockItem(ModBlocks.CORRODED_TIN_LANTERN);
         simpleBlockItem(ModBlocks.ERODED_TIN_LANTERN);
@@ -131,6 +137,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.WAXED_TARNISHED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_lantern"));
         withExistingParent(ModItems.WAXED_CORRODED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_lantern"));
         withExistingParent(ModItems.WAXED_ERODED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_lantern"));
+
         simpleBlockItem(ModBlocks.TIN_SOUL_LANTERN);
         simpleBlockItem(ModBlocks.TARNISHED_TIN_SOUL_LANTERN);
         simpleBlockItem(ModBlocks.CORRODED_TIN_SOUL_LANTERN);
@@ -139,6 +146,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.WAXED_TARNISHED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_soul_lantern"));
         withExistingParent(ModItems.WAXED_CORRODED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_soul_lantern"));
         withExistingParent(ModItems.WAXED_ERODED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_soul_lantern"));
+
         simpleBlockItem(ModBlocks.TIN_MAGE_LANTERN);
         simpleBlockItem(ModBlocks.TARNISHED_TIN_MAGE_LANTERN);
         simpleBlockItem(ModBlocks.CORRODED_TIN_MAGE_LANTERN);
@@ -162,7 +170,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BRONZE_SHOVEL);
         handheldItem(ModItems.BRONZE_HOE);
         simpleItem(ModItems.BRONZE_SHEARS);
+        evenSimplerBlockItem(ModBlocks.BRONZE_SHINGLE_STAIRS);
         evenSimplerBlockItem(ModBlocks.BRONZE_SHINGLE_SLAB);
+        evenSimplerBlockItem(ModBlocks.BRONZE_TILE_STAIRS);
         evenSimplerBlockItem(ModBlocks.BRONZE_TILE_SLAB);
         simpleBlockItem(ModBlocks.BRONZE_DOOR);
         trapdoorItem(ModBlocks.BRONZE_TRAPDOOR);
@@ -182,12 +192,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ROSE_GOLD_AXE);
         handheldItem(ModItems.ROSE_GOLD_SHOVEl);
         handheldItem(ModItems.ROSE_GOLD_HOE);
+        evenSimplerBlockItem(ModBlocks.ROSE_GOLD_MOSAIC_STAIRS);
+        evenSimplerBlockItem(ModBlocks.ROSE_GOLD_MOSAIC_SLAB);
         simpleBlockItem(ModBlocks.TIN_LANTERN);
         simpleBlockItem(ModBlocks.MAGE_LANTERN);
         simpleBlockItem(ModBlocks.MAGE_CAMPFIRE);
-        evenSimplerBlockItem(ModBlocks.ROSE_GOLD_MOSAIC_STAIRS);
-        evenSimplerBlockItem(ModBlocks.ROSE_GOLD_MOSAIC_SLAB);
-
 
         withExistingParent(ModItems.MAGE_GOLEM_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }

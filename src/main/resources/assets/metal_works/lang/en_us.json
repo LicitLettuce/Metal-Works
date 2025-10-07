@@ -1,9 +1,7 @@
 {
   "block.minecraft.chain": "Iron Chain",
-
   "creativetab.metal_works_tab": "Metal Works",
   "creativetab.tin_variants_tab": "Tin Variants",
-
   "block.metal_works.cassiterite": "Cassiterite",
   "block.metal_works.cassiterite_stairs": "Cassiterite Stairs",
   "block.metal_works.cassiterite_slab": "Cassiterite Slab",
@@ -11,7 +9,6 @@
   "block.metal_works.polished_cassiterite": "Polished Cassiterite",
   "block.metal_works.polished_cassiterite_stairs": "Polished Cassiterite Stairs",
   "block.metal_works.polished_cassiterite_slab": "Polished Cassiterite Slab",
-
   "block.metal_works.raw_tin_block": "Block of Raw Tin",
   "block.metal_works.tin_ore": "Tin Ore",
   "block.metal_works.deepslate_tin_ore": "Deepslate Tin Ore",
@@ -170,7 +167,6 @@
   "block.metal_works.waxed_tarnished_tin_mage_lantern": "Waxed Tarnished Tin Mage Lantern",
   "block.metal_works.waxed_corroded_tin_mage_lantern": "Waxed Corroded Tin Mage Lantern",
   "block.metal_works.waxed_eroded_tin_mage_lantern": "Waxed Eroded Tin Mage Lantern",
-
   "item.metal_works.tin_ingot": "Tin Ingot",
   "item.metal_works.tin_nugget": "Tin Nugget",
   "item.metal_works.raw_tin": "Raw Tin",
@@ -184,7 +180,6 @@
   "item.metal_works.tin_leggings": "Tin Leggings",
   "item.metal_works.tin_boots": "Tin Boots",
   "item.metal_works.tin_horse_armor": "Tin Horse Armor",
-
   "block.metal_works.bronze_block": "Block of Bronze",
   "block.metal_works.bronze_grate": "Bronze Grate",
   "block.metal_works.bronze_grate_drain": "Bronze Grate Drain",
@@ -198,7 +193,6 @@
   "block.metal_works.bronze_door": "Bronze Door",
   "block.metal_works.bronze_trapdoor": "Bronze Trapdoor",
   "block.metal_works.looping_pressure_plate": "Looping Pressure Plate",
-
   "item.metal_works.bronze_ingot": "Bronze Ingot",
   "item.metal_works.bronze_nugget": "Bronze Nugget",
   "item.metal_works.bronze_sword": "Bronze Sword",
@@ -213,18 +207,15 @@
   "item.metal_works.bronze_leggings": "Bronze Leggings",
   "item.metal_works.bronze_boots": "Bronze Boots",
   "item.metal_works.bronze_horse_armor": "Bronze Horse Armor",
-
   "block.metal_works.rose_gold_block": "Block of Rose Gold",
   "block.metal_works.rose_gold_mosaic": "Rose Gold Mosaic",
   "block.metal_works.rose_gold_mosaic_stairs": "Rose Gold Mosaic Stairs",
   "block.metal_works.rose_gold_mosaic_slab": "Rose Gold Mosaic Slab",
   "block.metal_works.rose_lantern": "Rose Lantern",
   "block.metal_works.medium_weighted_pressure_plate": "Medium Weighted Pressure Plate",
-
   "block.metal_works.mage_torch": "Mage Torch",
   "block.metal_works.mage_lantern": "Mage Lantern",
   "block.metal_works.mage_campfire": "Mage Campfire",
-
   "item.metal_works.rose_gold_ingot": "Rose Gold Ingot",
   "item.metal_works.rose_gold_nugget": "Rose Gold Nugget",
   "item.metal_works.mage_powder": "Mage Powder",
@@ -239,9 +230,7 @@
   "item.metal_works.rose_gold_leggings": "Rose Gold Leggings",
   "item.metal_works.rose_gold_boots": "Rose Gold Boots",
   "item.metal_works.rose_gold_horse_armor": "Rose Gold Horse Armor",
-
   "item.metal_works.mage_golem_spawn_egg": "Mage Golem Spawn Egg",
-
   "trim_material.metal_works.tin": "Tin",
   "trim_material.metal_works.bronze": "Bronze",
   "trim_material.metal_works.rose_gold": "Rose Gold"
