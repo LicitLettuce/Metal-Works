@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "ingredient": [
+    { "item": "metal_works:rose_gold_pickaxe" },
+    { "item": "metal_works:rose_gold_shovel" },
+    { "item": "metal_works:rose_gold_axe" },
+    { "item": "metal_works:rose_gold_hoe" },
+    { "item": "metal_works:rose_gold_sword" },
+    { "item": "metal_works:rose_gold_helmet" },
+    { "item": "metal_works:rose_gold_chestplate" },
+    { "item": "metal_works:rose_gold_leggings" },
+    { "item": "metal_works:rose_gold_boots" },
+    { "item": "metal_works:rose_gold_horse_armor" }
+  ],
+  "result": "metal_works:rose_gold_nugget"
+}

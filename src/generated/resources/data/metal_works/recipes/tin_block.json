@@ -1,18 +1,36 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "#": {
+  "ingredients": [
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
       "item": "metal_works:tin_ingot"
     }
-  },
-  "pattern": [
-    "###",
-    "###",
-    "###"
   ],
   "result": {
     "item": "metal_works:tin_block"
-  },
-  "show_notification": true
+  }
 }

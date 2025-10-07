@@ -5,6 +5,7 @@ import net.lettuce.metalworks.common.registry.ModBlocks;
 import net.lettuce.metalworks.common.registry.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -12,6 +13,8 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import org.apache.commons.lang3.tuple.Pair;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -80,7 +83,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.CASSITERITE.get()), has(ModItems.CASSITERITE.get()))
                 .save(pWriter, MetalWorks.MOD_ID + ":casiterite_wall_from_stonecutting");
 
-            // Polished Cassiterite
+        // Polished Cassiterite
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.POLISHED_CASSITERITE.get(), 4)
                 .pattern("##")
@@ -138,6 +141,105 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.CASSITERITE.get()), has(ModItems.CASSITERITE.get()))
                 .save(pWriter, MetalWorks.MOD_ID + ":polished_casiterite_slab_from_cassiterite_stonecutting");
 
+        // Tin Nugget
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIN_NUGGET.get(), 9)
+                .requires(ModItems.TIN_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Ingot from Nuggets
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIN_INGOT.get())
+                .requires(ModItems.TIN_NUGGET.get(), 9)
+                .unlockedBy(getHasName(ModItems.TIN_NUGGET.get()), has(ModItems.TIN_NUGGET.get()))
+                .save(pWriter, MetalWorks.MOD_ID + ":tin_ingot_from_nuggets");
+
+        // Tin Block
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIN_BLOCK.get())
+                .requires(ModItems.TIN_INGOT.get(), 9)
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Ingot from Block
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 9)
+                .requires(ModItems.TIN_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.TIN_BLOCK.get()), has(ModItems.TIN_BLOCK.get()))
+                .save(pWriter, MetalWorks.MOD_ID + ":tin_ingot_from_block");
+
+        // Tin Sword
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.TIN_SWORD.get())
+                .pattern("#")
+                .pattern("#")
+                .pattern("$")
+                .define('#', ModItems.TIN_INGOT.get())
+                .define('$', Items.STICK)
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Pickaxe
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.TIN_PICKAXE.get())
+                .pattern("###")
+                .pattern(" $ ")
+                .pattern(" $ ")
+                .define('#', ModItems.TIN_INGOT.get())
+                .define('$', Items.STICK)
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Axe
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.TIN_AXE.get())
+                .pattern("## ")
+                .pattern("#$ ")
+                .pattern(" $ ")
+                .define('#', ModItems.TIN_INGOT.get())
+                .define('$', Items.STICK)
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Shovel
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.TIN_SHOVEL.get())
+                .pattern("#")
+                .pattern("$")
+                .pattern("$")
+                .define('#', ModItems.TIN_INGOT.get())
+                .define('$', Items.STICK)
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Hoe
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.TIN_HOE.get())
+                .pattern("##")
+                .pattern(" $")
+                .pattern(" $")
+                .define('#', ModItems.TIN_INGOT.get())
+                .define('$', Items.STICK)
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Helmet
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.TIN_HELMET.get())
+                .pattern("###")
+                .pattern("# #")
+                .define('#', ModItems.TIN_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Chestplate
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.TIN_CHESTPLATE.get())
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.TIN_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Leggings
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.TIN_LEGGINGS.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("# #")
+                .define('#', ModItems.TIN_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
 
         // Bronze Ingot
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BRONZE_INGOT.get(), 4)
@@ -154,7 +256,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Bronze Ingot From Bronze Nugget
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BRONZE_INGOT.get(), 1)
-                .requires(ModItems.BRONZE_NUGGET.get(),9)
+                .requires(ModItems.BRONZE_NUGGET.get(), 9)
                 .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
                 .save(pWriter, MetalWorks.MOD_ID + ":bronze_ingot_from_bronze_nugget");
 
@@ -166,7 +268,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Bronze Ingot From Bronze Block
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BRONZE_INGOT.get(), 9)
-                .requires(ModItems.BRONZE_BLOCK.get(),1)
+                .requires(ModItems.BRONZE_BLOCK.get(), 1)
                 .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
                 .save(pWriter, MetalWorks.MOD_ID + ":bronze_ingot_from_bronze_block");
 
@@ -262,8 +364,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
                 .save(pWriter);
 
-
-
         // Rose Gold Ingot Recipe
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ROSE_GOLD_INGOT.get(), 4)
                 .requires(Items.GOLD_INGOT, 4)
@@ -277,25 +377,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
-// Rose Gold Ingot From Nuggets
+        // Rose Gold Ingot From Nuggets
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ROSE_GOLD_INGOT.get(), 1)
                 .requires(ModItems.ROSE_GOLD_NUGGET.get(), 9)
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_NUGGET.get()), has(ModItems.ROSE_GOLD_NUGGET.get()))
                 .save(pWriter, MetalWorks.MOD_ID + ":rose_gold_ingot_from_nuggets");
 
-// Rose Gold Block
+        // Rose Gold Block
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ROSE_GOLD_BLOCK.get(), 1)
                 .requires(ModItems.ROSE_GOLD_INGOT.get(), 9)
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
-// Rose Gold Ingot From Block
+        // Rose Gold Ingot From Block
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ROSE_GOLD_INGOT.get(), 9)
                 .requires(ModItems.ROSE_GOLD_BLOCK.get())
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_BLOCK.get()), has(ModItems.ROSE_GOLD_BLOCK.get()))
                 .save(pWriter, MetalWorks.MOD_ID + ":rose_gold_ingot_from_block");
 
-// Rose Gold Sword
+        // Rose Gold Sword
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ROSE_GOLD_SWORD.get())
                 .pattern("#")
                 .pattern("#")
@@ -305,7 +405,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
-// Rose Gold Pickaxe
+        // Rose Gold Pickaxe
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ROSE_GOLD_PICKAXE.get())
                 .pattern("###")
                 .pattern(" $ ")
@@ -315,7 +415,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
-// Rose Gold Axe
+        // Rose Gold Axe
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ROSE_GOLD_AXE.get())
                 .pattern("## ")
                 .pattern("#$ ")
@@ -325,7 +425,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
-// Rose Gold Shovel
+        // Rose Gold Shovel
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ROSE_GOLD_SHOVEL.get())
                 .pattern("#")
                 .pattern("$")
@@ -335,7 +435,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
-// Rose Gold Hoe
+        // Rose Gold Hoe
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ROSE_GOLD_HOE.get())
                 .pattern("##")
                 .pattern(" $")
@@ -344,9 +444,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('$', Items.STICK)
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
-        
 
-// Rose Gold Helmet
+        // Rose Gold Helmet
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ROSE_GOLD_HELMET.get())
                 .pattern("###")
                 .pattern("# #")
@@ -354,7 +453,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
-// Rose Gold Chestplate
+        // Rose Gold Chestplate
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ROSE_GOLD_CHESTPLATE.get())
                 .pattern("# #")
                 .pattern("###")
@@ -363,7 +462,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
-// Rose Gold Leggings
+        // Rose Gold Leggings
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ROSE_GOLD_LEGGINGS.get())
                 .pattern("###")
                 .pattern("# #")
@@ -372,35 +471,154 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
-
-
-
-
         oreSmelting(pWriter, TIN_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 0.25f, 200, "tin");
         oreBlasting(pWriter, TIN_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 0.25f, 100, "tin");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TIN_BLOCK.get())
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModItems.TIN_INGOT.get())
-                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
-                .save(pWriter);
+        //Rose Gold Mosaic
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 9)
-                .requires(ModItems.TIN_BLOCK.get())
-                .unlockedBy(getHasName(ModItems.TIN_BLOCK.get()), has(ModItems.TIN_BLOCK.get()))
-                .save(pWriter);
+
+        buildWaxingRecipes(pWriter);
+
     }
 
+    private void buildWaxingRecipes(Consumer<FinishedRecipe> writer) {
+        List<Pair<ItemLike, ItemLike>> waxingPairs = List.of(
+                // Tin Block
+                Pair.of(ModBlocks.TIN_BLOCK.get(), ModBlocks.WAXED_TIN_BLOCK.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN.get(), ModBlocks.WAXED_TARNISHED_TIN.get()),
+                Pair.of(ModBlocks.CORRODED_TIN.get(), ModBlocks.WAXED_CORRODED_TIN.get()),
+                Pair.of(ModBlocks.ERODED_TIN.get(), ModBlocks.WAXED_ERODED_TIN.get()),
 
+                // Chiseled Tin
+                Pair.of(ModBlocks.CHISELED_TIN.get(), ModBlocks.WAXED_CHISELED_TIN.get()),
+                Pair.of(ModBlocks.TARNISHED_CHISELED_TIN.get(), ModBlocks.WAXED_TARNISHED_CHISELED_TIN.get()),
+                Pair.of(ModBlocks.CORRODED_CHISELED_TIN.get(), ModBlocks.WAXED_CORRODED_CHISELED_TIN.get()),
+                Pair.of(ModBlocks.ERODED_CHISELED_TIN.get(), ModBlocks.WAXED_ERODED_CHISELED_TIN.get()),
 
+                // Tin Grate
+                Pair.of(ModBlocks.TIN_GRATE.get(), ModBlocks.WAXED_TIN_GRATE.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_GRATE.get(), ModBlocks.WAXED_TARNISHED_TIN_GRATE.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_GRATE.get(), ModBlocks.WAXED_CORRODED_TIN_GRATE.get()),
+                Pair.of(ModBlocks.ERODED_TIN_GRATE.get(), ModBlocks.WAXED_ERODED_TIN_GRATE.get()),
 
+                // Tin Grate Drain
+                Pair.of(ModBlocks.TIN_GRATE_DRAIN.get(), ModBlocks.WAXED_TIN_GRATE_DRAIN.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_GRATE_DRAIN.get(), ModBlocks.WAXED_TARNISHED_TIN_GRATE_DRAIN.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_GRATE_DRAIN.get(), ModBlocks.WAXED_CORRODED_TIN_GRATE_DRAIN.get()),
+                Pair.of(ModBlocks.ERODED_TIN_GRATE_DRAIN.get(), ModBlocks.WAXED_ERODED_TIN_GRATE_DRAIN.get()),
 
+                // Cut Tin
+                Pair.of(ModBlocks.CUT_TIN.get(), ModBlocks.WAXED_CUT_TIN.get()),
+                Pair.of(ModBlocks.TARNISHED_CUT_TIN.get(), ModBlocks.WAXED_TARNISHED_CUT_TIN.get()),
+                Pair.of(ModBlocks.CORRODED_CUT_TIN.get(), ModBlocks.WAXED_CORRODED_CUT_TIN.get()),
+                Pair.of(ModBlocks.ERODED_CUT_TIN.get(), ModBlocks.WAXED_ERODED_CUT_TIN.get()),
 
+                // Cut Tin Stairs
+                Pair.of(ModBlocks.CUT_TIN_STAIRS.get(), ModBlocks.WAXED_CUT_TIN_STAIRS.get()),
+                Pair.of(ModBlocks.TARNISHED_CUT_TIN_STAIRS.get(), ModBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS.get()),
+                Pair.of(ModBlocks.CORRODED_CUT_TIN_STAIRS.get(), ModBlocks.WAXED_CORRODED_CUT_TIN_STAIRS.get()),
+                Pair.of(ModBlocks.ERODED_CUT_TIN_STAIRS.get(), ModBlocks.WAXED_ERODED_CUT_TIN_STAIRS.get()),
 
+                // Cut Tin Slab
+                Pair.of(ModBlocks.CUT_TIN_SLAB.get(), ModBlocks.WAXED_CUT_TIN_SLAB.get()),
+                Pair.of(ModBlocks.TARNISHED_CUT_TIN_SLAB.get(), ModBlocks.WAXED_TARNISHED_CUT_TIN_SLAB.get()),
+                Pair.of(ModBlocks.CORRODED_CUT_TIN_SLAB.get(), ModBlocks.WAXED_CORRODED_CUT_TIN_SLAB.get()),
+                Pair.of(ModBlocks.ERODED_CUT_TIN_SLAB.get(), ModBlocks.WAXED_ERODED_CUT_TIN_SLAB.get()),
 
+                // Tin Tiles
+                Pair.of(ModBlocks.TIN_TILES.get(), ModBlocks.WAXED_TIN_TILES.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_TILES.get(), ModBlocks.WAXED_TARNISHED_TIN_TILES.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_TILES.get(), ModBlocks.WAXED_CORRODED_TIN_TILES.get()),
+                Pair.of(ModBlocks.ERODED_TIN_TILES.get(), ModBlocks.WAXED_ERODED_TIN_TILES.get()),
 
+                // Tin Tile Stairs
+                Pair.of(ModBlocks.TIN_TILE_STAIRS.get(), ModBlocks.WAXED_TIN_TILE_STAIRS.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_TILE_STAIRS.get(), ModBlocks.WAXED_TARNISHED_TIN_TILE_STAIRS.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_TILE_STAIRS.get(), ModBlocks.WAXED_CORRODED_TIN_TILE_STAIRS.get()),
+                Pair.of(ModBlocks.ERODED_TIN_TILE_STAIRS.get(), ModBlocks.WAXED_ERODED_TIN_TILE_STAIRS.get()),
+
+                // Tin Tile Slab
+                Pair.of(ModBlocks.TIN_TILE_SLAB.get(), ModBlocks.WAXED_TIN_TILE_SLAB.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_TILE_SLAB.get(), ModBlocks.WAXED_TARNISHED_TIN_TILE_SLAB.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_TILE_SLAB.get(), ModBlocks.WAXED_CORRODED_TIN_TILE_SLAB.get()),
+                Pair.of(ModBlocks.ERODED_TIN_TILE_SLAB.get(), ModBlocks.WAXED_ERODED_TIN_TILE_SLAB.get()),
+
+                // Tin Shingle
+                Pair.of(ModBlocks.TIN_SHINGLES.get(), ModBlocks.WAXED_TIN_SHINGLES.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_SHINGLES.get(), ModBlocks.WAXED_TARNISHED_TIN_SHINGLES.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_SHINGLES.get(), ModBlocks.WAXED_CORRODED_TIN_SHINGLES.get()),
+                Pair.of(ModBlocks.ERODED_TIN_SHINGLES.get(), ModBlocks.WAXED_ERODED_TIN_SHINGLES.get()),
+
+                // Tin Shingle Stairs
+                Pair.of(ModBlocks.TIN_SHINGLE_STAIRS.get(), ModBlocks.WAXED_TIN_SHINGLE_STAIRS.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS.get(), ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_STAIRS.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_SHINGLE_STAIRS.get(), ModBlocks.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get()),
+                Pair.of(ModBlocks.ERODED_TIN_SHINGLE_STAIRS.get(), ModBlocks.WAXED_ERODED_TIN_SHINGLE_STAIRS.get()),
+
+                // Tin Shingle Slab
+                Pair.of(ModBlocks.TIN_SHINGLE_SLAB.get(), ModBlocks.WAXED_TIN_SHINGLE_SLAB.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_SHINGLE_SLAB.get(), ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_SHINGLE_SLAB.get(), ModBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB.get()),
+                Pair.of(ModBlocks.ERODED_TIN_SHINGLE_SLAB.get(), ModBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB.get()),
+
+                // Tin Bars
+                Pair.of(ModBlocks.TIN_BARS.get(), ModBlocks.WAXED_TIN_BARS.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_BARS.get(), ModBlocks.WAXED_TARNISHED_TIN_BARS.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_BARS.get(), ModBlocks.WAXED_CORRODED_TIN_BARS.get()),
+                Pair.of(ModBlocks.ERODED_TIN_BARS.get(), ModBlocks.WAXED_ERODED_TIN_BARS.get()),
+
+                // Tin Chain
+                Pair.of(ModBlocks.TIN_CHAIN.get(), ModBlocks.WAXED_TIN_CHAIN.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_CHAIN.get(), ModBlocks.WAXED_TARNISHED_TIN_CHAIN.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_CHAIN.get(), ModBlocks.WAXED_CORRODED_TIN_CHAIN.get()),
+                Pair.of(ModBlocks.ERODED_TIN_CHAIN.get(), ModBlocks.WAXED_ERODED_TIN_CHAIN.get()),
+
+                // Tin Lanterns
+                Pair.of(ModBlocks.TIN_LANTERN.get(), ModBlocks.WAXED_TIN_LANTERN.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_LANTERN.get(), ModBlocks.WAXED_TARNISHED_TIN_LANTERN.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_LANTERN.get(), ModBlocks.WAXED_CORRODED_TIN_LANTERN.get()),
+                Pair.of(ModBlocks.ERODED_TIN_LANTERN.get(), ModBlocks.WAXED_ERODED_TIN_LANTERN.get()),
+
+                // Tin Soul Lantern
+                Pair.of(ModBlocks.TIN_SOUL_LANTERN.get(), ModBlocks.WAXED_TIN_SOUL_LANTERN.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_SOUL_LANTERN.get(), ModBlocks.WAXED_TARNISHED_TIN_SOUL_LANTERN.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_SOUL_LANTERN.get(), ModBlocks.WAXED_CORRODED_TIN_SOUL_LANTERN.get()),
+                Pair.of(ModBlocks.ERODED_TIN_SOUL_LANTERN.get(), ModBlocks.WAXED_ERODED_TIN_SOUL_LANTERN.get()),
+
+                // Tin Mage Lantern
+                Pair.of(ModBlocks.TIN_MAGE_LANTERN.get(), ModBlocks.WAXED_TIN_MAGE_LANTERN.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_MAGE_LANTERN.get(), ModBlocks.WAXED_TARNISHED_TIN_MAGE_LANTERN.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_MAGE_LANTERN.get(), ModBlocks.WAXED_CORRODED_TIN_MAGE_LANTERN.get()),
+                Pair.of(ModBlocks.ERODED_TIN_MAGE_LANTERN.get(), ModBlocks.WAXED_ERODED_TIN_MAGE_LANTERN.get())
+        );
+
+        for (Pair<ItemLike, ItemLike> pair : waxingPairs) {
+            makeWaxingRecipe(writer, pair.getLeft(), pair.getRight());
+        }
+    }
+
+    private static void smeltDownEquipment(Consumer<FinishedRecipe> writer, List<ItemLike> inputs, ItemLike result, float xp, int cookTime, String material) {
+        for (ItemLike input : inputs) {
+            SimpleCookingRecipeBuilder.smelting(
+                            Ingredient.of(input),
+                            RecipeCategory.MISC,
+                            result,
+                            xp,
+                            cookTime
+                    )
+                    .unlockedBy("has_" + getItemName(input), has(input))
+                    .save(writer, MetalWorks.MOD_ID + ":" + getItemName(result) + "_from_smelting_" + getItemName(input));
+        }
+    }
+
+    private void makeWaxingRecipe(Consumer<FinishedRecipe> writer, ItemLike unwaxed, ItemLike waxed) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, waxed)
+                .requires(unwaxed)
+                .requires(Items.HONEYCOMB)
+                .unlockedBy("has_honeycomb", has(Items.HONEYCOMB))
+                .unlockedBy("has_" + getItemName(unwaxed), has(unwaxed))
+                .save(writer, new ResourceLocation(MetalWorks.MOD_ID, "waxing/" + getItemName(waxed)));
+    }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
@@ -418,4 +636,5 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .save(pFinishedRecipeConsumer,  MetalWorks.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
     }
+
 }

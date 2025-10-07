@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.2,
+  "ingredient": [
+    { "item": "metal_works:bronze_pickaxe" },
+    { "item": "metal_works:bronze_shovel" },
+    { "item": "metal_works:bronze_axe" },
+    { "item": "metal_works:bronze_hoe" },
+    { "item": "metal_works:bronze_sword" },
+    { "item": "metal_works:bronze_helmet" },
+    { "item": "metal_works:bronze_chestplate" },
+    { "item": "metal_works:bronze_leggings" },
+    { "item": "metal_works:bronze_boots" },
+    { "item": "metal_works:bronze_horse_armor" }
+  ],
+  "result": "metal_works:bronze_nugget"
+}
