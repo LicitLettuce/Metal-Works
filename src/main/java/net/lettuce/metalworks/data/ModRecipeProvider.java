@@ -6,6 +6,7 @@ import net.lettuce.metalworks.common.registry.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -22,7 +23,8 @@ import java.util.function.Consumer;
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     private static final List<ItemLike> TIN_SMELTABLES = List.of(ModItems.RAW_TIN.get(),
             ModBlocks.TIN_ORE.get(),
-            ModBlocks.DEEPSLATE_TIN_ORE.get());
+            ModBlocks.DEEPSLATE_TIN_ORE.get(),
+            ModBlocks.NETHER_TIN_ORE.get());
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -41,7 +43,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.RAW_TIN.get()), has(ModItems.RAW_TIN.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CASSITERITE_STAIRS.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CASSITERITE_STAIRS.get(), 4)
                 .pattern("#  ")
                 .pattern("## ")
                 .pattern("###")
@@ -49,13 +51,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.CASSITERITE.get()), has(ModItems.CASSITERITE.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CASSITERITE_SLAB.get(), 6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CASSITERITE_SLAB.get(), 6)
                 .pattern("###")
                 .define('#', ModItems.CASSITERITE.get())
                 .unlockedBy(getHasName(ModItems.CASSITERITE.get()), has(ModItems.CASSITERITE.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CASSITERITE_WALL.get(), 6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CASSITERITE_WALL.get(), 6)
                 .pattern("###")
                 .pattern("###")
                 .define('#', ModItems.CASSITERITE.get())
@@ -85,14 +87,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Polished Cassiterite
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.POLISHED_CASSITERITE.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.POLISHED_CASSITERITE.get(), 4)
                 .pattern("##")
                 .pattern("##")
                 .define('#', ModItems.CASSITERITE.get())
                 .unlockedBy(getHasName(ModItems.CASSITERITE.get()), has(ModItems.CASSITERITE.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.POLISHED_CASSITERITE_STAIRS.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.POLISHED_CASSITERITE_STAIRS.get(), 4)
                 .pattern("#  ")
                 .pattern("## ")
                 .pattern("###")
@@ -100,7 +102,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.CASSITERITE.get()), has(ModItems.CASSITERITE.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.POLISHED_CASSITERITE_SLAB.get(), 6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.POLISHED_CASSITERITE_SLAB.get(), 6)
                 .pattern("###")
                 .define('#', ModItems.POLISHED_CASSITERITE.get())
                 .unlockedBy(getHasName(ModItems.CASSITERITE.get()), has(ModItems.CASSITERITE.get()))
@@ -154,7 +156,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter, MetalWorks.MOD_ID + ":tin_ingot_from_nuggets");
 
         // Tin Block
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIN_BLOCK.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_BLOCK.get())
                 .requires(ModItems.TIN_INGOT.get(), 9)
                 .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
                 .save(pWriter);
@@ -164,6 +166,828 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.TIN_BLOCK.get())
                 .unlockedBy(getHasName(ModItems.TIN_BLOCK.get()), has(ModItems.TIN_BLOCK.get()))
                 .save(pWriter, MetalWorks.MOD_ID + ":tin_ingot_from_block");
+
+        // Raw Tin Block
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_TIN_BLOCK.get())
+                .requires(ModItems.RAW_TIN.get(), 9)
+                .unlockedBy(getHasName(ModItems.RAW_TIN.get()), has(ModItems.RAW_TIN.get()))
+                .save(pWriter);
+
+        // Raw Tin from Block
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_TIN.get(), 9)
+                .requires(ModItems.RAW_TIN_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.TIN_BLOCK.get()), has(ModItems.TIN_BLOCK.get()))
+                .save(pWriter, MetalWorks.MOD_ID + ":raw_tin_from_block");
+
+        // Chiseled Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CHISELED_TIN.get(), 1)
+                .pattern("#")
+                .pattern("#")
+                .define('#', ModItems.CUT_TIN_SLAB.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Grate
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_GRATE.get(), 4)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.TIN_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Grate Drain
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_GRATE_DRAIN.get(), 6)
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.TIN_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Cut Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CUT_TIN.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.TIN_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Cut Tin Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CUT_TIN_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Cut Tin Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CUT_TIN_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Tiles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_TILES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Tile Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_TILE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Tile Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_TILE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Shingles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_SHINGLES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Shingle Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_SHINGLE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Shingle Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_SHINGLE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+
+        // Tin Bars
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_BARS.get(), 16)
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.TIN_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Door
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_DOOR.get(), 3)
+                .pattern("##")
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.TIN_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Trapdoor
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_TRAPDOOR.get(), 2)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.TIN_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Chain
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_CHAIN.get(), 1)
+                .pattern("$")
+                .pattern("#")
+                .pattern("$")
+                .define('#', ModItems.TIN_INGOT.get())
+                .define('$', ModItems.TIN_NUGGET.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tin Lantern
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_LANTERN.get(), 1)
+                .pattern("$$$")
+                .pattern("$#$")
+                .pattern("$$$")
+                .define('#', Items.TORCH)
+                .define('$', ModItems.TIN_NUGGET.get())
+                .unlockedBy(getHasName(ModItems.TIN_NUGGET.get()), has(ModItems.TIN_NUGGET.get()))
+                .save(pWriter);
+
+        // Tin Soul Lantern
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_SOUL_LANTERN.get(), 1)
+                .pattern("$$$")
+                .pattern("$#$")
+                .pattern("$$$")
+                .define('#', Items.SOUL_TORCH)
+                .define('$', ModItems.TIN_NUGGET.get())
+                .unlockedBy(getHasName(ModItems.TIN_NUGGET.get()), has(ModItems.TIN_NUGGET.get()))
+                .save(pWriter);
+
+        // Tin Mage Lantern
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_MAGE_LANTERN.get(), 1)
+                .pattern("$$$")
+                .pattern("$#$")
+                .pattern("$$$")
+                .define('#', ModItems.MAGE_TORCH.get())
+                .define('$', ModItems.TIN_NUGGET.get())
+                .unlockedBy(getHasName(ModItems.TIN_NUGGET.get()), has(ModItems.TIN_NUGGET.get()))
+                .save(pWriter);
+
+        // Chiseled Tarnished Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_CHISELED_TIN.get(), 1)
+                .pattern("#")
+                .pattern("#")
+                .define('#', ModItems.TARNISHED_CUT_TIN_SLAB.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tarnished Tin Grate
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_GRATE.get(), 4)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.TARNISHED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tarnished Tin Grate Drain
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_GRATE_DRAIN.get(), 6)
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.TARNISHED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tarnished Cut Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_CUT_TIN.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.TARNISHED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tarnished Cut Tin Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_CUT_TIN_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.TARNISHED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tarnished Cut Tin Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_CUT_TIN_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.TARNISHED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tarnished Tin Tiles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_TILES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.TARNISHED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tarnished Tin Tile Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_TILE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.TARNISHED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tarnished Tin Tile Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_TILE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.TARNISHED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tarnished Tin Shingles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_SHINGLES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.TARNISHED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tarnished Tin Shingle Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_SHINGLE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.TARNISHED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Tarnished Tin Shingle Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_SHINGLE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.TARNISHED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Chiseled Corroded Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_CHISELED_TIN.get(), 1)
+                .pattern("#")
+                .pattern("#")
+                .define('#', ModItems.CORRODED_CUT_TIN_SLAB.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Corroded Tin Grate
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_GRATE.get(), 4)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.CORRODED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Corroded Tin Grate Drain
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_GRATE_DRAIN.get(), 6)
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.CORRODED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Corroded Cut Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_CUT_TIN.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.CORRODED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Corroded Cut Tin Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_CUT_TIN_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.CORRODED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Corroded Cut Tin Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_CUT_TIN_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.CORRODED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Corroded Tin Tiles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_TILES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.CORRODED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Corroded Tin Tile Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_TILE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.CORRODED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Corroded Tin Tile Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_TILE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.CORRODED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Corroded Tin Shingles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_SHINGLES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.CORRODED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Corroded Tin Shingle Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_SHINGLE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.CORRODED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Corroded Tin Shingle Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_SHINGLE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.CORRODED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Chiseled Eroded Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_CHISELED_TIN.get(), 1)
+                .pattern("#")
+                .pattern("#")
+                .define('#', ModItems.ERODED_CUT_TIN_SLAB.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Eroded Tin Grate
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_GRATE.get(), 4)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.ERODED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Eroded Tin Grate Drain
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_GRATE_DRAIN.get(), 6)
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.ERODED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Eroded Cut Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_CUT_TIN.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.ERODED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Eroded Cut Tin Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_CUT_TIN_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.ERODED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Eroded Cut Tin Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_CUT_TIN_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.ERODED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Eroded Tin Tiles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_TILES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.ERODED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Eroded Tin Tile Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_TILE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.ERODED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Eroded Tin Tile Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_TILE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.ERODED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Eroded Tin Shingles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_SHINGLES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.ERODED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Eroded Tin Shingle Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_SHINGLE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.ERODED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Eroded Tin Shingle Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_SHINGLE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.ERODED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tin Shingles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CUT_TIN.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.TIN_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Cut Tin Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CUT_TIN_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.WAXED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Cut Tin Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CUT_TIN_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.WAXED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tin Tile Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_TILE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.WAXED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tin Tile Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_TILE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.WAXED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tin Shingles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_SHINGLES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.WAXED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tin Shingle Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_SHINGLE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.WAXED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tin Shingle Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_SHINGLE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.WAXED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Chiseled Tarnished Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_CHISELED_TIN.get())
+                .pattern("#")
+                .pattern("#")
+                .define('#', ModItems.WAXED_TARNISHED_CUT_TIN_SLAB.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tarnished Tin Tiles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_TILES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.WAXED_TARNISHED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tarnished Tin Grate
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_GRATE.get(), 4)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.WAXED_TARNISHED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tarnished Tin Grate Drain
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_GRATE_DRAIN.get(), 6)
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.WAXED_TARNISHED_TIN_GRATE.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tarnished Cut Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_CUT_TIN.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.WAXED_TARNISHED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tarnished Cut Tin Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_CUT_TIN_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.WAXED_TARNISHED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tarnished Cut Tin Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_CUT_TIN_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.WAXED_TARNISHED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tarnished Tin Tile Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_TILE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.WAXED_TARNISHED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tarnished Tin Tile Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_TILE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.WAXED_TARNISHED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tarnished Tin Shingles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_SHINGLES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.WAXED_TARNISHED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tarnished Tin Shingle Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.WAXED_TARNISHED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Tarnished Tin Shingle Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_SHINGLE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.WAXED_TARNISHED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+
+        // Waxed Chiseled Corroded Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_CHISELED_TIN.get())
+                .pattern("#")
+                .pattern("#")
+                .define('#', ModItems.WAXED_CORRODED_CUT_TIN_SLAB.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Corroded Tin Tiles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_TILES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.WAXED_CORRODED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Corroded Tin Grate
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_GRATE.get(), 4)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.WAXED_CORRODED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Corroded Tin Grate Drain
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_GRATE_DRAIN.get(), 6)
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.WAXED_CORRODED_TIN_GRATE.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Corroded Cut Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_CUT_TIN.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.WAXED_CORRODED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Corroded Cut Tin Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_CUT_TIN_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.WAXED_CORRODED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Corroded Cut Tin Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_CUT_TIN_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.WAXED_CORRODED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Corroded Tin Tile Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_TILE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.WAXED_CORRODED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Corroded Tin Tile Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_TILE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.WAXED_CORRODED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Corroded Tin Shingles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_SHINGLES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.WAXED_CORRODED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Corroded Tin Shingle Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_SHINGLE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.WAXED_CORRODED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Corroded Tin Shingle Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.WAXED_CORRODED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Chiseled Eroded Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_CHISELED_TIN.get())
+                .pattern("#")
+                .pattern("#")
+                .define('#', ModItems.WAXED_ERODED_CUT_TIN_SLAB.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Eroded Tin Tiles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_TILES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.WAXED_ERODED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Eroded Tin Grate
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_GRATE.get(), 4)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.WAXED_ERODED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Eroded Tin Grate Drain
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_GRATE_DRAIN.get(), 6)
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.WAXED_ERODED_TIN_GRATE.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Eroded Cut Tin Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_CUT_TIN_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.WAXED_ERODED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Eroded Cut Tin
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_CUT_TIN.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.WAXED_ERODED_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Eroded Cut Tin Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_CUT_TIN_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.WAXED_ERODED_CUT_TIN.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Eroded Tin Tile Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_TILE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.WAXED_ERODED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Eroded Tin Tile Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_TILE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.WAXED_ERODED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Eroded Tin Shingles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_SHINGLES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.WAXED_ERODED_TIN_TILES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Eroded Tin Shingle Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_SHINGLE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.WAXED_ERODED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Eroded Tin Shingle Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_SHINGLE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.WAXED_ERODED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
 
         // Tin Sword
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.TIN_SWORD.get())
@@ -271,6 +1095,96 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.BRONZE_BLOCK.get(), 1)
                 .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
                 .save(pWriter, MetalWorks.MOD_ID + ":bronze_ingot_from_bronze_block");
+
+        // Bronze Grate
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_GRATE.get(), 4)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.BRONZE_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .save(pWriter);
+
+        // Bronze Grate
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_GRATE_DRAIN.get(), 6)
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', ModItems.BRONZE_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .save(pWriter);
+
+        // Bronze Tiles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_TILES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.BRONZE_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .save(pWriter);
+
+        // Bronze Tile Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_TILE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.BRONZE_TILES.get())
+                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .save(pWriter);
+
+        // Bronze Tile Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_TILE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.BRONZE_TILES.get())
+                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .save(pWriter);
+
+        // Bronze Shingles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_SHINGLES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.BRONZE_TILES.get())
+                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .save(pWriter);
+
+        // Bronze Tile Stairs
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_SHINGLE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.BRONZE_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .save(pWriter);
+
+        // Bronze Tile Slab
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_SHINGLE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.BRONZE_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .save(pWriter);
+
+        // Bronze Door
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_DOOR.get(), 3)
+                .pattern("##")
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.BRONZE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .save(pWriter);
+
+        // Bronze Trapdoor
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_TRAPDOOR.get(), 2)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.BRONZE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .save(pWriter);
+
+        // Bronze Trapdoor
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_BARS.get(), 16)
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.BRONZE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .save(pWriter);
 
         // Bronze Sword
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BRONZE_SWORD.get(), 1)
@@ -383,9 +1297,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_NUGGET.get()), has(ModItems.ROSE_GOLD_NUGGET.get()))
                 .save(pWriter, MetalWorks.MOD_ID + ":rose_gold_ingot_from_nuggets");
 
+        // Rose Gold Beetroot
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ROSE_GOLD_BEETROOT.get(), 1)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###")
+                .define('#', ModItems.ROSE_GOLD_NUGGET.get())
+                .define('@', Items.BEETROOT)
+                .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
+                .save(pWriter);
+
         // Rose Gold Block
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ROSE_GOLD_BLOCK.get(), 1)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_GOLD_BLOCK.get(), 1)
                 .requires(ModItems.ROSE_GOLD_INGOT.get(), 9)
+                .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
+                .save(pWriter);
+
+        //Mage Powder
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MAGE_POWDER.get(), 2)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###")
+                .define('#', ModItems.ROSE_GOLD_NUGGET.get())
+                .define('@', Items.GUNPOWDER)
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
@@ -471,11 +1405,94 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
+        // Rose Gold Boots
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ROSE_GOLD_BOOTS.get())
+                .pattern("# #")
+                .pattern("# #")
+                .define('#', ModItems.ROSE_GOLD_INGOT.get())
+                .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
+                .save(pWriter);
+
         oreSmelting(pWriter, TIN_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 0.25f, 200, "tin");
         oreBlasting(pWriter, TIN_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 0.25f, 100, "tin");
 
         //Rose Gold Mosaic
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_GOLD_MOSAIC.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.ROSE_GOLD_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
+                .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_GOLD_MOSAIC_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.ROSE_GOLD_MOSAIC.get())
+                .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_GOLD_MOSAIC_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.ROSE_GOLD_MOSAIC.get())
+                .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
+                .save(pWriter);
+
+        // Mage Fire
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.MAGE_TORCH.get(), 4)
+                .pattern("#")
+                .pattern("$")
+                .pattern("@")
+                .define('#', ItemTags.COALS)
+                .define('$', Items.STICK)
+                .define('@', ModItems.MAGE_POWDER.get())
+                .unlockedBy(getHasName(ModItems.MAGE_POWDER.get()), has(ModItems.MAGE_POWDER.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.MAGE_LANTERN.get(), 1)
+                .pattern("$$$")
+                .pattern("$#$")
+                .pattern("$$$")
+                .define('#', ModItems.MAGE_TORCH.get())
+                .define('$', Items.IRON_NUGGET)
+                .unlockedBy(getHasName(ModItems.MAGE_TORCH.get()), has(ModItems.MAGE_TORCH.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MAGE_CAMPFIRE.get(), 1)
+                .pattern(" $ " )
+                .pattern("$@$")
+                .pattern("###")
+                .define('#', ItemTags.LOGS)
+                .define('$', Items.STICK)
+                .define('@', ModItems.MAGE_POWDER.get())
+                .unlockedBy(getHasName(ModItems.MAGE_TORCH.get()), has(ModItems.MAGE_TORCH.get()))
+                .save(pWriter);
+
+        // Medium Weighted Pressure Plate
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModItems.MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), 1)
+                .pattern("##")
+                .define('#', ModItems.ROSE_GOLD_INGOT.get())
+                .unlockedBy(getHasName(ModItems.MAGE_TORCH.get()), has(ModItems.MAGE_TORCH.get()))
+                .save(pWriter);
+
+        // Looping Pressure Plate
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModItems.LOOPING_PRESSURE_PLATE.get(), 1)
+                .pattern("##")
+                .pattern("%%")
+                .define('#', ModItems.BRONZE_INGOT.get())
+                .define('%', Items.REDSTONE)
+                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .save(pWriter);
+
+        // Rose Lantern
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_LANTERN.get(), 4)
+                .pattern("#@#")
+                .pattern("@ @")
+                .pattern("#@#")
+                .define('#', ModItems.ROSE_GOLD_INGOT.get())
+                .define('@', Items.GLOWSTONE)
+                .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
+                .save(pWriter);
 
         buildWaxingRecipes(pWriter);
 
