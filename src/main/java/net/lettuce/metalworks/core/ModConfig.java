@@ -26,7 +26,7 @@ public class ModConfig {
 
             tinVariantTab = builder
                     .comment("If true, a separate creative tab will be created for Weathered & Waxed Tin Blocks")
-                    .define("separateWeatheredTin", false);
+                    .define("separateWeatheredTin", true);
 
             builder.pop();
         }

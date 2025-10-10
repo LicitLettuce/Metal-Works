@@ -15,7 +15,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MetalWorks.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> METAL_WORKS_TAB = CREATIVE_MODE_TABS.register("metal_works_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BRONZE_HELMET.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TIN_HELMET.get()))
                     .title(Component.translatable("creativetab.metal_works_tab"))
                     .displayItems((pParameters, pOutput) -> {
                                 pOutput.accept(ModItems.CASSITERITE.get());
