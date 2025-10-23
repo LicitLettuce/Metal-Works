@@ -1,15 +1,166 @@
 package net.lettuce.metalworks.common.registry;
 
+import net.lettuce.metalworks.common.item.GlowingItem;
 import net.lettuce.metalworks.core.MetalWorks;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.ForgeSpawnEggItem;
+import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
+
+    @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
+    public class ClientTooltipHandler {
+
+        @SubscribeEvent
+        public static void onItemTooltip(ItemTooltipEvent event) {
+            ItemStack stack = event.getItemStack();
+            if (stack.is(ModItems.BRONZE_SWORD.get())) {
+                event.getToolTip().add(Component.literal("1+ Weakness Infliction").withStyle(ChatFormatting.BLUE));
+            }
+        }
+    }
+
+    @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+    public class BronzeArmorFireProtectionHandler {
+
+        // tune these how you like
+        private static final float REDUCTION_PER_PIECE = 0.05f; // 5% per piece
+        private static final float MAX_REDUCTION = 0.20f;       // 20% cap (full set)
+        private static final int   BURN_TICKS_REDUCTION_PER_PIECE = 20; // reduce 1s per piece
+
+        @SubscribeEvent
+        public static void onHurt(LivingHurtEvent event) {
+            if (!(event.getEntity() instanceof Player player)) return;
+
+            // Only reduce fire-type damage (lava, flame, in_fire, hot floor, etc.)
+            if (!event.getSource().is(net.minecraft.tags.DamageTypeTags.IS_FIRE)) return;
+
+            int pieces = countBronzePieces(player);
+            if (pieces <= 0) return;
+
+            float reduction = Math.min(pieces * REDUCTION_PER_PIECE, MAX_REDUCTION);
+            event.setAmount(event.getAmount() * (1.0f - reduction));
+        }
+
+        @SubscribeEvent
+        public static void onTick(LivingEvent.LivingTickEvent event) {
+            if (!(event.getEntity() instanceof Player player)) return;
+
+            int pieces = countBronzePieces(player);
+            if (pieces <= 0) return;
+
+            // If burning, shorten remaining fire duration
+            if (player.isOnFire()) {
+                int ticks = player.getRemainingFireTicks();
+                if (ticks > 0) {
+                    int reduce = pieces * BURN_TICKS_REDUCTION_PER_PIECE;
+                    player.setRemainingFireTicks(Math.max(0, ticks - reduce));
+                }
+            }
+        }
+
+        private static int countBronzePieces(Player player) {
+            int count = 0;
+            var inv = player.getArmorSlots().iterator();
+            // order is boots, leggings, chest, helmet (iteration of armor slots)
+            for (ItemStack stack : player.getArmorSlots()) {
+                if (isBronzePiece(stack)) count++;
+            }
+            return count;
+        }
+
+        private static boolean isBronzePiece(ItemStack stack) {
+            return stack.is(ModItems.BRONZE_HELMET.get())
+                    || stack.is(ModItems.BRONZE_CHESTPLATE.get())
+                    || stack.is(ModItems.BRONZE_LEGGINGS.get())
+                    || stack.is(ModItems.BRONZE_BOOTS.get());
+            // (Optional) use an item tag instead for flexibility:
+            // return stack.is(ModTags.Items.BRONZE_ARMOR);
+        }
+    }
+
+    @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+    public class RoseGoldRadiantWardHandler {
+
+        // Tune these values to taste:
+        private static final float REDUCTION_PER_PIECE = 0.15f; // 15% per piece
+        private static final float MAX_REDUCTION       = 0.60f; // cap at 60% (4 pieces)
+
+        @SubscribeEvent
+        public static void onHurt(LivingHurtEvent event) {
+            if (!(event.getEntity() instanceof Player player)) return;
+
+            if (!event.getSource().is(net.minecraft.tags.DamageTypeTags.IS_PROJECTILE)) return;
+
+            int pieces = countRoseGoldPieces(player);
+            if (pieces <= 0) return;
+
+            float reduction = Math.min(pieces * REDUCTION_PER_PIECE, MAX_REDUCTION);
+            event.setAmount(event.getAmount() * (1.0f - reduction));
+        }
+
+        private static int countRoseGoldPieces(Player player) {
+            int c = 0;
+            for (ItemStack s : player.getArmorSlots()) {
+                if (isRoseGoldArmor(s)) c++;
+            }
+            return c;
+        }
+
+        private static boolean isRoseGoldArmor(ItemStack stack) {
+
+            return stack.is(ModItems.ROSE_GOLD_HELMET.get())
+                    || stack.is(ModItems.ROSE_GOLD_CHESTPLATE.get())
+                    || stack.is(ModItems.ROSE_GOLD_LEGGINGS.get())
+                    || stack.is(ModItems.ROSE_GOLD_BOOTS.get());
+        }
+    }
+
+    @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
+    public class BronzeArmorTooltipHandler {
+        @SubscribeEvent
+        public static void onItemTooltip(ItemTooltipEvent event) {
+            ItemStack stack = event.getItemStack();
+
+            // check each bronze armor piece (or swap to a tag—see below)
+            if (stack.is(ModItems.BRONZE_HELMET.get())
+                    || stack.is(ModItems.BRONZE_CHESTPLATE.get())
+                    || stack.is(ModItems.BRONZE_LEGGINGS.get())
+                    || stack.is(ModItems.BRONZE_BOOTS.get())) {
+
+                event.getToolTip().add(Component.literal("+0.5 Fire Damage Reduction").withStyle(ChatFormatting.GOLD));
+                event.getToolTip().add(Component.literal("+0.5 Burn Time Reduction").withStyle(ChatFormatting.GOLD));
+
+            }
+        }
+    }
+
+    @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
+    public class RoseGoldTooltipHandler {
+        @SubscribeEvent
+        public static void onTooltip(ItemTooltipEvent e) {
+            ItemStack s = e.getItemStack();
+            if (s.is(ModItems.ROSE_GOLD_HELMET.get())
+                    || s.is(ModItems.ROSE_GOLD_CHESTPLATE.get())
+                    || s.is(ModItems.ROSE_GOLD_LEGGINGS.get())
+                    || s.is(ModItems.ROSE_GOLD_BOOTS.get())) {
+                e.getToolTip().add(Component.literal("+0.15 Projectile Protection").withStyle(ChatFormatting.AQUA));
+            }
+        }
+    }
 
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MetalWorks.MOD_ID);
@@ -470,6 +621,9 @@ public class ModItems {
             (ModBlocks.LOOPING_PRESSURE_PLATE.get(), new Item.Properties().fireResistant()));
 
         // Bronze Ingredients
+        public static final RegistryObject<Item> CRUDE_BRONZE = ITEMS.register("crude_bronze", () -> new Item
+                (new Item.Properties().fireResistant()));
+
     public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot", () -> new Item
             (new Item.Properties().fireResistant()));
 
@@ -533,6 +687,9 @@ public class ModItems {
             (ModBlocks.MAGE_CAMPFIRE.get(), new Item.Properties()));
 
         // Rose Gold Ingredients
+        public static final RegistryObject<Item> CRUDE_ROSE_GOLD = ITEMS.register("crude_rose_gold", () -> new Item
+                (new Item.Properties().fireResistant()));
+
     public static final RegistryObject<Item> ROSE_GOLD_INGOT = ITEMS.register("rose_gold_ingot", () -> new Item
             (new Item.Properties()));
 
@@ -572,6 +729,17 @@ public class ModItems {
 
     public static final RegistryObject<ForgeSpawnEggItem> MAGE_GOLEM_SPAWN_EGG = ITEMS.register("mage_golem_spawn_egg", () -> new ForgeSpawnEggItem
             (ModEntities.MAGE_GOLEM, 0xf25e63, 0xffcbc8, new Item.Properties()));
+
+        // GUI Items
+        public static final RegistryObject<Item> TAB_ITEM = ITEMS.register("tab_item", () -> new Item
+                (new Item.Properties().fireResistant()));
+
+        public static final RegistryObject<Item> MAGE_FIRE_ADVANCEMENT_ITEM = ITEMS.register("mage_fire_advancement_item", () -> new Item
+            (new Item.Properties().fireResistant()));
+
+        public static final RegistryObject<Item> REFINED_RADIANCE_ITEM =
+            ITEMS.register("refined_radiance_item", () -> new GlowingItem
+                    (new Item.Properties().fireResistant()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

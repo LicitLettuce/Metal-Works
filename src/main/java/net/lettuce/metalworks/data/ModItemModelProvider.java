@@ -157,6 +157,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.WAXED_ERODED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_mage_lantern"));
 
             // Bronze Items
+        simpleItem(ModItems.CRUDE_BRONZE);
         simpleItem(ModItems.BRONZE_INGOT);
         simpleItem(ModItems.BRONZE_NUGGET);
         trimmedArmorItem(ModItems.BRONZE_HELMET);
@@ -178,6 +179,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         trapdoorItem(ModBlocks.BRONZE_TRAPDOOR);
 
             // Rose Gold Items
+        simpleItem(ModItems.CRUDE_ROSE_GOLD);
         simpleItem(ModItems.ROSE_GOLD_INGOT);
         simpleItem(ModItems.ROSE_GOLD_NUGGET);
         simpleItem(ModItems.MAGE_POWDER);
@@ -199,6 +201,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.MAGE_CAMPFIRE);
 
         withExistingParent(ModItems.MAGE_GOLEM_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
+            // GUI Items
+        simpleItem(ModItems.TAB_ITEM);
+        simpleItem(ModItems.MAGE_FIRE_ADVANCEMENT_ITEM);
+        withExistingParent(ModItems.REFINED_RADIANCE_ITEM.getId().getPath(), "item/generated").texture("layer0", modLoc("item/rose_gold_chestplate"));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

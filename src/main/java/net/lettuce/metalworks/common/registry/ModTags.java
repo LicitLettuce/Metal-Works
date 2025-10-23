@@ -24,6 +24,11 @@ public class ModTags {
     public static final TagKey<Block> MAGE_FIRE_BASE_BLOCKS = tag
             ("mage_fire_base_blocks");
 
+    public static final TagKey<Block> TARNISHED_TIN_BLOCKS = tag
+            ("tarnished_tin_blocks");
+
+
+
     private static TagKey<Block> tag(String name) {
         return BlockTags.create(new ResourceLocation(MetalWorks.MOD_ID, name));
     }

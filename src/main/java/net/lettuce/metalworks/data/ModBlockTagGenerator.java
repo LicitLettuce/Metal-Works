@@ -221,7 +221,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         // Mage Fire Base Blocks
         this.tag(ModTags.MAGE_FIRE_BASE_BLOCKS)
                 .add(ModBlocks.ROSE_GOLD_BLOCK.get(),
-                        ModBlocks.ROSE_GOLD_MOSAIC.get());
+                        ModBlocks.ROSE_GOLD_MOSAIC.get(),
+                        ModBlocks.ROSE_GOLD_MOSAIC_STAIRS.get(),
+                        ModBlocks.ROSE_GOLD_MOSAIC_SLAB.get());
 
         // Enchantment Power Provider
         this.tag(BlockTags.ENCHANTMENT_POWER_PROVIDER)
@@ -237,6 +239,23 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.WAXED_TARNISHED_TIN_MAGE_LANTERN.get(),
                         ModBlocks.WAXED_CORRODED_TIN_MAGE_LANTERN.get(),
                         ModBlocks.WAXED_ERODED_TIN_MAGE_LANTERN.get());
+
+        this.tag(ModTags.TARNISHED_TIN_BLOCKS)
+                .add(ModBlocks.TARNISHED_TIN.get(),
+                ModBlocks.TARNISHED_CHISELED_TIN.get(),
+                ModBlocks.TARNISHED_TIN_GRATE.get(),
+                ModBlocks.TARNISHED_TIN_GRATE_DRAIN.get(),
+                ModBlocks.TARNISHED_CUT_TIN.get(),
+                ModBlocks.TARNISHED_CUT_TIN_STAIRS.get(),
+                ModBlocks.TARNISHED_CUT_TIN_SLAB.get(),
+                ModBlocks.TARNISHED_TIN_TILES.get(),
+                ModBlocks.TARNISHED_TIN_TILE_STAIRS.get(),
+                ModBlocks.TARNISHED_TIN_TILE_SLAB.get(),
+                ModBlocks.TARNISHED_TIN_SHINGLES.get(),
+                ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS.get(),
+                ModBlocks.TARNISHED_TIN_SHINGLE_SLAB.get(),
+                ModBlocks.TARNISHED_TIN_BARS.get(),
+                ModBlocks.TARNISHED_TIN_CHAIN.get());
 
     }
 }

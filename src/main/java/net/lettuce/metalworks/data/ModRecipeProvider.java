@@ -15,7 +15,6 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.apache.commons.lang3.tuple.Pair;
-import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -24,7 +23,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private static final List<ItemLike> TIN_SMELTABLES = List.of(ModItems.RAW_TIN.get(),
             ModBlocks.TIN_ORE.get(),
             ModBlocks.DEEPSLATE_TIN_ORE.get(),
-            ModBlocks.NETHER_TIN_ORE.get());
+            ModBlocks.NETHER_TIN_ORE.get(),
+            ModBlocks.CASSITERITE.get());
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -36,7 +36,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
         // Cassiterite Recipes
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CASSITERITE.get(), 1)
                 .requires(Blocks.ANDESITE)
                 .requires(ModItems.RAW_TIN.get())
@@ -86,7 +85,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter, MetalWorks.MOD_ID + ":casiterite_wall_from_stonecutting");
 
         // Polished Cassiterite
-
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.POLISHED_CASSITERITE.get(), 4)
                 .pattern("##")
                 .pattern("##")
@@ -634,10 +632,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         // Waxed Tin Shingles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_TILES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.WAXED_TIN_SHINGLES.get())
+                .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                .save(pWriter);
+
+        // Waxed Cut Tin
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CUT_TIN.get(), 4)
                 .pattern("##")
                 .pattern("##")
-                .define('#', ModItems.TIN_BLOCK.get())
+                .define('#', ModItems.WAXED_TIN_BLOCK.get())
                 .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
                 .save(pWriter);
 
@@ -1065,12 +1071,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
                 .save(pWriter);
 
-        // Bronze Ingot
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BRONZE_INGOT.get(), 4)
-                .requires(ModItems.TIN_INGOT.get(), 4)
-                .requires(Items.COPPER_INGOT, 4)
+        // Crude Bronze
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRUDE_BRONZE.get(), 4)
+                .requires(ModItems.RAW_TIN.get(), 4)
+                .requires(Items.RAW_COPPER, 4)
                 .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
                 .save(pWriter);
+
+        // Bronze Ingot
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.CRUDE_BRONZE.get()),
+                        RecipeCategory.MISC, ModItems.BRONZE_INGOT.get(), 0.7f, 200)
+                .unlockedBy(getHasName(ModItems.CRUDE_BRONZE.get()), has(ModItems.CRUDE_BRONZE.get()))
+                .save(pWriter, MetalWorks.MOD_ID + ":smelting/crude_bronze_to_bronze_ingot");
+
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.CRUDE_BRONZE.get()),
+                        RecipeCategory.MISC, ModItems.BRONZE_INGOT.get(), 0.7f, 100)
+                .unlockedBy(getHasName(ModItems.CRUDE_BRONZE.get()), has(ModItems.CRUDE_BRONZE.get()))
+                .save(pWriter, MetalWorks.MOD_ID + ":blasting/crude_bronze_to_bronze_ingot");
 
         // Bronze Nugget
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BRONZE_NUGGET.get(), 9)
@@ -1278,12 +1295,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
                 .save(pWriter);
 
-        // Rose Gold Ingot Recipe
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ROSE_GOLD_INGOT.get(), 4)
-                .requires(Items.GOLD_INGOT, 4)
-                .requires(Items.COPPER_INGOT, 4)
+        // Crude Rose Gold
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRUDE_ROSE_GOLD.get(), 4)
+                .requires(Items.RAW_GOLD, 4)
+                .requires(Items.RAW_COPPER, 4)
                 .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
                 .save(pWriter);
+
+        // Rose Gold Ingot
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.CRUDE_ROSE_GOLD.get()),
+                        RecipeCategory.MISC, ModItems.ROSE_GOLD_INGOT.get(), 0.7f, 200)
+                .unlockedBy(getHasName(ModItems.CRUDE_ROSE_GOLD.get()), has(ModItems.CRUDE_ROSE_GOLD.get()))
+                .save(pWriter, MetalWorks.MOD_ID + ":smelting/crude_rose_gold_to_rose_gold_ingot");
+
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.CRUDE_ROSE_GOLD.get()),
+                        RecipeCategory.MISC, ModItems.ROSE_GOLD_INGOT.get(), 0.7f, 100)
+                .unlockedBy(getHasName(ModItems.CRUDE_ROSE_GOLD.get()), has(ModItems.CRUDE_ROSE_GOLD.get()))
+                .save(pWriter, MetalWorks.MOD_ID + ":blasting/crude_rose_gold_to_rose_gold_ingot");
 
         // Rose Gold Nugget
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ROSE_GOLD_NUGGET.get(), 9)
@@ -1496,6 +1524,435 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         buildWaxingRecipes(pWriter);
 
+        // Cut Tin From Stonecutting Tin Block
+        stonecut(pWriter, ModItems.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CUT_TIN.get(),            4, "tin_block_to_cut_tin");
+
+        // Cut Tin Stairs From Stonecutting Tin Block
+        stonecut(pWriter, ModItems.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CUT_TIN_STAIRS.get(),      4, "tin_block_to_cut_tin_stairs");
+
+        // Cut Tin Slab From Stonecutting Tin Block
+        stonecut(pWriter, ModItems.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CUT_TIN_SLAB.get(),        8, "tin_block_to_cut_tin_slab");
+
+        // Tin Tiles From Stonecutting Tin Block
+        stonecut(pWriter, ModItems.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_TILES.get(),           4, "tin_block_to_tin_tiles");
+
+        // Tin Tile Stairs From Stonecutting Tin Block
+        stonecut(pWriter, ModItems.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_TILE_STAIRS.get(),     4, "tin_block_to_tin_tile_stairs");
+
+        // Tin Tile Slab From Stonecutting Tin Block
+        stonecut(pWriter, ModItems.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_TILE_SLAB.get(),       8, "tin_block_to_tin_tile_slab");
+
+        // Tin Shingles From Stonecutting Tin Block
+        stonecut(pWriter, ModItems.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_SHINGLES.get(),        4, "tin_block_to_tin_shingles");
+
+        // Tin Shingle Stairs From Stonecutting Tin Block
+        stonecut(pWriter, ModItems.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_SHINGLE_STAIRS.get(),  4, "tin_block_to_tin_shingle_stairs");
+
+        // Tin Shingle Slab From Stonecutting Tin Block
+        stonecut(pWriter, ModItems.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_SHINGLE_SLAB.get(),    8, "tin_block_to_tin_shingle_slab");
+
+        // Tin Grate From Stonecutting Tin Block
+        stonecut(pWriter, ModItems.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_GRATE.get(),           4, "tin_block_to_tin_grate");
+
+        // Tin Grate Drain From Stonecutting Tin Block
+        stonecut(pWriter, ModItems.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_GRATE_DRAIN.get(),     8, "tin_block_to_tin_grate_drain");
+
+        // Chiseled Tin From Stonecutting Tin Block
+        stonecut(pWriter, ModItems.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CHISELED_TIN.get(),        4, "tin_block_to_chiseled_tin");
+
+        // Cut Tin Stairs From Stonecutting Cut Tin
+        stonecut(pWriter, ModItems.CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CUT_TIN_STAIRS.get(),        1, "cut_tin_to_cut_tin_stairs");
+
+        // Cut Tin Slab From Stonecutting Cut Tin
+        stonecut(pWriter, ModItems.CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CUT_TIN_SLAB.get(),          2, "cut_tin_to_cut_tin_slab");
+
+        // Tin Tile Stairs From Stonecutting Tin Tiles
+        stonecut(pWriter, ModItems.TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_TILE_STAIRS.get(),     1, "tin_tiles_to_tile_stairs");
+
+        // Tin Tile Slab From Stonecutting Tin Tiles
+        stonecut(pWriter, ModItems.TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_TILE_SLAB.get(),       2, "tin_tiles_to_tile_slab");
+
+        // Tin Shingle Stairs From Stonecutting Tin Shingles
+        stonecut(pWriter, ModItems.TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_SHINGLE_STAIRS.get(), 1, "tin_shingles_to_shingle_stairs");
+
+        // Tin Shingle Slab From Stonecutting Tin Shingles
+        stonecut(pWriter, ModItems.TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_SHINGLE_SLAB.get(),   2, "tin_shingles_to_shingle_slab");
+
+        // Tarnished Cut Tin From Stonecutting Tarnished Tin
+        stonecut(pWriter, ModItems.TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_CUT_TIN.get(),            4, "tarnished_tin_to_tarnished_cut_tin");
+
+        // Tarnished Cut Tin Stairs From Stonecutting Tarnished Tin
+        stonecut(pWriter, ModItems.TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_CUT_TIN_STAIRS.get(),      4, "tarnished_tin_to_tarnished_cut_tin_stairs");
+
+        // Tarnished Cut Tin Slab From Stonecutting Tarnished Tin
+        stonecut(pWriter, ModItems.TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_CUT_TIN_SLAB.get(),        8, "tarnished_tin_to_tarnished_cut_tin_slab");
+
+        // Tarnished Tin Tiles From Stonecutting Tarnished Tin
+        stonecut(pWriter, ModItems.TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_TILES.get(),           4, "tarnished_tin_to_tarnished_tin_tiles");
+
+        // Tarnished Tin Tile Stairs From Stonecutting Tarnished Tin
+        stonecut(pWriter, ModItems.TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_TILE_STAIRS.get(),     4, "tarnished_tin_to_tarnished_tin_tile_stairs");
+
+        // Tarnished Tin Tile Slab From Stonecutting Tarnished Tin
+        stonecut(pWriter, ModItems.TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_TILE_SLAB.get(),       8, "tarnished_tin_to_tarnished_tin_tile_slab");
+
+        // Tarnished Tin Shingles From Stonecutting Tarnished Tin
+        stonecut(pWriter, ModItems.TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_SHINGLES.get(),        4, "tarnished_tin_to_tarnished_tin_shingles");
+
+        // Tarnished Tin Shingle Stairs From Stonecutting Tarnished Tin
+        stonecut(pWriter, ModItems.TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_SHINGLE_STAIRS.get(),  4, "tarnished_tin_to_tarnished_tin_shingle_stairs");
+
+        // Tarnished Tin Shingle Slab From Stonecutting Tarnished Tin
+        stonecut(pWriter, ModItems.TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_SHINGLE_SLAB.get(),    8, "tarnished_tin_to_tarnished_tin_shingle_slab");
+
+        // Tarnished Tin Grate From Stonecutting Tarnished Tin
+        stonecut(pWriter, ModItems.TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_GRATE.get(),           4, "tarnished_tin_to_tarnished_tin_grate");
+
+        // Tarnished Tin Grate Drain From Stonecutting Tarnished Tin
+        stonecut(pWriter, ModItems.TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_GRATE_DRAIN.get(),     8, "tarnished_tin_to_tarnished_tin_grate_drain");
+
+        // Tarnished Chiseled Tin From Stonecutting Tarnished Tin
+        stonecut(pWriter, ModItems.TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_CHISELED_TIN.get(),        4, "tarnished_tin_to_tarnished_chiseled_tin");
+
+        // Tarnished Cut Tin Stairs From Stonecutting Tarnished Cut Tin
+        stonecut(pWriter, ModItems.TARNISHED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_CUT_TIN_STAIRS.get(),  1, "tarnished_cut_tin_to_stairs");
+
+        // Tarnished Cut Tin Slab From Stonecutting Tarnished Cut Tin
+        stonecut(pWriter, ModItems.TARNISHED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_CUT_TIN_SLAB.get(),    2, "tarnished_cut_tin_to_slab");
+
+        // Tarnished Tin Tile Stairs From Stonecutting Tarnished Tin Tiles
+        stonecut(pWriter, ModItems.TARNISHED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_TILE_STAIRS.get(), 1, "tarnished_tin_tiles_to_stairs");
+
+        // Tarnished Tin Tile Slab From Stonecutting Tarnished Tin Tiles
+        stonecut(pWriter, ModItems.TARNISHED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_TILE_SLAB.get(),   2, "tarnished_tin_tiles_to_slab");
+
+        // Tarnished Tin Shingle Stairs From Stonecutting Tarnished Tin Shingles
+        stonecut(pWriter, ModItems.TARNISHED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_SHINGLE_STAIRS.get(), 1, "tarnished_tin_shingles_to_stairs");
+
+        // Tarnished Tin Shingle Slab From Stonecutting Tarnished Tin Shingles
+        stonecut(pWriter, ModItems.TARNISHED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISHED_TIN_SHINGLE_SLAB.get(),   2, "tarnished_tin_shingles_to_slab");
+
+        // Corroded Cut Tin Stairs From Stonecutting Corroded Tin
+        stonecut(pWriter, ModItems.CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_CUT_TIN_STAIRS.get(),      4, "corroded_tin_to_corroded_cut_tin_stairs");
+
+        // Corroded Cut Tin Slab From Stonecutting Corroded Tin
+        stonecut(pWriter, ModItems.CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_CUT_TIN_SLAB.get(),        8, "corroded_tin_to_corroded_cut_tin_slab");
+
+        // Corroded Tin Tiles From Stonecutting Corroded Tin
+        stonecut(pWriter, ModItems.CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_TILES.get(),           4, "corroded_tin_to_corroded_tin_tiles");
+
+        // Corroded Tin Tile Stairs From Stonecutting Corroded Tin
+        stonecut(pWriter, ModItems.CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_TILE_STAIRS.get(),     4, "corroded_tin_to_corroded_tin_tile_stairs");
+
+        // Corroded Tin Tile Slab From Stonecutting Corroded Tin
+        stonecut(pWriter, ModItems.CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_TILE_SLAB.get(),       8, "corroded_tin_to_corroded_tin_tile_slab");
+
+        // Corroded Tin Shingles From Stonecutting Corroded Tin
+        stonecut(pWriter, ModItems.CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_SHINGLES.get(),        4, "corroded_tin_to_corroded_tin_shingles");
+
+        // Corroded Tin Shingle Stairs From Stonecutting Corroded Tin
+        stonecut(pWriter, ModItems.CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_SHINGLE_STAIRS.get(),  4, "corroded_tin_to_corroded_tin_shingle_stairs");
+
+        // Corroded Tin Shingle Slab From Stonecutting Corroded Tin
+        stonecut(pWriter, ModItems.CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_SHINGLE_SLAB.get(),    8, "corroded_tin_to_corroded_tin_shingle_slab");
+
+        // Corroded Tin Grate From Stonecutting Corroded Tin
+        stonecut(pWriter, ModItems.CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_GRATE.get(),           4, "corroded_tin_to_corroded_tin_grate");
+
+        // Corroded Tin Grate Drain From Stonecutting Corroded Tin
+        stonecut(pWriter, ModItems.CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_GRATE_DRAIN.get(),     8, "corroded_tin_to_corroded_tin_grate_drain");
+
+        // Corroded Chiseled Tin From Stonecutting Corroded Tin
+        stonecut(pWriter, ModItems.CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_CHISELED_TIN.get(),        4, "corroded_tin_to_corroded_chiseled_tin");
+
+        // Corroded Cut Tin Stairs From Stonecutting Corroded Cut Tin
+        stonecut(pWriter, ModItems.CORRODED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_CUT_TIN_STAIRS.get(),  1, "corroded_cut_tin_to_stairs");
+
+        // Corroded Cut Tin Slab From Stonecutting Corroded Cut Tin
+        stonecut(pWriter, ModItems.CORRODED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_CUT_TIN_SLAB.get(),    2, "corroded_cut_tin_to_slab");
+
+        // Corroded Tin Tile Stairs From Stonecutting Corroded Tin Tiles
+        stonecut(pWriter, ModItems.CORRODED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_TILE_STAIRS.get(), 1, "corroded_tin_tiles_to_stairs");
+
+        // Corroded Tin Tile Slab From Stonecutting Corroded Tin Tiles
+        stonecut(pWriter, ModItems.CORRODED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_TILE_SLAB.get(),   2, "corroded_tin_tiles_to_slab");
+
+        // Corroded Tin Shingle Stairs From Stonecutting Corroded Tin Shingles
+        stonecut(pWriter, ModItems.CORRODED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_SHINGLE_STAIRS.get(), 1, "corroded_tin_shingles_to_stairs");
+
+        // Corroded Tin Shingle Slab From Stonecutting Corroded Tin Shingles
+        stonecut(pWriter, ModItems.CORRODED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.CORRODED_TIN_SHINGLE_SLAB.get(),   2, "corroded_tin_shingles_to_slab");
+
+        // Eroded Cut Tin From Stonecutting Eroded Tin
+        stonecut(pWriter, ModItems.ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_CUT_TIN.get(),            4, "eroded_tin_to_eroded_cut_tin");
+
+        // Eroded Cut Tin Stairs From Stonecutting Eroded Tin
+        stonecut(pWriter, ModItems.ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_CUT_TIN_STAIRS.get(),      4, "eroded_tin_to_eroded_cut_tin_stairs");
+
+        // Eroded Cut Tin Slab From Stonecutting Eroded Tin
+        stonecut(pWriter, ModItems.ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_CUT_TIN_SLAB.get(),        8, "eroded_tin_to_eroded_cut_tin_slab");
+
+        // Eroded Tin Tiles From Stonecutting Eroded Tin
+        stonecut(pWriter, ModItems.ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_TILES.get(),           4, "eroded_tin_to_eroded_tin_tiles");
+
+        // Eroded Tin Tile Stairs From Stonecutting Eroded Tin
+        stonecut(pWriter, ModItems.ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_TILE_STAIRS.get(),     4, "eroded_tin_to_eroded_tin_tile_stairs");
+
+        // Eroded Tin Tile Slab From Stonecutting Eroded Tin
+        stonecut(pWriter, ModItems.ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_TILE_SLAB.get(),       8, "eroded_tin_to_eroded_tin_tile_slab");
+
+        // Eroded Tin Shingles From Stonecutting Eroded Tin
+        stonecut(pWriter, ModItems.ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_SHINGLES.get(),        4, "eroded_tin_to_eroded_tin_shingles");
+
+        // Eroded Tin Shingle Stairs From Stonecutting Eroded Tin
+        stonecut(pWriter, ModItems.ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_SHINGLE_STAIRS.get(),  4, "eroded_tin_to_eroded_tin_shingle_stairs");
+
+        // Eroded Tin Shingle Slab From Stonecutting Eroded Tin
+        stonecut(pWriter, ModItems.ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_SHINGLE_SLAB.get(),    8, "eroded_tin_to_eroded_tin_shingle_slab");
+
+        // Eroded Tin Grate From Stonecutting Eroded Tin
+        stonecut(pWriter, ModItems.ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_GRATE.get(),           4, "eroded_tin_to_eroded_tin_grate");
+
+        // Eroded Tin Grate Drain From Stonecutting Eroded Tin
+        stonecut(pWriter, ModItems.ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_GRATE_DRAIN.get(),     8, "eroded_tin_to_eroded_tin_grate_drain");
+
+        // Eroded Chiseled Tin From Stonecutting Eroded Tin
+        stonecut(pWriter, ModItems.ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_CHISELED_TIN.get(),        4, "eroded_tin_to_eroded_chiseled_tin");
+
+        // Eroded Cut Tin Stairs From Stonecutting Eroded Cut Tin
+        stonecut(pWriter, ModItems.ERODED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_CUT_TIN_STAIRS.get(),  1, "eroded_cut_tin_to_stairs");
+
+        // Eroded Cut Tin Slab From Stonecutting Eroded Cut Tin
+        stonecut(pWriter, ModItems.ERODED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_CUT_TIN_SLAB.get(),    2, "eroded_cut_tin_to_slab");
+
+        // Eroded Tin Tile Stairs From Stonecutting Eroded Tin Tiles
+        stonecut(pWriter, ModItems.ERODED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_TILE_STAIRS.get(), 1, "eroded_tin_tiles_to_stairs");
+
+        // Eroded Tin Tile Slab From Stonecutting Eroded Tin Tiles
+        stonecut(pWriter, ModItems.ERODED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_TILE_SLAB.get(),   2, "eroded_tin_tiles_to_slab");
+
+        // Eroded Tin Shingle Stairs From Stonecutting Eroded Tin Shingles
+        stonecut(pWriter, ModItems.ERODED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_SHINGLE_STAIRS.get(), 1, "eroded_tin_shingles_to_stairs");
+
+        // Eroded Tin Shingle Slab From Stonecutting Eroded Tin Shingles
+        stonecut(pWriter, ModItems.ERODED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ERODED_TIN_SHINGLE_SLAB.get(),   2, "eroded_tin_shingles_to_slab");
+
+        // Cut Tin From Stonecutting Waxed Tin Block
+        stonecut(pWriter, ModItems.WAXED_TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CUT_TIN.get(),            4, "waxed_tin_block_to_waxed_cut_tin");
+
+        // Cut Tin Stairs From Stonecutting Waxed Tin Block
+        stonecut(pWriter, ModItems.WAXED_TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CUT_TIN_STAIRS.get(),      4, "waxed_tin_block_to_waxed_cut_tin_stairs");
+
+        // Cut Tin Slab From Stonecutting Waxed Tin Block
+        stonecut(pWriter, ModItems.WAXED_TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CUT_TIN_SLAB.get(),        8, "waxed_tin_block_to_waxed_cut_tin_slab");
+
+        // Tin Tiles From Stonecutting Waxed Tin Block
+        stonecut(pWriter, ModItems.WAXED_TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_TILES.get(),           4, "waxed_tin_block_to_waxed_tin_tiles");
+
+        // Tin Tile Stairs From Stonecutting Waxed Tin Block
+        stonecut(pWriter, ModItems.WAXED_TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_TILE_STAIRS.get(),     4, "waxed_tin_block_to_waxed_tin_tile_stairs");
+
+        // Tin Tile Slab From Stonecutting Waxed Tin Block
+        stonecut(pWriter, ModItems.WAXED_TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_TILE_SLAB.get(),       8, "waxed_tin_block_to_waxed_tin_tile_slab");
+
+        // Tin Shingles From Stonecutting Waxed Tin Block
+        stonecut(pWriter, ModItems.WAXED_TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_SHINGLES.get(),        4, "waxed_tin_block_to_waxed_tin_shingles");
+
+        // Tin Shingle Stairs From Stonecutting Waxed Tin Block
+        stonecut(pWriter, ModItems.WAXED_TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_SHINGLE_STAIRS.get(),  4, "waxed_tin_block_to_waxed_tin_shingle_stairs");
+
+        // Tin Shingle Slab From Stonecutting Waxed Tin Block
+        stonecut(pWriter, ModItems.WAXED_TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_SHINGLE_SLAB.get(),    8, "waxed_tin_block_to_waxed_tin_shingle_slab");
+
+        // Tin Grate From Stonecutting Waxed Tin Block
+        stonecut(pWriter, ModItems.WAXED_TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_GRATE.get(),           4, "waxed_tin_block_to_waxed_tin_grate");
+
+        // Tin Grate Drain From Stonecutting Waxed Tin Block
+        stonecut(pWriter, ModItems.WAXED_TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_GRATE_DRAIN.get(),     8, "waxed_tin_block_to_waxed_tin_grate_drain");
+
+        // Chiseled Tin From Stonecutting Waxed Tin Block
+        stonecut(pWriter, ModItems.WAXED_TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CHISELED_TIN.get(),        4, "waxed_tin_block_to_waxed_chiseled_tin");
+
+        // Cut Tin Stairs From Stonecutting Waxed Cut Tin
+        stonecut(pWriter, ModItems.WAXED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CUT_TIN_STAIRS.get(),        1, "waxed_cut_tin_to_stairs");
+
+        // Cut Tin Slab From Stonecutting Waxed Cut Tin
+        stonecut(pWriter, ModItems.WAXED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CUT_TIN_SLAB.get(),          2, "waxed_cut_tin_to_slab");
+
+        // Tin Tile Stairs From Stonecutting Waxed Tin Tiles
+        stonecut(pWriter, ModItems.WAXED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_TILE_STAIRS.get(),     1, "waxed_tin_tiles_to_stairs");
+
+        // Tin Tile Slab From Stonecutting Waxed Tin Tiles
+        stonecut(pWriter, ModItems.WAXED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_TILE_SLAB.get(),       2, "waxed_tin_tiles_to_slab");
+
+        // Tin Shingle Stairs From Stonecutting Waxed Tin Shingles
+        stonecut(pWriter, ModItems.WAXED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_SHINGLE_STAIRS.get(), 1, "waxed_tin_shingles_to_stairs");
+
+        // Tin Shingle Slab From Stonecutting Waxed Tin Shingles
+        stonecut(pWriter, ModItems.WAXED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TIN_SHINGLE_SLAB.get(),   2, "waxed_tin_shingles_to_slab");
+
+        // Tarnished Cut Tin From Stonecutting Waxed Tarnished Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_CUT_TIN.get(),            4, "waxed_tarnished_tin_to_waxed_tarnished_cut_tin");
+
+        // Tarnished Cut Tin Stairs From Stonecutting Waxed Tarnished Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_CUT_TIN_STAIRS.get(),      4, "waxed_tarnished_tin_to_waxed_tarnished_cut_tin_stairs");
+
+        // Tarnished Cut Tin Slab From Stonecutting Waxed Tarnished Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_CUT_TIN_SLAB.get(),        8, "waxed_tarnished_tin_to_waxed_tarnished_cut_tin_slab");
+
+        // Tarnished Tin Tiles From Stonecutting Waxed Tarnished Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_TILES.get(),           4, "waxed_tarnished_tin_to_waxed_tarnished_tin_tiles");
+
+        // Tarnished Tin Tile Stairs From Stonecutting Waxed Tarnished Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_TILE_STAIRS.get(),     4, "waxed_tarnished_tin_to_waxed_tarnished_tin_tile_stairs");
+
+        // Tarnished Tin Tile Slab From Stonecutting Waxed Tarnished Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_TILE_SLAB.get(),       8, "waxed_tarnished_tin_to_waxed_tarnished_tin_tile_slab");
+
+        // Tarnished Tin Shingles From Stonecutting Waxed Tarnished Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_SHINGLES.get(),        4, "waxed_tarnished_tin_to_waxed_tarnished_tin_shingles");
+
+        // Tarnished Tin Shingle Stairs From Stonecutting Waxed Tarnished Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_SHINGLE_STAIRS.get(),  4, "waxed_tarnished_tin_to_waxed_tarnished_tin_shingle_stairs");
+
+        // Tarnished Tin Shingle Slab From Stonecutting Waxed Tarnished Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get(),    8, "waxed_tarnished_tin_to_waxed_tarnished_tin_shingle_slab");
+
+        // Tarnished Tin Grate From Stonecutting Waxed Tarnished Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_GRATE.get(),           4, "waxed_tarnished_tin_to_waxed_tarnished_tin_grate");
+
+        // Tarnished Tin Grate Drain From Stonecutting Waxed Tarnished Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_GRATE_DRAIN.get(),     8, "waxed_tarnished_tin_to_waxed_tarnished_tin_grate_drain");
+
+        // Tarnished Chiseled Tin From Stonecutting Waxed Tarnished Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_CHISELED_TIN.get(),        4, "waxed_tarnished_tin_to_waxed_tarnished_chiseled_tin");
+
+        // Tarnished Cut Tin Stairs From Stonecutting Waxed Tarnished Cut Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_CUT_TIN_STAIRS.get(),  1, "waxed_tarnished_cut_tin_to_stairs");
+
+        // Tarnished Cut Tin Slab From Stonecutting Waxed Tarnished Cut Tin
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_CUT_TIN_SLAB.get(),    2, "waxed_tarnished_cut_tin_to_slab");
+
+        // Tarnished Tin Tile Stairs From Stonecutting Waxed Tarnished Tin Tiles
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_TILE_STAIRS.get(), 1, "waxed_tarnished_tin_tiles_to_stairs");
+
+        // Tarnished Tin Tile Slab From Stonecutting Waxed Tarnished Tin Tiles
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_TILE_SLAB.get(),   2, "waxed_tarnished_tin_tiles_to_slab");
+
+        // Tarnished Tin Shingle Stairs From Stonecutting Waxed Tarnished Tin Shingles
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_SHINGLE_STAIRS.get(), 1, "waxed_tarnished_tin_shingles_to_stairs");
+
+        // Tarnished Tin Shingle Slab From Stonecutting Waxed Tarnished Tin Shingles
+        stonecut(pWriter, ModItems.WAXED_TARNISHED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get(),   2, "waxed_tarnished_tin_shingles_to_slab");
+
+        // Corroded Cut Tin From Stonecutting Waxed Corroded Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_CUT_TIN.get(),            4, "waxed_corroded_tin_to_waxed_corroded_cut_tin");
+
+        // Corroded Cut Tin Stairs From Stonecutting Waxed Corroded Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_CUT_TIN_STAIRS.get(),      4, "waxed_corroded_tin_to_waxed_corroded_cut_tin_stairs");
+
+        // Corroded Cut Tin Slab From Stonecutting Waxed Corroded Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_CUT_TIN_SLAB.get(),        8, "waxed_corroded_tin_to_waxed_corroded_cut_tin_slab");
+
+        // Corroded Tin Tiles From Stonecutting Waxed Corroded Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_TILES.get(),           4, "waxed_corroded_tin_to_waxed_corroded_tin_tiles");
+
+        // Corroded Tin Tile Stairs From Stonecutting Waxed Corroded Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_TILE_STAIRS.get(),     4, "waxed_corroded_tin_to_waxed_corroded_tin_tile_stairs");
+
+        // Corroded Tin Tile Slab From Stonecutting Waxed Corroded Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_TILE_SLAB.get(),       8, "waxed_corroded_tin_to_waxed_corroded_tin_tile_slab");
+
+        // Corroded Tin Shingles From Stonecutting Waxed Corroded Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_SHINGLES.get(),        4, "waxed_corroded_tin_to_waxed_corroded_tin_shingles");
+
+        // Corroded Tin Shingle Stairs From Stonecutting Waxed Corroded Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get(),  4, "waxed_corroded_tin_to_waxed_corroded_tin_shingle_stairs");
+
+        // Corroded Tin Shingle Slab From Stonecutting Waxed Corroded Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_SHINGLE_SLAB.get(),    8, "waxed_corroded_tin_to_waxed_corroded_tin_shingle_slab");
+
+        // Corroded Tin Grate From Stonecutting Waxed Corroded Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_GRATE.get(),           4, "waxed_corroded_tin_to_waxed_corroded_tin_grate");
+
+        // Corroded Tin Grate Drain From Stonecutting Waxed Corroded Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_GRATE_DRAIN.get(),     8, "waxed_corroded_tin_to_waxed_corroded_tin_grate_drain");
+
+        // Corroded Chiseled Tin From Stonecutting Waxed Corroded Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_CHISELED_TIN.get(),        4, "waxed_corroded_tin_to_waxed_corroded_chiseled_tin");
+
+        // Corroded Cut Tin Stairs From Stonecutting Waxed Corroded Cut Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_CUT_TIN_STAIRS.get(),  1, "waxed_corroded_cut_tin_to_stairs");
+
+        // Corroded Cut Tin Slab From Stonecutting Waxed Corroded Cut Tin
+        stonecut(pWriter, ModItems.WAXED_CORRODED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_CUT_TIN_SLAB.get(),    2, "waxed_corroded_cut_tin_to_slab");
+
+        // Corroded Tin Tile Stairs From Stonecutting Waxed Corroded Tin Tiles
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_TILE_STAIRS.get(), 1, "waxed_corroded_tin_tiles_to_stairs");
+
+        // Corroded Tin Tile Slab From Stonecutting Waxed Corroded Tin Tiles
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_TILE_SLAB.get(),   2, "waxed_corroded_tin_tiles_to_slab");
+
+        // Corroded Tin Shingle Stairs From Stonecutting Waxed Corroded Tin Shingles
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get(), 1, "waxed_corroded_tin_shingles_to_stairs");
+
+        // Corroded Tin Shingle Slab From Stonecutting Waxed Corroded Tin Shingles
+        stonecut(pWriter, ModItems.WAXED_CORRODED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_CORRODED_TIN_SHINGLE_SLAB.get(),   2, "waxed_corroded_tin_shingles_to_slab");
+
+        // Eroded Cut Tin From Stonecutting Waxed Eroded Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_CUT_TIN.get(),            4, "waxed_eroded_tin_to_waxed_eroded_cut_tin");
+
+        // Eroded Cut Tin Stairs From Stonecutting Waxed Eroded Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_CUT_TIN_STAIRS.get(),      4, "waxed_eroded_tin_to_waxed_eroded_cut_tin_stairs");
+
+        // Eroded Cut Tin Slab From Stonecutting Waxed Eroded Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_CUT_TIN_SLAB.get(),        8, "waxed_eroded_tin_to_waxed_eroded_cut_tin_slab");
+
+        // Eroded Tin Tiles From Stonecutting Waxed Eroded Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_TILES.get(),           4, "waxed_eroded_tin_to_waxed_eroded_tin_tiles");
+
+        // Eroded Tin Tile Stairs From Stonecutting Waxed Eroded Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_TILE_STAIRS.get(),     4, "waxed_eroded_tin_to_waxed_eroded_tin_tile_stairs");
+
+        // Eroded Tin Tile Slab From Stonecutting Waxed Eroded Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_TILE_SLAB.get(),       8, "waxed_eroded_tin_to_waxed_eroded_tin_tile_slab");
+
+        // Eroded Tin Shingles From Stonecutting Waxed Eroded Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_SHINGLES.get(),        4, "waxed_eroded_tin_to_waxed_eroded_tin_shingles");
+
+        // Eroded Tin Shingle Stairs From Stonecutting Waxed Eroded Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_SHINGLE_STAIRS.get(),  4, "waxed_eroded_tin_to_waxed_eroded_tin_shingle_stairs");
+
+        // Eroded Tin Shingle Slab From Stonecutting Waxed Eroded Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_SHINGLE_SLAB.get(),    8, "waxed_eroded_tin_to_waxed_eroded_tin_shingle_slab");
+
+        // Eroded Tin Grate From Stonecutting Waxed Eroded Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_GRATE.get(),           4, "waxed_eroded_tin_to_waxed_eroded_tin_grate");
+
+        // Eroded Tin Grate Drain From Stonecutting Waxed Eroded Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_GRATE_DRAIN.get(),     8, "waxed_eroded_tin_to_waxed_eroded_tin_grate_drain");
+
+        // Eroded Chiseled Tin From Stonecutting Waxed Eroded Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_CHISELED_TIN.get(),        4, "waxed_eroded_tin_to_waxed_eroded_chiseled_tin");
+
+        // Eroded Cut Tin Stairs From Stonecutting Waxed Eroded Cut Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_CUT_TIN_STAIRS.get(),  1, "waxed_eroded_cut_tin_to_stairs");
+
+        // Eroded Cut Tin Slab From Stonecutting Waxed Eroded Cut Tin
+        stonecut(pWriter, ModItems.WAXED_ERODED_CUT_TIN.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_CUT_TIN_SLAB.get(),    2, "waxed_eroded_cut_tin_to_slab");
+
+        // Eroded Tin Tile Stairs From Stonecutting Waxed Eroded Tin Tiles
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_TILE_STAIRS.get(), 1, "waxed_eroded_tin_tiles_to_stairs");
+
+        // Eroded Tin Tile Slab From Stonecutting Waxed Eroded Tin Tiles
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_TILE_SLAB.get(),   2, "waxed_eroded_tin_tiles_to_slab");
+
+        // Eroded Tin Shingle Stairs From Stonecutting Waxed Eroded Tin Shingles
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_SHINGLE_STAIRS.get(), 1, "waxed_eroded_tin_shingles_to_stairs");
+
+        // Eroded Tin Shingle Slab From Stonecutting Waxed Eroded Tin Shingles
+        stonecut(pWriter, ModItems.WAXED_ERODED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_SHINGLE_SLAB.get(),   2, "waxed_eroded_tin_shingles_to_slab");
+
     }
 
     private void buildWaxingRecipes(Consumer<FinishedRecipe> writer) {
@@ -1637,6 +2094,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(writer, new ResourceLocation(MetalWorks.MOD_ID, "waxing/" + getItemName(waxed)));
     }
 
+    private void stonecut(Consumer<FinishedRecipe> writer, ItemLike input, RecipeCategory category,
+                          ItemLike output, int count, String id) {
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), category, output, count)
+                .unlockedBy(getHasName(input), has(input))
+                .save(writer, MetalWorks.MOD_ID + ":stonecutting/" + id);
+    }
+
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
     }
@@ -1653,5 +2117,4 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .save(pFinishedRecipeConsumer,  MetalWorks.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
     }
-
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2025-10-01T15:04:10.9899447	Item Models: metal_works
+// 1.20.1	2025-10-22T03:38:56.3692768	Item Models: metal_works
 3a80a545789b30f683dff01f83bc2d7fece1a491 assets/metal_works/models/item/bronze_axe.json
 c4395b8b2f1fa8d47915c6579177a1abd3e51f08 assets/metal_works/models/item/bronze_boots.json
 1684750ce46e2f7b8e313dd58280b90aaa9b7611 assets/metal_works/models/item/bronze_boots_amethyst_trim.json
@@ -71,6 +71,8 @@ fbec9ee28ec1cb77db55b0b20a59c4d545ea88e2 assets/metal_works/models/item/corroded
 c136aba89132c5498c872720e437b025e72d3dda assets/metal_works/models/item/corroded_tin_soul_lantern.json
 1bf22c0fff0718d1f1a6a06d353a6c6319286580 assets/metal_works/models/item/corroded_tin_tile_slab.json
 40827ae16cbd76c63872b951736776e3f1acab0e assets/metal_works/models/item/corroded_tin_tile_stairs.json
+35378be8b9050830d68bf3e0cfc0793b8b363f56 assets/metal_works/models/item/crude_bronze.json
+6805cf81b0b525043976217739e00490b1bc438e assets/metal_works/models/item/crude_rose_gold.json
 aaf680eed80a70a679d01a438791cea005657c38 assets/metal_works/models/item/cut_tin_slab.json
 bea917d4971659cad1084a884d1d6fb9a4ea9a16 assets/metal_works/models/item/cut_tin_stairs.json
 90e79c7fcb518f40ead472c1032eabc3fe874bfd assets/metal_works/models/item/eroded_cut_tin_slab.json
@@ -84,12 +86,14 @@ df895608b40535eb896f70703376ae69b1f6f305 assets/metal_works/models/item/eroded_t
 4732fb84e238a6eca6248daeafd97dcf067946b1 assets/metal_works/models/item/eroded_tin_tile_slab.json
 c547066ea1692260ae0a6b30e69cf4c3ac22add3 assets/metal_works/models/item/eroded_tin_tile_stairs.json
 260685b5fb84f0f2e526ea6974beaf315447be0f assets/metal_works/models/item/mage_campfire.json
+41e0faa4d89953bff70db52dfcc639e5e2391716 assets/metal_works/models/item/mage_fire_advancement_item.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/metal_works/models/item/mage_golem_spawn_egg.json
 7e7512303887cdea6c10638d038e9ed269ff643d assets/metal_works/models/item/mage_lantern.json
 bcd1f06760cbca23b9c06a20419317a12de9f2d6 assets/metal_works/models/item/mage_powder.json
 8e3a6806ae49bba193c3f3c2802dfe071ed6ee30 assets/metal_works/models/item/polished_cassiterite_slab.json
 513979d9565f8006f429918052b19ab72fd6bd36 assets/metal_works/models/item/polished_cassiterite_stairs.json
 bcc2ae6cd2afe7243b6e4e8ef7ee0b06189fbc2f assets/metal_works/models/item/raw_tin.json
+00d476c779f97b9bd2e642c49cbeb2df3d590989 assets/metal_works/models/item/refined_radiance_item.json
 dbd593f946615832810777b5d7a109e1a73f6828 assets/metal_works/models/item/rose_gold_axe.json
 0e2c62d0a7eba45009a41c4ce180720c0e77e57c assets/metal_works/models/item/rose_gold_beetroot.json
 2e314aee54e85ccf998239edf083f28cbacfc8a6 assets/metal_works/models/item/rose_gold_boots.json
@@ -145,6 +149,7 @@ da8ce1df03d819977a82af3d2b54e335a15cd991 assets/metal_works/models/item/rose_gol
 d3639cc3c48742c0b8da269007824ce93b3bff9a assets/metal_works/models/item/rose_gold_pickaxe.json
 f0e12375b4dc6f2ffcfeafaabd64bcdcc98d5e3f assets/metal_works/models/item/rose_gold_shovel.json
 8a0140313e76e78969080e03dc62dd0f208a8d76 assets/metal_works/models/item/rose_gold_sword.json
+d579b1cc24935a18e857756eda3e7ae47282e13c assets/metal_works/models/item/tab_item.json
 5829bc05dcda58e2be23db5f41fdec6e743953ca assets/metal_works/models/item/tarnished_cut_tin_slab.json
 8229ceb4365fd8ab764a45fb5957986a43d588bb assets/metal_works/models/item/tarnished_cut_tin_stairs.json
 70869520e0476a7b3c187fa9f42867dd9c9b6a86 assets/metal_works/models/item/tarnished_tin_chain.json

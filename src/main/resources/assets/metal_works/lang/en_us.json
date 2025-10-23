@@ -233,5 +233,71 @@
   "item.metal_works.mage_golem_spawn_egg": "Mage Golem Spawn Egg",
   "trim_material.metal_works.tin": "Tin",
   "trim_material.metal_works.bronze": "Bronze",
-  "trim_material.metal_works.rose_gold": "Rose Gold"
+  "trim_material.metal_works.rose_gold": "Rose Gold",
+  "item.metal_works.crude_bronze": "Crude Bronze",
+  "item.metal_works.crude_rose_gold": "Crude Rose Gold",
+
+  "advancements.metal_works.root.title": "Metal Works",
+  "advancements.metal_works.root.desc": "Discover the art of metallurgy and unlock the secrets of alloy creation.",
+
+  "advancements.metal_works.raw_tin.title": "Tin to Win",
+  "advancements.metal_works.raw_tin.desc": "Mine your first tin ore or obtain raw tin.",
+
+  "advancements.metal_works.tin_ingot.title": "From Ore to Ingot",
+  "advancements.metal_works.tin_ingot.desc": "Smelt tin ore into its refined ingot form.",
+
+  "advancements.metal_works.tin_block.title": "Industrial Architecture",
+  "advancements.metal_works.tin_block.desc": "Craft tin blocks for your workshop or storage.",
+
+  "advancements.metal_works.waxed_any.title": "Preservation!",
+  "advancements.metal_works.waxed_any.desc": "Hold any waxed tin variant to keep it safe from corrosion.",
+
+  "advancements.metal_works.weathered_any.title": "Foul Tarnish!",
+  "advancements.metal_works.weathered_any.desc": "Acquire any weathered tin block, showing the marks of time.",
+
+  "advancements.metal_works.tin_armor_any.title": "Not So Hardware",
+  "advancements.metal_works.tin_armor_any.desc": "Equip yourself with any piece of tin armor.",
+
+  "advancements.metal_works.tin_tool_any.title": "First Forging",
+  "advancements.metal_works.tin_tool_any.desc": "Craft your first tin tool or weapon.",
+
+  "advancements.metal_works.crude_bronze.title": "Crude Awakening",
+  "advancements.metal_works.crude_bronze.desc": "Mix metals together to form crude bronze.",
+
+  "advancements.metal_works.bronze_ingot.title": "The Bronze Age",
+  "advancements.metal_works.bronze_ingot.desc": "Smelt crude bronze into usable ingots.",
+
+  "advancements.metal_works.bronze_armor_any.title": "Time for a Side-Grade!",
+  "advancements.metal_works.bronze_armor_any.desc": "Equip a piece of sturdy bronze armor.",
+
+  "advancements.metal_works.bronze_tool_any.title": "Metal Evolution",
+  "advancements.metal_works.bronze_tool_any.desc": "Forge tools that mark the dawn of the Bronze Age.",
+
+  "advancements.metal_works.crude_rose_gold.title": "Aquarium Gravel",
+  "advancements.metal_works.crude_rose_gold.desc": "Experiment with copper and gold to form crude rose gold.",
+
+  "advancements.metal_works.rose_gold_ingot.title": "Alchemist’s Alloy",
+  "advancements.metal_works.rose_gold_ingot.desc": "Refine crude rose gold into shimmering ingots.",
+
+  "advancements.metal_works.rose_gold_armor_any.title": "A Touch of Elegance",
+  "advancements.metal_works.rose_gold_armor_any.desc": "Wear armor that gleams with refined beauty.",
+
+  "advancements.metal_works.rose_gold_tool_any.title": "Gilded Precision",
+  "advancements.metal_works.rose_gold_tool_any.desc": "Forge tools that balance beauty and strength.",
+
+  "advancements.metal_works.mage_powder.title": "Arcane Ember",
+  "advancements.metal_works.mage_powder.desc": "Obtain Mage Powder — a key to crafting mystical fire.",
+
+  "advancements.metal_works.rose_gold_pickaxe.title": "Wow, That’s Fast!",
+  "advancements.metal_works.rose_gold_pickaxe.desc": "Craft a rose gold pickaxe — the perfect mix of elegance and efficiency.",
+
+  "advancements.metal_works.rose_gold_beetroot.title": "Super Food",
+  "advancements.metal_works.rose_gold_beetroot.desc": "Taste power: craft a rose gold beetroot brimming with energy.",
+
+  "advancements.metal_works.summon_mage_golem.title": "Arcane Protection",
+  "advancements.metal_works.summon_mage_golem.desc": "Summon a Mage Golem to guard your forge and channel ancient magic.",
+
+  "advancements.metal_works.enchanted_rose_gold_armor.title": "Refined Radiance",
+  "advancements.metal_works.enchanted_rose_gold_armor.desc": "Enchant a piece of rose gold armor until it shines with pure brilliance."
 }
+

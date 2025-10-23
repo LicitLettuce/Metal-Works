@@ -14,6 +14,7 @@ import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+
 @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class MageGolemSpawnEvents {
 
@@ -59,6 +60,8 @@ public class MageGolemSpawnEvents {
                             0.0f
                     );
                     serverLevel.addFreshEntity(golem);
+
+
                 }
             }
         }
