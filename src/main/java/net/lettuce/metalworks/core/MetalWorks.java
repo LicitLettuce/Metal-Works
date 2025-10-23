@@ -2,6 +2,7 @@ package net.lettuce.metalworks.core;
 
 import com.mojang.logging.LogUtils;
 import net.lettuce.metalworks.client.events.tin.WeatheringChain;
+import net.lettuce.metalworks.common.registry.ModLootModifiers;
 import net.lettuce.metalworks.common.registry.*;
 import net.lettuce.metalworks.client.renderer.MageGolemRenderer;
 import net.lettuce.metalworks.client.events.tin.WaxingEvent;
@@ -44,11 +45,13 @@ public class MetalWorks
         ModBlocks.BLOCKS.register(modEventBus);
         ModBlockEntities.register();
         ModPaintings.REGISTRY.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
         ModSounds.register(modEventBus);
         ModEntities.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+
 
     }
     private void commonSetup(final FMLCommonSetupEvent event) {
