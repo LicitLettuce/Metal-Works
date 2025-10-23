@@ -1953,6 +1953,56 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         // Eroded Tin Shingle Slab From Stonecutting Waxed Eroded Tin Shingles
         stonecut(pWriter, ModItems.WAXED_ERODED_TIN_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.WAXED_ERODED_TIN_SHINGLE_SLAB.get(),   2, "waxed_eroded_tin_shingles_to_slab");
 
+        // Bronze Tiles From Stonecutting
+        stonecut(pWriter, ModItems.BRONZE_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_TILES.get(),   4, "bronze_block_to_bronze_tiles");
+
+        // Bronze Tile Stairs From Stonecutting Bronze Block
+        stonecut(pWriter, ModItems.BRONZE_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_TILE_STAIRS.get(),   4, "bronze_block_to_bronze_tile_stairs");
+
+        // Bronze Tile Slab From Stonecutting Bronze Block
+        stonecut(pWriter, ModItems.BRONZE_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_TILE_SLAB.get(),   8, "bronze_block_to_bronze_tile_slab");
+
+        // Bronze Shingles From Stonecutting
+        stonecut(pWriter, ModItems.BRONZE_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_SHINGLES.get(),   4, "bronze_block_to_bronze_shingles");
+
+        // Bronze Shingle Stairs From Stonecutting Bronze Block
+        stonecut(pWriter, ModItems.BRONZE_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_SHINGLE_STAIRS.get(),   4, "bronze_block_to_bronze_shingle_stairs");
+
+        // Bronze Shingle Slab From Stonecutting Bronze Block
+        stonecut(pWriter, ModItems.BRONZE_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_SHINGLE_SLAB.get(),   8, "bronze_block_to_bronze_shingle_slab");
+
+        // Bronze Grate From Stonecutting Bronze Block
+        stonecut(pWriter, ModItems.BRONZE_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_GRATE.get(),   4, "bronze_block_to_bronze_grate");
+
+        // Bronze Grate Drain From Stonecutting Bronze Block
+        stonecut(pWriter, ModItems.BRONZE_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_GRATE_DRAIN.get(),   6, "bronze_block_to_bronze_grate_drain");
+
+        // Bronze Tile Stairs Stonecutting
+        stonecut(pWriter, ModItems.BRONZE_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_TILE_STAIRS.get(),   1, "bronze_tile_to_bronze_tile_stair");
+
+        // Bronze Tile Slab Stonecutting
+        stonecut(pWriter, ModItems.BRONZE_TILES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_TILE_STAIRS.get(),   2, "bronze_tile_to_bronze_tile_slab");
+
+        // Bronze Shingle Stairs Stonecutting
+        stonecut(pWriter, ModItems.BRONZE_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_SHINGLE_STAIRS.get(),   1, "bronze_shingle_to_bronze_shingle_stair");
+
+        // Bronze Shingle Slab Stonecutting
+        stonecut(pWriter, ModItems.BRONZE_SHINGLES.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_SHINGLE_STAIRS.get(),   2, "bronze_shingle_to_bronze_shingle_slab");
+
+        // Rose Gold Mosaic From Stonecutting Rose Gold Block
+        stonecut(pWriter, ModItems.ROSE_GOLD_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_GOLD_MOSAIC.get(),   4, "rose_gold_block_to_rose_gold_mosaic");
+
+        // Rose Gold Mosaic Stairs From Rose Gold Block
+        stonecut(pWriter, ModItems.ROSE_GOLD_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_GOLD_MOSAIC_STAIRS.get(),   4, "rose_gold_block_to_rose_gold_mosaic_stairs");
+
+        // Rose Gold Mosaic Slab From Rose Gold Block
+        stonecut(pWriter, ModItems.ROSE_GOLD_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_GOLD_MOSAIC_SLAB.get(),   8, "rose_gold_block_to_rose_gold_mosaic_slab");
+
+        // Rose Gold Mosaic Stairs From Rose Gold Mosaic
+        stonecut(pWriter, ModItems.ROSE_GOLD_MOSAIC.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_GOLD_MOSAIC_STAIRS.get(),   1, "rose_gold_mosaic_to_rose_gold_mosaic_stairs");
+
+        // Rose Gold Mosaic Slab From Rose Gold Mosaic
+        stonecut(pWriter, ModItems.ROSE_GOLD_MOSAIC.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_GOLD_MOSAIC_SLAB.get(),   2, "rose_gold_osaic_to_rose_gold_mosaic_slab");
     }
 
     private void buildWaxingRecipes(Consumer<FinishedRecipe> writer) {
