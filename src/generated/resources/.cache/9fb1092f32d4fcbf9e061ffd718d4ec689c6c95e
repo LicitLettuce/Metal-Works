@@ -1,4 +1,4 @@
-// 1.20.1	2025-10-23T03:08:34.7186174	Recipes
+// 1.20.1	2025-10-23T16:28:12.1543034	Recipes
 bc2ac9e8f69a8f9def22ec91f31e83a420c967ce data/metal_works/advancements/recipes/building_blocks/bronze_bars.json
 6c78724a847ec2d831e3cfde817f8aabae3d04c6 data/metal_works/advancements/recipes/building_blocks/bronze_door.json
 1352d36afb06d98095210aab7c1ac61a162ea336 data/metal_works/advancements/recipes/building_blocks/bronze_grate.json
@@ -492,7 +492,7 @@ ce1b9062bb56aa38229d935510450ba67879131d data/metal_works/recipes/eroded_tin_til
 f70ec67f86638dcba4c4975199721dcf4f4b9cf2 data/metal_works/recipes/looping_pressure_plate.json
 8f76e1e98b64820fc9e5e35205dc5f83bc4481cd data/metal_works/recipes/mage_campfire.json
 1cac2172f4b14fc442177ed095639c20a9b63197 data/metal_works/recipes/mage_lantern.json
-d8c0ce872f3b3f7949136624f942c2f2d05f1066 data/metal_works/recipes/mage_powder.json
+4f5ba2ed3e0af4db5256f81da96401156794f499 data/metal_works/recipes/mage_powder.json
 687e96d902e2e6b02ee964e41639085b7908a1a7 data/metal_works/recipes/mage_torch.json
 6b394698e7ed5c9ae542251daaa9e409f85e2996 data/metal_works/recipes/medium_weighted_pressure_plate.json
 07b9539c93c6c2fb3951b07038b6c4efb139cc96 data/metal_works/recipes/polished_casiterite_from_stonecutting.json

@@ -1341,13 +1341,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
-        //Mage Powder
+        // Mage Powder
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MAGE_POWDER.get(), 2)
                 .pattern("###")
                 .pattern("#@#")
                 .pattern("###")
                 .define('#', ModItems.ROSE_GOLD_NUGGET.get())
-                .define('@', Items.GUNPOWDER)
+                .define('@', Items.BLAZE_POWDER)
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
