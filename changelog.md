@@ -1,19 +1,21 @@
 # Metal Works Changelog
 
-## 1.2.0 "The Revival Update"
+## 1.2.0 "Tarnish and Theurgy Update"
 
 ### Additions
 - __Added Mage Golem__
   - The Mage Golem is a new golem type that is made with 2 Rose Gold Blocks and 1 Pumpkin
-  - It does not go after entities, instead it blocks hostile mob spawns within a 32 block radius
+  - It does not go after entities, instead it blocks hostile mob spawns within a radius of 8-64 blocks.
+  - The Mage Golem's radius is dependent on the amount of enchanting power within a 3-block radius of itself.
+  - Use bookshelves and magefire items to increase its strength!
   - By default it blocks the following:
     - Monster Spawners
     - Most Hostile Entities
-    - Spawn Eggs
     - Wither Spawns (Yes, Wither Spawns)
     - Portal Spawns (Zombified Piglins)
     - Zombification of Villagers (Dissapear)
     - Zombification of Piglins/Hoglins (Dissapear)
+    - Spawn Eggs of Any Blocked Spawn (i.e. Zombie, Skeleton, Creeper)
   - It does not block the spawns of the following by default:
     - Phantoms
     - Wardens
@@ -21,13 +23,24 @@
     - Illagers
   - Mage Golems Drop 1-2 Rose Gold Ingots Upon Being Killed
   - Monsters will attack Mage Golems, even though they do not attack back
+  - The radius of blocked spawns can be increased by using enchantment power with the following:
+    - Bookshelfs
+    - Mage Fire Blocks
+    - Any block under the tag minecraft:enchantment_power_provider
+      It does not go after entities, instead it blocks hostile mob spawns within a radius of 8-64 blocks.
+      The Mage Golem's radius is dependent on the amount of enchanting power within a 3-block radius of itself. Use bookshelves and magefire items to increase its strength!
+  > **Note:** Config is in the works for spawn preventions – *Lettuce*
+- __Added Crude Bronze and Crude Rose Gold__
+  - Crude Bronze is crafted with 4 Raw Copper and 4 Raw Tin
+  - Crude Bronze can be smelted into Tin Ingots
+  - Crude Rose Gold
 - __Added Cassiterite__
     - A new bluish stone type with a block family similar to granite, diorite, and andesite
     - Cassiterite generates between y-level 0 to 120 in the following biomes
       - Stony Peaks
       - Jagged Peaks
       - Frozen Peaks
-    - Cassiterite can be smelted down into Tin Nuggets, making it useful to mine in large quantities
+    - Cassiterite can be smelted down into Tin Ingots, making it useful to mine in large quantities
 - __Added Nether Tin Ore__
   - Drops 2-6 Tin Nuggets
   - Generates in Nether Waste Biomes between y-level 0 to 128
@@ -56,7 +69,15 @@
     - Mage Fire is a new pink flame variant that can be crafted into torches, lanterns, tin lanterns, and campfires
 - __Added Rose Powder__
     - Rose Powder is the crafting ingredient used to make Mage Fire items
-    - Crafted from 4 Gunpowder and 4 Rose Gold Nugget
+    - Crafted from 1 Blazepowder and 9 Rose Gold Nuggets
+### Global Loot Additions
+- __Added New Loot Modifiers__
+    - Tin: Found in most village chests, dungeons, and early loot tables
+    - Bronze: Appears in dungeons, strongholds, bastions, and village blacksmiths
+    - Rose Gold: Found in mansions, strongholds, and bastions
+- Exact Loot spawn percentages can be found on the Wiki page
+   
+
 ### Changes
 - __Changed Rose Lantern center texture to be opaque__
   - The center texture is now opaque to prevent rendering errors 
@@ -83,8 +104,6 @@
 - Cut Tin Pressure Plate
 - Cut Tin Button
 > **Note:** I removed these because they did not fit the direction of the mod. They felt like filler blocks added for the sake of variety, without much purpose. – *Lettuce*
-### Translations
-- Added the following translations:
 
 ## 1.1.3
 
