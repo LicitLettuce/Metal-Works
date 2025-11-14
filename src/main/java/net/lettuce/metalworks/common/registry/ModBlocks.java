@@ -32,9 +32,24 @@ public class ModBlocks {
     public static final RegistryObject<Block> POLISHED_CASSITERITE = BLOCKS.register("polished_cassiterite", () -> new Block
             (BlockBehaviour.Properties.copy(ModBlocks.CASSITERITE.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final RegistryObject<Block> POLISHED_CASSITERITE_STAIRS = BLOCKS.register("polished_cassiterite_stairs", () -> new StairBlock
-            (() -> ModBlocks.CASSITERITE.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.CASSITERITE.get())));
+            (() -> ModBlocks.POLISHED_CASSITERITE.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.POLISHED_CASSITERITE.get())));
     public static final RegistryObject<Block> POLISHED_CASSITERITE_SLAB = BLOCKS.register("polished_cassiterite_slab", () -> new SlabBlock
-            (BlockBehaviour.Properties.copy(ModBlocks.CASSITERITE.get())));
+            (BlockBehaviour.Properties.copy(ModBlocks.POLISHED_CASSITERITE.get())));
+    public static final RegistryObject<Block> POLISHED_CASSITERITE_WALL = BLOCKS.register("polished_cassiterite_wall", () -> new WallBlock(
+            BlockBehaviour.Properties.copy(ModBlocks.POLISHED_CASSITERITE.get())));
+
+    public static final RegistryObject<Block> CASSITERITE_BRICKS = BLOCKS.register("cassiterite_bricks", () -> new Block
+            (BlockBehaviour.Properties.copy(ModBlocks.POLISHED_CASSITERITE.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+    public static final RegistryObject<Block> CRACKED_CASSITERITE_BRICKS = BLOCKS.register("cracked_cassiterite_bricks", () -> new Block
+            (BlockBehaviour.Properties.copy(ModBlocks.POLISHED_CASSITERITE.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+    public static final RegistryObject<Block> CASSITERITE_BRICK_STAIRS = BLOCKS.register("cassiterite_brick_stairs", () -> new StairBlock
+            (() -> ModBlocks.CASSITERITE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.CASSITERITE_BRICKS.get())));
+    public static final RegistryObject<Block> CASSITERITE_BRICK_SLAB = BLOCKS.register("cassiterite_brick_slab", () -> new SlabBlock
+            (BlockBehaviour.Properties.copy(ModBlocks.CASSITERITE_BRICKS.get())));
+    public static final RegistryObject<Block> CASSITERITE_BRICK_WALL = BLOCKS.register("cassiterite_brick_wall", () -> new WallBlock(
+            BlockBehaviour.Properties.copy(ModBlocks.CASSITERITE_BRICKS.get())));
+    public static final RegistryObject<Block> CHISELED_CASSITERITE_BRICKS = BLOCKS.register("chiseled_cassiterite_bricks", () -> new Block
+            (BlockBehaviour.Properties.copy(ModBlocks.POLISHED_CASSITERITE.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
 
         // Natural Tin Blocks
     public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore", () -> new Block
@@ -294,11 +309,41 @@ public class ModBlocks {
             (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
 
         // Tin Door
-    public static final RegistryObject<Block> TIN_DOOR = BLOCKS.register("tin_door", () -> new DoorBlock
+    public static final RegistryObject<Block> TIN_DOOR = BLOCKS.register("tin_door", () -> new WeatheringTinDoorBlock
+                (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE, ModBlocks.TIN_DOOR::get));
+    public static final RegistryObject<Block> TARNISHED_TIN_DOOR = BLOCKS.register("tarnished_tin_door", () -> new WeatheringTinDoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE, ModBlocks.TARNISHED_TIN_DOOR::get));
+    public static final RegistryObject<Block> CORRODED_TIN_DOOR = BLOCKS.register("corroded_tin_door", () -> new WeatheringTinDoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE, ModBlocks.CORRODED_TIN_DOOR::get));
+    public static final RegistryObject<Block> ERODED_TIN_DOOR = BLOCKS.register("eroded_tin_door", () -> new DoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
+
+    public static final RegistryObject<Block> WAXED_TIN_DOOR = BLOCKS.register("waxed_tin_door", () -> new DoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
+    public static final RegistryObject<Block> WAXED_TARNISHED_TIN_DOOR = BLOCKS.register("waxed_tarnished_tin_door", () -> new DoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
+    public static final RegistryObject<Block> WAXED_CORRODED_TIN_DOOR = BLOCKS.register("waxed_corroded_tin_door", () -> new DoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
+    public static final RegistryObject<Block> WAXED_ERODED_TIN_DOOR = BLOCKS.register("waxed_eroded_tin_door", () -> new DoorBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
 
         // Tin Trapdoor
-    public static final RegistryObject<Block> TIN_TRAPDOOR = BLOCKS.register("tin_trapdoor", () -> new TrapDoorBlock
+    public static final RegistryObject<Block> TIN_TRAPDOOR = BLOCKS.register("tin_trapdoor", () -> new WeatheringTinTrapdoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE, ModBlocks.TIN_TRAPDOOR::get));
+    public static final RegistryObject<Block> TARNISHED_TIN_TRAPDOOR = BLOCKS.register("tarnished_tin_trapdoor", () -> new WeatheringTinTrapdoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE, ModBlocks.TARNISHED_TIN_TRAPDOOR::get));
+    public static final RegistryObject<Block> CORRODED_TIN_TRAPDOOR = BLOCKS.register("corroded_tin_trapdoor", () -> new WeatheringTinTrapdoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE, ModBlocks.CORRODED_TIN_TRAPDOOR::get));
+    public static final RegistryObject<Block> ERODED_TIN_TRAPDOOR = BLOCKS.register("eroded_tin_trapdoor", () -> new TrapDoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
+
+    public static final RegistryObject<Block> WAXED_TIN_TRAPDOOR = BLOCKS.register("waxed_tin_trapdoor", () -> new TrapDoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
+    public static final RegistryObject<Block> WAXED_TARNISHED_TIN_TRAPDOOR = BLOCKS.register("waxed_tarnished_tin_trapdoor", () -> new TrapDoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
+    public static final RegistryObject<Block> WAXED_CORRODED_TIN_TRAPDOOR = BLOCKS.register("waxed_corroded_tin_trapdoor", () -> new TrapDoorBlock
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
+    public static final RegistryObject<Block> WAXED_ERODED_TIN_TRAPDOOR = BLOCKS.register("waxed_eroded_tin_trapdoor", () -> new TrapDoorBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
 
         // Tin Bars

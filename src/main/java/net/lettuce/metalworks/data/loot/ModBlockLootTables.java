@@ -37,8 +37,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.POLISHED_CASSITERITE.get());
         this.dropSelf(ModBlocks.POLISHED_CASSITERITE_STAIRS.get());
         this.add(ModBlocks.POLISHED_CASSITERITE_SLAB.get(), createSlabItemTable(ModBlocks.POLISHED_CASSITERITE_SLAB.get()));
+        this.dropSelf(ModBlocks.POLISHED_CASSITERITE_WALL.get());
 
-            // Natural Tin Loot Tables
+        this.dropSelf(ModBlocks.CASSITERITE_BRICKS.get());
+        this.dropSelf(ModBlocks.CRACKED_CASSITERITE_BRICKS.get());
+        this.dropSelf(ModBlocks.CASSITERITE_BRICK_STAIRS.get());
+        this.add(ModBlocks.CASSITERITE_BRICK_SLAB.get(), createSlabItemTable(ModBlocks.CASSITERITE_BRICK_SLAB.get()));
+        this.dropSelf(ModBlocks.CASSITERITE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.CHISELED_CASSITERITE_BRICKS.get());
+
+        // Natural Tin Loot Tables
         this.dropSelf(ModBlocks.RAW_TIN_BLOCK.get());
         this.add(ModBlocks.TIN_ORE.get(), block -> createCopperLikeOreDrops(ModBlocks.TIN_ORE.get(), ModItems.RAW_TIN.get()));
         this.add(ModBlocks.DEEPSLATE_TIN_ORE.get(), block -> createCopperLikeOreDrops(ModBlocks.DEEPSLATE_TIN_ORE.get(), ModItems.RAW_TIN.get()));
@@ -190,9 +198,32 @@ public class ModBlockLootTables extends BlockLootSubProvider {
             // Tin Door Loot Table
         this.add(ModBlocks.TIN_DOOR.get(),
                 block -> createDoorTable(ModBlocks.TIN_DOOR.get()));
+        this.add(ModBlocks.TARNISHED_TIN_DOOR.get(),
+                block -> createDoorTable(ModBlocks.TARNISHED_TIN_DOOR.get()));
+        this.add(ModBlocks.CORRODED_TIN_DOOR.get(),
+                block -> createDoorTable(ModBlocks.CORRODED_TIN_DOOR.get()));
+        this.add(ModBlocks.ERODED_TIN_DOOR.get(),
+                block -> createDoorTable(ModBlocks.ERODED_TIN_DOOR.get()));
+
+        this.add(ModBlocks.WAXED_TIN_DOOR.get(),
+                block -> createDoorTable(ModBlocks.WAXED_TIN_DOOR.get()));
+        this.add(ModBlocks.WAXED_TARNISHED_TIN_DOOR.get(),
+                block -> createDoorTable(ModBlocks.WAXED_TARNISHED_TIN_DOOR.get()));
+        this.add(ModBlocks.WAXED_CORRODED_TIN_DOOR.get(),
+                block -> createDoorTable(ModBlocks.WAXED_CORRODED_TIN_DOOR.get()));
+        this.add(ModBlocks.WAXED_ERODED_TIN_DOOR.get(),
+                block -> createDoorTable(ModBlocks.WAXED_ERODED_TIN_DOOR.get()));
 
             // Tin Trapdoor Loot Table
         this.dropSelf(ModBlocks.TIN_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.TARNISHED_TIN_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.CORRODED_TIN_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.ERODED_TIN_TRAPDOOR.get());
+
+        this.dropSelf(ModBlocks.WAXED_TIN_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_TRAPDOOR.get());
 
             // Tn Bar Loot Tables
         this.dropSelf(ModBlocks.TIN_BARS.get());

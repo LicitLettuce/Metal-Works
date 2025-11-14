@@ -25,6 +25,13 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.POLISHED_CASSITERITE.get());
                                 pOutput.accept(ModItems.POLISHED_CASSITERITE_STAIRS.get());
                                 pOutput.accept(ModItems.POLISHED_CASSITERITE_SLAB.get());
+                                pOutput.accept(ModItems.POLISHED_CASSITERITE_WALL.get());
+                                pOutput.accept(ModItems.CASSITERITE_BRICKS.get());
+                                pOutput.accept(ModItems.CRACKED_CASSITERITE_BRICKS.get());
+                                pOutput.accept(ModItems.CASSITERITE_BRICK_STAIRS.get());
+                                pOutput.accept(ModItems.CASSITERITE_BRICK_SLAB.get());
+                                pOutput.accept(ModItems.CASSITERITE_BRICK_WALL.get());
+                                pOutput.accept(ModItems.CHISELED_CASSITERITE_BRICKS.get());
                                 pOutput.accept(ModItems.TIN_ORE.get());
                                 pOutput.accept(ModItems.DEEPSLATE_TIN_ORE.get());
                                 pOutput.accept(ModItems.NETHER_TIN_ORE.get());
@@ -63,6 +70,8 @@ public class ModCreativeModeTabs {
                                     pOutput.accept(ModItems.TARNISHED_TIN_SHINGLES.get());
                                     pOutput.accept(ModItems.TARNISHED_TIN_SHINGLE_STAIRS.get());
                                     pOutput.accept(ModItems.TARNISHED_TIN_SHINGLE_SLAB.get());
+                                    pOutput.accept(ModItems.TARNISHED_TIN_DOOR.get());
+                                    pOutput.accept(ModItems.TARNISHED_TIN_TRAPDOOR.get());
                                     pOutput.accept(ModItems.TARNISHED_TIN_BARS.get());
                                     pOutput.accept(ModItems.TARNISHED_TIN_CHAIN.get());
                                     pOutput.accept(ModItems.TARNISHED_TIN_LANTERN.get());
@@ -81,6 +90,8 @@ public class ModCreativeModeTabs {
                                     pOutput.accept(ModItems.CORRODED_TIN_SHINGLES.get());
                                     pOutput.accept(ModItems.CORRODED_TIN_SHINGLE_STAIRS.get());
                                     pOutput.accept(ModItems.CORRODED_TIN_SHINGLE_SLAB.get());
+                                    pOutput.accept(ModItems.CORRODED_TIN_DOOR.get());
+                                    pOutput.accept(ModItems.CORRODED_TIN_TRAPDOOR.get());
                                     pOutput.accept(ModItems.CORRODED_TIN_BARS.get());
                                     pOutput.accept(ModItems.CORRODED_TIN_CHAIN.get());
                                     pOutput.accept(ModItems.CORRODED_TIN_LANTERN.get());
@@ -99,6 +110,8 @@ public class ModCreativeModeTabs {
                                     pOutput.accept(ModItems.ERODED_TIN_SHINGLES.get());
                                     pOutput.accept(ModItems.ERODED_TIN_SHINGLE_STAIRS.get());
                                     pOutput.accept(ModItems.ERODED_TIN_SHINGLE_SLAB.get());
+                                    pOutput.accept(ModItems.ERODED_TIN_DOOR.get());
+                                    pOutput.accept(ModItems.ERODED_TIN_TRAPDOOR.get());
                                     pOutput.accept(ModItems.ERODED_TIN_BARS.get());
                                     pOutput.accept(ModItems.ERODED_TIN_CHAIN.get());
                                     pOutput.accept(ModItems.ERODED_TIN_LANTERN.get());
@@ -117,6 +130,8 @@ public class ModCreativeModeTabs {
                                     pOutput.accept(ModItems.WAXED_TIN_SHINGLES.get());
                                     pOutput.accept(ModItems.WAXED_TIN_SHINGLE_STAIRS.get());
                                     pOutput.accept(ModItems.WAXED_TIN_SHINGLE_SLAB.get());
+                                    pOutput.accept(ModItems.WAXED_TIN_DOOR.get());
+                                    pOutput.accept(ModItems.WAXED_TIN_TRAPDOOR.get());
                                     pOutput.accept(ModItems.WAXED_TIN_BARS.get());
                                     pOutput.accept(ModItems.WAXED_TIN_CHAIN.get());
                                     pOutput.accept(ModItems.WAXED_TIN_LANTERN.get());
@@ -135,6 +150,8 @@ public class ModCreativeModeTabs {
                                     pOutput.accept(ModItems.WAXED_TARNISHED_TIN_SHINGLES.get());
                                     pOutput.accept(ModItems.WAXED_TARNISHED_TIN_SHINGLE_STAIRS.get());
                                     pOutput.accept(ModItems.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get());
+                                    pOutput.accept(ModItems.WAXED_TARNISHED_TIN_DOOR.get());
+                                    pOutput.accept(ModItems.WAXED_TARNISHED_TIN_TRAPDOOR.get());
                                     pOutput.accept(ModItems.WAXED_TARNISHED_TIN_BARS.get());
                                     pOutput.accept(ModItems.WAXED_TARNISHED_TIN_CHAIN.get());
                                     pOutput.accept(ModItems.WAXED_TARNISHED_TIN_LANTERN.get());
@@ -153,6 +170,8 @@ public class ModCreativeModeTabs {
                                     pOutput.accept(ModItems.WAXED_CORRODED_TIN_SHINGLES.get());
                                     pOutput.accept(ModItems.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get());
                                     pOutput.accept(ModItems.WAXED_CORRODED_TIN_SHINGLE_SLAB.get());
+                                    pOutput.accept(ModItems.WAXED_CORRODED_TIN_DOOR.get());
+                                    pOutput.accept(ModItems.WAXED_CORRODED_TIN_TRAPDOOR.get());
                                     pOutput.accept(ModItems.WAXED_CORRODED_TIN_BARS.get());
                                     pOutput.accept(ModItems.WAXED_CORRODED_TIN_CHAIN.get());
                                     pOutput.accept(ModItems.WAXED_CORRODED_TIN_LANTERN.get());
@@ -171,6 +190,8 @@ public class ModCreativeModeTabs {
                                     pOutput.accept(ModItems.WAXED_ERODED_TIN_SHINGLES.get());
                                     pOutput.accept(ModItems.WAXED_ERODED_TIN_SHINGLE_STAIRS.get());
                                     pOutput.accept(ModItems.WAXED_ERODED_TIN_SHINGLE_SLAB.get());
+                                    pOutput.accept(ModItems.WAXED_ERODED_TIN_DOOR.get());
+                                    pOutput.accept(ModItems.WAXED_ERODED_TIN_TRAPDOOR.get());
                                     pOutput.accept(ModItems.WAXED_ERODED_TIN_BARS.get());
                                     pOutput.accept(ModItems.WAXED_ERODED_TIN_CHAIN.get());
                                     pOutput.accept(ModItems.WAXED_ERODED_TIN_LANTERN.get());

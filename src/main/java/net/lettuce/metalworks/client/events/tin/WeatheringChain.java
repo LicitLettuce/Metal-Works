@@ -75,6 +75,16 @@ public class WeatheringChain {
         WEATHERING_CHAIN.put(ModBlocks.TARNISHED_TIN_SHINGLE_SLAB.get(), ModBlocks.CORRODED_TIN_SHINGLE_SLAB.get());
         WEATHERING_CHAIN.put(ModBlocks.CORRODED_TIN_SHINGLE_SLAB.get(), ModBlocks.ERODED_TIN_SHINGLE_SLAB.get());
 
+        // Doors
+        WEATHERING_CHAIN.put(ModBlocks.TIN_DOOR.get(), ModBlocks.TARNISHED_TIN_DOOR.get());
+        WEATHERING_CHAIN.put(ModBlocks.TARNISHED_TIN_DOOR.get(), ModBlocks.CORRODED_TIN_DOOR.get());
+        WEATHERING_CHAIN.put(ModBlocks.CORRODED_TIN_DOOR.get(), ModBlocks.ERODED_TIN_DOOR.get());
+
+// Trapdoors
+        WEATHERING_CHAIN.put(ModBlocks.TIN_TRAPDOOR.get(), ModBlocks.TARNISHED_TIN_TRAPDOOR.get());
+        WEATHERING_CHAIN.put(ModBlocks.TARNISHED_TIN_TRAPDOOR.get(), ModBlocks.CORRODED_TIN_TRAPDOOR.get());
+        WEATHERING_CHAIN.put(ModBlocks.CORRODED_TIN_TRAPDOOR.get(), ModBlocks.ERODED_TIN_TRAPDOOR.get());
+
         // Tin Bars
         WEATHERING_CHAIN.put(ModBlocks.TIN_BARS.get(), ModBlocks.TARNISHED_TIN_BARS.get());
         WEATHERING_CHAIN.put(ModBlocks.TARNISHED_TIN_BARS.get(), ModBlocks.CORRODED_TIN_BARS.get());

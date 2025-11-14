@@ -85,6 +85,9 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
+    maven {
+        url = "https://maven.teamabnormals.com"
+    }
     mavenCentral()
 }
 
@@ -93,6 +96,8 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+    implementation fg.deobf("com.teamabnormals:blueprint:${minecraft_version}-${blueprint_version}")
+
 }
 
 // Resource processing

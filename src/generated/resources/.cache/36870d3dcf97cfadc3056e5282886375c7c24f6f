@@ -1,9 +1,9 @@
-// 1.20.1	2025-10-23T02:57:14.7389294	Tags for minecraft:block mod id metal_works
+// 1.20.1	2025-11-13T17:20:40.5521254	Tags for minecraft:block mod id metal_works
 f16e0f65df3b637dd6f3ad2a9164eda09a37b0db data/metal_works/tags/blocks/mage_fire_base_blocks.json
 7ae1c4261a037c090f251e064d50da9f241f35e6 data/metal_works/tags/blocks/tarnished_tin_blocks.json
 355db86fbe5e99617532f5293bbce2386c7e34e2 data/metal_works/tags/blocks/tin_ores.json
 f63794d437ad00f5283e8126ebf92b9e448943fc data/minecraft/tags/blocks/enchantment_power_provider.json
 d85d5d198460096cdcc71616f5ec9423b6fd6f63 data/minecraft/tags/blocks/mineable/axe.json
-085f19ec61fe833d078b062ae76d50646450718c data/minecraft/tags/blocks/mineable/pickaxe.json
+d80d490fbbaea7889dcabb70b1a69e78cb4ecb97 data/minecraft/tags/blocks/mineable/pickaxe.json
 355db86fbe5e99617532f5293bbce2386c7e34e2 data/minecraft/tags/blocks/needs_stone_tool.json
-4f101f616580006335087c1cb136665400061302 data/minecraft/tags/blocks/walls.json
+49e8caad0b57b300bc4809fab828cfbe4c5ece8e data/minecraft/tags/blocks/walls.json

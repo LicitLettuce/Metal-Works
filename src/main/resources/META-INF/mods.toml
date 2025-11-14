@@ -6,10 +6,10 @@ license="Lettuce License v2.1 https://github.com/LicitLettuce/Metal-Works?tab=Li
 modId="metal_works"
 version="1.2.0"
 displayName="Metal Works"
-credits="LicitLettuce (Game Design, Artist, Programmer), That_Bubba_Guy (Assets & Models), Im_Dolos (Tester, Concepts, & Documenter)"
+credits="LicitLettuce (Game Design, Artist, Programmer), Im_Dolos (Tester , Concepts, & Documentation)"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/metal-works"
 logoFile="logo.png"
-authors="LicitLettuce, That Bubba Guy, Im_Dolos"
+authors="LicitLettuce, Im_Dolos"
 description="Adds vanilla-styled metals with distinct functions and some deco!"
 
 [[dependencies.metal_works]]
@@ -18,3 +18,11 @@ mandatory=true
 versionRange="[1.20.1]"
 ordering="NONE"
 side="BOTH"
+
+[[dependencies.metal_works]]
+modId ="blueprint"
+mandatory =true
+versionRange ="[7.1.0,)"
+ordering ="AFTER"
+side ="BOTH"
+

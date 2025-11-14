@@ -35,5 +35,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.ROSE_GOLD_LEGGINGS.get(),
                 ModItems.ROSE_GOLD_BOOTS.get());
 
+        this.tag(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.TIN_INGOT.get(),
+                        ModItems.BRONZE_INGOT.get(),
+                        ModItems.ROSE_GOLD_INGOT.get());
+
+
     }
 }

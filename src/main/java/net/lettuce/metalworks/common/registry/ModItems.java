@@ -180,6 +180,21 @@ public class ModItems {
             (ModBlocks.POLISHED_CASSITERITE_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> POLISHED_CASSITERITE_SLAB = ITEMS.register("polished_cassiterite_slab", () -> new BlockItem
             (ModBlocks.POLISHED_CASSITERITE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> POLISHED_CASSITERITE_WALL = ITEMS.register("polished_cassiterite_wall", () -> new BlockItem
+            (ModBlocks.POLISHED_CASSITERITE_WALL.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CASSITERITE_BRICKS = ITEMS.register("cassiterite_bricks", () -> new BlockItem
+            (ModBlocks.CASSITERITE_BRICKS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CRACKED_CASSITERITE_BRICKS = ITEMS.register("cracked_cassiterite_bricks", () -> new BlockItem
+            (ModBlocks.CRACKED_CASSITERITE_BRICKS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CASSITERITE_BRICK_STAIRS = ITEMS.register("cassiterite_brick_stairs", () -> new BlockItem
+            (ModBlocks.CASSITERITE_BRICK_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CASSITERITE_BRICK_SLAB = ITEMS.register("cassiterite_brick_slab", () -> new BlockItem
+            (ModBlocks.CASSITERITE_BRICK_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CASSITERITE_BRICK_WALL = ITEMS.register("cassiterite_brick_wall", () -> new BlockItem
+            (ModBlocks.CASSITERITE_BRICK_WALL.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CHISELED_CASSITERITE_BRICKS = ITEMS.register("chiseled_cassiterite_bricks", () -> new BlockItem
+            (ModBlocks.CHISELED_CASSITERITE_BRICKS.get(), new Item.Properties()));
+
 
         // Natural Tin Items
     public static final RegistryObject<BlockItem> RAW_TIN_BLOCK = ITEMS.register("raw_tin_block", () -> new BlockItem
@@ -442,10 +457,40 @@ public class ModItems {
         // Tin Door Items
     public static final RegistryObject<BlockItem> TIN_DOOR = ITEMS.register("tin_door", () -> new BlockItem
             (ModBlocks.TIN_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> TARNISHED_TIN_DOOR = ITEMS.register("tarnished_tin_door", () -> new BlockItem
+            (ModBlocks.TARNISHED_TIN_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CORRODED_TIN_DOOR = ITEMS.register("corroded_tin_door", () -> new BlockItem
+            (ModBlocks.CORRODED_TIN_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> ERODED_TIN_DOOR = ITEMS.register("eroded_tin_door", () -> new BlockItem
+            (ModBlocks.ERODED_TIN_DOOR.get(), new Item.Properties()));
+
+    public static final RegistryObject<BlockItem> WAXED_TIN_DOOR = ITEMS.register("waxed_tin_door", () -> new BlockItem
+            (ModBlocks.WAXED_TIN_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_DOOR = ITEMS.register("waxed_tarnished_tin_door", () -> new BlockItem
+            (ModBlocks.WAXED_TARNISHED_TIN_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_DOOR = ITEMS.register("waxed_corroded_tin_door", () -> new BlockItem
+            (ModBlocks.WAXED_CORRODED_TIN_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_DOOR = ITEMS.register("waxed_eroded_tin_door", () -> new BlockItem
+            (ModBlocks.WAXED_ERODED_TIN_DOOR.get(), new Item.Properties()));
 
         // Tin Trapdoor Items
     public static final RegistryObject<BlockItem> TIN_TRAPDOOR = ITEMS.register("tin_trapdoor", () -> new BlockItem
             (ModBlocks.TIN_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> TARNISHED_TIN_TRAPDOOR = ITEMS.register("tarnished_tin_trapdoor", () -> new BlockItem
+            (ModBlocks.TARNISHED_TIN_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CORRODED_TIN_TRAPDOOR = ITEMS.register("corroded_tin_trapdoor", () -> new BlockItem
+            (ModBlocks.CORRODED_TIN_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> ERODED_TIN_TRAPDOOR = ITEMS.register("eroded_tin_trapdoor", () -> new BlockItem
+            (ModBlocks.ERODED_TIN_TRAPDOOR.get(), new Item.Properties()));
+
+    public static final RegistryObject<BlockItem> WAXED_TIN_TRAPDOOR = ITEMS.register("waxed_tin_trapdoor", () -> new BlockItem
+            (ModBlocks.WAXED_TIN_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_TRAPDOOR = ITEMS.register("waxed_tarnished_tin_trapdoor", () -> new BlockItem
+            (ModBlocks.WAXED_TARNISHED_TIN_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_TRAPDOOR = ITEMS.register("waxed_corroded_tin_trapdoor", () -> new BlockItem
+            (ModBlocks.WAXED_CORRODED_TIN_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_TRAPDOOR = ITEMS.register("waxed_eroded_tin_trapdoor", () -> new BlockItem
+            (ModBlocks.WAXED_ERODED_TIN_TRAPDOOR.get(), new Item.Properties()));
 
         // Tin Bar Items
     public static final RegistryObject<BlockItem> TIN_BARS = ITEMS.register("tin_bars", () -> new BlockItem

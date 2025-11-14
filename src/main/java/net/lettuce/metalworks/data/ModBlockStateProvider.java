@@ -17,18 +17,28 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-            // Casserite Blocks
+            // Cassiterite Blocks
         blockWithItem(ModBlocks.CASSITERITE);
         stairsBlock(((StairBlock) ModBlocks.CASSITERITE_STAIRS.get()), blockTexture(ModBlocks.CASSITERITE.get()));
         slabBlock(((SlabBlock) ModBlocks.CASSITERITE_SLAB.get()), blockTexture(ModBlocks.CASSITERITE.get()), blockTexture(ModBlocks.CASSITERITE.get()));
         wallBlock(((WallBlock) ModBlocks.CASSITERITE_WALL.get()), blockTexture(ModBlocks.CASSITERITE.get()));
 
-            // Polished Casserite
+            // Polished Cassiterite
         blockWithItem(ModBlocks.POLISHED_CASSITERITE);
         stairsBlock(((StairBlock) ModBlocks.POLISHED_CASSITERITE_STAIRS.get()), blockTexture(ModBlocks.POLISHED_CASSITERITE.get()));
         slabBlock(((SlabBlock) ModBlocks.POLISHED_CASSITERITE_SLAB.get()), blockTexture(ModBlocks.POLISHED_CASSITERITE.get()), blockTexture(ModBlocks.POLISHED_CASSITERITE.get()));
+        wallBlock(((WallBlock) ModBlocks.POLISHED_CASSITERITE_WALL.get()), blockTexture(ModBlocks.POLISHED_CASSITERITE.get()));
 
-            // Natural Tin Blocks
+            // Cassiterite Bricks
+        blockWithItem(ModBlocks.CASSITERITE_BRICKS);
+        blockWithItem(ModBlocks.CRACKED_CASSITERITE_BRICKS);
+        stairsBlock(((StairBlock) ModBlocks.CASSITERITE_BRICK_STAIRS.get()), blockTexture(ModBlocks.CASSITERITE_BRICKS.get()));
+        slabBlock(((SlabBlock) ModBlocks.CASSITERITE_BRICK_SLAB.get()), blockTexture(ModBlocks.CASSITERITE_BRICKS.get()), blockTexture(ModBlocks.CASSITERITE_BRICKS.get()));
+        wallBlock(((WallBlock) ModBlocks.CASSITERITE_BRICK_WALL.get()), blockTexture(ModBlocks.CASSITERITE_BRICKS.get()));
+        blockWithItem(ModBlocks.CHISELED_CASSITERITE_BRICKS);
+
+
+        // Natural Tin Blocks
         blockWithItem(ModBlocks.RAW_TIN_BLOCK);
         blockWithItem(ModBlocks.TIN_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_TIN_ORE);
@@ -157,9 +167,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
             // Tin Door
         doorBlockWithRenderType(((DoorBlock) ModBlocks.TIN_DOOR.get()), modLoc("block/tin_door_bottom"), modLoc("block/tin_door_top"), "cutout");
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.TARNISHED_TIN_DOOR.get()), modLoc("block/tarnished_tin_door_bottom"), modLoc("block/tarnished_tin_door_top"), "cutout");
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.CORRODED_TIN_DOOR.get()), modLoc("block/corroded_tin_door_bottom"), modLoc("block/corroded_tin_door_top"), "cutout");
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.ERODED_TIN_DOOR.get()), modLoc("block/eroded_tin_door_bottom"), modLoc("block/eroded_tin_door_top"), "cutout");
+
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.WAXED_TIN_DOOR.get()), modLoc("block/tin_door_bottom"), modLoc("block/tin_door_top"), "cutout");
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.WAXED_TARNISHED_TIN_DOOR.get()), modLoc("block/tarnished_tin_door_bottom"), modLoc("block/tarnished_tin_door_top"), "cutout");
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.WAXED_CORRODED_TIN_DOOR.get()), modLoc("block/corroded_tin_door_bottom"), modLoc("block/corroded_tin_door_top"), "cutout");
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.WAXED_ERODED_TIN_DOOR.get()), modLoc("block/eroded_tin_door_bottom"), modLoc("block/eroded_tin_door_top"), "cutout");
 
             // Tin Trapdoor
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.TIN_TRAPDOOR.get()), modLoc("block/tin_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.TARNISHED_TIN_TRAPDOOR.get()), modLoc("block/tarnished_tin_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.CORRODED_TIN_TRAPDOOR.get()), modLoc("block/corroded_tin_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.ERODED_TIN_TRAPDOOR.get()), modLoc("block/eroded_tin_trapdoor"), true, "cutout");
+
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.WAXED_TIN_TRAPDOOR.get()), modLoc("block/tin_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.WAXED_TARNISHED_TIN_TRAPDOOR.get()), modLoc("block/tarnished_tin_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.WAXED_CORRODED_TIN_TRAPDOOR.get()), modLoc("block/corroded_tin_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.WAXED_ERODED_TIN_TRAPDOOR.get()), modLoc("block/eroded_tin_trapdoor"), true, "cutout");
 
             // Bronze Block
         blockWithItem(ModBlocks.BRONZE_BLOCK);

@@ -186,7 +186,6 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 LootItemRandomChanceCondition.randomChance(0.15f).build()
         }, ModItems.ROSE_GOLD_INGOT.get()));
 
-
         // Nether Fortress
         add("bronze_ingot_from_fortress", new AddItemModifier(new LootItemCondition[]{
                 new LootTableIdCondition.Builder(new ResourceLocation("minecraft:chests/nether_bridge")).build(),

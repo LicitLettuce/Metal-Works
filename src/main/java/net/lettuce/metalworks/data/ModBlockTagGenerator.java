@@ -33,6 +33,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.POLISHED_CASSITERITE.get(),
                         ModBlocks.POLISHED_CASSITERITE_STAIRS.get(),
                         ModBlocks.POLISHED_CASSITERITE_SLAB.get(),
+                        ModBlocks.POLISHED_CASSITERITE_WALL.get(),
+                        ModBlocks.CASSITERITE_BRICKS.get(),
+                        ModBlocks.CRACKED_CASSITERITE_BRICKS.get(),
+                        ModBlocks.CASSITERITE_BRICK_STAIRS.get(),
+                        ModBlocks.CASSITERITE_BRICK_SLAB.get(),
+                        ModBlocks.CASSITERITE_BRICK_WALL.get(),
+                        ModBlocks.CHISELED_CASSITERITE_BRICKS.get(),
                         ModBlocks.TIN_BLOCK.get(),
                         ModBlocks.TARNISHED_TIN.get(),
                         ModBlocks.CORRODED_TIN.get(),
@@ -211,7 +218,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         // Walls
         this.tag(BlockTags.WALLS)
-                .add(ModBlocks.CASSITERITE_WALL.get());
+                .add(ModBlocks.CASSITERITE_WALL.get(),
+                        ModBlocks.POLISHED_CASSITERITE_WALL.get(),
+                        ModBlocks.CASSITERITE_BRICK_WALL.get());
 
         this.tag(ModTags.TIN_ORES)
                 .add(ModBlocks.TIN_ORE.get(),

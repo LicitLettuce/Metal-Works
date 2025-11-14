@@ -4,6 +4,7 @@ package net.lettuce.metalworks.data;
 import net.lettuce.metalworks.core.MetalWorks;
 import net.lettuce.metalworks.common.registry.ModBlocks;
 import net.lettuce.metalworks.common.registry.ModItems;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -23,6 +24,14 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.LinkedHashMap;
 
 public class ModItemModelProvider extends ItemModelProvider {
+
+    public static final ResourceKey<net.minecraft.world.item.armortrim.TrimMaterial> TIN_TRIM
+            = ResourceKey.create(Registries.TRIM_MATERIAL, new ResourceLocation(MetalWorks.MOD_ID, "tin"));
+    public static final ResourceKey<net.minecraft.world.item.armortrim.TrimMaterial> BRONZE_TRIM
+            = ResourceKey.create(Registries.TRIM_MATERIAL, new ResourceLocation(MetalWorks.MOD_ID, "bronze"));
+    public static final ResourceKey<net.minecraft.world.item.armortrim.TrimMaterial> ROSE_GOLD_TRIM
+            = ResourceKey.create(Registries.TRIM_MATERIAL, new ResourceLocation(MetalWorks.MOD_ID, "rose_gold"));
+
     private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
     static {
         trimMaterials.put(TrimMaterials.QUARTZ, 0.1F);
@@ -35,6 +44,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.DIAMOND, 0.8F);
         trimMaterials.put(TrimMaterials.LAPIS, 0.9F);
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
+        trimMaterials.put(TIN_TRIM, 0.2F);
+        trimMaterials.put(BRONZE_TRIM, 0.5F);
+        trimMaterials.put(ROSE_GOLD_TRIM, 1.0F);
     }
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, MetalWorks.MOD_ID, existingFileHelper);
@@ -49,6 +61,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.CASSITERITE_WALL, ModBlocks.CASSITERITE);
         evenSimplerBlockItem(ModBlocks.POLISHED_CASSITERITE_STAIRS);
         evenSimplerBlockItem(ModBlocks.POLISHED_CASSITERITE_SLAB);
+        wallItem(ModBlocks.POLISHED_CASSITERITE_WALL, ModBlocks.POLISHED_CASSITERITE);
+        evenSimplerBlockItem(ModBlocks.CASSITERITE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.CASSITERITE_BRICK_SLAB);
+        wallItem(ModBlocks.CASSITERITE_BRICK_WALL, ModBlocks.CASSITERITE_BRICKS);
 
             // Tin Items
         simpleItem(ModItems.TIN_INGOT);
@@ -119,7 +135,22 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB);
 
         simpleBlockItem(ModBlocks.TIN_DOOR);
+        simpleBlockItem(ModBlocks.TARNISHED_TIN_DOOR);
+        simpleBlockItem(ModBlocks.CORRODED_TIN_DOOR);
+        simpleBlockItem(ModBlocks.ERODED_TIN_DOOR);
+        withExistingParent(ModItems.WAXED_TIN_DOOR.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_door"));
+        withExistingParent(ModItems.WAXED_TARNISHED_TIN_DOOR.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_door"));
+        withExistingParent(ModItems.WAXED_CORRODED_TIN_DOOR.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_door"));
+        withExistingParent(ModItems.WAXED_ERODED_TIN_DOOR.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_door"));
+
         trapdoorItem(ModBlocks.TIN_TRAPDOOR);
+        trapdoorItem(ModBlocks.TARNISHED_TIN_TRAPDOOR);
+        trapdoorItem(ModBlocks.CORRODED_TIN_TRAPDOOR);
+        trapdoorItem(ModBlocks.ERODED_TIN_TRAPDOOR);
+        trapdoorItem(ModBlocks.WAXED_TIN_TRAPDOOR);
+        trapdoorItem(ModBlocks.WAXED_TARNISHED_TIN_TRAPDOOR);
+        trapdoorItem(ModBlocks.WAXED_CORRODED_TIN_TRAPDOOR);
+        trapdoorItem(ModBlocks.WAXED_ERODED_TIN_TRAPDOOR);
 
         simpleBlockItem(ModBlocks.TIN_CHAIN);
         simpleBlockItem(ModBlocks.TARNISHED_TIN_CHAIN);

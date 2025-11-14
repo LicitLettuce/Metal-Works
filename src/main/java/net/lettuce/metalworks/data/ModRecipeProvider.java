@@ -2085,11 +2085,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 Pair.of(ModBlocks.CORRODED_TIN_SHINGLE_SLAB.get(), ModBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB.get()),
                 Pair.of(ModBlocks.ERODED_TIN_SHINGLE_SLAB.get(), ModBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB.get()),
 
+                // Tin Door
+                Pair.of(ModBlocks.TIN_DOOR.get(), ModBlocks.WAXED_TIN_DOOR.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_DOOR.get(), ModBlocks.WAXED_TARNISHED_TIN_DOOR.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_DOOR.get(), ModBlocks.WAXED_CORRODED_TIN_DOOR.get()),
+                Pair.of(ModBlocks.ERODED_TIN_DOOR.get(), ModBlocks.WAXED_ERODED_TIN_DOOR.get()),
+
+                // Tin Trapdoor
+                Pair.of(ModBlocks.TIN_TRAPDOOR.get(), ModBlocks.WAXED_TIN_TRAPDOOR.get()),
+                Pair.of(ModBlocks.TARNISHED_TIN_TRAPDOOR.get(), ModBlocks.WAXED_TARNISHED_TIN_TRAPDOOR.get()),
+                Pair.of(ModBlocks.CORRODED_TIN_TRAPDOOR.get(), ModBlocks.WAXED_CORRODED_TIN_TRAPDOOR.get()),
+                Pair.of(ModBlocks.ERODED_TIN_TRAPDOOR.get(), ModBlocks.WAXED_ERODED_TIN_TRAPDOOR.get()),
+
                 // Tin Bars
                 Pair.of(ModBlocks.TIN_BARS.get(), ModBlocks.WAXED_TIN_BARS.get()),
                 Pair.of(ModBlocks.TARNISHED_TIN_BARS.get(), ModBlocks.WAXED_TARNISHED_TIN_BARS.get()),
                 Pair.of(ModBlocks.CORRODED_TIN_BARS.get(), ModBlocks.WAXED_CORRODED_TIN_BARS.get()),
                 Pair.of(ModBlocks.ERODED_TIN_BARS.get(), ModBlocks.WAXED_ERODED_TIN_BARS.get()),
+
 
                 // Tin Chain
                 Pair.of(ModBlocks.TIN_CHAIN.get(), ModBlocks.WAXED_TIN_CHAIN.get()),
