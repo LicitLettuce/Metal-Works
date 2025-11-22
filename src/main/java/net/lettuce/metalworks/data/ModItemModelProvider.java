@@ -25,13 +25,6 @@ import java.util.LinkedHashMap;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
-    public static final ResourceKey<net.minecraft.world.item.armortrim.TrimMaterial> TIN_TRIM
-            = ResourceKey.create(Registries.TRIM_MATERIAL, new ResourceLocation(MetalWorks.MOD_ID, "tin"));
-    public static final ResourceKey<net.minecraft.world.item.armortrim.TrimMaterial> BRONZE_TRIM
-            = ResourceKey.create(Registries.TRIM_MATERIAL, new ResourceLocation(MetalWorks.MOD_ID, "bronze"));
-    public static final ResourceKey<net.minecraft.world.item.armortrim.TrimMaterial> ROSE_GOLD_TRIM
-            = ResourceKey.create(Registries.TRIM_MATERIAL, new ResourceLocation(MetalWorks.MOD_ID, "rose_gold"));
-
     private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
     static {
         trimMaterials.put(TrimMaterials.QUARTZ, 0.1F);
@@ -44,9 +37,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.DIAMOND, 0.8F);
         trimMaterials.put(TrimMaterials.LAPIS, 0.9F);
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
-        trimMaterials.put(TIN_TRIM, 0.2F);
-        trimMaterials.put(BRONZE_TRIM, 0.5F);
-        trimMaterials.put(ROSE_GOLD_TRIM, 1.0F);
     }
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, MetalWorks.MOD_ID, existingFileHelper);
@@ -83,109 +73,56 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         evenSimplerBlockItem(ModBlocks.CUT_TIN_STAIRS);
         evenSimplerBlockItem(ModBlocks.TARNISHED_CUT_TIN_STAIRS);
-        evenSimplerBlockItem(ModBlocks.CORRODED_CUT_TIN_STAIRS);
-        evenSimplerBlockItem(ModBlocks.ERODED_CUT_TIN_STAIRS);
         evenSimplerBlockItem(ModBlocks.WAXED_CUT_TIN_STAIRS);
         evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_CUT_TIN_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_CUT_TIN_STAIRS);
         evenSimplerBlockItem(ModBlocks.CUT_TIN_SLAB);
         evenSimplerBlockItem(ModBlocks.TARNISHED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(ModBlocks.CORRODED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(ModBlocks.ERODED_CUT_TIN_SLAB);
         evenSimplerBlockItem(ModBlocks.WAXED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_CUT_TIN_SLAB);
-        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_CUT_TIN_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_CUT_TIN_SLAB);;
 
         evenSimplerBlockItem(ModBlocks.TIN_TILE_STAIRS);
         evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_TILE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.CORRODED_TIN_TILE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.ERODED_TIN_TILE_STAIRS);
         evenSimplerBlockItem(ModBlocks.WAXED_TIN_TILE_STAIRS);
         evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_TILE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_TILE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_TILE_STAIRS);
 
         evenSimplerBlockItem(ModBlocks.TIN_TILE_SLAB);
         evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_TILE_SLAB);
-        evenSimplerBlockItem(ModBlocks.CORRODED_TIN_TILE_SLAB);
-        evenSimplerBlockItem(ModBlocks.ERODED_TIN_TILE_SLAB);
         evenSimplerBlockItem(ModBlocks.WAXED_TIN_TILE_SLAB);
         evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_TILE_SLAB);
-        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_TILE_SLAB);
-        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_TILE_SLAB);
 
         evenSimplerBlockItem(ModBlocks.TIN_SHINGLE_STAIRS);
         evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.CORRODED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.ERODED_TIN_SHINGLE_STAIRS);
         evenSimplerBlockItem(ModBlocks.WAXED_TIN_SHINGLE_STAIRS);
         evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_SHINGLE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_SHINGLE_STAIRS);
 
         evenSimplerBlockItem(ModBlocks.TIN_SHINGLE_SLAB);
         evenSimplerBlockItem(ModBlocks.TARNISHED_TIN_SHINGLE_SLAB);
-        evenSimplerBlockItem(ModBlocks.CORRODED_TIN_SHINGLE_SLAB);
-        evenSimplerBlockItem(ModBlocks.ERODED_TIN_SHINGLE_SLAB);
         evenSimplerBlockItem(ModBlocks.WAXED_TIN_SHINGLE_SLAB);
-        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB);
-        evenSimplerBlockItem(ModBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB);
-        evenSimplerBlockItem(ModBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB);;
 
         simpleBlockItem(ModBlocks.TIN_DOOR);
         simpleBlockItem(ModBlocks.TARNISHED_TIN_DOOR);
-        simpleBlockItem(ModBlocks.CORRODED_TIN_DOOR);
-        simpleBlockItem(ModBlocks.ERODED_TIN_DOOR);
         withExistingParent(ModItems.WAXED_TIN_DOOR.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_door"));
         withExistingParent(ModItems.WAXED_TARNISHED_TIN_DOOR.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_door"));
-        withExistingParent(ModItems.WAXED_CORRODED_TIN_DOOR.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_door"));
-        withExistingParent(ModItems.WAXED_ERODED_TIN_DOOR.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_door"));
 
         trapdoorItem(ModBlocks.TIN_TRAPDOOR);
         trapdoorItem(ModBlocks.TARNISHED_TIN_TRAPDOOR);
-        trapdoorItem(ModBlocks.CORRODED_TIN_TRAPDOOR);
-        trapdoorItem(ModBlocks.ERODED_TIN_TRAPDOOR);
         trapdoorItem(ModBlocks.WAXED_TIN_TRAPDOOR);
         trapdoorItem(ModBlocks.WAXED_TARNISHED_TIN_TRAPDOOR);
-        trapdoorItem(ModBlocks.WAXED_CORRODED_TIN_TRAPDOOR);
-        trapdoorItem(ModBlocks.WAXED_ERODED_TIN_TRAPDOOR);
 
         simpleBlockItem(ModBlocks.TIN_CHAIN);
         simpleBlockItem(ModBlocks.TARNISHED_TIN_CHAIN);
-        simpleBlockItem(ModBlocks.CORRODED_TIN_CHAIN);
-        simpleBlockItem(ModBlocks.ERODED_TIN_CHAIN);
         withExistingParent(ModItems.WAXED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_chain"));
         withExistingParent(ModItems.WAXED_TARNISHED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_chain"));
-        withExistingParent(ModItems.WAXED_CORRODED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_chain"));
-        withExistingParent(ModItems.WAXED_ERODED_TIN_CHAIN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_chain"));
 
         simpleBlockItem(ModBlocks.TARNISHED_TIN_LANTERN);
-        simpleBlockItem(ModBlocks.CORRODED_TIN_LANTERN);
-        simpleBlockItem(ModBlocks.ERODED_TIN_LANTERN);
         withExistingParent(ModItems.WAXED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_lantern"));
         withExistingParent(ModItems.WAXED_TARNISHED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_lantern"));
-        withExistingParent(ModItems.WAXED_CORRODED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_lantern"));
-        withExistingParent(ModItems.WAXED_ERODED_TIN_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_lantern"));
 
         simpleBlockItem(ModBlocks.TIN_SOUL_LANTERN);
         simpleBlockItem(ModBlocks.TARNISHED_TIN_SOUL_LANTERN);
-        simpleBlockItem(ModBlocks.CORRODED_TIN_SOUL_LANTERN);
-        simpleBlockItem(ModBlocks.ERODED_TIN_SOUL_LANTERN);
         withExistingParent(ModItems.WAXED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_soul_lantern"));
         withExistingParent(ModItems.WAXED_TARNISHED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_soul_lantern"));
-        withExistingParent(ModItems.WAXED_CORRODED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_soul_lantern"));
-        withExistingParent(ModItems.WAXED_ERODED_TIN_SOUL_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_soul_lantern"));
-
-        simpleBlockItem(ModBlocks.TIN_MAGE_LANTERN);
-        simpleBlockItem(ModBlocks.TARNISHED_TIN_MAGE_LANTERN);
-        simpleBlockItem(ModBlocks.CORRODED_TIN_MAGE_LANTERN);
-        simpleBlockItem(ModBlocks.ERODED_TIN_MAGE_LANTERN);
-        withExistingParent(ModItems.WAXED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tin_mage_lantern"));
-        withExistingParent(ModItems.WAXED_TARNISHED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/tarnished_tin_mage_lantern"));
-        withExistingParent(ModItems.WAXED_CORRODED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/corroded_tin_mage_lantern"));
-        withExistingParent(ModItems.WAXED_ERODED_TIN_MAGE_LANTERN.getId().getPath(), "item/generated").texture("layer0", modLoc("item/eroded_tin_mage_lantern"));
 
             // Bronze Items
         simpleItem(ModItems.CRUDE_BRONZE);

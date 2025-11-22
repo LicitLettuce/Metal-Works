@@ -32,166 +32,90 @@ public class ToolnteractionsEvent {
         Block block = state.getBlock();
 
         // Tin Block
-        if (block == ModBlocks.ERODED_TIN.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN.get());
-        } else if (block == ModBlocks.CORRODED_TIN.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN.get());
-        } else if (block == ModBlocks.TARNISHED_TIN.get()) {
+        if (block == ModBlocks.TARNISHED_TIN.get()) {
             setWeatheredState(event, ModBlocks.TIN_BLOCK.get());
         }
 
         // Chiseled Tin
-        if (block == ModBlocks.ERODED_CHISELED_TIN.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_CHISELED_TIN.get());
-        } else if (block == ModBlocks.CORRODED_CHISELED_TIN.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_CHISELED_TIN.get());
-        } else if (block == ModBlocks.TARNISHED_CHISELED_TIN.get()) {
+        if (block == ModBlocks.TARNISHED_CHISELED_TIN.get()) {
             setWeatheredState(event, ModBlocks.CHISELED_TIN.get());
         }
 
         // Tin Grate
-        if (block == ModBlocks.ERODED_TIN_GRATE.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_GRATE.get());
-        } else if (block == ModBlocks.CORRODED_TIN_GRATE.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_GRATE.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_GRATE.get()) {
+        if (block == ModBlocks.TARNISHED_TIN_GRATE.get()) {
             setWeatheredState(event, ModBlocks.TIN_GRATE.get());
         }
 
         // Tin Grate Drain
-        if (block == ModBlocks.ERODED_TIN_GRATE_DRAIN.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_GRATE_DRAIN.get());
-        } else if (block == ModBlocks.CORRODED_TIN_GRATE_DRAIN.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_GRATE_DRAIN.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_GRATE_DRAIN.get()) {
+        if (block == ModBlocks.TARNISHED_TIN_GRATE_DRAIN.get()) {
             setWeatheredState(event, ModBlocks.TIN_GRATE_DRAIN.get());
         }
 
         // Cut Tin
-        if (block == ModBlocks.ERODED_CUT_TIN.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_CUT_TIN.get());
-        } else if (block == ModBlocks.CORRODED_CUT_TIN.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_CUT_TIN.get());
-        } else if (block == ModBlocks.TARNISHED_CUT_TIN.get()) {
+        if (block == ModBlocks.TARNISHED_CUT_TIN.get()) {
             setWeatheredState(event, ModBlocks.CUT_TIN.get());
         }
 
         // Cut Tin Stairs
-        if (block == ModBlocks.ERODED_CUT_TIN_STAIRS.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_CUT_TIN_STAIRS.get());
-        } else if (block == ModBlocks.CORRODED_CUT_TIN_STAIRS.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_CUT_TIN_STAIRS.get());
-        } else if (block == ModBlocks.TARNISHED_CUT_TIN_STAIRS.get()) {
+        if (block == ModBlocks.TARNISHED_CUT_TIN_STAIRS.get()) {
             setWeatheredState(event, ModBlocks.CUT_TIN_STAIRS.get());
         }
 
         // Cut Tin Slabs
-        if (block == ModBlocks.ERODED_CUT_TIN_SLAB.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_CUT_TIN_SLAB.get());
-        } else if (block == ModBlocks.CORRODED_CUT_TIN_SLAB.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_CUT_TIN_SLAB.get());
-        } else if (block == ModBlocks.TARNISHED_CUT_TIN_SLAB.get()) {
+        if (block == ModBlocks.TARNISHED_CUT_TIN_SLAB.get()) {
             setWeatheredState(event, ModBlocks.CUT_TIN_SLAB.get());
         }
 
         // Tin Tiles
-        if (block == ModBlocks.ERODED_TIN_TILES.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_TILES.get());
-        } else if (block == ModBlocks.CORRODED_TIN_TILES.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_TILES.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_TILES.get()) {
+        if (block == ModBlocks.TARNISHED_TIN_TILES.get()) {
             setWeatheredState(event, ModBlocks.TIN_TILES.get());
         }
 
         // Tin Tile Stairs
-        if (block == ModBlocks.ERODED_TIN_TILE_STAIRS.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_TILE_STAIRS.get());
-        } else if (block == ModBlocks.CORRODED_TIN_TILE_STAIRS.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_TILE_STAIRS.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_TILE_STAIRS.get()) {
+        if (block == ModBlocks.TARNISHED_TIN_TILE_STAIRS.get()) {
             setWeatheredState(event, ModBlocks.TIN_TILE_STAIRS.get());
         }
 
         // Tin Tile Slabs
-        if (block == ModBlocks.ERODED_TIN_TILE_SLAB.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_TILE_SLAB.get());
-        } else if (block == ModBlocks.CORRODED_TIN_TILE_SLAB.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_TILE_SLAB.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_TILE_SLAB.get()) {
+        if (block == ModBlocks.TARNISHED_TIN_TILE_SLAB.get()) {
             setWeatheredState(event, ModBlocks.TIN_TILE_SLAB.get());
         }
 
         // Tin Shingles
-        if (block == ModBlocks.ERODED_TIN_SHINGLES.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_SHINGLES.get());
-        } else if (block == ModBlocks.CORRODED_TIN_SHINGLES.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_SHINGLES.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_SHINGLES.get()) {
+        if (block == ModBlocks.TARNISHED_TIN_SHINGLES.get()) {
             setWeatheredState(event, ModBlocks.TIN_SHINGLES.get());
         }
 
         // Tin Shingle Stairs
-        if (block == ModBlocks.ERODED_TIN_SHINGLE_STAIRS.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_SHINGLE_STAIRS.get());
-        } else if (block == ModBlocks.CORRODED_TIN_SHINGLE_STAIRS.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS.get()) {
+        if (block == ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS.get()) {
             setWeatheredState(event, ModBlocks.TIN_SHINGLE_STAIRS.get());
         }
 
         // Tin Shingle Slabs
-        if (block == ModBlocks.ERODED_TIN_SHINGLE_SLAB.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_SHINGLE_SLAB.get());
-        } else if (block == ModBlocks.CORRODED_TIN_SHINGLE_SLAB.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_SHINGLE_SLAB.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_SHINGLE_SLAB.get()) {
+        if (block == ModBlocks.TARNISHED_TIN_SHINGLE_SLAB.get()) {
             setWeatheredState(event, ModBlocks.TIN_SHINGLE_SLAB.get());
         }
 
         // Tin Bars
-        if (block == ModBlocks.ERODED_TIN_BARS.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_BARS.get());
-        } else if (block == ModBlocks.CORRODED_TIN_BARS.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_BARS.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_BARS.get()) {
+        if (block == ModBlocks.TARNISHED_TIN_BARS.get()) {
             setWeatheredState(event, ModBlocks.TIN_BARS.get());
         }
 
         // Tin Chains
-        if (block == ModBlocks.ERODED_TIN_CHAIN.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_CHAIN.get());
-        } else if (block == ModBlocks.CORRODED_TIN_CHAIN.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_CHAIN.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_CHAIN.get()) {
+        if (block == ModBlocks.TARNISHED_TIN_CHAIN.get()) {
             setWeatheredState(event, ModBlocks.TIN_CHAIN.get());
         }
 
         // Tin Lanterns
-        if (block == ModBlocks.ERODED_TIN_LANTERN.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_LANTERN.get());
-        } else if (block == ModBlocks.CORRODED_TIN_LANTERN.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_LANTERN.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_LANTERN.get()) {
+        if (block == ModBlocks.TARNISHED_TIN_LANTERN.get()) {
             setWeatheredState(event, ModBlocks.TIN_LANTERN.get());
         }
 
         // Tin Soul Lanterns
-        if (block == ModBlocks.ERODED_TIN_SOUL_LANTERN.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_SOUL_LANTERN.get());
-        } else if (block == ModBlocks.CORRODED_TIN_SOUL_LANTERN.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_SOUL_LANTERN.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_SOUL_LANTERN.get()) {
+        if (block == ModBlocks.TARNISHED_TIN_SOUL_LANTERN.get()) {
             setWeatheredState(event, ModBlocks.TIN_SOUL_LANTERN.get());
         }
 
-        // Tin Mage Lantern
-        if (block == ModBlocks.ERODED_TIN_MAGE_LANTERN.get()) {
-            setWeatheredState(event, ModBlocks.CORRODED_TIN_MAGE_LANTERN.get());
-        } else if (block == ModBlocks.CORRODED_TIN_MAGE_LANTERN.get()) {
-            setWeatheredState(event, ModBlocks.TARNISHED_TIN_MAGE_LANTERN.get());
-        } else if (block == ModBlocks.TARNISHED_TIN_MAGE_LANTERN.get()) {
-            setWeatheredState(event, ModBlocks.TIN_MAGE_LANTERN.get());
-        }
     }
     @Mod.EventBusSubscriber(modid = "metal_works")
     public class CommonEvents {

@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "type": "blueprint:paletted_permutations",
+      "palette_key": "minecraft:trims/color_palettes/trim_palette",
+      "permutations": {
+        "tin": "metal_works:trims/color_palettes/tin",
+        "bronze": "metal_works:trims/color_palettes/bronze",
+        "rose_gold": "metal_works:trims/color_palettes/rose_gold"
+      },
+      "sources": [
+        {
+          "type": "minecraft:directory",
+          "prefix": "trims/models/armor/",
+          "source": "trims/models/armor"
+        }
+      ]
+    }
+  ]
+}

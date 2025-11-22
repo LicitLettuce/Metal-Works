@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "metal_works:block/eroded_tin_tiles",
-    "side": "metal_works:block/eroded_tin_tiles",
-    "top": "metal_works:block/eroded_tin_tiles"
-  }
-}

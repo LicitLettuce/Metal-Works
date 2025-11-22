@@ -1,6 +1,9 @@
 {
   "asset_name": "rose_gold",
-  "description": { "translate": "trim_material.metal_works.rose_gold" },
+  "description": {
+    "color": "#505150",
+    "translate": "trim_material.metal_works.rose_gold"
+  },
   "ingredient": "metal_works:rose_gold_ingot",
-  "item_model_index": 1.0
+  "item_model_index": -1.0
 }

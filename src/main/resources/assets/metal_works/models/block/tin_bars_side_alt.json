@@ -4,7 +4,7 @@
   "textures": {
     "particle": "metal_works:block/tin_bars",
     "bars": "metal_works:block/tin_bars",
-    "edge": "metal_works:block/tin_bars"
+    "edge": "metal_works:block/tin_bars_edge"
   },
   "elements": [
     {   "from": [ 8, 0, 8 ],

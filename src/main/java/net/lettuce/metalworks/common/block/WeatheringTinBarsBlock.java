@@ -1,6 +1,6 @@
 package net.lettuce.metalworks.common.block;
 
-import net.lettuce.metalworks.client.events.tin.WeatheringChain;
+import net.lettuce.metalworks.client.events.tin.TarnishingChain;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -18,7 +18,7 @@ public class WeatheringTinBarsBlock extends IronBarsBlock {
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (random.nextInt(300) == 0) {
-            Block next = WeatheringChain.getNext(this);
+            Block next = TarnishingChain.getNext(this);
             if (next instanceof IronBarsBlock nextBars) {
                 level.setBlock(pos, nextBars.defaultBlockState()
                         .setValue(NORTH, state.getValue(NORTH))
@@ -31,7 +31,7 @@ public class WeatheringTinBarsBlock extends IronBarsBlock {
 
     @Override
     public boolean isRandomlyTicking(BlockState state) {
-        return WeatheringChain.getNext(this) != null;
+        return TarnishingChain.getNext(this) != null;
     }
 }
 

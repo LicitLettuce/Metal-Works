@@ -60,24 +60,6 @@
       "predicate": {
         "minecraft:trim_type": 1.0
       }
-    },
-    {
-      "model": "metal_works:item/bronze_leggings_tin_trim",
-      "predicate": {
-        "minecraft:trim_type": 0.2
-      }
-    },
-    {
-      "model": "metal_works:item/bronze_leggings_bronze_trim",
-      "predicate": {
-        "minecraft:trim_type": 0.5
-      }
-    },
-    {
-      "model": "metal_works:item/bronze_leggings_rose_gold_trim",
-      "predicate": {
-        "minecraft:trim_type": 1.0
-      }
     }
   ],
   "textures": {

@@ -50,235 +50,145 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.RAW_TIN_BLOCK.get());
         this.add(ModBlocks.TIN_ORE.get(), block -> createCopperLikeOreDrops(ModBlocks.TIN_ORE.get(), ModItems.RAW_TIN.get()));
         this.add(ModBlocks.DEEPSLATE_TIN_ORE.get(), block -> createCopperLikeOreDrops(ModBlocks.DEEPSLATE_TIN_ORE.get(), ModItems.RAW_TIN.get()));
-        this.add(ModBlocks.NETHER_TIN_ORE.get(), block -> createNetherLikeOreDrops(ModBlocks.NETHER_TIN_ORE.get(), ModItems.TIN_NUGGET.get()));
+        this.add(ModBlocks.SOUL_TIN_ORE.get(), block -> createNetherLikeOreDrops(ModBlocks.SOUL_TIN_ORE.get(), ModItems.TIN_NUGGET.get()));
 
             // Tin Block Loot Tables
         this.dropSelf(ModBlocks.TIN_BLOCK.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN.get());
-        this.dropSelf(ModBlocks.ERODED_TIN.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_BLOCK.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN.get());
 
             // Chiseled Tin Loot Tables
         this.dropSelf(ModBlocks.CHISELED_TIN.get());
         this.dropSelf(ModBlocks.TARNISHED_CHISELED_TIN.get());
-        this.dropSelf(ModBlocks.CORRODED_CHISELED_TIN.get());
-        this.dropSelf(ModBlocks.ERODED_CHISELED_TIN.get());
 
         this.dropSelf(ModBlocks.WAXED_CHISELED_TIN.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_CHISELED_TIN.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_CHISELED_TIN.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_CHISELED_TIN.get());
 
             // Tin Grates Loot Tables
         this.dropSelf(ModBlocks.TIN_GRATE.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_GRATE.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_GRATE.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_GRATE.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_GRATE.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_GRATE.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_GRATE.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_GRATE.get());
 
             // Tin Grate Drains Loot Tables
         this.dropSelf(ModBlocks.TIN_GRATE_DRAIN.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_GRATE_DRAIN.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_GRATE_DRAIN.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_GRATE_DRAIN.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_GRATE_DRAIN.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_GRATE_DRAIN.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_GRATE_DRAIN.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_GRATE_DRAIN.get());
 
             // Cut Tin Loot Tables
         this.dropSelf(ModBlocks.CUT_TIN.get());
         this.dropSelf(ModBlocks.TARNISHED_CUT_TIN.get());
-        this.dropSelf(ModBlocks.CORRODED_CUT_TIN.get());
-        this.dropSelf(ModBlocks.ERODED_CUT_TIN.get());
 
         this.dropSelf(ModBlocks.WAXED_CUT_TIN.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_CUT_TIN.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_CUT_TIN.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_CUT_TIN.get());
 
             // Cut Tin Stair Loot Tables
         this.dropSelf(ModBlocks.CUT_TIN_STAIRS.get());
         this.dropSelf(ModBlocks.TARNISHED_CUT_TIN_STAIRS.get());
-        this.dropSelf(ModBlocks.CORRODED_CUT_TIN_STAIRS.get());
-        this.dropSelf(ModBlocks.ERODED_CUT_TIN_STAIRS.get());
 
-        this.dropSelf(ModBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_CUT_TIN_STAIRS.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_CUT_TIN_STAIRS.get());
         this.dropSelf(ModBlocks.WAXED_CUT_TIN_STAIRS.get());
+        this.dropSelf(ModBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS.get());
 
-            // Cut Tin Slab Loot Tables
+
+        // Cut Tin Slab Loot Tables
         this.dropSelf(ModBlocks.CUT_TIN_SLAB.get());
         this.dropSelf(ModBlocks.TARNISHED_CUT_TIN_SLAB.get());
-        this.dropSelf(ModBlocks.CORRODED_CUT_TIN_SLAB.get());
-        this.dropSelf(ModBlocks.ERODED_CUT_TIN_SLAB.get());
 
         this.dropSelf(ModBlocks.WAXED_CUT_TIN_SLAB.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_CUT_TIN_SLAB.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_CUT_TIN_SLAB.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_CUT_TIN_SLAB.get());
 
             // Tin Tile Loot Tables
         this.dropSelf(ModBlocks.TIN_TILES.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_TILES.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_TILES.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_TILES.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_TILES.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_TILES.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_TILES.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_TILES.get());
 
             // Tin Tile Stair Loot Tables
         this.dropSelf(ModBlocks.TIN_TILE_STAIRS.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_TILE_STAIRS.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_TILE_STAIRS.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_TILE_STAIRS.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_TILE_STAIRS.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_TILE_STAIRS.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_TILE_STAIRS.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_TILE_STAIRS.get());
 
             // Tin Tile Slab Loot Tables
         this.dropSelf(ModBlocks.TIN_TILE_SLAB.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_TILE_SLAB.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_TILE_SLAB.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_TILE_SLAB.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_TILE_SLAB.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_TILE_SLAB.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_TILE_SLAB.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_TILE_SLAB.get());
 
             // Tin Shingle Loot Tables
         this.dropSelf(ModBlocks.TIN_SHINGLES.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_SHINGLES.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_SHINGLES.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_SHINGLES.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_SHINGLES.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_SHINGLES.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_SHINGLES.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_SHINGLES.get());
 
             // Tin Shingle Stair Loot Tables
         this.dropSelf(ModBlocks.TIN_SHINGLE_STAIRS.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_SHINGLE_STAIRS.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_SHINGLE_STAIRS.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_SHINGLE_STAIRS.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_STAIRS.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_SHINGLE_STAIRS.get());
 
             // Tin Shingle Slab Loot Tables
         this.dropSelf(ModBlocks.TIN_SHINGLE_SLAB.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_SHINGLE_SLAB.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_SHINGLE_SLAB.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_SHINGLE_SLAB.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_SHINGLE_SLAB.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB.get());
 
             // Tin Door Loot Table
         this.add(ModBlocks.TIN_DOOR.get(),
                 block -> createDoorTable(ModBlocks.TIN_DOOR.get()));
         this.add(ModBlocks.TARNISHED_TIN_DOOR.get(),
                 block -> createDoorTable(ModBlocks.TARNISHED_TIN_DOOR.get()));
-        this.add(ModBlocks.CORRODED_TIN_DOOR.get(),
-                block -> createDoorTable(ModBlocks.CORRODED_TIN_DOOR.get()));
-        this.add(ModBlocks.ERODED_TIN_DOOR.get(),
-                block -> createDoorTable(ModBlocks.ERODED_TIN_DOOR.get()));
 
         this.add(ModBlocks.WAXED_TIN_DOOR.get(),
                 block -> createDoorTable(ModBlocks.WAXED_TIN_DOOR.get()));
         this.add(ModBlocks.WAXED_TARNISHED_TIN_DOOR.get(),
                 block -> createDoorTable(ModBlocks.WAXED_TARNISHED_TIN_DOOR.get()));
-        this.add(ModBlocks.WAXED_CORRODED_TIN_DOOR.get(),
-                block -> createDoorTable(ModBlocks.WAXED_CORRODED_TIN_DOOR.get()));
-        this.add(ModBlocks.WAXED_ERODED_TIN_DOOR.get(),
-                block -> createDoorTable(ModBlocks.WAXED_ERODED_TIN_DOOR.get()));
 
             // Tin Trapdoor Loot Table
         this.dropSelf(ModBlocks.TIN_TRAPDOOR.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_TRAPDOOR.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_TRAPDOOR.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_TRAPDOOR.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_TRAPDOOR.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_TRAPDOOR.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_TRAPDOOR.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_TRAPDOOR.get());
 
             // Tn Bar Loot Tables
         this.dropSelf(ModBlocks.TIN_BARS.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_BARS.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_BARS.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_BARS.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_BARS.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_BARS.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_BARS.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_BARS.get());
 
             // Tin Chain Loot Tables
         this.dropSelf(ModBlocks.TIN_CHAIN.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_CHAIN.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_CHAIN.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_CHAIN.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_CHAIN.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_CHAIN.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_CHAIN.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_CHAIN.get());
 
             // Tin Lantern Loot Tables
         this.dropSelf(ModBlocks.TIN_LANTERN.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_LANTERN.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_LANTERN.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_LANTERN.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_LANTERN.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_LANTERN.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_LANTERN.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_LANTERN.get());
 
             // Soul Tin Lantern Loot Tables
         this.dropSelf(ModBlocks.TIN_SOUL_LANTERN.get());
         this.dropSelf(ModBlocks.TARNISHED_TIN_SOUL_LANTERN.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_SOUL_LANTERN.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_SOUL_LANTERN.get());
 
         this.dropSelf(ModBlocks.WAXED_TIN_SOUL_LANTERN.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_SOUL_LANTERN.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_SOUL_LANTERN.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_SOUL_LANTERN.get());
-
-            // Tin Mage Lantern Loot Tables
-        this.dropSelf(ModBlocks.TIN_MAGE_LANTERN.get());
-        this.dropSelf(ModBlocks.TARNISHED_TIN_MAGE_LANTERN.get());
-        this.dropSelf(ModBlocks.CORRODED_TIN_MAGE_LANTERN.get());
-        this.dropSelf(ModBlocks.ERODED_TIN_MAGE_LANTERN.get());
-
-        this.dropSelf(ModBlocks.WAXED_TIN_MAGE_LANTERN.get());
-        this.dropSelf(ModBlocks.WAXED_TARNISHED_TIN_MAGE_LANTERN.get());
-        this.dropSelf(ModBlocks.WAXED_CORRODED_TIN_MAGE_LANTERN.get());
-        this.dropSelf(ModBlocks.WAXED_ERODED_TIN_MAGE_LANTERN.get());
 
             // Bronze Block Loot Table
         this.dropSelf(ModBlocks.BRONZE_BLOCK.get());

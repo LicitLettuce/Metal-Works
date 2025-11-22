@@ -1,6 +1,6 @@
 package net.lettuce.metalworks.common.block;
 
-import net.lettuce.metalworks.client.events.tin.WeatheringChain;
+import net.lettuce.metalworks.client.events.tin.TarnishingChain;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -26,7 +26,7 @@ public class WeatheringTinTrapdoorBlock extends TrapDoorBlock {
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (random.nextInt(300) != 0) return;
 
-        Block next = WeatheringChain.getNext(this.parentBlock.get());
+        Block next = TarnishingChain.getNext(this.parentBlock.get());
         if (!(next instanceof TrapDoorBlock nextTrap)) return;
 
         BlockState nextState = nextTrap.defaultBlockState();
@@ -40,7 +40,7 @@ public class WeatheringTinTrapdoorBlock extends TrapDoorBlock {
 
     @Override
     public boolean isRandomlyTicking(BlockState state) {
-        return WeatheringChain.getNext(this.parentBlock.get()) != null;
+        return TarnishingChain.getNext(this.parentBlock.get()) != null;
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })

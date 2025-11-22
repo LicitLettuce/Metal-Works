@@ -60,24 +60,6 @@
       "predicate": {
         "minecraft:trim_type": 1.0
       }
-    },
-    {
-      "model": "metal_works:item/tin_chestplate_tin_trim",
-      "predicate": {
-        "minecraft:trim_type": 0.2
-      }
-    },
-    {
-      "model": "metal_works:item/tin_chestplate_bronze_trim",
-      "predicate": {
-        "minecraft:trim_type": 0.5
-      }
-    },
-    {
-      "model": "metal_works:item/tin_chestplate_rose_gold_trim",
-      "predicate": {
-        "minecraft:trim_type": 1.0
-      }
     }
   ],
   "textures": {

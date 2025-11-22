@@ -1,6 +1,0 @@
-{
-	"parent": "metal_works:block/tin_lantern_template",
-	"textures": {
-		"texture": "metal_works:block/eroded_tin_lantern"
-	}
-}

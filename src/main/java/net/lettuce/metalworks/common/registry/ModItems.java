@@ -203,389 +203,219 @@ public class ModItems {
             (ModBlocks.TIN_ORE.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> DEEPSLATE_TIN_ORE = ITEMS.register("deepslate_tin_ore", () -> new BlockItem
             (ModBlocks.DEEPSLATE_TIN_ORE.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> NETHER_TIN_ORE = ITEMS.register("nether_tin_ore", () -> new BlockItem
-            (ModBlocks.NETHER_TIN_ORE.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> SOUL_TIN_ORE = ITEMS.register("soul_tin_ore", () -> new BlockItem
+            (ModBlocks.SOUL_TIN_ORE.get(), new Item.Properties()));
 
         // Tin Blocks Items
     public static final RegistryObject<BlockItem> TIN_BLOCK = ITEMS.register("tin_block", () -> new BlockItem
             (ModBlocks.TIN_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN = ITEMS.register("tarnished_tin", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN = ITEMS.register("corroded_tin", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN = ITEMS.register("eroded_tin", () -> new BlockItem
-            (ModBlocks.ERODED_TIN.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_BLOCK = ITEMS.register("waxed_tin_block", () -> new BlockItem
             (ModBlocks.WAXED_TIN_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN = ITEMS.register("waxed_tarnished_tin", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN = ITEMS.register("waxed_corroded_tin", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN = ITEMS.register("waxed_eroded_tin", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN.get(), new Item.Properties()));
 
         // Chiseled Tin Items
     public static final RegistryObject<BlockItem> CHISELED_TIN = ITEMS.register("chiseled_tin", () -> new BlockItem
             (ModBlocks.CHISELED_TIN.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_CHISELED_TIN= ITEMS.register("tarnished_chiseled_tin", () -> new BlockItem
             (ModBlocks.TARNISHED_CHISELED_TIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_CHISELED_TIN = ITEMS.register("corroded_chiseled_tin", () -> new BlockItem
-            (ModBlocks.CORRODED_CHISELED_TIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_CHISELED_TIN = ITEMS.register("eroded_chiseled_tin", () -> new BlockItem
-            (ModBlocks.ERODED_CHISELED_TIN.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_CHISELED_TIN = ITEMS.register("waxed_chiseled_tin", () -> new BlockItem
             (ModBlocks.WAXED_CHISELED_TIN.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_CHISELED_TIN = ITEMS.register("waxed_tarnished_chiseled_tin", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_CHISELED_TIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_CHISELED_TIN = ITEMS.register("waxed_corroded_chiseled_tin", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_CHISELED_TIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_CHISELED_TIN = ITEMS.register("waxed_eroded_chiseled_tin", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_CHISELED_TIN.get(), new Item.Properties()));
 
         // Tin Grate Items
     public static final RegistryObject<BlockItem> TIN_GRATE = ITEMS.register("tin_grate", () -> new BlockItem
             (ModBlocks.TIN_GRATE.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_GRATE = ITEMS.register("tarnished_tin_grate", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_GRATE.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_GRATE = ITEMS.register("corroded_tin_grate", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_GRATE.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_GRATE = ITEMS.register("eroded_tin_grate", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_GRATE.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_GRATE = ITEMS.register("waxed_tin_grate", () -> new BlockItem
             (ModBlocks.WAXED_TIN_GRATE.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_GRATE = ITEMS.register("waxed_tarnished_tin_grate", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_GRATE.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_GRATE = ITEMS.register("waxed_corroded_tin_grate", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_GRATE.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_GRATE = ITEMS.register("waxed_eroded_tin_grate", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_GRATE.get(), new Item.Properties()));
 
         // Tin Grate Drain Items
     public static final RegistryObject<BlockItem> TIN_GRATE_DRAIN = ITEMS.register("tin_grate_drain", () -> new BlockItem
             (ModBlocks.TIN_GRATE_DRAIN.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_GRATE_DRAIN = ITEMS.register("tarnished_tin_grate_drain", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_GRATE_DRAIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_GRATE_DRAIN = ITEMS.register("corroded_tin_grate_drain", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_GRATE_DRAIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_GRATE_DRAIN = ITEMS.register("eroded_tin_grate_drain", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_GRATE_DRAIN.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_GRATE_DRAIN = ITEMS.register("waxed_tin_grate_drain", () -> new BlockItem
             (ModBlocks.WAXED_TIN_GRATE_DRAIN.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_GRATE_DRAIN = ITEMS.register("waxed_tarnished_tin_grate_drain", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_GRATE_DRAIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_GRATE_DRAIN = ITEMS.register("waxed_corroded_tin_grate_drain", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_GRATE_DRAIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_GRATE_DRAIN = ITEMS.register("waxed_eroded_tin_grate_drain", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_GRATE_DRAIN.get(), new Item.Properties()));
 
         // Cut Tin Items
     public static final RegistryObject<BlockItem> CUT_TIN = ITEMS.register("cut_tin", () -> new BlockItem
             (ModBlocks.CUT_TIN.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_CUT_TIN= ITEMS.register("tarnished_cut_tin", () -> new BlockItem
             (ModBlocks.TARNISHED_CUT_TIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_CUT_TIN = ITEMS.register("corroded_cut_tin", () -> new BlockItem
-            (ModBlocks.CORRODED_CUT_TIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_CUT_TIN = ITEMS.register("eroded_cut_tin", () -> new BlockItem
-            (ModBlocks.ERODED_CUT_TIN.get(), new Item.Properties()));
+
 
     public static final RegistryObject<BlockItem> WAXED_CUT_TIN = ITEMS.register("waxed_cut_tin", () -> new BlockItem
             (ModBlocks.WAXED_CUT_TIN.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_CUT_TIN = ITEMS.register("waxed_tarnished_cut_tin", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_CUT_TIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_CUT_TIN = ITEMS.register("waxed_corroded_cut_tin", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_CUT_TIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_CUT_TIN = ITEMS.register("waxed_eroded_cut_tin", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_CUT_TIN.get(), new Item.Properties()));
 
         // Cut Tin Stair Items
     public static final RegistryObject<BlockItem> CUT_TIN_STAIRS = ITEMS.register("cut_tin_stairs", () -> new BlockItem
             (ModBlocks.CUT_TIN_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_CUT_TIN_STAIRS = ITEMS.register("tarnished_cut_tin_stairs", () -> new BlockItem
             (ModBlocks.TARNISHED_CUT_TIN_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_CUT_TIN_STAIRS = ITEMS.register("corroded_cut_tin_stairs", () -> new BlockItem
-            (ModBlocks.CORRODED_CUT_TIN_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_CUT_TIN_STAIRS = ITEMS.register("eroded_cut_tin_stairs", () -> new BlockItem
-            (ModBlocks.ERODED_CUT_TIN_STAIRS.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_CUT_TIN_STAIRS = ITEMS.register("waxed_cut_tin_stairs", () -> new BlockItem(
             ModBlocks.WAXED_CUT_TIN_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_CUT_TIN_STAIRS = ITEMS.register("waxed_tarnished_cut_tin_stairs", () -> new BlockItem(
             ModBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_CUT_TIN_STAIRS = ITEMS.register("waxed_corroded_cut_tin_stairs", () -> new BlockItem(
-            ModBlocks.WAXED_CORRODED_CUT_TIN_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_CUT_TIN_STAIRS = ITEMS.register("waxed_eroded_cut_tin_stairs", () -> new BlockItem(
-            ModBlocks.WAXED_ERODED_CUT_TIN_STAIRS.get(), new Item.Properties()));
 
         // Cut Tin Slab Items
     public static final RegistryObject<BlockItem> CUT_TIN_SLAB = ITEMS.register("cut_tin_slab", () -> new BlockItem
             (ModBlocks.CUT_TIN_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_CUT_TIN_SLAB = ITEMS.register("tarnished_cut_tin_slab", () -> new BlockItem
             (ModBlocks.TARNISHED_CUT_TIN_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_CUT_TIN_SLAB = ITEMS.register("corroded_cut_tin_slab", () -> new BlockItem
-            (ModBlocks.CORRODED_CUT_TIN_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_CUT_TIN_SLAB = ITEMS.register("eroded_cut_tin_slab", () -> new BlockItem
-            (ModBlocks.ERODED_CUT_TIN_SLAB.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_CUT_TIN_SLAB = ITEMS.register("waxed_cut_tin_slab", () -> new BlockItem
             (ModBlocks.WAXED_CUT_TIN_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_CUT_TIN_SLAB = ITEMS.register("waxed_tarnished_cut_tin_slab", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_CUT_TIN_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_CUT_TIN_SLAB = ITEMS.register("waxed_corroded_cut_tin_slab", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_CUT_TIN_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_CUT_TIN_SLAB = ITEMS.register("waxed_eroded_cut_tin_slab", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_CUT_TIN_SLAB.get(), new Item.Properties()));
 
         // Tin Tile Items
     public static final RegistryObject<BlockItem> TIN_TILES = ITEMS.register("tin_tiles", () -> new BlockItem
             (ModBlocks.TIN_TILES.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_TILES= ITEMS.register("tarnished_tin_tiles", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_TILES.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_TILES = ITEMS.register("corroded_tin_tiles", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_TILES.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_TILES = ITEMS.register("eroded_tin_tiles", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_TILES.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_TILES = ITEMS.register("waxed_tin_tiles", () -> new BlockItem
             (ModBlocks.WAXED_TIN_TILES.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_TILES = ITEMS.register("waxed_tarnished_tin_tiles", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_TILES.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_TILES = ITEMS.register("waxed_corroded_tin_tiles", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_TILES.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_TILES = ITEMS.register("waxed_eroded_tin_tiles", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_TILES.get(), new Item.Properties()));
 
         // Tin Tile Stair Items
     public static final RegistryObject<BlockItem> TIN_TILE_STAIRS = ITEMS.register("tin_tile_stairs", () -> new BlockItem
             (ModBlocks.TIN_TILE_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_TILE_STAIRS = ITEMS.register("tarnished_tin_tile_stairs", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_TILE_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_TILE_STAIRS = ITEMS.register("corroded_tin_tile_stairs", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_TILE_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_TILE_STAIRS = ITEMS.register("eroded_tin_tile_stairs", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_TILE_STAIRS.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_TILE_STAIRS = ITEMS.register("waxed_tin_tile_stairs", () -> new BlockItem
             (ModBlocks.WAXED_TIN_TILE_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_TILE_STAIRS = ITEMS.register("waxed_tarnished_tin_tile_stairs", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_TILE_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_TILE_STAIRS = ITEMS.register("waxed_corroded_tin_tile_stairs", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_TILE_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_TILE_STAIRS = ITEMS.register("waxed_eroded_tin_tile_stairs", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_TILE_STAIRS.get(), new Item.Properties()));
 
         // Tin Tile Slab Items
     public static final RegistryObject<BlockItem> TIN_TILE_SLAB = ITEMS.register("tin_tile_slab", () -> new BlockItem
             (ModBlocks.TIN_TILE_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_TILE_SLAB = ITEMS.register("tarnished_tin_tile_slab", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_TILE_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_TILE_SLAB = ITEMS.register("corroded_tin_tile_slab", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_TILE_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_TILE_SLAB = ITEMS.register("eroded_tin_tile_slab", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_TILE_SLAB.get(), new Item.Properties()));
 
 
     public static final RegistryObject<BlockItem> WAXED_TIN_TILE_SLAB = ITEMS.register("waxed_tin_tile_slab", () -> new BlockItem
             (ModBlocks.WAXED_TIN_TILE_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_TILE_SLAB = ITEMS.register("waxed_tarnished_tin_tile_slab", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_TILE_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_TILE_SLAB = ITEMS.register("waxed_corroded_tin_tile_slab", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_TILE_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_TILE_SLAB = ITEMS.register("waxed_eroded_tin_tile_slab", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_TILE_SLAB.get(), new Item.Properties()));
 
         // Tin Shingle Items
     public static final RegistryObject<BlockItem> TIN_SHINGLES = ITEMS.register("tin_shingles", () -> new BlockItem
             (ModBlocks.TIN_SHINGLES.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_SHINGLES= ITEMS.register("tarnished_tin_shingles", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_SHINGLES.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_SHINGLES = ITEMS.register("corroded_tin_shingles", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_SHINGLES.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_SHINGLES = ITEMS.register("eroded_tin_shingles", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_SHINGLES.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_SHINGLES = ITEMS.register("waxed_tin_shingles", () -> new BlockItem
             (ModBlocks.WAXED_TIN_SHINGLES.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_SHINGLES = ITEMS.register("waxed_tarnished_tin_shingles", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_SHINGLES.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_SHINGLES = ITEMS.register("waxed_corroded_tin_shingles", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_SHINGLES.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_SHINGLES = ITEMS.register("waxed_eroded_tin_shingles", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_SHINGLES.get(), new Item.Properties()));
 
         // Tin Shingle Stair Items
     public static final RegistryObject<BlockItem> TIN_SHINGLE_STAIRS = ITEMS.register("tin_shingle_stairs", () -> new BlockItem
             (ModBlocks.TIN_SHINGLE_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_SHINGLE_STAIRS = ITEMS.register("tarnished_tin_shingle_stairs", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_SHINGLE_STAIRS = ITEMS.register("corroded_tin_shingle_stairs", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_SHINGLE_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_SHINGLE_STAIRS = ITEMS.register("eroded_tin_shingle_stairs", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_SHINGLE_STAIRS.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_SHINGLE_STAIRS = ITEMS.register("waxed_tin_shingle_stairs", () -> new BlockItem
             (ModBlocks.WAXED_TIN_SHINGLE_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_SHINGLE_STAIRS = ITEMS.register("waxed_tarnished_tin_shingle_stairs", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_SHINGLE_STAIRS = ITEMS.register("waxed_corroded_tin_shingle_stairs", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_SHINGLE_STAIRS = ITEMS.register("waxed_eroded_tin_shingle_stairs", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_SHINGLE_STAIRS.get(), new Item.Properties()));
 
         // Tin Shingle Slab Items
     public static final RegistryObject<BlockItem> TIN_SHINGLE_SLAB = ITEMS.register("tin_shingle_slab", () -> new BlockItem
             (ModBlocks.TIN_SHINGLE_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_SHINGLE_SLAB = ITEMS.register("tarnished_tin_shingle_slab", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_SHINGLE_SLAB = ITEMS.register("corroded_tin_shingle_slab", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_SHINGLE_SLAB = ITEMS.register("eroded_tin_shingle_slab", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_SHINGLE_SLAB = ITEMS.register("waxed_tin_shingle_slab", () -> new BlockItem
             (ModBlocks.WAXED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_SHINGLE_SLAB = ITEMS.register("waxed_tarnished_tin_shingle_slab", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_SHINGLE_SLAB = ITEMS.register("waxed_corroded_tin_shingle_slab", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_SHINGLE_SLAB = ITEMS.register("waxed_eroded_tin_shingle_slab", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_SHINGLE_SLAB.get(), new Item.Properties()));
 
         // Tin Door Items
     public static final RegistryObject<BlockItem> TIN_DOOR = ITEMS.register("tin_door", () -> new BlockItem
             (ModBlocks.TIN_DOOR.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_DOOR = ITEMS.register("tarnished_tin_door", () -> new BlockItem
-            (ModBlocks.TARNISHED_TIN_DOOR.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_DOOR = ITEMS.register("corroded_tin_door", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_DOOR.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_DOOR = ITEMS.register("eroded_tin_door", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_DOOR.get(), new Item.Properties()));
+            (ModBlocks.TARNISHED_TIN_DOOR.get(), new Item.Properties()));;
 
     public static final RegistryObject<BlockItem> WAXED_TIN_DOOR = ITEMS.register("waxed_tin_door", () -> new BlockItem
             (ModBlocks.WAXED_TIN_DOOR.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_DOOR = ITEMS.register("waxed_tarnished_tin_door", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_DOOR.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_DOOR = ITEMS.register("waxed_corroded_tin_door", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_DOOR.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_DOOR = ITEMS.register("waxed_eroded_tin_door", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_DOOR.get(), new Item.Properties()));
 
         // Tin Trapdoor Items
     public static final RegistryObject<BlockItem> TIN_TRAPDOOR = ITEMS.register("tin_trapdoor", () -> new BlockItem
             (ModBlocks.TIN_TRAPDOOR.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_TRAPDOOR = ITEMS.register("tarnished_tin_trapdoor", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_TRAPDOOR.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_TRAPDOOR = ITEMS.register("corroded_tin_trapdoor", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_TRAPDOOR.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_TRAPDOOR = ITEMS.register("eroded_tin_trapdoor", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_TRAPDOOR.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_TRAPDOOR = ITEMS.register("waxed_tin_trapdoor", () -> new BlockItem
             (ModBlocks.WAXED_TIN_TRAPDOOR.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_TRAPDOOR = ITEMS.register("waxed_tarnished_tin_trapdoor", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_TRAPDOOR.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_TRAPDOOR = ITEMS.register("waxed_corroded_tin_trapdoor", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_TRAPDOOR.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_TRAPDOOR = ITEMS.register("waxed_eroded_tin_trapdoor", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_TRAPDOOR.get(), new Item.Properties()));
 
         // Tin Bar Items
     public static final RegistryObject<BlockItem> TIN_BARS = ITEMS.register("tin_bars", () -> new BlockItem
             (ModBlocks.TIN_BARS.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_BARS = ITEMS.register("tarnished_tin_bars", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_BARS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_BARS = ITEMS.register("corroded_tin_bars", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_BARS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_BARS = ITEMS.register("eroded_tin_bars", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_BARS.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_BARS = ITEMS.register("waxed_tin_bars", () -> new BlockItem
             (ModBlocks.WAXED_TIN_BARS.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_BARS = ITEMS.register("waxed_tarnished_tin_bars", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_BARS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_BARS = ITEMS.register("waxed_corroded_tin_bars", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_BARS.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_BARS = ITEMS.register("waxed_eroded_tin_bars", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_BARS.get(), new Item.Properties()));
 
         // Tin Chain Items
     public static final RegistryObject<BlockItem> TIN_CHAIN = ITEMS.register("tin_chain", () -> new BlockItem
             (ModBlocks.TIN_CHAIN.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_CHAIN = ITEMS.register("tarnished_tin_chain", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_CHAIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_CHAIN = ITEMS.register("corroded_tin_chain", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_CHAIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_CHAIN = ITEMS.register("eroded_tin_chain", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_CHAIN.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_CHAIN = ITEMS.register("waxed_tin_chain", () -> new BlockItem
             (ModBlocks.WAXED_TIN_CHAIN.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_CHAIN = ITEMS.register("waxed_tarnished_tin_chain", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_CHAIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_CHAIN = ITEMS.register("waxed_corroded_in_chain", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_CHAIN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_CHAIN = ITEMS.register("waxed_eroded_tin_chain", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_CHAIN.get(), new Item.Properties()));
 
         // Tin Lantern Items
     public static final RegistryObject<BlockItem> TIN_LANTERN = ITEMS.register("tin_lantern", () -> new BlockItem
             (ModBlocks.TIN_LANTERN.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_LANTERN = ITEMS.register("tarnished_tin_lantern", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_LANTERN = ITEMS.register("corroded_tin_lantern", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_LANTERN = ITEMS.register("eroded_tin_lantern", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_LANTERN.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_LANTERN = ITEMS.register("waxed_tin_lantern", () -> new BlockItem
             (ModBlocks.WAXED_TIN_LANTERN.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_LANTERN = ITEMS.register("waxed_tarnished_tin_lantern", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_LANTERN = ITEMS.register("waxed_corroded_tin_lantern", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_LANTERN = ITEMS.register("waxed_eroded_tin_lantern", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_LANTERN.get(), new Item.Properties()));
 
         // Tin Soul Lantern Items
     public static final RegistryObject<BlockItem> TIN_SOUL_LANTERN = ITEMS.register("tin_soul_lantern", () -> new BlockItem
             (ModBlocks.TIN_SOUL_LANTERN.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TARNISHED_TIN_SOUL_LANTERN = ITEMS.register("tarnished_tin_soul_lantern", () -> new BlockItem
             (ModBlocks.TARNISHED_TIN_SOUL_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_SOUL_LANTERN = ITEMS.register("corroded_tin_soul_lantern", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_SOUL_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_SOUL_LANTERN = ITEMS.register("eroded_tin_soul_lantern", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_SOUL_LANTERN.get(), new Item.Properties()));
 
     public static final RegistryObject<BlockItem> WAXED_TIN_SOUL_LANTERN = ITEMS.register("waxed_tin_soul_lantern", () -> new BlockItem
             (ModBlocks.WAXED_TIN_SOUL_LANTERN.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_SOUL_LANTERN = ITEMS.register("waxed_tarnished_tin_soul_lantern", () -> new BlockItem
             (ModBlocks.WAXED_TARNISHED_TIN_SOUL_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_SOUL_LANTERN = ITEMS.register("waxed_corroded_tin_soul_lantern", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_SOUL_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_SOUL_LANTERN = ITEMS.register("waxed_eroded_tin_soul_lantern", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_SOUL_LANTERN.get(), new Item.Properties()));
-
-        // Tin Mage Lantern Items
-    public static final RegistryObject<BlockItem> TIN_MAGE_LANTERN = ITEMS.register("tin_mage_lantern", () -> new BlockItem
-            (ModBlocks.TIN_MAGE_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> TARNISHED_TIN_MAGE_LANTERN = ITEMS.register("tarnished_tin_mage_lantern", () -> new BlockItem
-            (ModBlocks.TARNISHED_TIN_MAGE_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> CORRODED_TIN_MAGE_LANTERN = ITEMS.register("corroded_tin_mage_lantern", () -> new BlockItem
-            (ModBlocks.CORRODED_TIN_MAGE_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> ERODED_TIN_MAGE_LANTERN = ITEMS.register("eroded_tin_mage_lantern", () -> new BlockItem
-            (ModBlocks.ERODED_TIN_MAGE_LANTERN.get(), new Item.Properties()));
-
-    public static final RegistryObject<BlockItem> WAXED_TIN_MAGE_LANTERN = ITEMS.register("waxed_tin_mage_lantern", () -> new BlockItem
-            (ModBlocks.WAXED_TIN_MAGE_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_TARNISHED_TIN_MAGE_LANTERN = ITEMS.register("waxed_tarnished_tin_mage_lantern", () -> new BlockItem
-            (ModBlocks.WAXED_TARNISHED_TIN_MAGE_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_CORRODED_TIN_MAGE_LANTERN = ITEMS.register("waxed_corroded_tin_mage_lantern", () -> new BlockItem
-            (ModBlocks.WAXED_CORRODED_TIN_MAGE_LANTERN.get(), new Item.Properties()));
-    public static final RegistryObject<BlockItem> WAXED_ERODED_TIN_MAGE_LANTERN = ITEMS.register("waxed_eroded_tin_mage_lantern", () -> new BlockItem
-            (ModBlocks.WAXED_ERODED_TIN_MAGE_LANTERN.get(), new Item.Properties()));
 
         // Tin Ingredients
     public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot", () -> new Item
@@ -773,7 +603,7 @@ public class ModItems {
             ( 8, "rose_gold", new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<ForgeSpawnEggItem> MAGE_GOLEM_SPAWN_EGG = ITEMS.register("mage_golem_spawn_egg", () -> new ForgeSpawnEggItem
-            (ModEntities.MAGE_GOLEM, 0xf25e63, 0xffcbc8, new Item.Properties()));
+            (ModEntities.MAGE_GOLEM, 0xf25e63, 16382457, new Item.Properties()));
 
         // GUI Items
         public static final RegistryObject<Item> TAB_ITEM = ITEMS.register("tab_item", () -> new Item

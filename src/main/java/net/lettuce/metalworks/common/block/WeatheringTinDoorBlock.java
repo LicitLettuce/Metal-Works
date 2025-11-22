@@ -1,6 +1,6 @@
 package net.lettuce.metalworks.common.block;
 
-import net.lettuce.metalworks.client.events.tin.WeatheringChain;
+import net.lettuce.metalworks.client.events.tin.TarnishingChain;
 import net.lettuce.metalworks.util.DoorStateUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -30,7 +30,7 @@ public class WeatheringTinDoorBlock extends DoorBlock {
 
         if (state.getValue(HALF) == DoubleBlockHalf.UPPER) return;
 
-        Block next = WeatheringChain.getNext(this.parentBlock.get());
+        Block next = TarnishingChain.getNext(this.parentBlock.get());
         if (!(next instanceof DoorBlock nextDoor)) return;
 
         DoorStateUtil.transformDoor(level, pos, nextDoor);
@@ -39,7 +39,7 @@ public class WeatheringTinDoorBlock extends DoorBlock {
     @Override
     public boolean isRandomlyTicking(BlockState state) {
         return state.getValue(HALF) == DoubleBlockHalf.LOWER
-                && WeatheringChain.getNext(this.parentBlock.get()) != null;
+                && TarnishingChain.getNext(this.parentBlock.get()) != null;
     }
 }
 

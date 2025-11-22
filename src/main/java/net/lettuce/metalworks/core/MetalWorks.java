@@ -1,7 +1,7 @@
 package net.lettuce.metalworks.core;
 
 import com.mojang.logging.LogUtils;
-import net.lettuce.metalworks.client.events.tin.WeatheringChain;
+import net.lettuce.metalworks.client.events.tin.TarnishingChain;
 import net.lettuce.metalworks.common.registry.ModLootModifiers;
 import net.lettuce.metalworks.common.registry.*;
 import net.lettuce.metalworks.client.renderer.MageGolemRenderer;
@@ -31,8 +31,7 @@ import org.slf4j.Logger;
 import static net.lettuce.metalworks.common.registry.ModBlocks.*;
 
 @Mod(MetalWorks.MOD_ID)
-public class MetalWorks
-{
+public class MetalWorks  {
     public static final String MOD_ID = "metal_works";
     private static final Logger LOGGER = LogUtils.getLogger();
     public MetalWorks()
@@ -56,7 +55,7 @@ public class MetalWorks
     }
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            WeatheringChain.registerWeatheringChain();
+            TarnishingChain.registerWeatheringChain();
             WaxingEvent.initWaxables();
             var type = ModEntities.MAGE_GOLEM.get();
             var key = ForgeRegistries.ENTITY_TYPES.getKey(type);
@@ -108,37 +107,7 @@ public class MetalWorks
                 event.getEntries().putAfter(ModItems.TARNISHED_TIN_SHINGLE_STAIRS.get().getDefaultInstance(), ModItems.TARNISHED_TIN_SHINGLE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.TARNISHED_TIN_SHINGLE_SLAB.get().getDefaultInstance(), ModItems.TARNISHED_TIN_BARS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.TARNISHED_TIN_BARS.get().getDefaultInstance(), ModItems.TARNISHED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.TARNISHED_TIN_CHAIN.get().getDefaultInstance(), ModItems.CORRODED_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN.get().getDefaultInstance(), ModItems.CORRODED_CHISELED_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_CHISELED_TIN.get().getDefaultInstance(), ModItems.CORRODED_TIN_GRATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_GRATE.get().getDefaultInstance(), ModItems.CORRODED_TIN_GRATE_DRAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_GRATE_DRAIN.get().getDefaultInstance(), ModItems.CORRODED_CUT_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_CUT_TIN.get().getDefaultInstance(), ModItems.CORRODED_CUT_TIN_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_CUT_TIN_STAIRS.get().getDefaultInstance(), ModItems.CORRODED_CUT_TIN_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_CUT_TIN_SLAB.get().getDefaultInstance(), ModItems.CORRODED_TIN_TILES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_TILES.get().getDefaultInstance(), ModItems.CORRODED_TIN_TILE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_TILE_STAIRS.get().getDefaultInstance(), ModItems.CORRODED_TIN_TILE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_TILE_SLAB.get().getDefaultInstance(), ModItems.CORRODED_TIN_SHINGLES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_SHINGLES.get().getDefaultInstance(), ModItems.CORRODED_TIN_SHINGLE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_SHINGLE_STAIRS.get().getDefaultInstance(), ModItems.CORRODED_TIN_SHINGLE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_SHINGLE_SLAB.get().getDefaultInstance(), ModItems.CORRODED_TIN_BARS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_BARS.get().getDefaultInstance(), ModItems.CORRODED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_CHAIN.get().getDefaultInstance(), ModItems.ERODED_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN.get().getDefaultInstance(), ModItems.ERODED_CHISELED_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_CHISELED_TIN.get().getDefaultInstance(), ModItems.ERODED_TIN_GRATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_GRATE.get().getDefaultInstance(), ModItems.ERODED_TIN_GRATE_DRAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_GRATE_DRAIN.get().getDefaultInstance(), ModItems.ERODED_CUT_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_CUT_TIN.get().getDefaultInstance(), ModItems.ERODED_CUT_TIN_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_CUT_TIN_STAIRS.get().getDefaultInstance(), ModItems.ERODED_CUT_TIN_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_CUT_TIN_SLAB.get().getDefaultInstance(), ModItems.ERODED_TIN_TILES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_TILES.get().getDefaultInstance(), ModItems.ERODED_TIN_TILE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_TILE_STAIRS.get().getDefaultInstance(), ModItems.ERODED_TIN_TILE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_TILE_SLAB.get().getDefaultInstance(), ModItems.ERODED_TIN_SHINGLES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_SHINGLES.get().getDefaultInstance(), ModItems.ERODED_TIN_SHINGLE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_SHINGLE_STAIRS.get().getDefaultInstance(), ModItems.ERODED_TIN_SHINGLE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_SHINGLE_SLAB.get().getDefaultInstance(), ModItems.ERODED_TIN_BARS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_BARS.get().getDefaultInstance(), ModItems.ERODED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_CHAIN.get().getDefaultInstance(), ModItems.WAXED_TIN_BLOCK.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.TARNISHED_TIN_CHAIN.get().getDefaultInstance(), ModItems.WAXED_TIN_BLOCK.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.WAXED_TIN_BLOCK.get().getDefaultInstance(), ModItems.WAXED_CHISELED_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.WAXED_CHISELED_TIN.get().getDefaultInstance(), ModItems.WAXED_TIN_GRATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.WAXED_TIN_GRATE.get().getDefaultInstance(), ModItems.WAXED_TIN_GRATE_DRAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -168,36 +137,6 @@ public class MetalWorks
                 event.getEntries().putAfter(ModItems.WAXED_TARNISHED_TIN_SHINGLE_STAIRS.get().getDefaultInstance(), ModItems.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.WAXED_TARNISHED_TIN_SHINGLE_SLAB.get().getDefaultInstance(), ModItems.WAXED_TARNISHED_TIN_BARS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.WAXED_TARNISHED_TIN_BARS.get().getDefaultInstance(), ModItems.WAXED_TARNISHED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_TARNISHED_TIN_CHAIN.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN.get().getDefaultInstance(), ModItems.WAXED_CORRODED_CHISELED_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_CHISELED_TIN.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_GRATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_GRATE.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_GRATE_DRAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_GRATE_DRAIN.get().getDefaultInstance(), ModItems.WAXED_CORRODED_CUT_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_CUT_TIN.get().getDefaultInstance(), ModItems.WAXED_CORRODED_CUT_TIN_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_CUT_TIN_STAIRS.get().getDefaultInstance(), ModItems.WAXED_CORRODED_CUT_TIN_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_CUT_TIN_SLAB.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_TILES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_TILES.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_TILE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_TILE_STAIRS.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_TILE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_TILE_SLAB.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_SHINGLES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_SHINGLES.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_SHINGLE_STAIRS.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_SHINGLE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_SHINGLE_SLAB.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_BARS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_BARS.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_CHAIN.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN.get().getDefaultInstance(), ModItems.WAXED_ERODED_CHISELED_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_CHISELED_TIN.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_GRATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN_GRATE.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_GRATE_DRAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN_GRATE_DRAIN.get().getDefaultInstance(), ModItems.WAXED_ERODED_CUT_TIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_CUT_TIN.get().getDefaultInstance(), ModItems.WAXED_ERODED_CUT_TIN_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_CUT_TIN_STAIRS.get().getDefaultInstance(), ModItems.WAXED_ERODED_CUT_TIN_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_CUT_TIN_SLAB.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_TILES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN_TILES.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_TILE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN_TILE_STAIRS.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_TILE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN_TILE_SLAB.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_SHINGLES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN_SHINGLES.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_SHINGLE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN_SHINGLE_STAIRS.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_SHINGLE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN_SHINGLE_SLAB.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_BARS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN_BARS.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(Items.CHAIN.getDefaultInstance(), ModItems.BRONZE_BLOCK.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.BRONZE_BLOCK.get().getDefaultInstance(), ModItems.BRONZE_GRATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.BRONZE_GRATE.get().getDefaultInstance(), ModItems.BRONZE_GRATE_DRAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -221,53 +160,16 @@ public class MetalWorks
         if (ModConfig.COMMON.populateVanillaTabs.get()) {
             if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
 
-
                 event.getEntries().putAfter(Items.ANDESITE.getDefaultInstance(), ModItems.CASSITERITE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putBefore(Items.RAW_IRON_BLOCK.getDefaultInstance(), ModItems.RAW_TIN_BLOCK.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(Items.DEEPSLATE_COAL_ORE.getDefaultInstance(), ModItems.TIN_ORE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.TIN_ORE.get().getDefaultInstance(), ModItems.DEEPSLATE_TIN_ORE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putBefore(Items.NETHER_GOLD_ORE.getDefaultInstance(), ModItems.NETHER_TIN_ORE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putBefore(Items.NETHER_GOLD_ORE.getDefaultInstance(), ModItems.SOUL_TIN_ORE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
         }
         if (ModConfig.COMMON.populateVanillaTabs.get()) {
             if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
 
-                event.getEntries().putAfter(Items.SOUL_TORCH.getDefaultInstance(), ModItems.MAGE_TORCH.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(Items.SOUL_LANTERN.getDefaultInstance(), ModItems.MAGE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(Items.SOUL_CAMPFIRE.getDefaultInstance(), ModItems.MAGE_CAMPFIRE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.MAGE_LANTERN.get().getDefaultInstance(), ModItems.TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.TIN_LANTERN.get().getDefaultInstance(), ModItems.TARNISHED_TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.TARNISHED_TIN_LANTERN.get().getDefaultInstance(), ModItems.CORRODED_TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_LANTERN.get().getDefaultInstance(), ModItems.ERODED_TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_TIN_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TARNISHED_TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_TARNISHED_TIN_LANTERN.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_LANTERN.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN_LANTERN.get().getDefaultInstance(), ModItems.TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.TIN_SOUL_LANTERN.get().getDefaultInstance(), ModItems.TARNISHED_TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.TARNISHED_TIN_SOUL_LANTERN.get().getDefaultInstance(), ModItems.CORRODED_TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_SOUL_LANTERN.get().getDefaultInstance(), ModItems.ERODED_TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_SOUL_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_TIN_SOUL_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TARNISHED_TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_TARNISHED_TIN_SOUL_LANTERN.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_SOUL_LANTERN.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN_SOUL_LANTERN.get().getDefaultInstance(), ModItems.TIN_MAGE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.TIN_MAGE_LANTERN.get().getDefaultInstance(), ModItems.TARNISHED_TIN_MAGE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.TARNISHED_TIN_MAGE_LANTERN.get().getDefaultInstance(), ModItems.CORRODED_TIN_MAGE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_MAGE_LANTERN.get().getDefaultInstance(), ModItems.ERODED_TIN_MAGE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_MAGE_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TIN_MAGE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_TIN_MAGE_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TARNISHED_TIN_MAGE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_TARNISHED_TIN_MAGE_LANTERN.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_MAGE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_MAGE_LANTERN.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_MAGE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_ERODED_TIN_MAGE_LANTERN.get().getDefaultInstance(), ModItems.TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.TIN_CHAIN.get().getDefaultInstance(), ModItems.TARNISHED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.TARNISHED_TIN_CHAIN.get().getDefaultInstance(), ModItems.CORRODED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.CORRODED_TIN_CHAIN.get().getDefaultInstance(), ModItems.ERODED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.ERODED_TIN_CHAIN.get().getDefaultInstance(), ModItems.WAXED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_TIN_CHAIN.get().getDefaultInstance(), ModItems.WAXED_TARNISHED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_TARNISHED_TIN_CHAIN.get().getDefaultInstance(), ModItems.WAXED_CORRODED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.WAXED_CORRODED_TIN_CHAIN.get().getDefaultInstance(), ModItems.WAXED_ERODED_TIN_CHAIN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(Items.SEA_LANTERN.getDefaultInstance(), ModItems.ROSE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
         }
         if (ModConfig.COMMON.populateVanillaTabs.get()) {
