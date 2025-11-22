@@ -6,10 +6,10 @@
     "targets": [
       {
         "state": {
-          "Name": "metal_works:nether_tin_ore"
+          "Name": "metal_works:soul_tin_ore"
         },
         "target": {
-          "block": "minecraft:netherrack",
+          "block": "minecraft:soul_soil",
           "predicate_type": "minecraft:block_match"
         }
       }

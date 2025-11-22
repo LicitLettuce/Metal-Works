@@ -1,10 +1,10 @@
 {
   "type": "forge:add_features",
   "biomes": [
-    "nether_wastes"
+    "soul_sand_valley"
   ],
   "features": [
-    "metal_works:ore_nether_tin"
+    "metal_works:ore_soul_tin"
   ],
   "step": "underground_ores"
 }

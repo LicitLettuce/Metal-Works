@@ -5,7 +5,7 @@
 
     "particle": "metal_works:block/tarnished_tin_bars",
     "bars": "metal_works:block/tarnished_tin_bars",
-    "edge": "metal_works:block/tarnished_tin_bars_edge"
+    "edge": "metal_works:block/edge"
   },
   "elements": [
     {   "from": [ 7, 0.001, 7 ],
