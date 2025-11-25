@@ -56,6 +56,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.CASSITERITE_BRICK_SLAB);
         wallItem(ModBlocks.CASSITERITE_BRICK_WALL, ModBlocks.CASSITERITE_BRICKS);
 
+            // Citadel Items
+        evenSimplerBlockItem(ModBlocks.SOUL_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.SOUL_BRICK_SLAB);
+
             // Tin Items
         simpleItem(ModItems.TIN_INGOT);
         simpleItem(ModItems.TIN_NUGGET);

@@ -36,16 +36,14 @@ public class ModItems {
     @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
     public class BronzeArmorFireProtectionHandler {
 
-        // tune these how you like
-        private static final float REDUCTION_PER_PIECE = 0.05f; // 5% per piece
-        private static final float MAX_REDUCTION = 0.20f;       // 20% cap (full set)
-        private static final int   BURN_TICKS_REDUCTION_PER_PIECE = 20; // reduce 1s per piece
+        private static final float REDUCTION_PER_PIECE = 0.05f;
+        private static final float MAX_REDUCTION = 0.20f;
+        private static final int   BURN_TICKS_REDUCTION_PER_PIECE = 20;
 
         @SubscribeEvent
         public static void onHurt(LivingHurtEvent event) {
             if (!(event.getEntity() instanceof Player player)) return;
 
-            // Only reduce fire-type damage (lava, flame, in_fire, hot floor, etc.)
             if (!event.getSource().is(net.minecraft.tags.DamageTypeTags.IS_FIRE)) return;
 
             int pieces = countBronzePieces(player);
@@ -62,7 +60,6 @@ public class ModItems {
             int pieces = countBronzePieces(player);
             if (pieces <= 0) return;
 
-            // If burning, shorten remaining fire duration
             if (player.isOnFire()) {
                 int ticks = player.getRemainingFireTicks();
                 if (ticks > 0) {
@@ -75,7 +72,6 @@ public class ModItems {
         private static int countBronzePieces(Player player) {
             int count = 0;
             var inv = player.getArmorSlots().iterator();
-            // order is boots, leggings, chest, helmet (iteration of armor slots)
             for (ItemStack stack : player.getArmorSlots()) {
                 if (isBronzePiece(stack)) count++;
             }
@@ -87,8 +83,6 @@ public class ModItems {
                     || stack.is(ModItems.BRONZE_CHESTPLATE.get())
                     || stack.is(ModItems.BRONZE_LEGGINGS.get())
                     || stack.is(ModItems.BRONZE_BOOTS.get());
-            // (Optional) use an item tag instead for flexibility:
-            // return stack.is(ModTags.Items.BRONZE_ARMOR);
         }
     }
 
@@ -96,8 +90,8 @@ public class ModItems {
     public class RoseGoldRadiantWardHandler {
 
         // Tune these values to taste:
-        private static final float REDUCTION_PER_PIECE = 0.15f; // 15% per piece
-        private static final float MAX_REDUCTION       = 0.60f; // cap at 60% (4 pieces)
+        private static final float REDUCTION_PER_PIECE = 0.15f;
+        private static final float MAX_REDUCTION       = 0.60f;
 
         @SubscribeEvent
         public static void onHurt(LivingHurtEvent event) {
@@ -135,7 +129,6 @@ public class ModItems {
         public static void onItemTooltip(ItemTooltipEvent event) {
             ItemStack stack = event.getItemStack();
 
-            // check each bronze armor piece (or swap to a tag—see below)
             if (stack.is(ModItems.BRONZE_HELMET.get())
                     || stack.is(ModItems.BRONZE_CHESTPLATE.get())
                     || stack.is(ModItems.BRONZE_LEGGINGS.get())
@@ -195,6 +188,15 @@ public class ModItems {
     public static final RegistryObject<BlockItem> CHISELED_CASSITERITE_BRICKS = ITEMS.register("chiseled_cassiterite_bricks", () -> new BlockItem
             (ModBlocks.CHISELED_CASSITERITE_BRICKS.get(), new Item.Properties()));
 
+        // Citadel Items
+    public static final RegistryObject<BlockItem> SOUL_BRICKS = ITEMS.register("soul_bricks", () -> new BlockItem
+                (ModBlocks.SOUL_BRICKS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> SOUL_BRICK_STAIRS = ITEMS.register("soul_brick_stairs", () -> new BlockItem
+            (ModBlocks.SOUL_BRICK_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> SOUL_BRICK_SLAB = ITEMS.register("soul_brick_slab", () -> new BlockItem
+            (ModBlocks.SOUL_BRICK_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> SUSPICIOUS_SOUL_SOIL = ITEMS.register("suspicious_soul_soil", () -> new BlockItem
+            (ModBlocks.SUSPICIOUS_SOUL_SOIL.get(), new Item.Properties()));
 
         // Natural Tin Items
     public static final RegistryObject<BlockItem> RAW_TIN_BLOCK = ITEMS.register("raw_tin_block", () -> new BlockItem

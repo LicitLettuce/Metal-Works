@@ -1,4 +1,4 @@
-// 1.20.1	2025-11-21T18:56:01.6362958	Item Models: metal_works
+// 1.20.1	2025-11-22T00:09:22.2941177	Item Models: metal_works
 3a80a545789b30f683dff01f83bc2d7fece1a491 assets/metal_works/models/item/bronze_axe.json
 c4395b8b2f1fa8d47915c6579177a1abd3e51f08 assets/metal_works/models/item/bronze_boots.json
 1684750ce46e2f7b8e313dd58280b90aaa9b7611 assets/metal_works/models/item/bronze_boots_amethyst_trim.json
@@ -133,6 +133,8 @@ da8ce1df03d819977a82af3d2b54e335a15cd991 assets/metal_works/models/item/rose_gol
 d3639cc3c48742c0b8da269007824ce93b3bff9a assets/metal_works/models/item/rose_gold_pickaxe.json
 f0e12375b4dc6f2ffcfeafaabd64bcdcc98d5e3f assets/metal_works/models/item/rose_gold_shovel.json
 8a0140313e76e78969080e03dc62dd0f208a8d76 assets/metal_works/models/item/rose_gold_sword.json
+1ce1fcb3461b0810b41254d8988780d871c53c65 assets/metal_works/models/item/soul_brick_slab.json
+b059e7dcdb2dbb726dffe7c0d2c2798423fd0777 assets/metal_works/models/item/soul_brick_stairs.json
 d579b1cc24935a18e857756eda3e7ae47282e13c assets/metal_works/models/item/tab_item.json
 5829bc05dcda58e2be23db5f41fdec6e743953ca assets/metal_works/models/item/tarnished_cut_tin_slab.json
 8229ceb4365fd8ab764a45fb5957986a43d588bb assets/metal_works/models/item/tarnished_cut_tin_stairs.json

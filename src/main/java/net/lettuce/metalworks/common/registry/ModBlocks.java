@@ -2,12 +2,14 @@ package net.lettuce.metalworks.common.registry;
 
 import net.lettuce.metalworks.common.block.*;
 import net.lettuce.metalworks.core.MetalWorks;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
@@ -50,6 +52,17 @@ public class ModBlocks {
             BlockBehaviour.Properties.copy(ModBlocks.CASSITERITE_BRICKS.get())));
     public static final RegistryObject<Block> CHISELED_CASSITERITE_BRICKS = BLOCKS.register("chiseled_cassiterite_bricks", () -> new Block
             (BlockBehaviour.Properties.copy(ModBlocks.POLISHED_CASSITERITE.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+
+        // Citadel Blocks
+    public static final RegistryObject<Block> SOUL_BRICKS = BLOCKS.register("soul_bricks", () -> new Block
+                (BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
+    public static final RegistryObject<Block> SOUL_BRICK_STAIRS = BLOCKS.register("soul_brick_stairs", () -> new StairBlock
+            (() -> ModBlocks.SOUL_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.SOUL_BRICKS.get())));
+    public static final RegistryObject<Block> SOUL_BRICK_SLAB = BLOCKS.register("soul_brick_slab", () -> new SlabBlock
+            (BlockBehaviour.Properties.copy(ModBlocks.SOUL_BRICKS.get())));
+
+    public static final RegistryObject<Block> SUSPICIOUS_SOUL_SOIL = BLOCKS.register("suspicious_soul_soil", () -> new BrushableBlock
+            (Blocks.SOUL_SOIL, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.SNARE).strength(0.25F).sound(SoundType.SUSPICIOUS_GRAVEL).pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_GRAVEL, SoundEvents.BRUSH_GRAVEL_COMPLETED));
 
         // Natural Tin Blocks
     public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore", () -> new Block

@@ -30,6 +30,10 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.CASSITERITE_BRICK_STAIRS.get());
                                 pOutput.accept(ModItems.CASSITERITE_BRICK_SLAB.get());
                                 pOutput.accept(ModItems.CASSITERITE_BRICK_WALL.get());
+                                pOutput.accept(ModItems.SOUL_BRICKS.get());
+                                pOutput.accept(ModItems.SOUL_BRICK_STAIRS.get());
+                                pOutput.accept(ModItems.SOUL_BRICK_SLAB.get());
+                                pOutput.accept(ModItems.SUSPICIOUS_SOUL_SOIL.get());
                                 pOutput.accept(ModItems.RAW_TIN.get());
                                 pOutput.accept(ModItems.TIN_INGOT.get());
                                 pOutput.accept(ModItems.TIN_NUGGET.get());
@@ -92,7 +96,6 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.WAXED_CUT_TIN.get());
                                 pOutput.accept(ModItems.WAXED_CUT_TIN_STAIRS.get());
                                 pOutput.accept(ModItems.WAXED_CUT_TIN_SLAB.get());
-
                                 pOutput.accept(ModItems.WAXED_TIN_TILES.get());
                                 pOutput.accept(ModItems.WAXED_TIN_TILE_STAIRS.get());
                                 pOutput.accept(ModItems.WAXED_TIN_TILE_SLAB.get());
@@ -124,22 +127,21 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.WAXED_TARNISHED_TIN_CHAIN.get());
                                 pOutput.accept(ModItems.WAXED_TARNISHED_TIN_LANTERN.get());
                                 pOutput.accept(ModItems.WAXED_TARNISHED_TIN_SOUL_LANTERN.get());
-
-                        pOutput.accept(ModItems.CRUDE_BRONZE.get());
-                        pOutput.accept(ModItems.BRONZE_INGOT.get());
-                        pOutput.accept(ModItems.BRONZE_NUGGET.get());
-                        pOutput.accept(ModItems.BRONZE_SWORD.get());
-                        pOutput.accept(ModItems.BRONZE_PICKAXE.get());
-                        pOutput.accept(ModItems.BRONZE_AXE.get());
-                        pOutput.accept(ModItems.BRONZE_SHOVEL.get());
-                        pOutput.accept(ModItems.BRONZE_HOE.get());
-                        pOutput.accept(ModItems.BRONZE_SHEARS.get());
-                        pOutput.accept(ModItems.BRONZE_BLOCK.get());
-                        pOutput.accept(ModItems.BRONZE_HELMET.get());
-                        pOutput.accept(ModItems.BRONZE_CHESTPLATE.get());
-                        pOutput.accept(ModItems.BRONZE_LEGGINGS.get());
-                        pOutput.accept(ModItems.BRONZE_BOOTS.get());
-                        pOutput.accept(ModItems.BRONZE_HORSE_ARMOR.get());
+                                pOutput.accept(ModItems.CRUDE_BRONZE.get());
+                                pOutput.accept(ModItems.BRONZE_INGOT.get());
+                                pOutput.accept(ModItems.BRONZE_NUGGET.get());
+                                pOutput.accept(ModItems.BRONZE_SWORD.get());
+                                pOutput.accept(ModItems.BRONZE_PICKAXE.get());
+                                pOutput.accept(ModItems.BRONZE_AXE.get());
+                                pOutput.accept(ModItems.BRONZE_SHOVEL.get());
+                                pOutput.accept(ModItems.BRONZE_HOE.get());
+                                pOutput.accept(ModItems.BRONZE_SHEARS.get());
+                                pOutput.accept(ModItems.BRONZE_BLOCK.get());
+                                pOutput.accept(ModItems.BRONZE_HELMET.get());
+                                pOutput.accept(ModItems.BRONZE_CHESTPLATE.get());
+                                pOutput.accept(ModItems.BRONZE_LEGGINGS.get());
+                                pOutput.accept(ModItems.BRONZE_BOOTS.get());
+                                pOutput.accept(ModItems.BRONZE_HORSE_ARMOR.get());
                                 pOutput.accept(ModItems.BRONZE_GRATE.get());
                                 pOutput.accept(ModItems.BRONZE_GRATE_DRAIN.get());
                                 pOutput.accept(ModItems.BRONZE_TILES.get());
@@ -152,25 +154,23 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.BRONZE_TRAPDOOR.get());
                                 pOutput.accept(ModItems.BRONZE_BARS.get());
                                 pOutput.accept(ModItems.LOOPING_PRESSURE_PLATE.get());
-
-
-                        pOutput.accept(ModItems.CRUDE_ROSE_GOLD.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_INGOT.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_NUGGET.get());
-                        pOutput.accept(ModItems.MAGE_POWDER.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_BEETROOT.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_SWORD.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_PICKAXE.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_AXE.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_SHOVEL.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_HOE.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_HELMET.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_CHESTPLATE.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_LEGGINGS.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_BOOTS.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_HORSE_ARMOR.get());
-                        pOutput.accept(ModItems.MAGE_GOLEM_SPAWN_EGG.get());
-                        pOutput.accept(ModItems.ROSE_GOLD_BLOCK.get());
+                                pOutput.accept(ModItems.CRUDE_ROSE_GOLD.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_INGOT.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_NUGGET.get());
+                                pOutput.accept(ModItems.MAGE_POWDER.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_BEETROOT.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_SWORD.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_PICKAXE.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_AXE.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_SHOVEL.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_HOE.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_HELMET.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_CHESTPLATE.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_LEGGINGS.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_BOOTS.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_HORSE_ARMOR.get());
+                                pOutput.accept(ModItems.MAGE_GOLEM_SPAWN_EGG.get());
+                                pOutput.accept(ModItems.ROSE_GOLD_BLOCK.get());
                                 pOutput.accept(ModItems.ROSE_GOLD_MOSAIC.get());
                                 pOutput.accept(ModItems.ROSE_GOLD_MOSAIC_STAIRS.get());
                                 pOutput.accept(ModItems.ROSE_GOLD_MOSAIC_SLAB.get());
@@ -179,15 +179,6 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.MAGE_TORCH.get());
                                 pOutput.accept(ModItems.MAGE_LANTERN.get());
                                 pOutput.accept(ModItems.MAGE_CAMPFIRE.get());
-
-
-
-
-
-
-
-
-
                         })
                     .build());
 

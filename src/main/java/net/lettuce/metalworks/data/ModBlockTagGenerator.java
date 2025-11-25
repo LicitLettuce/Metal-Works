@@ -130,10 +130,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.ROSE_LANTERN.get(),
                         ModBlocks.MAGE_LANTERN.get());
 
-        // Mineable w/AXe
+        // Mineable w/Axe
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.MAGE_TORCH.get(),
                         ModBlocks.MAGE_CAMPFIRE.get());
+
+        // Mineable w/Sovel
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.SOUL_BRICKS.get(),
+                        ModBlocks.SOUL_BRICK_STAIRS.get(),
+                        ModBlocks.SOUL_BRICK_SLAB.get(),
+                        ModBlocks.SUSPICIOUS_SOUL_SOIL.get());
 
         // Needs Stone Tool
         this.tag(BlockTags.NEEDS_STONE_TOOL)
@@ -167,6 +174,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.MAGE_CAMPFIRE.get(),
                         Blocks.BOOKSHELF);
 
+        // Tarnished Tin Blocks
         this.tag(ModTags.TARNISHED_TIN_BLOCKS)
                 .add(ModBlocks.TARNISHED_TIN.get(),
                 ModBlocks.TARNISHED_CHISELED_TIN.get(),
@@ -184,5 +192,18 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.TARNISHED_TIN_BARS.get(),
                 ModBlocks.TARNISHED_TIN_CHAIN.get());
 
+        // Soul Fire Base Blocks
+        this.tag(BlockTags.SOUL_FIRE_BASE_BLOCKS)
+                .add(ModBlocks.SOUL_BRICKS.get(),
+                        ModBlocks.SOUL_BRICK_STAIRS.get(),
+                        ModBlocks.SOUL_BRICK_SLAB.get(),
+                        ModBlocks.SUSPICIOUS_SOUL_SOIL.get());
+
+        // Soul Speed Blocks
+        this.tag(BlockTags.SOUL_SPEED_BLOCKS)
+                .add(ModBlocks.SOUL_BRICKS.get(),
+                        ModBlocks.SOUL_BRICK_STAIRS.get(),
+                        ModBlocks.SOUL_BRICK_SLAB.get(),
+                        ModBlocks.SUSPICIOUS_SOUL_SOIL.get());
     }
 }

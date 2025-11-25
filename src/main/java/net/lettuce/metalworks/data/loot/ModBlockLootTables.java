@@ -1,7 +1,5 @@
 package net.lettuce.metalworks.data.loot;
 
-
-
 import net.lettuce.metalworks.common.registry.ModBlocks;
 import net.lettuce.metalworks.common.registry.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -46,7 +44,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.CASSITERITE_BRICK_WALL.get());
         this.dropSelf(ModBlocks.CHISELED_CASSITERITE_BRICKS.get());
 
-        // Natural Tin Loot Tables
+            // Citadel Blocks
+        this.dropSelf(ModBlocks.SOUL_BRICKS.get());
+        this.dropSelf(ModBlocks.SOUL_BRICK_STAIRS.get());
+        this.add(ModBlocks.SOUL_BRICK_SLAB.get(), createSlabItemTable(ModBlocks.SOUL_BRICK_SLAB.get()));
+        this.dropSelf(ModBlocks.SUSPICIOUS_SOUL_SOIL.get());
+
+            // Natural Tin Loot Tables
         this.dropSelf(ModBlocks.RAW_TIN_BLOCK.get());
         this.add(ModBlocks.TIN_ORE.get(), block -> createCopperLikeOreDrops(ModBlocks.TIN_ORE.get(), ModItems.RAW_TIN.get()));
         this.add(ModBlocks.DEEPSLATE_TIN_ORE.get(), block -> createCopperLikeOreDrops(ModBlocks.DEEPSLATE_TIN_ORE.get(), ModItems.RAW_TIN.get()));
