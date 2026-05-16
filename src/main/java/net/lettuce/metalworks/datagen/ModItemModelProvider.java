@@ -59,8 +59,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.SOUL_BRICK_STAIRS);
         evenSimplerBlockItem(ModBlocks.SOUL_BRICK_SLAB);
 
-        simpleItem(ModItems.REAP_POTTERY_SHERD);
-        simpleItem(ModItems.LOST_POTTERY_SHERD);
         simpleItem(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE);
         simpleItem(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE);
         simpleItem(ModItems.ANCIENTS_MUSIC_DISC);

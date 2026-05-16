@@ -40,13 +40,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.BRONZE_INGOT.get(),
                         ModItems.ROSE_GOLD_INGOT.get());
 
-        this.tag(ItemTags.DECORATED_POT_SHERDS)
-                .add(ModItems.REAP_POTTERY_SHERD.get(),
-                        ModItems.LOST_POTTERY_SHERD.get());
-
         this.tag(ItemTags.MUSIC_DISCS)
                 .add(ModItems.ANCIENTS_MUSIC_DISC.get());
-
 
     }
 }

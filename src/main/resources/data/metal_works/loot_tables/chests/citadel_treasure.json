@@ -149,16 +149,6 @@
           "weight": 2
         },
         {
-          "type": "minecraft:item",
-          "name": "metal_works:lost_pottery_sherd",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "metal_works:reap_pottery_sherd",
-          "weight": 3
-        },
-        {
           "type": "minecraft:empty",
           "weight": 4
         }

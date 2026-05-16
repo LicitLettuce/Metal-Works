@@ -198,19 +198,15 @@ public class ModItems {
     public static final RegistryObject<BlockItem> SUSPICIOUS_SOUL_SOIL = ITEMS.register("suspicious_soul_soil", () -> new BlockItem
             (ModBlocks.SUSPICIOUS_SOUL_SOIL.get(), new Item.Properties()));
 
-    public static final RegistryObject<Item> LOST_POTTERY_SHERD = ITEMS.register("lost_pottery_sherd",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> REAP_POTTERY_SHERD = ITEMS.register("reap_pottery_sherd",
-            () -> new Item(new Item.Properties()));
-
     public static final RegistryObject<Item> ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("ethos_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.ETHOS));
     public static final RegistryObject<Item> TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("tarnish_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.ETHOS));
 
+    public static final RegistryObject<Item> ANCIENTS_MUSIC_DISC = ITEMS.register("ancients_music_disc", () -> new RecordItem
+            (14, ModSounds.ANCIENTS_MUSIC_DISC, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 9200));
 
-    // Natural Tin Items
+        // Natural Tin Items
     public static final RegistryObject<BlockItem> RAW_TIN_BLOCK = ITEMS.register("raw_tin_block", () -> new BlockItem
             (ModBlocks.RAW_TIN_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> TIN_ORE = ITEMS.register("tin_ore", () -> new BlockItem
@@ -619,9 +615,6 @@ public class ModItems {
     public static final RegistryObject<ForgeSpawnEggItem> MAGE_GOLEM_SPAWN_EGG = ITEMS.register("mage_golem_spawn_egg", () -> new ForgeSpawnEggItem
             (ModEntities.MAGE_GOLEM, 0xf25e63, 16382457, new Item.Properties()));
 
-    public static final RegistryObject<Item> ANCIENTS_MUSIC_DISC = ITEMS.register("ancients_music_disc", () -> new RecordItem
-            (14, ModSounds.ANCIENTS_MUSIC_DISC, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 9200));
-
         // GUI Items
         public static final RegistryObject<Item> TAB_ITEM = ITEMS.register("tab_item", () -> new Item
                 (new Item.Properties().fireResistant()));
@@ -632,7 +625,6 @@ public class ModItems {
         public static final RegistryObject<Item> REFINED_RADIANCE_ITEM =
             ITEMS.register("refined_radiance_item", () -> new GlowingItem
                     (new Item.Properties().fireResistant()));
-
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

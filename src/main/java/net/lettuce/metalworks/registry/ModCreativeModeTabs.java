@@ -177,9 +177,7 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.MEDIUM_WEIGHTED_PRESSURE_PLATE.get());
                                 pOutput.accept(ModItems.ROSE_LANTERN.get());
                                 pOutput.accept(ModItems.MAGE_TORCH.get());
-                                pOutput.accept(ModItems.MAGE_LANTERN.get());
-                                pOutput.accept(ModItems.REAP_POTTERY_SHERD.get());
-                                pOutput.accept(ModItems.LOST_POTTERY_SHERD.get());
+                                pOutput.accept(ModItems.MAGE_LANTERN.get());;
                                 pOutput.accept(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get());
                                 pOutput.accept(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get());
                                 pOutput.accept(ModItems.ANCIENTS_MUSIC_DISC.get());

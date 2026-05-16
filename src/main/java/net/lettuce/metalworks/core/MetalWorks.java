@@ -49,7 +49,6 @@ public class MetalWorks  {
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
-        ModDecoratedPotPatterns.register();
         ModStructures.STRUCTURE_TYPES.register(modEventBus);
         ModStructurePieces.STRUCTURE_PIECES.register(modEventBus);
 
@@ -58,7 +57,6 @@ public class MetalWorks  {
         event.enqueueWork(() -> {
             TarnishingChain.registerWeatheringChain();
             WaxingEvent.initWaxables();
-            ModDecoratedPotPatterns.register();
             var type = ModEntities.MAGE_GOLEM.get();
             var key = ForgeRegistries.ENTITY_TYPES.getKey(type);
             MetalWorks.LOGGER.info("Mage Golem registered with ID: {}", key);

@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-15T19:52:17.2163774	Item Models: metal_works
+// 1.20.1	2026-05-15T23:33:38.5585727	Item Models: metal_works
 bb91faff50c3a3b25cf3a4c43b364bb78293aa30 assets/metal_works/models/item/ancients_music_disc.json
 3a80a545789b30f683dff01f83bc2d7fece1a491 assets/metal_works/models/item/bronze_axe.json
 c4395b8b2f1fa8d47915c6579177a1abd3e51f08 assets/metal_works/models/item/bronze_boots.json
@@ -70,7 +70,6 @@ a4d22991f4ffba9fb3cc0500a8a8ecafc1edea86 assets/metal_works/models/item/cassiter
 aaf680eed80a70a679d01a438791cea005657c38 assets/metal_works/models/item/cut_tin_slab.json
 bea917d4971659cad1084a884d1d6fb9a4ea9a16 assets/metal_works/models/item/cut_tin_stairs.json
 a4947e336a551b63fd39158224960e93936e7e04 assets/metal_works/models/item/ethos_armor_trim_smithing_template.json
-3d3a0d4ad5af5deec9aeb0ca67033c67f3d80a0b assets/metal_works/models/item/lost_pottery_sherd.json
 260685b5fb84f0f2e526ea6974beaf315447be0f assets/metal_works/models/item/mage_campfire.json
 41e0faa4d89953bff70db52dfcc639e5e2391716 assets/metal_works/models/item/mage_fire_advancement_item.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/metal_works/models/item/mage_golem_spawn_egg.json
@@ -80,7 +79,6 @@ bcd1f06760cbca23b9c06a20419317a12de9f2d6 assets/metal_works/models/item/mage_pow
 513979d9565f8006f429918052b19ab72fd6bd36 assets/metal_works/models/item/polished_cassiterite_stairs.json
 46dcee36ec7a1f997a6e36a28401af09a37af36e assets/metal_works/models/item/polished_cassiterite_wall.json
 bcc2ae6cd2afe7243b6e4e8ef7ee0b06189fbc2f assets/metal_works/models/item/raw_tin.json
-43877a1cd60713b6dbece55d62d89ea4562d99c5 assets/metal_works/models/item/reap_pottery_sherd.json
 00d476c779f97b9bd2e642c49cbeb2df3d590989 assets/metal_works/models/item/refined_radiance_item.json
 dbd593f946615832810777b5d7a109e1a73f6828 assets/metal_works/models/item/rose_gold_axe.json
 0e2c62d0a7eba45009a41c4ce180720c0e77e57c assets/metal_works/models/item/rose_gold_beetroot.json
