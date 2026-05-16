@@ -1,3 +1,5 @@
-// 1.20.1	2025-11-10T23:36:23.5148929	Tags for minecraft:item mod id metal_works
+// 1.20.1	2026-05-15T20:01:23.1980878	Tags for minecraft:item mod id metal_works
+44ce77783ee5f00df42c11e27984fc4145ec16bd data/minecraft/tags/items/decorated_pot_sherds.json
+df34bf2a4a0e77b7355e4feac562deaf79c96f78 data/minecraft/tags/items/music_discs.json
 9b260e8526d3f28d35743630081eac9aa1e1e67b data/minecraft/tags/items/trimmable_armor.json
 4522962aca09956e6c66d285d6db01e3a513456a data/minecraft/tags/items/trim_materials.json

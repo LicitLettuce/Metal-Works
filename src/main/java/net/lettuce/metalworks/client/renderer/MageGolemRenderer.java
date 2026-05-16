@@ -4,7 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import net.lettuce.metalworks.client.model.MageGolemEmissiveLayer;
 import net.lettuce.metalworks.client.model.MageGolemModel;
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.ModModelLayers;
+import net.lettuce.metalworks.registry.ModModelLayers;
 import net.lettuce.metalworks.entity.MageGolemEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

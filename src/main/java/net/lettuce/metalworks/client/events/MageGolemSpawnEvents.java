@@ -1,8 +1,8 @@
 package net.lettuce.metalworks.client.events;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.ModBlocks;
-import net.lettuce.metalworks.common.registry.ModEntities;
+import net.lettuce.metalworks.registry.ModBlocks;
+import net.lettuce.metalworks.registry.ModEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;

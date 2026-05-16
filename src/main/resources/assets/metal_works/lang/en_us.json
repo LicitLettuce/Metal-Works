@@ -213,6 +213,8 @@
   "advancements.metal_works.summon_mage_golem.title": "Arcane Protection",
   "advancements.metal_works.summon_mage_golem.desc": "Summon a Mage Golem to guard your home with ancient magic.",
   "advancements.metal_works.enchanted_rose_gold_armor.title": "Refined Radiance",
-  "advancements.metal_works.enchanted_rose_gold_armor.desc": "Enchant a piece of rose gold armor. Nothing's touching you in this!"
+  "advancements.metal_works.enchanted_rose_gold_armor.desc": "Enchant a piece of rose gold armor. Nothing's touching you in this!",
+  "item.metal_works.ancients_music_disc": "Music Disc",
+  "item.metal_works.ancients_music_disc.desc": "LicitLettuce - Ancients"
 }
 

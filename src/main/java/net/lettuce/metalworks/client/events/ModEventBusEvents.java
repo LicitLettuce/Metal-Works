@@ -1,7 +1,7 @@
 package net.lettuce.metalworks.client.events;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.ModEntities;
+import net.lettuce.metalworks.registry.ModEntities;
 import net.lettuce.metalworks.entity.MageGolemEntity;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

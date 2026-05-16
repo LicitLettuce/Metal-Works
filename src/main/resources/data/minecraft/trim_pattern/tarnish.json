@@ -1,0 +1,7 @@
+{
+  "asset_id": "minecraft:tarnish",
+  "description": {
+    "translate": "Tarnish Armor Trim"
+  },
+  "template_item": "metal_works:tarnish_armor_trim_smithing_template"
+}

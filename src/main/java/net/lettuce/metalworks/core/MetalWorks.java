@@ -2,8 +2,7 @@ package net.lettuce.metalworks.core;
 
 import com.mojang.logging.LogUtils;
 import net.lettuce.metalworks.client.events.tin.TarnishingChain;
-import net.lettuce.metalworks.common.registry.ModLootModifiers;
-import net.lettuce.metalworks.common.registry.*;
+import net.lettuce.metalworks.registry.*;
 import net.lettuce.metalworks.client.renderer.MageGolemRenderer;
 import net.lettuce.metalworks.client.events.tin.WaxingEvent;
 import net.minecraft.client.particle.FlameParticle;
@@ -28,12 +27,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
-import static net.lettuce.metalworks.common.registry.ModBlocks.*;
+import static net.lettuce.metalworks.registry.ModBlocks.*;
 
 @Mod(MetalWorks.MOD_ID)
 public class MetalWorks  {
     public static final String MOD_ID = "metal_works";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     public MetalWorks()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -45,18 +44,21 @@ public class MetalWorks  {
         ModBlockEntities.register();
         ModPaintings.REGISTRY.register(modEventBus);
         ModLootModifiers.register(modEventBus);
-        ModSounds.register(modEventBus);
+        ModSounds.SOUND_EVENTS.register(modEventBus);
         ModEntities.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
-
+        ModDecoratedPotPatterns.register();
+        ModStructures.STRUCTURE_TYPES.register(modEventBus);
+        ModStructurePieces.STRUCTURE_PIECES.register(modEventBus);
 
     }
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             TarnishingChain.registerWeatheringChain();
             WaxingEvent.initWaxables();
+            ModDecoratedPotPatterns.register();
             var type = ModEntities.MAGE_GOLEM.get();
             var key = ForgeRegistries.ENTITY_TYPES.getKey(type);
             MetalWorks.LOGGER.info("Mage Golem registered with ID: {}", key);

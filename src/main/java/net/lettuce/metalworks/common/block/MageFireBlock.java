@@ -1,6 +1,6 @@
 package net.lettuce.metalworks.common.block;
 
-import net.lettuce.metalworks.common.registry.ModTags;
+import net.lettuce.metalworks.registry.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;

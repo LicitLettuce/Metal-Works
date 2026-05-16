@@ -1,5 +1,5 @@
 package net.lettuce.metalworks.client.events.tin;
-import net.lettuce.metalworks.common.registry.ModBlocks;
+import net.lettuce.metalworks.registry.ModBlocks;
 import net.minecraft.world.level.block.Block;
 
 import java.util.HashMap;

@@ -1,0 +1,9 @@
+{
+  "sources": [
+    {
+      "type": "metal_works:directory",
+      "source": "entity/decorated_pot",
+      "prefix": "entity/decorated_pot/"
+    }
+  ]
+}

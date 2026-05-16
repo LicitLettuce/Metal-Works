@@ -1,0 +1,7 @@
+{
+  "type": "metal_works:lost_citadel",
+  "biomes": "#metal_works:has_structure/lost_citadel",
+  "step": "surface_structures",
+  "terrain_adaptation": "bury",
+  "spawn_overrides": {}
+}

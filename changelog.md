@@ -45,8 +45,7 @@
   - Drops 2-6 Tin Nuggets
   - Generates in Nether Waste Biomes between y-level 0 to 128
 - __Tin Blocks now weather like Copper Blocks__
-    - Tin weathers in 3 stages: tarnished, corroded, and eroded
-    - As tin weathers, it slowly turns more purple.
+    - Tin weathers into tarnished tin.
     - Tin weathers 75% the speed of copper, making it slightly slower
     - Tin blocks can be waxed and unwaxed with honeycombs and axes, respectively
     - Unwaxed weathered tin blocks can be scraped back to the previous stage of weathering

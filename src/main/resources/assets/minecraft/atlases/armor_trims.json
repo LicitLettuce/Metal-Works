@@ -2,11 +2,44 @@
   "sources": [
     {
       "type": "blueprint:paletted_permutations",
-      "palette_key": "minecraft:trims/color_palettes/trim_palette",
+      "textures": [
+        "trims/models/armor/ethos",
+        "trims/models/armor/ethos_leggings",
+        "trims/models/armor/tarnish",
+        "trims/models/armor/tarnish_leggings"
+        ],
+        "palette_key": "minecraft:trims/color_palettes/trim_palette",
       "permutations": {
         "tin": "metal_works:trims/color_palettes/tin",
         "bronze": "metal_works:trims/color_palettes/bronze",
-        "rose_gold": "metal_works:trims/color_palettes/rose_gold"
+        "rose_gold": "metal_works:trims/color_palettes/rose_gold",
+        "quartz": "trims/color_palettes/quartz",
+        "iron": "trims/color_palettes/iron",
+        "gold": "trims/color_palettes/gold",
+        "diamond": "trims/color_palettes/diamond",
+        "netherite": "trims/color_palettes/netherite",
+        "redstone": "trims/color_palettes/redstone",
+        "copper": "trims/color_palettes/copper",
+        "emerald": "trims/color_palettes/emerald",
+        "lapis": "trims/color_palettes/lapis",
+        "amethyst": "trims/color_palettes/amethyst",
+        "iron_darker": "trims/color_palettes/iron_darker",
+        "gold_darker": "trims/color_palettes/gold_darker",
+        "diamond_darker": "trims/color_palettes/diamond_darker",
+        "netherite_darker": "trims/color_palettes/netherite_darker",
+        "glowworm_silk": "biomesoplenty:trims/color_palettes/glowworm_silk",
+        "rose_quartz": "biomesoplenty:trims/color_palettes/rose_quartz",
+        "enderite": "enderitemod:trims/color_palettes/enderite",
+        "lead": "oreganized:trims/color_palettes/lead",
+        "silver": "oreganized:trims/color_palettes/silver",
+        "electrum": "oreganized:trims/color_palettes/electrum",
+        "lumiere_shard": "trims/color_palettes/lumiere_shard",
+        "allurite_shard": "trims/color_palettes/allurite_shard",
+        "pink_salt_shard": "trims/color_palettes/pink_salt_shard",
+        "uranium": "trims/color_palettes/uranium",
+        "polished_jade": "trims/color_palettes/polished_jade",
+        "opal_chunk": "trims/color_palettes/opal_chunk",
+        "rune": "trims/color_palettes/rune"
       },
       "sources": [
         {

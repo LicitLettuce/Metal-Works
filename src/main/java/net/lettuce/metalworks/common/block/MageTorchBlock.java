@@ -1,6 +1,6 @@
 package net.lettuce.metalworks.common.block;
 
-import net.lettuce.metalworks.common.registry.ModParticles;
+import net.lettuce.metalworks.registry.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.RandomSource;

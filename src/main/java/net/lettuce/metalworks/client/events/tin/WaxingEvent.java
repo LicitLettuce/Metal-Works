@@ -1,7 +1,7 @@
 package net.lettuce.metalworks.client.events.tin;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.ModBlocks;
+import net.lettuce.metalworks.registry.ModBlocks;
 import net.lettuce.metalworks.util.DoorStateUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;

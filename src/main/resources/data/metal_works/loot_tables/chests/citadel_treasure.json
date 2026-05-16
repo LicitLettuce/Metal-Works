@@ -1,0 +1,168 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": { "min": 5, "max": 9 },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "weight": 12,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 2, "max": 8 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_block",
+          "weight": 3,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 2 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gilded_blackstone",
+          "weight": 5,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 2, "max": 8 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ancient_debris",
+          "weight": 2,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 2 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_scrap",
+          "weight": 2,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 2 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "weight": 3,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 3 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "weight": 4,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 2, "max": 6 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:crying_obsidian",
+          "weight": 5,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 2, "max": 6 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:obsidian",
+          "weight": 5,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 2, "max": 8 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "weight": 4,
+          "functions": [{ "function": "minecraft:enchant_randomly" }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_apple",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lodestone",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:bronze_ingot",
+          "weight": 8,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 2, "max": 6 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:rose_gold_ingot",
+          "weight": 6,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:tin_block",
+          "weight": 3,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 2 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:bronze_block",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:rose_gold_block",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:mage_powder",
+          "weight": 4,
+          "functions": [{ "function": "minecraft:set_count", "count": { "min": 1, "max": 4 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:tin_axe",
+          "weight": 3,
+          "functions": [{ "function": "minecraft:set_damage", "damage": { "min": 0.15, "max": 0.75 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:tin_helmet",
+          "weight": 3,
+          "functions": [{ "function": "minecraft:set_damage", "damage": { "min": 0.1, "max": 0.7 } }]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:bronze_sword",
+          "weight": 2,
+          "functions": [
+            { "function": "minecraft:set_damage", "damage": { "min": 0.1, "max": 0.6 } },
+            { "function": "minecraft:enchant_with_levels", "levels": { "min": 5, "max": 18 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:bronze_chestplate",
+          "weight": 2,
+          "functions": [
+            { "function": "minecraft:set_damage", "damage": { "min": 0.1, "max": 0.65 } },
+            { "function": "minecraft:enchant_with_levels", "levels": { "min": 5, "max": 16 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:ancients_music_disc",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:ethos_armor_trim_smithing_template",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:lost_pottery_sherd",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "metal_works:reap_pottery_sherd",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

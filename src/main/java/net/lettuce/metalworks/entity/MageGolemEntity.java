@@ -1,9 +1,7 @@
 package net.lettuce.metalworks.entity;
 
-import com.teamabnormals.blueprint.core.Blueprint;
-import com.teamabnormals.blueprint.core.other.tags.BlueprintBlockTags;
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.ModParticles;
+import net.lettuce.metalworks.registry.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -25,8 +23,6 @@ import net.minecraft.world.entity.animal.AbstractGolem;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

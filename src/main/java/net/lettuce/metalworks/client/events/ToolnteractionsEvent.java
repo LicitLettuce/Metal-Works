@@ -1,8 +1,8 @@
 package net.lettuce.metalworks.client.events;
 
 import net.lettuce.metalworks.core.MetalWorks;
-import net.lettuce.metalworks.common.registry.ModBlocks;
-import net.lettuce.metalworks.common.registry.ModTags;
+import net.lettuce.metalworks.registry.ModBlocks;
+import net.lettuce.metalworks.registry.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

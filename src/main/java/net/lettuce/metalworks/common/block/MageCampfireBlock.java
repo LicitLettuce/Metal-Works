@@ -1,7 +1,7 @@
 package net.lettuce.metalworks.common.block;
 
 import net.lettuce.metalworks.common.blockentity.MageCampfireBlockEntity;
-import net.lettuce.metalworks.common.registry.ModBlockEntities;
+import net.lettuce.metalworks.registry.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
