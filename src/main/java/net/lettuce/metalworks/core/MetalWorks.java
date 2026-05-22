@@ -161,6 +161,11 @@ public class MetalWorks  {
                 event.getEntries().putAfter(ModItems.ROSE_GOLD_MOSAIC_STAIRS.get().getDefaultInstance(), ModItems.ROSE_GOLD_MOSAIC_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.ROSE_GOLD_MOSAIC_SLAB.get().getDefaultInstance(), ModItems.MEDIUM_WEIGHTED_PRESSURE_PLATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.MEDIUM_WEIGHTED_PRESSURE_PLATE.get().getDefaultInstance(), ModItems.ROSE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(Items.RED_NETHER_BRICK_WALL.getDefaultInstance(), Items.SOUL_SOIL.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(Items.SOUL_SOIL.getDefaultInstance(), Items.SOUL_SAND.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(Items.SOUL_SAND.getDefaultInstance(), ModItems.SOUL_BRICKS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.SOUL_BRICKS.get().getDefaultInstance(), ModItems.SOUL_BRICK_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.SOUL_BRICK_STAIRS.get().getDefaultInstance(), ModItems.SOUL_BRICK_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
         }
         if (ModConfig.COMMON.populateVanillaTabs.get()) {
@@ -207,6 +212,8 @@ public class MetalWorks  {
                 event.getEntries().putAfter(ModItems.ROSE_GOLD_SHOVEL.get().getDefaultInstance(), ModItems.ROSE_GOLD_PICKAXE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.ROSE_GOLD_PICKAXE.get().getDefaultInstance(), ModItems.ROSE_GOLD_AXE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.ROSE_GOLD_AXE.get().getDefaultInstance(), ModItems.ROSE_GOLD_HOE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(Items.MUSIC_DISC_PIGSTEP.getDefaultInstance(), ModItems.MUSIC_DISC_ANCIENTS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
             }
         }
         if (ModConfig.COMMON.populateVanillaTabs.get()) {
@@ -246,9 +253,10 @@ public class MetalWorks  {
                 event.getEntries().putAfter(Items.IRON_INGOT.getDefaultInstance(), ModItems.BRONZE_INGOT.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(Items.GOLD_INGOT.getDefaultInstance(), ModItems.ROSE_GOLD_INGOT.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(Items.BLAZE_POWDER.getDefaultInstance(), ModItems.MAGE_POWDER.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
                 event.getEntries().putBefore(ModItems.BRONZE_INGOT.get().getDefaultInstance(), ModItems.CRUDE_BRONZE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putBefore(ModItems.ROSE_GOLD_INGOT.get().getDefaultInstance(), ModItems.CRUDE_ROSE_GOLD.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(Items.RIB_ARMOR_TRIM_SMITHING_TEMPLATE.getDefaultInstance(), ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putBefore(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get().getDefaultInstance(), ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
             }
         }

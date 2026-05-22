@@ -242,6 +242,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.CASSITERITE.get()), has(ModItems.CASSITERITE.get()))
                 .save(pWriter);
 
+        // Soul Bricks
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.SOUL_BRICKS.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', Items.SOUL_SOIL)
+                .unlockedBy(getHasName(Items.SOUL_SOIL), has(Items.SOUL_SOIL))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.SOUL_BRICK_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.SOUL_BRICKS.get())
+                .unlockedBy(getHasName(Items.SOUL_SOIL), has(Items.SOUL_SOIL))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.SOUL_BRICK_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.SOUL_BRICKS.get())
+                .unlockedBy(getHasName(Items.SOUL_SOIL), has(Items.SOUL_SOIL))
+                .save(pWriter);
+
         // Tin Nugget
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIN_NUGGET.get(), 9)
                 .requires(ModItems.TIN_INGOT.get())
@@ -1225,6 +1247,31 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('@', Items.GLOWSTONE)
                 .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
+
+        // Armor Trims
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get(), 2)
+                .pattern("#T#")
+                .pattern("#@#")
+                .pattern("###")
+                .define('#', Items.DIAMOND)
+                .define('@', Items.SOUL_SOIL)
+                .define('T', ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get())
+                .unlockedBy(getHasName(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get()),
+                        has(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
+                .save(pWriter, new ResourceLocation(MetalWorks.MOD_ID,
+                        "ethos_armor_trim_smithing_template_duplication"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get(), 2)
+                .pattern("#T#")
+                .pattern("#@#")
+                .pattern("###")
+                .define('#', Items.DIAMOND)
+                .define('@', ModItems.RAW_TIN.get())
+                .define('T', ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get())
+                .unlockedBy(getHasName(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get()),
+                        has(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
+                .save(pWriter, new ResourceLocation(MetalWorks.MOD_ID,
+                        "tarnish_armor_trim_smithing_template_duplication"));
 
         buildWaxingRecipes(pWriter);
 

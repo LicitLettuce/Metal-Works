@@ -34,6 +34,7 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.SOUL_BRICK_STAIRS.get());
                                 pOutput.accept(ModItems.SOUL_BRICK_SLAB.get());
                                 pOutput.accept(ModItems.SUSPICIOUS_SOUL_SOIL.get());
+                                pOutput.accept(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get());
                                 pOutput.accept(ModItems.RAW_TIN.get());
                                 pOutput.accept(ModItems.TIN_INGOT.get());
                                 pOutput.accept(ModItems.TIN_NUGGET.get());
@@ -47,6 +48,8 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.TIN_LEGGINGS.get());
                                 pOutput.accept(ModItems.TIN_BOOTS.get());
                                 pOutput.accept(ModItems.TIN_HORSE_ARMOR.get());
+                                pOutput.accept(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+                                pOutput.accept(ModItems.MUSIC_DISC_ANCIENTS.get());
                                 pOutput.accept(ModItems.TIN_ORE.get());
                                 pOutput.accept(ModItems.DEEPSLATE_TIN_ORE.get());
                                 pOutput.accept(ModItems.SOUL_TIN_ORE.get());
@@ -178,9 +181,6 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.ROSE_LANTERN.get());
                                 pOutput.accept(ModItems.MAGE_TORCH.get());
                                 pOutput.accept(ModItems.MAGE_LANTERN.get());;
-                                pOutput.accept(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get());
-                                pOutput.accept(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get());
-                                pOutput.accept(ModItems.ANCIENTS_MUSIC_DISC.get());
                         })
                     .build());
 

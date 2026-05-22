@@ -61,7 +61,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE);
         simpleItem(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE);
-        simpleItem(ModItems.ANCIENTS_MUSIC_DISC);
+        simpleItem(ModItems.MUSIC_DISC_ANCIENTS);
 
 
         // Tin Items

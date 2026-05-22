@@ -78,45 +78,45 @@ public class ModBlocks {
     public static final RegistryObject<Block> TIN_BLOCK = BLOCKS.register("tin_block", () -> new WeatheringTinBlock
             (BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).strength(3.0F)));
     public static final RegistryObject<Block> TARNISHED_TIN = BLOCKS.register("tarnished_tin", () -> new WeatheringTinBlock
-            (BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).strength(3.0F)));
+            (BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_TIN_BLOCK = BLOCKS.register("waxed_tin_block", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN = BLOCKS.register("waxed_tarnished_tin", () ->
-            new Block(BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER)));
+            new Block(BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER).strength(3.5F).explosionResistance(12)));
 
         // Chiseled Tin
     public static final RegistryObject<Block> CHISELED_TIN = BLOCKS.register("chiseled_tin", () -> new WeatheringTinBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
     public static final RegistryObject<Block> TARNISHED_CHISELED_TIN = BLOCKS.register("tarnished_chiseled_tin", () -> new WeatheringTinBlock
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_CHISELED_TIN = BLOCKS.register("waxed_chiseled_tin", () -> new Block
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
     public static final RegistryObject<Block> WAXED_TARNISHED_CHISELED_TIN = BLOCKS.register("waxed_tarnished_chiseled_tin", () -> new Block
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).strength(3.5F).explosionResistance(12)));
 
         // Tin Grate
     public static final RegistryObject<Block> TIN_GRATE = BLOCKS.register("tin_grate", () -> new WeatheringGrateBlock
             (BlockBehaviour.Properties.copy(Blocks.IRON_BARS)));
     public static final RegistryObject<Block> TARNISHED_TIN_GRATE = BLOCKS.register("tarnished_tin_grate", () -> new WeatheringGrateBlock
-            (BlockBehaviour.Properties.copy(Blocks.IRON_BARS)));
+            (BlockBehaviour.Properties.copy(Blocks.IRON_BARS).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_TIN_GRATE = BLOCKS.register("waxed_tin_grate", () -> new GrateBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).noOcclusion().sound(SoundType.COPPER).mapColor(DyeColor.GREEN)));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_GRATE = BLOCKS.register("waxed_tarnished_tin_grate", () -> new GrateBlock
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).noOcclusion().sound(SoundType.COPPER).mapColor(DyeColor.LIGHT_GRAY)));;
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).noOcclusion().sound(SoundType.COPPER).strength(3.5F).explosionResistance(12).mapColor(DyeColor.LIGHT_GRAY)));;
 
         // Tin Grate Drain
     public static final RegistryObject<Block> TIN_GRATE_DRAIN = BLOCKS.register("tin_grate_drain", () -> new WeatheringGrateDrainBlock
             (BlockBehaviour.Properties.copy(Blocks.IRON_BARS)));
     public static final RegistryObject<Block> TARNISHED_TIN_GRATE_DRAIN = BLOCKS.register("tarnished_tin_grate_drain", () -> new WeatheringGrateDrainBlock
-            (BlockBehaviour.Properties.copy(Blocks.IRON_BARS)));
+            (BlockBehaviour.Properties.copy(Blocks.IRON_BARS).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_TIN_GRATE_DRAIN = BLOCKS.register("waxed_tin_grate_drain", () -> new GrateDrainBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).noOcclusion().sound(SoundType.COPPER).mapColor(DyeColor.GREEN)));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_GRATE_DRAIN = BLOCKS.register("waxed_tarnished_tin_grate_drain", () -> new GrateDrainBlock
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).noOcclusion().sound(SoundType.COPPER).mapColor(DyeColor.LIGHT_GRAY)));
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).noOcclusion().sound(SoundType.COPPER).mapColor(DyeColor.LIGHT_GRAY).strength(3.5F).explosionResistance(12)));
 
         // Cut Tin
     public static final RegistryObject<Block> CUT_TIN = BLOCKS.register("cut_tin", () -> new WeatheringTinBlock
@@ -127,162 +127,162 @@ public class ModBlocks {
     public static final RegistryObject<Block> WAXED_CUT_TIN = BLOCKS.register("waxed_cut_tin", () -> new Block
             (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> WAXED_TARNISHED_CUT_TIN = BLOCKS.register("waxed_tarnished_cut_tin", () -> new Block
-            (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
         // Cut Tin Stairs
     public static final RegistryObject<Block> CUT_TIN_STAIRS = BLOCKS.register("cut_tin_stairs", () -> new WeatheringTinStairBlock
             (ModBlocks.CUT_TIN.get().defaultBlockState(), ModBlocks.CUT_TIN_STAIRS::get, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> TARNISHED_CUT_TIN_STAIRS = BLOCKS.register("tarnished_cut_tin_stairs", () -> new WeatheringTinStairBlock
-            (ModBlocks.CUT_TIN.get().defaultBlockState(), ModBlocks.TARNISHED_CUT_TIN_STAIRS::get, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (ModBlocks.CUT_TIN.get().defaultBlockState(), ModBlocks.TARNISHED_CUT_TIN_STAIRS::get, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_CUT_TIN_STAIRS = BLOCKS.register("waxed_cut_tin_stairs", () -> new StairBlock
             (() -> ModBlocks.CUT_TIN.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> WAXED_TARNISHED_CUT_TIN_STAIRS = BLOCKS.register("waxed_tarnished_cut_tin_stairs", () -> new StairBlock
-            (() -> ModBlocks.CUT_TIN.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (() -> ModBlocks.CUT_TIN.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
         // Cut Tin Slabs
     public static final RegistryObject<Block> CUT_TIN_SLAB = BLOCKS.register("cut_tin_slab", () -> new WeatheringTinSlabBlock
             (ModBlocks.CUT_TIN_SLAB, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> TARNISHED_CUT_TIN_SLAB = BLOCKS.register("tarnished_cut_tin_slab", () -> new WeatheringTinSlabBlock
-            (ModBlocks.TARNISHED_CUT_TIN_SLAB, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (ModBlocks.TARNISHED_CUT_TIN_SLAB, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_CUT_TIN_SLAB = BLOCKS.register("waxed_cut_tin_slab", () -> new SlabBlock
             (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> WAXED_TARNISHED_CUT_TIN_SLAB = BLOCKS.register("waxed_tarnished_cut_tin_slab", () -> new SlabBlock
-            (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
         // Tin Tiles
     public static final RegistryObject<Block> TIN_TILES = BLOCKS.register("tin_tiles", () -> new WeatheringTinBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
     public static final RegistryObject<Block> TARNISHED_TIN_TILES = BLOCKS.register("tarnished_tin_tiles", () -> new WeatheringTinBlock
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_TIN_TILES = BLOCKS.register("waxed_tin_tiles", () -> new Block
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_TILES = BLOCKS.register("waxed_tarnished_tin_tiles", () -> new Block
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).strength(3.5F).explosionResistance(12)));
 
         // Tin Tiles Stairs
     public static final RegistryObject<Block> TIN_TILE_STAIRS = BLOCKS.register("tin_tile_stairs", () -> new WeatheringTinStairBlock
             (ModBlocks.CUT_TIN.get().defaultBlockState(), ModBlocks.TIN_TILE_STAIRS::get, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> TARNISHED_TIN_TILE_STAIRS = BLOCKS.register("tarnished_tin_tile_stairs", () -> new WeatheringTinStairBlock
-            (ModBlocks.CUT_TIN.get().defaultBlockState(), ModBlocks.TARNISHED_TIN_TILE_STAIRS::get, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (ModBlocks.CUT_TIN.get().defaultBlockState(), ModBlocks.TARNISHED_TIN_TILE_STAIRS::get, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_TIN_TILE_STAIRS = BLOCKS.register("waxed_tin_tile_stairs", () -> new StairBlock
             (() -> ModBlocks.CUT_TIN.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_TILE_STAIRS = BLOCKS.register("waxed_tarnished_tin_tile_stairs", () -> new StairBlock
-            (() -> ModBlocks.CUT_TIN.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (() -> ModBlocks.CUT_TIN.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
         // Tin Tile Slabs
     public static final RegistryObject<Block> TIN_TILE_SLAB = BLOCKS.register("tin_tile_slab", () -> new WeatheringTinSlabBlock
             (ModBlocks.CUT_TIN_SLAB, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> TARNISHED_TIN_TILE_SLAB = BLOCKS.register("tarnished_tin_tile_slab", () -> new WeatheringTinSlabBlock
-            (ModBlocks.TARNISHED_TIN_TILE_SLAB, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (ModBlocks.TARNISHED_TIN_TILE_SLAB, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_TIN_TILE_SLAB = BLOCKS.register("waxed_tin_tile_slab", () -> new SlabBlock
             (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_TILE_SLAB = BLOCKS.register("waxed_tarnished_tin_tile_slab", () -> new SlabBlock
-            (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
         // Tin Shingles
     public static final RegistryObject<Block> TIN_SHINGLES = BLOCKS.register("tin_shingles", () -> new WeatheringTinBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
     public static final RegistryObject<Block> TARNISHED_TIN_SHINGLES = BLOCKS.register("tarnished_tin_shingles", () -> new WeatheringTinBlock
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_TIN_SHINGLES = BLOCKS.register("waxed_tin_shingles", () -> new Block
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_SHINGLES = BLOCKS.register("waxed_tarnished_tin_shingles", () -> new Block
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER)));
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).strength(3.5F).explosionResistance(12)));
 
         // Tin Shingle Stairs
     public static final RegistryObject<Block> TIN_SHINGLE_STAIRS = BLOCKS.register("tin_shingle_stairs", () -> new WeatheringTinStairBlock
             (ModBlocks.CUT_TIN.get().defaultBlockState(), ModBlocks.TIN_SHINGLE_STAIRS::get, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> TARNISHED_TIN_SHINGLE_STAIRS = BLOCKS.register("tarnished_tin_shingle_stairs", () -> new WeatheringTinStairBlock
-            (ModBlocks.CUT_TIN.get().defaultBlockState(), ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS::get, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (ModBlocks.CUT_TIN.get().defaultBlockState(), ModBlocks.TARNISHED_TIN_SHINGLE_STAIRS::get, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_TIN_SHINGLE_STAIRS = BLOCKS.register("waxed_tin_shingle_stairs", () -> new StairBlock
             (() -> ModBlocks.CUT_TIN.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_SHINGLE_STAIRS = BLOCKS.register("waxed_tarnished_tin_shingle_stairs", () -> new StairBlock
-            (() -> ModBlocks.CUT_TIN.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (() -> ModBlocks.CUT_TIN.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
         // Tin Shingle Slabs
     public static final RegistryObject<Block> TIN_SHINGLE_SLAB = BLOCKS.register("tin_shingle_slab", () -> new WeatheringTinSlabBlock
             (ModBlocks.TIN_SHINGLE_SLAB, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> TARNISHED_TIN_SHINGLE_SLAB = BLOCKS.register("tarnished_tin_shingle_slab", () -> new WeatheringTinSlabBlock
-            (ModBlocks.TARNISHED_TIN_SHINGLE_SLAB, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (ModBlocks.TARNISHED_TIN_SHINGLE_SLAB, BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_TIN_SHINGLE_SLAB = BLOCKS.register("waxed_tin_shingle_slab", () -> new SlabBlock
             (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_SHINGLE_SLAB = BLOCKS.register("waxed_tarnished_tin_shingle_slab", () -> new SlabBlock
-            (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get())));
+            (BlockBehaviour.Properties.copy(ModBlocks.CUT_TIN.get()).strength(3.5F).explosionResistance(12)));
 
         // Tin Door
     public static final RegistryObject<Block> TIN_DOOR = BLOCKS.register("tin_door", () -> new WeatheringTinDoorBlock
                 (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE, ModBlocks.TIN_DOOR::get));
     public static final RegistryObject<Block> TARNISHED_TIN_DOOR = BLOCKS.register("tarnished_tin_door", () -> new WeatheringTinDoorBlock
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE, ModBlocks.TARNISHED_TIN_DOOR::get));
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).strength(3.5F).explosionResistance(12).noOcclusion(), BlockSetType.STONE, ModBlocks.TARNISHED_TIN_DOOR::get));
 
     public static final RegistryObject<Block> WAXED_TIN_DOOR = BLOCKS.register("waxed_tin_door", () -> new DoorBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_DOOR = BLOCKS.register("waxed_tarnished_tin_door", () -> new DoorBlock
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).strength(3.5F).explosionResistance(12).noOcclusion(), BlockSetType.STONE));
 
         // Tin Trapdoor
     public static final RegistryObject<Block> TIN_TRAPDOOR = BLOCKS.register("tin_trapdoor", () -> new WeatheringTinTrapdoorBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE, ModBlocks.TIN_TRAPDOOR::get));
     public static final RegistryObject<Block> TARNISHED_TIN_TRAPDOOR = BLOCKS.register("tarnished_tin_trapdoor", () -> new WeatheringTinTrapdoorBlock
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE, ModBlocks.TARNISHED_TIN_TRAPDOOR::get));
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).strength(3.5F).explosionResistance(12).noOcclusion(), BlockSetType.STONE, ModBlocks.TARNISHED_TIN_TRAPDOOR::get));
 
     public static final RegistryObject<Block> WAXED_TIN_TRAPDOOR = BLOCKS.register("waxed_tin_trapdoor", () -> new TrapDoorBlock
             (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_TRAPDOOR = BLOCKS.register("waxed_tarnished_tin_trapdoor", () -> new TrapDoorBlock
-            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).noOcclusion(), BlockSetType.STONE));
+            (BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).sound(SoundType.COPPER).strength(3.5F).explosionResistance(12).noOcclusion(), BlockSetType.STONE));
 
         // Tin Bars
     public static final RegistryObject<Block> TIN_BARS = BLOCKS.register("tin_bars", () ->
             new WeatheringTinBarsBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BARS).noOcclusion().randomTicks()));
     public static final RegistryObject<Block> TARNISHED_TIN_BARS = BLOCKS.register("tarnished_tin_bars", () -> new WeatheringTinBarsBlock
-            (BlockBehaviour.Properties.copy(ModBlocks.TIN_BARS.get()).noOcclusion().randomTicks()));
+            (BlockBehaviour.Properties.copy(ModBlocks.TIN_BARS.get()).noOcclusion().randomTicks().strength(3.5F).explosionResistance(12)));
 
 
     public static final RegistryObject<Block> WAXED_TIN_BARS = BLOCKS.register("waxed_tin_bars", () -> new IronBarsBlock
             (BlockBehaviour.Properties.copy(ModBlocks.TIN_BARS.get()).noOcclusion()));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_BARS = BLOCKS.register("waxed_tarnished_tin_bars", () -> new IronBarsBlock
-            (BlockBehaviour.Properties.copy(ModBlocks.TIN_BARS.get()).noOcclusion()));
+            (BlockBehaviour.Properties.copy(ModBlocks.TIN_BARS.get()).noOcclusion().strength(3.5F).explosionResistance(12)));
 
         // Tin Chains
     public static final RegistryObject<Block> TIN_CHAIN = BLOCKS.register("tin_chain", () -> new WeatheringTinChainBlock
             (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion()));
     public static final RegistryObject<Block> TARNISHED_TIN_CHAIN = BLOCKS.register("tarnished_tin_chain", () -> new WeatheringTinChainBlock
-            (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion()));
+            (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion().strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_TIN_CHAIN = BLOCKS.register("waxed_tin_chain", () -> new WeatheringTinChainBlock
             (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion()));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_CHAIN = BLOCKS.register("waxed_tarnished_tin_chain", () -> new WeatheringTinChainBlock
-            (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion()));
+            (BlockBehaviour.Properties.copy(Blocks.CHAIN).noOcclusion().strength(3.5F).explosionResistance(12)));
 
         // Tin Lantern
     public static final RegistryObject<Block> TIN_LANTERN = BLOCKS.register("tin_lantern", () -> new WeatheringTinLanternBlock
             (BlockBehaviour.Properties.copy(Blocks.LANTERN)));
     public static final RegistryObject<Block> TARNISHED_TIN_LANTERN = BLOCKS.register("tarnished_tin_lantern", () -> new WeatheringTinLanternBlock
-            (BlockBehaviour.Properties.copy(Blocks.LANTERN)));
+            (BlockBehaviour.Properties.copy(Blocks.LANTERN).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_TIN_LANTERN = BLOCKS.register("waxed_tin_lantern", () -> new TinLanternBlock
             (BlockBehaviour.Properties.copy(Blocks.LANTERN)));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_LANTERN = BLOCKS.register("waxed_tarnished_tin_lantern", () -> new TinLanternBlock
-            (BlockBehaviour.Properties.copy(Blocks.LANTERN)));
+            (BlockBehaviour.Properties.copy(Blocks.LANTERN).strength(3.5F).explosionResistance(12)));
 
         // Tin Soul Lantern
     public static final RegistryObject<Block> TIN_SOUL_LANTERN = BLOCKS.register("tin_soul_lantern", () -> new WeatheringTinLanternBlock
             (BlockBehaviour.Properties.copy(Blocks.SOUL_LANTERN)));
     public static final RegistryObject<Block> TARNISHED_TIN_SOUL_LANTERN = BLOCKS.register("tarnished_tin_soul_lantern", () -> new WeatheringTinLanternBlock
-            (BlockBehaviour.Properties.copy(ModBlocks.TIN_SOUL_LANTERN.get())));
+            (BlockBehaviour.Properties.copy(ModBlocks.TIN_SOUL_LANTERN.get()).strength(3.5F).explosionResistance(12)));
 
     public static final RegistryObject<Block> WAXED_TIN_SOUL_LANTERN = BLOCKS.register("waxed_tin_soul_lantern", () -> new TinLanternBlock
             (BlockBehaviour.Properties.copy(ModBlocks.TIN_SOUL_LANTERN.get())));
     public static final RegistryObject<Block> WAXED_TARNISHED_TIN_SOUL_LANTERN = BLOCKS.register("waxed_tarnished_tin_soul_lantern", () -> new TinLanternBlock
-            (BlockBehaviour.Properties.copy(ModBlocks.TIN_SOUL_LANTERN.get())));
+            (BlockBehaviour.Properties.copy(ModBlocks.TIN_SOUL_LANTERN.get()).strength(3.5F).explosionResistance(12)));
 
         // Bronze Blocks
     public static final RegistryObject<Block> BRONZE_BLOCK = BLOCKS.register("bronze_block", () -> new Block

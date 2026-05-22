@@ -3,10 +3,10 @@
     {
       "type": "blueprint:paletted_permutations",
       "textures": [
-        "trims/models/armor/ethos",
-        "trims/models/armor/ethos_leggings",
-        "trims/models/armor/tarnish",
-        "trims/models/armor/tarnish_leggings"
+        "metal_works:trims/models/armor/ethos",
+        "metal_works:trims/models/armor/ethos_leggings",
+        "metal_works:trims/models/armor/tarnish",
+        "metal_works:trims/models/armor/tarnish_leggings"
         ],
         "palette_key": "minecraft:trims/color_palettes/trim_palette",
       "permutations": {

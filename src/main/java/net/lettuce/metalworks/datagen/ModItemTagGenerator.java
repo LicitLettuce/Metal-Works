@@ -41,7 +41,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.ROSE_GOLD_INGOT.get());
 
         this.tag(ItemTags.MUSIC_DISCS)
-                .add(ModItems.ANCIENTS_MUSIC_DISC.get());
+                .add(ModItems.MUSIC_DISC_ANCIENTS.get());
 
     }
 }
