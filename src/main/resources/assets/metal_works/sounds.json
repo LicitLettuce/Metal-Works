@@ -14,5 +14,22 @@
         "stream": true
       }
     ]
+  },
+  "entity.mage_golem.idle": {
+    "subtitle": "subtitles.metal_works.entity.mage_golem.idle",
+    "sounds": [
+      {
+        "name": "metal_works:entity/mage_golem/idle1"
+      },
+      {
+        "name": "metal_works:entity/mage_golem/idle2"
+      },
+      {
+        "name": "metal_works:entity/mage_golem/idle3"
+      },
+      {
+        "name": "metal_works:entity/mage_golem/idle4"
+      }
+    ]
   }
 }

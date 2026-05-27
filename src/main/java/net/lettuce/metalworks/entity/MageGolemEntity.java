@@ -2,6 +2,7 @@ package net.lettuce.metalworks.entity;
 
 import net.lettuce.metalworks.core.MetalWorks;
 import net.lettuce.metalworks.registry.ModParticles;
+import net.lettuce.metalworks.registry.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -65,6 +66,16 @@ public class MageGolemEntity extends AbstractGolem {
                 this.idleAnimationState.stop();
             }
         }
+    }
+
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return ModSounds.MAGE_GOLEM_IDLE.get();
+    }
+
+    @Override
+    public int getAmbientSoundInterval() {
+        return 160;
     }
 
     private void updateLevelFromBlocks() {
