@@ -1,5 +1,19 @@
 # Metal Works Changelog
 
+## 1.2.1
+
+### Additions
+- __Added New Blocks__
+  - Cracked Soul Bricks
+  - Soul Tiles
+  - Soul Tile Stairs
+  - Soul Tile Slab
+### Changes
+- __Revamped Lost Citadel__
+
+
+
+
 ## 1.2.0 "Tarnish and Theurgy Update"
 
 ### Additions
@@ -77,8 +91,6 @@
   - Ethos (Found in The Lost Citadel)
 - __Added New Music Disc__
   - Ancients By LicitLettuce (Found in The Lost Citadel)
-
-
 
 ### Global Loot Additions
 - __Added New Loot Modifiers__

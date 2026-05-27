@@ -39,8 +39,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
             // Citadel Blocks
         blockWithItem(ModBlocks.SOUL_BRICKS);
+        blockWithItem(ModBlocks.CRACKED_SOUL_BRICKS);
         stairsBlock(((StairBlock) ModBlocks.SOUL_BRICK_STAIRS.get()), blockTexture(ModBlocks.SOUL_BRICKS.get()));
         slabBlock(((SlabBlock) ModBlocks.SOUL_BRICK_SLAB.get()), blockTexture(ModBlocks.SOUL_BRICKS.get()), blockTexture(ModBlocks.SOUL_BRICKS.get()));
+        blockWithItem(ModBlocks.SOUL_TILES);
+        stairsBlock(((StairBlock) ModBlocks.SOUL_TILE_STAIRS.get()), blockTexture(ModBlocks.SOUL_TILES.get()));
+        slabBlock(((SlabBlock) ModBlocks.SOUL_TILE_SLAB.get()), blockTexture(ModBlocks.SOUL_TILES.get()), blockTexture(ModBlocks.SOUL_TILES.get()));
         blockWithItem(ModBlocks.SUSPICIOUS_SOUL_SOIL);
 
             // Natural Tin Blocks

@@ -138,8 +138,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         // Mineable w/Sovel
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.SOUL_BRICKS.get(),
+                        ModBlocks.CRACKED_SOUL_BRICKS.get(),
                         ModBlocks.SOUL_BRICK_STAIRS.get(),
                         ModBlocks.SOUL_BRICK_SLAB.get(),
+                        ModBlocks.SOUL_TILES.get(),
+                        ModBlocks.SOUL_TILE_STAIRS.get(),
+                        ModBlocks.SOUL_TILE_SLAB.get(),
                         ModBlocks.SUSPICIOUS_SOUL_SOIL.get());
 
         // Needs Stone Tool
@@ -195,15 +199,25 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         // Soul Fire Base Blocks
         this.tag(BlockTags.SOUL_FIRE_BASE_BLOCKS)
                 .add(ModBlocks.SOUL_BRICKS.get(),
+                        ModBlocks.CRACKED_SOUL_BRICKS.get(),
                         ModBlocks.SOUL_BRICK_STAIRS.get(),
                         ModBlocks.SOUL_BRICK_SLAB.get(),
+                        ModBlocks.SOUL_BRICK_SLAB.get(),
+                        ModBlocks.SOUL_TILES.get(),
+                        ModBlocks.SOUL_TILE_STAIRS.get(),
+                        ModBlocks.SOUL_TILE_SLAB.get(),
                         ModBlocks.SUSPICIOUS_SOUL_SOIL.get());
 
         // Soul Speed Blocks
         this.tag(BlockTags.SOUL_SPEED_BLOCKS)
                 .add(ModBlocks.SOUL_BRICKS.get(),
+                        ModBlocks.CRACKED_SOUL_BRICKS.get(),
                         ModBlocks.SOUL_BRICK_STAIRS.get(),
                         ModBlocks.SOUL_BRICK_SLAB.get(),
+                        ModBlocks.SOUL_BRICK_SLAB.get(),
+                        ModBlocks.SOUL_TILES.get(),
+                        ModBlocks.SOUL_TILE_STAIRS.get(),
+                        ModBlocks.SOUL_TILE_SLAB.get(),
                         ModBlocks.SUSPICIOUS_SOUL_SOIL.get());
     }
 }

@@ -31,8 +31,12 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.CASSITERITE_BRICK_SLAB.get());
                                 pOutput.accept(ModItems.CASSITERITE_BRICK_WALL.get());
                                 pOutput.accept(ModItems.SOUL_BRICKS.get());
+                                pOutput.accept(ModItems.CRACKED_SOUL_BRICKS.get());
                                 pOutput.accept(ModItems.SOUL_BRICK_STAIRS.get());
                                 pOutput.accept(ModItems.SOUL_BRICK_SLAB.get());
+                                pOutput.accept(ModItems.SOUL_TILES.get());
+                                pOutput.accept(ModItems.SOUL_TILE_STAIRS.get());
+                                pOutput.accept(ModItems.SOUL_TILE_SLAB.get());
                                 pOutput.accept(ModItems.SUSPICIOUS_SOUL_SOIL.get());
                                 pOutput.accept(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get());
                                 pOutput.accept(ModItems.RAW_TIN.get());

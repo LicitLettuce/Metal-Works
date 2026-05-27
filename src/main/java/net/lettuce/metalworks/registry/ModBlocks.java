@@ -60,6 +60,14 @@ public class ModBlocks {
             (() -> ModBlocks.SOUL_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.SOUL_BRICKS.get())));
     public static final RegistryObject<Block> SOUL_BRICK_SLAB = BLOCKS.register("soul_brick_slab", () -> new SlabBlock
             (BlockBehaviour.Properties.copy(ModBlocks.SOUL_BRICKS.get())));
+    public static final RegistryObject<Block> CRACKED_SOUL_BRICKS = BLOCKS.register("cracked_soul_bricks", () -> new Block
+            (BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
+    public static final RegistryObject<Block> SOUL_TILES = BLOCKS.register("soul_tiles", () -> new Block
+            (BlockBehaviour.Properties.copy(ModBlocks.SOUL_BRICKS.get())));
+    public static final RegistryObject<Block> SOUL_TILE_STAIRS = BLOCKS.register("soul_tile_stairs", () -> new StairBlock
+            (() -> ModBlocks.SOUL_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.SOUL_BRICKS.get())));
+    public static final RegistryObject<Block> SOUL_TILE_SLAB = BLOCKS.register("soul_tile_slab", () -> new SlabBlock
+            (BlockBehaviour.Properties.copy(ModBlocks.SOUL_BRICKS.get())));
 
     public static final RegistryObject<Block> SUSPICIOUS_SOUL_SOIL = BLOCKS.register("suspicious_soul_soil", () -> new BrushableBlock
             (Blocks.SOUL_SOIL, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.SNARE).strength(0.25F).sound(SoundType.SUSPICIOUS_GRAVEL).pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_GRAVEL, SoundEvents.BRUSH_GRAVEL_COMPLETED));

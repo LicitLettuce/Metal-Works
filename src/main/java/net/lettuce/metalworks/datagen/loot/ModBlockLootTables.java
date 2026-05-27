@@ -46,8 +46,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
             // Citadel Blocks
         this.dropSelf(ModBlocks.SOUL_BRICKS.get());
+        this.dropSelf(ModBlocks.CRACKED_SOUL_BRICKS.get());
         this.dropSelf(ModBlocks.SOUL_BRICK_STAIRS.get());
         this.add(ModBlocks.SOUL_BRICK_SLAB.get(), createSlabItemTable(ModBlocks.SOUL_BRICK_SLAB.get()));
+        this.dropSelf(ModBlocks.SOUL_TILES.get());
+        this.dropSelf(ModBlocks.SOUL_TILE_SLAB.get());
+        this.dropSelf(ModBlocks.SOUL_TILE_STAIRS.get());
+        this.add(ModBlocks.SOUL_TILE_SLAB.get(), createSlabItemTable(ModBlocks.SOUL_TILE_SLAB.get()));
         this.dropSelf(ModBlocks.SUSPICIOUS_SOUL_SOIL.get());
 
             // Natural Tin Loot Tables
@@ -98,8 +103,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WAXED_CUT_TIN_STAIRS.get());
         this.dropSelf(ModBlocks.WAXED_TARNISHED_CUT_TIN_STAIRS.get());
 
-
-        // Cut Tin Slab Loot Tables
+            // Cut Tin Slab Loot Tables
         this.dropSelf(ModBlocks.CUT_TIN_SLAB.get());
         this.dropSelf(ModBlocks.TARNISHED_CUT_TIN_SLAB.get());
 

@@ -164,8 +164,12 @@ public class MetalWorks  {
                 event.getEntries().putAfter(Items.RED_NETHER_BRICK_WALL.getDefaultInstance(), Items.SOUL_SOIL.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(Items.SOUL_SOIL.getDefaultInstance(), Items.SOUL_SAND.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(Items.SOUL_SAND.getDefaultInstance(), ModItems.SOUL_BRICKS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.SOUL_BRICKS.get().getDefaultInstance(), ModItems.SOUL_BRICK_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.SOUL_BRICKS.get().getDefaultInstance(), ModItems.CRACKED_SOUL_BRICKS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.CRACKED_SOUL_BRICKS.get().getDefaultInstance(), ModItems.SOUL_BRICK_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.SOUL_BRICK_STAIRS.get().getDefaultInstance(), ModItems.SOUL_BRICK_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.SOUL_BRICK_SLAB.get().getDefaultInstance(), ModItems.SOUL_TILES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.SOUL_TILES.get().getDefaultInstance(), ModItems.SOUL_TILE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.SOUL_TILE_STAIRS.get().getDefaultInstance(), ModItems.SOUL_TILES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
         }
         if (ModConfig.COMMON.populateVanillaTabs.get()) {

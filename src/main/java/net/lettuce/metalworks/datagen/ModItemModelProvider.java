@@ -58,13 +58,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             // Citadel Items
         evenSimplerBlockItem(ModBlocks.SOUL_BRICK_STAIRS);
         evenSimplerBlockItem(ModBlocks.SOUL_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.SOUL_TILE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.SOUL_TILE_SLAB);
 
         simpleItem(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE);
         simpleItem(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE);
         simpleItem(ModItems.MUSIC_DISC_ANCIENTS);
 
-
-        // Tin Items
+            // Tin Items
         simpleItem(ModItems.TIN_INGOT);
         simpleItem(ModItems.TIN_NUGGET);
         simpleItem(ModItems.RAW_TIN);

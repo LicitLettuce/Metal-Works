@@ -191,12 +191,20 @@ public class ModItems {
         // Citadel Items
     public static final RegistryObject<BlockItem> SOUL_BRICKS = ITEMS.register("soul_bricks", () -> new BlockItem
                 (ModBlocks.SOUL_BRICKS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> CRACKED_SOUL_BRICKS = ITEMS.register("cracked_soul_bricks", () -> new BlockItem
+            (ModBlocks.CRACKED_SOUL_BRICKS.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> SOUL_BRICK_STAIRS = ITEMS.register("soul_brick_stairs", () -> new BlockItem
             (ModBlocks.SOUL_BRICK_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> SOUL_BRICK_SLAB = ITEMS.register("soul_brick_slab", () -> new BlockItem
             (ModBlocks.SOUL_BRICK_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> SUSPICIOUS_SOUL_SOIL = ITEMS.register("suspicious_soul_soil", () -> new BlockItem
             (ModBlocks.SUSPICIOUS_SOUL_SOIL.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> SOUL_TILES = ITEMS.register("soul_tiles", () -> new BlockItem
+            (ModBlocks.SOUL_TILES.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> SOUL_TILE_STAIRS = ITEMS.register("soul_tile_stairs", () -> new BlockItem
+            (ModBlocks.SOUL_TILE_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> SOUL_TILE_SLAB = ITEMS.register("soul_tile_slab", () -> new BlockItem
+            (ModBlocks.SOUL_TILE_SLAB.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("ethos_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.ETHOS));

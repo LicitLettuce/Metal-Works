@@ -264,6 +264,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.SOUL_SOIL), has(Items.SOUL_SOIL))
                 .save(pWriter);
 
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.SOUL_BRICKS.get()),
+                        RecipeCategory.MISC, ModItems.CRACKED_SOUL_BRICKS.get(), 0.1f, 200)
+                .unlockedBy(getHasName(ModItems.SOUL_BRICKS.get()), has(ModItems.SOUL_BRICKS.get()))
+                .save(pWriter, MetalWorks.MOD_ID + ":smelting/cracked_soul_bricks");
+
+        // Soul Tiles
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.SOUL_TILES.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', ModItems.SOUL_BRICKS.get())
+                .unlockedBy(getHasName(Items.SOUL_SOIL), has(Items.SOUL_SOIL))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.SOUL_TILE_STAIRS.get(), 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', ModItems.SOUL_TILES.get())
+                .unlockedBy(getHasName(Items.SOUL_SOIL), has(Items.SOUL_SOIL))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.SOUL_TILE_SLAB.get(), 6)
+                .pattern("###")
+                .define('#', ModItems.SOUL_TILES.get())
+                .unlockedBy(getHasName(Items.SOUL_SOIL), has(Items.SOUL_SOIL))
+                .save(pWriter);
+
+
         // Tin Nugget
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TIN_NUGGET.get(), 9)
                 .requires(ModItems.TIN_INGOT.get())

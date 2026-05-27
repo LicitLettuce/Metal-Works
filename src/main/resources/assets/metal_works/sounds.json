@@ -2,6 +2,10 @@
   "ancients": {
     "sounds": [
       {
+        "name": "metal_works:underworld",
+        "stream": true
+      },
+      {
         "name": "metal_works:ancients",
         "stream": true
       }
