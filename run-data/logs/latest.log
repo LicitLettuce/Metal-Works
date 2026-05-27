@@ -1,37 +1,37 @@
-[16May2026 00:32:46.404] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\brayd\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.19, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, metal_works, --all, --output, C:\Users\brayd\Desktop\MINECRAFT MOD DEVELOPMENT\Metal Works\MW - Projects\metal-works 1.2.0 - v1.20.1\src\generated\resources, --existing, C:\Users\brayd\Desktop\MINECRAFT MOD DEVELOPMENT\Metal Works\MW - Projects\metal-works 1.2.0 - v1.20.1\src\main\resources]
-[16May2026 00:32:46.416] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.11 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
-[16May2026 00:32:46.557] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[16May2026 00:32:46.622] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/brayd/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[16May2026 00:32:47.045] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\brayd\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.19\99f54fe7798c97a9a6e7c962ef94f7d30610122d\javafmllanguage-1.20.1-47.2.19.jar is missing mods.toml file
-[16May2026 00:32:47.051] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\brayd\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.19\1b32b3f27357ab558a098c1c20e1494558a71b31\lowcodelanguage-1.20.1-47.2.19.jar is missing mods.toml file
-[16May2026 00:32:47.062] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\brayd\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.19\2eb26ae9afdd5709b9ee9bdf90b9486212a676af\mclanguage-1.20.1-47.2.19.jar is missing mods.toml file
-[16May2026 00:32:47.070] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\brayd\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.19\7cd28cc091d07bbe6a4f51bf9728ccbc27bfc4fc\fmlcore-1.20.1-47.2.19.jar is missing mods.toml file
-[16May2026 00:32:47.188] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[16May2026 00:32:49.713] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[16May2026 00:32:49.717] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\brayd\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, metal_works, --all, --output, C:\Users\brayd\Desktop\MINECRAFT MOD DEVELOPMENT\Metal Works\MW - Projects\metal-works 1.2.0 - v1.20.1\src\generated\resources, --existing, C:\Users\brayd\Desktop\MINECRAFT MOD DEVELOPMENT\Metal Works\MW - Projects\metal-works 1.2.0 - v1.20.1\src\main\resources]
-[16May2026 00:32:50.125] [main/INFO] [mixin/]: Remapping refMap blueprint.refmap.json using C:\Users\brayd\Desktop\MINECRAFT MOD DEVELOPMENT\Metal Works\MW - Projects\metal-works 1.2.0 - v1.20.1/build/createSrgToMcp/output.srg
-[16May2026 00:32:50.996] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [metal_works]
-[16May2026 00:32:56.252] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.19, for MC 1.20.1 with MCP 20230612.114412
-[16May2026 00:32:56.253] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.19 Initialized
-[16May2026 00:32:56.693] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[16May2026 00:32:56.698] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.886 ms
-[16May2026 00:32:57.194] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/brayd/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.19_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.19_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[16May2026 00:32:57.195] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/brayd/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.19_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.19_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[16May2026 00:32:57.469] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[16May2026 00:32:57.607] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 137 ms
-[16May2026 00:32:57.609] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[16May2026 00:32:57.691] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 82 ms
-[16May2026 00:32:57.691] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: metal_works
-[16May2026 00:32:58.186] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: metal_works finished after 494 ms
-[16May2026 00:32:58.186] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: metal_works
-[16May2026 00:32:58.356] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: metal_works finished after 170 ms
-[16May2026 00:32:58.356] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id metal_works
-[16May2026 00:32:58.372] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id metal_works finished after 15 ms
-[16May2026 00:32:58.373] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id metal_works
-[16May2026 00:32:58.374] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id metal_works finished after 1 ms
-[16May2026 00:32:58.374] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : metal_works
-[16May2026 00:32:58.388] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : metal_works finished after 14 ms
-[16May2026 00:32:58.388] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
-[16May2026 00:32:58.492] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 103 ms
-[16May2026 00:32:58.492] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 1024 ms
-[16May2026 00:32:58.591] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 1351, old count: 1351, new count: 1352, removed stale: 0, written: 0
+[27May2026 15:16:03.062] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\brayd\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.19, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, metal_works, --all, --output, C:\Users\brayd\Desktop\Lettuce Mod Development\Metal Works\MW - Projects\metal-works 1.2.0 - v1.20.1\src\generated\resources, --existing, C:\Users\brayd\Desktop\Lettuce Mod Development\Metal Works\MW - Projects\metal-works 1.2.0 - v1.20.1\src\main\resources]
+[27May2026 15:16:03.077] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.11 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
+[27May2026 15:16:03.209] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[27May2026 15:16:03.249] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/brayd/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[27May2026 15:16:03.592] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\brayd\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.19\99f54fe7798c97a9a6e7c962ef94f7d30610122d\javafmllanguage-1.20.1-47.2.19.jar is missing mods.toml file
+[27May2026 15:16:03.608] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\brayd\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.19\1b32b3f27357ab558a098c1c20e1494558a71b31\lowcodelanguage-1.20.1-47.2.19.jar is missing mods.toml file
+[27May2026 15:16:03.608] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\brayd\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.19\2eb26ae9afdd5709b9ee9bdf90b9486212a676af\mclanguage-1.20.1-47.2.19.jar is missing mods.toml file
+[27May2026 15:16:03.608] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\brayd\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.19\7cd28cc091d07bbe6a4f51bf9728ccbc27bfc4fc\fmlcore-1.20.1-47.2.19.jar is missing mods.toml file
+[27May2026 15:16:03.704] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[27May2026 15:16:05.687] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[27May2026 15:16:05.689] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\brayd\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, metal_works, --all, --output, C:\Users\brayd\Desktop\Lettuce Mod Development\Metal Works\MW - Projects\metal-works 1.2.0 - v1.20.1\src\generated\resources, --existing, C:\Users\brayd\Desktop\Lettuce Mod Development\Metal Works\MW - Projects\metal-works 1.2.0 - v1.20.1\src\main\resources]
+[27May2026 15:16:06.077] [main/INFO] [mixin/]: Remapping refMap blueprint.refmap.json using C:\Users\brayd\Desktop\Lettuce Mod Development\Metal Works\MW - Projects\metal-works 1.2.0 - v1.20.1/build/createSrgToMcp/output.srg
+[27May2026 15:16:06.859] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [metal_works]
+[27May2026 15:16:11.103] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.19, for MC 1.20.1 with MCP 20230612.114412
+[27May2026 15:16:11.104] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.19 Initialized
+[27May2026 15:16:11.489] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[27May2026 15:16:11.511] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 18.65 ms
+[27May2026 15:16:11.922] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/brayd/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.19_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.19_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[27May2026 15:16:11.922] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/brayd/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.19_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.19_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[27May2026 15:16:12.240] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[27May2026 15:16:12.359] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 118 ms
+[27May2026 15:16:12.359] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[27May2026 15:16:12.421] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 71 ms
+[27May2026 15:16:12.421] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: metal_works
+[27May2026 15:16:12.843] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: metal_works finished after 424 ms
+[27May2026 15:16:12.843] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: metal_works
+[27May2026 15:16:12.999] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: metal_works finished after 148 ms
+[27May2026 15:16:12.999] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id metal_works
+[27May2026 15:16:13.015] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id metal_works finished after 15 ms
+[27May2026 15:16:13.015] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id metal_works
+[27May2026 15:16:13.015] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id metal_works finished after 2 ms
+[27May2026 15:16:13.015] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : metal_works
+[27May2026 15:16:13.036] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : metal_works finished after 14 ms
+[27May2026 15:16:13.036] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[27May2026 15:16:13.144] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 106 ms
+[27May2026 15:16:13.144] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 904 ms
+[27May2026 15:16:13.238] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 1379, old count: 1379, new count: 1380, removed stale: 0, written: 1

@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-14T20:33:34.988552	Loot Tables
+// 1.20.1	2026-05-27T14:42:30.8488038	Loot Tables
 bed80fee4830c7a39213eb2e2513e97d7f2862b5 data/metal_works/loot_tables/blocks/bronze_bars.json
 e6ffce43a097e0773c2891bd48e6d7592da0ec73 data/metal_works/loot_tables/blocks/bronze_block.json
 94a62d1a35628e47b5190e076246b0735e464d45 data/metal_works/loot_tables/blocks/bronze_door.json
@@ -22,6 +22,7 @@ e5a08089373ed10ce11583d8b4207eac1637a790 data/metal_works/loot_tables/blocks/cas
 6afdb54e6750fad97cd2ca790d6623a37c6e6b63 data/metal_works/loot_tables/blocks/chiseled_cassiterite_bricks.json
 02d42e854239fc8a0be18037eb426279241cce1a data/metal_works/loot_tables/blocks/chiseled_tin.json
 215d363ab26af6cad8995df594f48fa0149da7de data/metal_works/loot_tables/blocks/cracked_cassiterite_bricks.json
+25f4d9ba4af4ca60e8dd9a62923b5eb03fdd09f2 data/metal_works/loot_tables/blocks/cracked_soul_bricks.json
 c201a8105945ae8a9a8fe9ee09977d3ccb886aca data/metal_works/loot_tables/blocks/cut_tin.json
 3d1eaeea989d10cf783690c0070bf49666adb640 data/metal_works/loot_tables/blocks/cut_tin_slab.json
 2e8f1c9b2753846e7990af7a436ecd5bb9b6fe5e data/metal_works/loot_tables/blocks/cut_tin_stairs.json
@@ -45,6 +46,9 @@ d6b5e248f63fe28227e31df7981ae318d88bcfc3 data/metal_works/loot_tables/blocks/ros
 70f67f5f39c8ffa4dd1cf738619e573c1a5ac832 data/metal_works/loot_tables/blocks/soul_bricks.json
 e927a7d37b4ecd3f78b384fdc9b532c2542e0f1a data/metal_works/loot_tables/blocks/soul_brick_slab.json
 c810a121e8aa547c505357efdef490f3ffb27990 data/metal_works/loot_tables/blocks/soul_brick_stairs.json
+b11d8721dadd7e07cf20c168f7ac01dab46d8676 data/metal_works/loot_tables/blocks/soul_tiles.json
+9b99c9ae563b0b7959c983899ec035c561783909 data/metal_works/loot_tables/blocks/soul_tile_slab.json
+6effec4c65f379fb92ca54a9f503e5630b25b317 data/metal_works/loot_tables/blocks/soul_tile_stairs.json
 cbe310baea1b91904aad800eff37b3e84f77cdd6 data/metal_works/loot_tables/blocks/soul_tin_ore.json
 8331e3e39b5adbc95cacd18d6dcd9b7cfa6183a5 data/metal_works/loot_tables/blocks/suspicious_soul_soil.json
 b1b2f1541bf39943142a3ffdee066684e762468f data/metal_works/loot_tables/blocks/tarnished_chiseled_tin.json

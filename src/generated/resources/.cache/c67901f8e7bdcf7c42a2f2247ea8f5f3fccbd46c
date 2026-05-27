@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-15T23:33:38.5585727	Item Models: metal_works
+// 1.20.1	2026-05-27T15:09:51.3862553	Item Models: metal_works
 bb91faff50c3a3b25cf3a4c43b364bb78293aa30 assets/metal_works/models/item/ancients_music_disc.json
 3a80a545789b30f683dff01f83bc2d7fece1a491 assets/metal_works/models/item/bronze_axe.json
 c4395b8b2f1fa8d47915c6579177a1abd3e51f08 assets/metal_works/models/item/bronze_boots.json
@@ -137,6 +137,8 @@ f0e12375b4dc6f2ffcfeafaabd64bcdcc98d5e3f assets/metal_works/models/item/rose_gol
 8a0140313e76e78969080e03dc62dd0f208a8d76 assets/metal_works/models/item/rose_gold_sword.json
 1ce1fcb3461b0810b41254d8988780d871c53c65 assets/metal_works/models/item/soul_brick_slab.json
 b059e7dcdb2dbb726dffe7c0d2c2798423fd0777 assets/metal_works/models/item/soul_brick_stairs.json
+d865c49892ebc57cad16691b5bf8fa08e87ced92 assets/metal_works/models/item/soul_tile_slab.json
+32fd71388c08f4e7b3f48ee4adf927ea26f77901 assets/metal_works/models/item/soul_tile_stairs.json
 d579b1cc24935a18e857756eda3e7ae47282e13c assets/metal_works/models/item/tab_item.json
 5829bc05dcda58e2be23db5f41fdec6e743953ca assets/metal_works/models/item/tarnished_cut_tin_slab.json
 8229ceb4365fd8ab764a45fb5957986a43d588bb assets/metal_works/models/item/tarnished_cut_tin_stairs.json
@@ -211,6 +213,7 @@ a4f90fac79be500753834e133b9a0f308f5befb1 assets/metal_works/models/item/tin_legg
 5d4366e7f864dea82757b29b5d516c4c88ff1352 assets/metal_works/models/item/tin_tile_slab.json
 c100c65e30a376596469b66f7b11cafdc5a4dbb0 assets/metal_works/models/item/tin_tile_stairs.json
 54c712167565bff4be8443624e1c4eb1c56720c3 assets/metal_works/models/item/tin_trapdoor.json
+bf29962d6c08c135f5a69f3d24d86e1cea0008c2 assets/metal_works/models/item/underworld_music_disc.json
 76466f9e501b0fd7ea843bf8c3dc2fe0306b643d assets/metal_works/models/item/waxed_cut_tin_slab.json
 a0f1be8e7f81fe9073a26e8ec0db3c9d22524376 assets/metal_works/models/item/waxed_cut_tin_stairs.json
 6ce824bcaf02be559bcce489f4df90d1101d241e assets/metal_works/models/item/waxed_tarnished_cut_tin_slab.json

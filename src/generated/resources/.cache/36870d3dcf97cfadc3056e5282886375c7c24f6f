@@ -1,12 +1,12 @@
-// 1.20.1	2025-11-22T00:09:22.2927632	Tags for minecraft:block mod id metal_works
+// 1.20.1	2026-05-27T14:42:30.8646116	Tags for minecraft:block mod id metal_works
 f16e0f65df3b637dd6f3ad2a9164eda09a37b0db data/metal_works/tags/blocks/mage_fire_base_blocks.json
 7ae1c4261a037c090f251e064d50da9f241f35e6 data/metal_works/tags/blocks/tarnished_tin_blocks.json
 de5f2e547a50470056943ed101617b4cf9dfb43d data/metal_works/tags/blocks/tin_ores.json
 f533fa0513303d209f8ffef22f573f5f9951ad90 data/minecraft/tags/blocks/enchantment_power_provider.json
 d85d5d198460096cdcc71616f5ec9423b6fd6f63 data/minecraft/tags/blocks/mineable/axe.json
 cf89924cdd22fc654966c22a18c80a82f19b7fbb data/minecraft/tags/blocks/mineable/pickaxe.json
-88325732179fbc576901c41fb3133fa9d03680d8 data/minecraft/tags/blocks/mineable/shovel.json
+fd87eb19212136e722bba0bd60a75abf867263c4 data/minecraft/tags/blocks/mineable/shovel.json
 de5f2e547a50470056943ed101617b4cf9dfb43d data/minecraft/tags/blocks/needs_stone_tool.json
-88325732179fbc576901c41fb3133fa9d03680d8 data/minecraft/tags/blocks/soul_fire_base_blocks.json
-88325732179fbc576901c41fb3133fa9d03680d8 data/minecraft/tags/blocks/soul_speed_blocks.json
+080d3bc74fd1c088b37115921c0e2cc97c077e4f data/minecraft/tags/blocks/soul_fire_base_blocks.json
+080d3bc74fd1c088b37115921c0e2cc97c077e4f data/minecraft/tags/blocks/soul_speed_blocks.json
 49e8caad0b57b300bc4809fab828cfbe4c5ece8e data/minecraft/tags/blocks/walls.json

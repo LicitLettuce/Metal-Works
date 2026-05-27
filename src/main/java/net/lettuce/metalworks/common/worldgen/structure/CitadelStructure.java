@@ -26,6 +26,13 @@ import java.util.Optional;
 public class CitadelStructure extends Structure {
     public static final Codec<CitadelStructure> CODEC = simpleCodec(CitadelStructure::new);
 
+    private static final ResourceLocation[] VARIANTS = new ResourceLocation[] {
+            new ResourceLocation(MetalWorks.MOD_ID, "citadel_treasure"),
+            new ResourceLocation(MetalWorks.MOD_ID, "citadel_portal"),
+            new ResourceLocation(MetalWorks.MOD_ID, "citadel_ancient"),
+            new ResourceLocation(MetalWorks.MOD_ID, "citadel_summon")
+    };
+
     public CitadelStructure(StructureSettings settings) {
         super(settings);
     }
@@ -35,23 +42,26 @@ public class CitadelStructure extends Structure {
         int x = context.chunkPos().getMinBlockX() + 8;
         int z = context.chunkPos().getMinBlockZ() + 8;
 
-        Optional<Integer> yOptional = findNetherFloorY(context, x, z);
+        Optional<Integer> yOptional = findLavaOceanPlacementY(context, x, z);
 
         if (yOptional.isEmpty()) {
             return Optional.empty();
         }
 
-        // Sink it slightly into the terrain so it looks less floaty/pasted.
-        BlockPos pos = new BlockPos(x, yOptional.get() - 2, z);
+        BlockPos pos = new BlockPos(x, yOptional.get(), z);
+        ResourceLocation template = getRandomVariant(context.random());
 
         return Optional.of(new GenerationStub(pos, builder ->
-                addPieces(context.structureTemplateManager(), pos, builder)
+                addPieces(context.structureTemplateManager(), pos, builder, template)
         ));
     }
 
-    private static Optional<Integer> findNetherFloorY(GenerationContext context, int x, int z) {
-        final int minY = 32;
-        final int maxY = 95;
+    private static ResourceLocation getRandomVariant(RandomSource random) {
+        return VARIANTS[random.nextInt(VARIANTS.length)];
+    }
+
+    private static Optional<Integer> findLavaOceanPlacementY(GenerationContext context, int x, int z) {
+        int seaLevel = context.chunkGenerator().getSeaLevel();
 
         var column = context.chunkGenerator().getBaseColumn(
                 x,
@@ -60,43 +70,20 @@ public class CitadelStructure extends Structure {
                 context.randomState()
         );
 
-        RandomSource random = RandomSource.create(
-                context.seed()
-                        + (long) context.chunkPos().x * 341873128712L
-                        + (long) context.chunkPos().z * 132897987541L
-        );
+        BlockState topLava = column.getBlock(seaLevel - 1);
 
-        for (int attempt = 0; attempt < 16; attempt++) {
-            int startY = minY + random.nextInt(maxY - minY + 1);
-
-            for (int y = startY; y >= minY; y--) {
-                BlockState floor = column.getBlock(y - 1);
-                BlockState feet = column.getBlock(y);
-                BlockState head = column.getBlock(y + 1);
-
-                if (isGoodNetherFloor(floor) && isOpenSpace(feet) && isOpenSpace(head)) {
-                    return Optional.of(y);
-                }
-            }
+        if (!topLava.is(Blocks.LAVA)) {
+            return Optional.empty();
         }
 
-        return Optional.empty();
-    }
-
-    private static boolean isGoodNetherFloor(BlockState state) {
-        return !state.isAir()
-                && state.getFluidState().isEmpty()
-                && !state.is(Blocks.BEDROCK);
-    }
-
-    private static boolean isOpenSpace(BlockState state) {
-        return state.isAir() && state.getFluidState().isEmpty();
+        return Optional.of(seaLevel - 2);
     }
 
     private static void addPieces(StructureTemplateManager templateManager,
                                   BlockPos pos,
-                                  StructurePiecesBuilder builder) {
-        builder.addPiece(new Piece(templateManager, pos));
+                                  StructurePiecesBuilder builder,
+                                  ResourceLocation template) {
+        builder.addPiece(new Piece(templateManager, pos, template));
     }
 
     @Override
@@ -105,16 +92,13 @@ public class CitadelStructure extends Structure {
     }
 
     public static class Piece extends TemplateStructurePiece {
-        private static final ResourceLocation TEMPLATE =
-                new ResourceLocation(MetalWorks.MOD_ID, "lost_citadel");
-
-        public Piece(StructureTemplateManager templateManager, BlockPos pos) {
+        public Piece(StructureTemplateManager templateManager, BlockPos pos, ResourceLocation template) {
             super(
                     ModStructurePieces.CITADEL_PIECE.get(),
                     0,
                     templateManager,
-                    TEMPLATE,
-                    TEMPLATE.toString(),
+                    template,
+                    template.toString(),
                     makeSettings(),
                     pos
             );
@@ -131,10 +115,7 @@ public class CitadelStructure extends Structure {
 
         private static StructurePlaceSettings makeSettings() {
             return new StructurePlaceSettings()
-                    // Keep entities saved inside citadel.nbt.
                     .setIgnoreEntities(false)
-
-                    // Prevent saved air/structure blocks from carving a giant empty cube.
                     .addProcessor(BlockIgnoreProcessor.STRUCTURE_AND_AIR);
         }
 
