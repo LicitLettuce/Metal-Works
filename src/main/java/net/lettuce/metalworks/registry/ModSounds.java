@@ -14,6 +14,9 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> ANCIENTS_MUSIC_DISC =
             registerSoundEvent("ancients");
 
+    public static final RegistryObject<SoundEvent> UNDERWORLD_MUSIC_DISC =
+            registerSoundEvent("underworld");
+
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () ->
                 SoundEvent.createVariableRangeEvent(new ResourceLocation(MetalWorks.MOD_ID, name)));

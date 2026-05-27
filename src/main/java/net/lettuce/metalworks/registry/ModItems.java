@@ -212,7 +212,10 @@ public class ModItems {
             () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.ETHOS));
 
     public static final RegistryObject<Item> MUSIC_DISC_ANCIENTS = ITEMS.register("ancients_music_disc", () -> new RecordItem
-            (14, ModSounds.ANCIENTS_MUSIC_DISC, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 9200));
+            (12, ModSounds.ANCIENTS_MUSIC_DISC, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 1860));
+
+    public static final RegistryObject<Item> MUSIC_DISC_UNDERWORLD = ITEMS.register("underworld_music_disc", () -> new RecordItem
+            (14, ModSounds.UNDERWORLD_MUSIC_DISC, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 3220));
 
         // Natural Tin Items
     public static final RegistryObject<BlockItem> RAW_TIN_BLOCK = ITEMS.register("raw_tin_block", () -> new BlockItem

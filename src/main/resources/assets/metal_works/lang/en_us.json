@@ -221,6 +221,9 @@
   "trim_pattern.metal_works.ethos": "Ethos Armor Trim",
   "trim_pattern.metal_works.tarnish": "Tarnish Armor Trim",
   "item.metal_works.ancients_music_disc": "Music Disc",
-  "item.metal_works.ancients_music_disc.desc": "LicitLettuce - Ancients"
+  "item.metal_works.underworld_music_disc": "Music Disc",
+  "item.metal_works.ancients_music_disc.desc": "LicitLettuce - Ancients",
+  "item.metal_works.underworld_music_disc.desc": "LicitLettuce - Underworld",
+  "subtitles.metal_works.entity.mage_golem.idle": "Mage Golem hums"
 }
 

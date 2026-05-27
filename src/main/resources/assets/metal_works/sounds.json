@@ -1,10 +1,14 @@
 {
-  "ancients": {
+  "underworld": {
     "sounds": [
       {
         "name": "metal_works:underworld",
         "stream": true
-      },
+      }
+    ]
+  },
+  "ancients": {
+    "sounds": [
       {
         "name": "metal_works:ancients",
         "stream": true

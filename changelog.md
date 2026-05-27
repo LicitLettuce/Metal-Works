@@ -8,8 +8,15 @@
   - Soul Tiles
   - Soul Tile Stairs
   - Soul Tile Slab
+- __Added New Music Disc__
+  - Underworld by LicitLettuce - Found in Lost Citadel structures
+
 ### Changes
 - __Revamped Lost Citadel__
+### Bug Fixes
+- __Ancients Music Disc now ends at the proper time__
+
+
 
 
 

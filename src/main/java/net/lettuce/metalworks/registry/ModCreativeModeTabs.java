@@ -54,6 +54,7 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.TIN_HORSE_ARMOR.get());
                                 pOutput.accept(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get());
                                 pOutput.accept(ModItems.MUSIC_DISC_ANCIENTS.get());
+                                pOutput.accept(ModItems.MUSIC_DISC_UNDERWORLD.get());
                                 pOutput.accept(ModItems.TIN_ORE.get());
                                 pOutput.accept(ModItems.DEEPSLATE_TIN_ORE.get());
                                 pOutput.accept(ModItems.SOUL_TIN_ORE.get());
