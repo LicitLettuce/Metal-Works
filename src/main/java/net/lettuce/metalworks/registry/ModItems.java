@@ -209,7 +209,7 @@ public class ModItems {
     public static final RegistryObject<Item> ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("ethos_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.ETHOS));
     public static final RegistryObject<Item> TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("tarnish_armor_trim_smithing_template",
-            () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.ETHOS));
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.TARNISH));
 
     public static final RegistryObject<Item> MUSIC_DISC_ANCIENTS = ITEMS.register("ancients_music_disc", () -> new RecordItem
             (12, ModSounds.ANCIENTS_MUSIC_DISC, new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 1860));

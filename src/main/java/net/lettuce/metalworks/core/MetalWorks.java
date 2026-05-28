@@ -169,7 +169,7 @@ public class MetalWorks  {
                 event.getEntries().putAfter(ModItems.SOUL_BRICK_STAIRS.get().getDefaultInstance(), ModItems.SOUL_BRICK_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.SOUL_BRICK_SLAB.get().getDefaultInstance(), ModItems.SOUL_TILES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.getEntries().putAfter(ModItems.SOUL_TILES.get().getDefaultInstance(), ModItems.SOUL_TILE_STAIRS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-                event.getEntries().putAfter(ModItems.SOUL_TILE_STAIRS.get().getDefaultInstance(), ModItems.SOUL_TILES.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.SOUL_TILE_STAIRS.get().getDefaultInstance(), ModItems.SOUL_TILE_SLAB.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
         }
         if (ModConfig.COMMON.populateVanillaTabs.get()) {

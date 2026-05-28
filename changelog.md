@@ -1,6 +1,18 @@
 # Metal Works Changelog
 
-## 1.2.1
+## 1.2.11 Hotfix
+### Changes
+- Updated Underworld Music Disc texture.
+- Updated Tarnish Armor Trim chestplate texture.
+  > **Note:** The original trim looked very bad in my opinion. – *Lettuce*
+
+### Bug Fixes
+- Fixed Tarnish Armor Trim legging texture.
+- Fixed Tarnish Armor Trim incorrect naming conventions.
+- Fixed Soul Tiles not appearing in vanilla creative tabs when enabled.
+
+
+## 1.2.1 Update
 
 ### Additions
 - __Added New Blocks__
@@ -9,17 +21,24 @@
   - Soul Tile Stairs
   - Soul Tile Slab
 - __Added New Music Disc__
-  - Underworld by LicitLettuce - Found in Lost Citadel structures
+  - Underworld by LicitLettuce - Found in Lost Citadel structures.
+- __Added New Mage Golem Sounds__
+  - The Mage Golem now makes mystical humming noises when idle.
 
 ### Changes
 - __Revamped Lost Citadel__
+  - The Lost Citadel now has 4 variants
+    - Portal
+    - Summoning
+    - Treasure
+    - Ancient
+  - Generation Changes
+    - The Lost Citadel now on generates on the same level as the lava ocean.
+  - Loot Pool Changes
+    - The Citadel Treasure loot pool is now more rewarding, you can now find
+      - Enchanted Tin, Bronze, Iron, and Gold Gear
 ### Bug Fixes
 - __Ancients Music Disc now ends at the proper time__
-
-
-
-
-
 
 ## 1.2.0 "Tarnish and Theurgy Update"
 
