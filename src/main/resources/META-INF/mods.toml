@@ -4,7 +4,7 @@ license="Lettuce License v2.1 https://github.com/LicitLettuce/Metal-Works?tab=Li
 
 [[mods]]
 modId="metal_works"
-version="1.2.11n b "
+version="1.2.12"
 displayName="Metal Works"
 credits="LicitLettuce (Game Design, Artist, Programmer), Im_Dolos (Tester , Concepts, & Documentation)"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/metal-works"
@@ -25,4 +25,3 @@ mandatory =true
 versionRange ="[7.1.0,)"
 ordering ="AFTER"
 side ="BOTH"
-

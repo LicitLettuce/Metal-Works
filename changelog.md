@@ -1,5 +1,16 @@
 # Metal Works Changelog
 
+## 1.2.11 Patch
+### Changes
+- Actually updated Tarnish Armor Trim chestplate texture.
+- Added Mage and Tin lanterns to Functional Blocks Creative tab
+  - If populateVanillaTabs is enabled in config, they will appear there.
+
+### Bug Fixes
+- Fixed legging trim textures again.
+
+
+
 ## 1.2.11 Hotfix
 ### Changes
 - Updated Underworld Music Disc texture.

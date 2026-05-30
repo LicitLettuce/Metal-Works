@@ -184,7 +184,16 @@ public class MetalWorks  {
         }
         if (ModConfig.COMMON.populateVanillaTabs.get()) {
             if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-
+                event.getEntries().putAfter(Items.SOUL_TORCH.getDefaultInstance(), ModItems.MAGE_TORCH.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(Items.SOUL_LANTERN.getDefaultInstance(), ModItems.MAGE_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.MAGE_LANTERN.get().getDefaultInstance(), ModItems.TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.TIN_LANTERN.get().getDefaultInstance(), ModItems.TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.TIN_SOUL_LANTERN.get().getDefaultInstance(), ModItems.TARNISHED_TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.TARNISHED_TIN_LANTERN.get().getDefaultInstance(), ModItems.TARNISHED_TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.TARNISHED_TIN_SOUL_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.WAXED_TIN_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.WAXED_TIN_SOUL_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TARNISHED_TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(ModItems.WAXED_TARNISHED_TIN_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TARNISHED_TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
         }
         if (ModConfig.COMMON.populateVanillaTabs.get()) {
