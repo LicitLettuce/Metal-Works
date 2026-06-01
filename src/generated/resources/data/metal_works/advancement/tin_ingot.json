@@ -1,0 +1,34 @@
+{
+  "parent": "metal_works:raw_tin",
+  "criteria": {
+    "has_tin_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tin_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.tin_ingot.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "metal_works:tin_ingot"
+    },
+    "title": {
+      "translate": "advancements.metal_works.tin_ingot.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_tin_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

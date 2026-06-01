@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "soul_sand_valley"
+  ],
+  "features": [
+    "metal_works:ore_soul_tin"
+  ],
+  "step": "underground_ores"
+}

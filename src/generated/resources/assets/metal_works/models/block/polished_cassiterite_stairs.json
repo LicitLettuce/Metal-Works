@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "metal_works:block/polished_cassiterite",
+    "side": "metal_works:block/polished_cassiterite",
+    "top": "metal_works:block/polished_cassiterite"
+  }
+}

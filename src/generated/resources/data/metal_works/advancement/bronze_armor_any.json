@@ -1,0 +1,66 @@
+{
+  "parent": "metal_works:bronze_ingot",
+  "criteria": {
+    "bronze_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bronze_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bronze_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bronze_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.bronze_armor_any.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "metal_works:bronze_helmet"
+    },
+    "title": {
+      "translate": "advancements.metal_works.bronze_armor_any.title"
+    }
+  },
+  "requirements": [
+    [
+      "bronze_helmet",
+      "bronze_chestplate",
+      "bronze_leggings",
+      "bronze_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

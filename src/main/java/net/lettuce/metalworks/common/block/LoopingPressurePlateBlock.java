@@ -58,9 +58,7 @@ public class LoopingPressurePlateBlock extends Block {
 
                 // ✅ Play sound from registry
                 SoundEvent clickSound = BuiltInRegistries.SOUND_EVENT.get(
-                        new ResourceLocation("minecraft", newPoweredState
-                                ? "block.wooden_pressure_plate.click_on"
-                                : "block.wooden_pressure_plate.click_off")
+                        ResourceLocation.withDefaultNamespace(newPoweredState ? "block.wooden_pressure_plate.click_on" : "block.wooden_pressure_plate.click_off")
                 );
 
                 if (clickSound != null) {

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bronze_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "metal_works:stonecutting/bronze_tile_to_bronze_tile_stair"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bronze_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "metal_works:stonecutting/bronze_tile_to_bronze_tile_stair"
+    ]
+  }
+}

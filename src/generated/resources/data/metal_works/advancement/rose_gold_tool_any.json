@@ -1,0 +1,77 @@
+{
+  "parent": "metal_works:rose_gold_ingot",
+  "criteria": {
+    "rose_gold_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:rose_gold_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "rose_gold_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:rose_gold_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "rose_gold_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:rose_gold_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "rose_gold_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:rose_gold_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "rose_gold_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:rose_gold_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.rose_gold_tool_any.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "metal_works:rose_gold_shovel"
+    },
+    "title": {
+      "translate": "advancements.metal_works.rose_gold_tool_any.title"
+    }
+  },
+  "requirements": [
+    [
+      "rose_gold_sword",
+      "rose_gold_pickaxe",
+      "rose_gold_axe",
+      "rose_gold_shovel",
+      "rose_gold_hoe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

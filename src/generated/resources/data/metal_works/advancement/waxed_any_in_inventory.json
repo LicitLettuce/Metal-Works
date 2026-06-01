@@ -1,0 +1,374 @@
+{
+  "parent": "metal_works:tin_block",
+  "criteria": {
+    "waxed_chiseled_tin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_chiseled_tin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_cut_tin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_cut_tin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_cut_tin_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_cut_tin_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_cut_tin_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_cut_tin_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_chain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin_chain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_chiseled": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_chiseled_tin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_cut": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_cut_tin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_cut_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_cut_tin_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_cut_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_cut_tin_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_grate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin_grate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_grate_drain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin_grate_drain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_shingle_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin_shingle_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_shingle_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin_shingle_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin_shingles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_tile_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin_tile_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_tile_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin_tile_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_tin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_tin_lantern": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin_lantern"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tarnished_tin_soul_lantern": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tarnished_tin_soul_lantern"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tin_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tin_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tin_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tin_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tin_chain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tin_chain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tin_grate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tin_grate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tin_grate_drain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tin_grate_drain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tin_shingle_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tin_shingle_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tin_shingle_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tin_shingle_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tin_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tin_shingles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tin_tile_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tin_tile_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tin_tile_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tin_tile_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "waxed_tin_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:waxed_tin_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.waxed_any.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:honeycomb"
+    },
+    "title": {
+      "translate": "advancements.metal_works.waxed_any.title"
+    }
+  },
+  "requirements": [
+    [
+      "waxed_tin_block",
+      "waxed_chiseled_tin",
+      "waxed_tin_grate",
+      "waxed_tin_grate_drain",
+      "waxed_cut_tin",
+      "waxed_cut_tin_stairs",
+      "waxed_cut_tin_slab",
+      "waxed_tin_tiles",
+      "waxed_tin_tile_stairs",
+      "waxed_tin_tile_slab",
+      "waxed_tin_shingles",
+      "waxed_tin_shingle_stairs",
+      "waxed_tin_shingle_slab",
+      "waxed_tin_bars",
+      "waxed_tin_chain",
+      "waxed_tarnished_tin",
+      "waxed_tarnished_chiseled",
+      "waxed_tarnished_grate",
+      "waxed_tarnished_grate_drain",
+      "waxed_tarnished_cut",
+      "waxed_tarnished_cut_stairs",
+      "waxed_tarnished_cut_slab",
+      "waxed_tarnished_tiles",
+      "waxed_tarnished_tile_stairs",
+      "waxed_tarnished_tile_slab",
+      "waxed_tarnished_shingles",
+      "waxed_tarnished_shingle_stairs",
+      "waxed_tarnished_shingle_slab",
+      "waxed_tarnished_bars",
+      "waxed_tarnished_chain",
+      "waxed_tarnished_tin_lantern",
+      "waxed_tarnished_tin_soul_lantern"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

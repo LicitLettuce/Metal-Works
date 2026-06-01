@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "metal_works:tin_nugget"
+    },
+    {
+      "item": "metal_works:tin_nugget"
+    },
+    {
+      "item": "metal_works:tin_nugget"
+    },
+    {
+      "item": "metal_works:tin_nugget"
+    },
+    {
+      "item": "metal_works:tin_nugget"
+    },
+    {
+      "item": "metal_works:tin_nugget"
+    },
+    {
+      "item": "metal_works:tin_nugget"
+    },
+    {
+      "item": "metal_works:tin_nugget"
+    },
+    {
+      "item": "metal_works:tin_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "metal_works:tin_ingot"
+  }
+}

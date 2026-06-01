@@ -1,0 +1,77 @@
+{
+  "parent": "metal_works:tin_ingot",
+  "criteria": {
+    "tin_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tin_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tin_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tin_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tin_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tin_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tin_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tin_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tin_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tin_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.tin_tool_any.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "metal_works:tin_axe"
+    },
+    "title": {
+      "translate": "advancements.metal_works.tin_tool_any.title"
+    }
+  },
+  "requirements": [
+    [
+      "tin_sword",
+      "tin_pickaxe",
+      "tin_axe",
+      "tin_shovel",
+      "tin_hoe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,4 +1,3 @@
-// 1.20.1	2026-05-27T15:16:13.1493	Tags for minecraft:item mod id metal_works
-ba6999496e5f08782df7ffdf30a9e727c839108e data/minecraft/tags/items/music_discs.json
-9b260e8526d3f28d35743630081eac9aa1e1e67b data/minecraft/tags/items/trimmable_armor.json
-4522962aca09956e6c66d285d6db01e3a513456a data/minecraft/tags/items/trim_materials.json
+// 1.21.1	2026-06-01T12:12:46.2083147	Tags for minecraft:item mod id metal_works
+9b260e8526d3f28d35743630081eac9aa1e1e67b data/minecraft/tags/item/trimmable_armor.json
+4522962aca09956e6c66d285d6db01e3a513456a data/minecraft/tags/item/trim_materials.json

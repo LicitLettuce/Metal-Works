@@ -1,0 +1,8 @@
+{
+  "sound_event": "metal_works:ancients",
+  "description": {
+    "translate": "jukebox_song.metal_works.ancients"
+  },
+  "length_in_seconds": 93.0,
+  "comparator_output": 12
+}

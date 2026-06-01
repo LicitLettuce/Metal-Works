@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mage_torch": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:mage_torch"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "metal_works:medium_weighted_pressure_plate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mage_torch"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "metal_works:medium_weighted_pressure_plate"
+    ]
+  }
+}

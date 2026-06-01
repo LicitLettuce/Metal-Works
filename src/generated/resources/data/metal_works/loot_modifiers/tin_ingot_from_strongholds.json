@@ -1,0 +1,14 @@
+{
+  "type": "metal_works:add_item",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/stronghold_corridor"
+    },
+    {
+      "chance": 0.4,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "metal_works:tin_ingot"
+}

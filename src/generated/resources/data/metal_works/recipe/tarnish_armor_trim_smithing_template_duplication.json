@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "@": {
+      "item": "metal_works:raw_tin"
+    },
+    "T": {
+      "item": "metal_works:tarnish_armor_trim_smithing_template"
+    }
+  },
+  "pattern": [
+    "#T#",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "metal_works:tarnish_armor_trim_smithing_template"
+  }
+}

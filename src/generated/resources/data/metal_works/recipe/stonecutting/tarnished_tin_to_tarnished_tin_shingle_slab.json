@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "metal_works:tarnished_tin"
+  },
+  "result": {
+    "count": 8,
+    "id": "metal_works:tarnished_tin_shingle_slab"
+  }
+}

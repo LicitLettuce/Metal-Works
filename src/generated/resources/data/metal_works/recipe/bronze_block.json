@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "metal_works:bronze_ingot"
+    },
+    {
+      "item": "metal_works:bronze_ingot"
+    },
+    {
+      "item": "metal_works:bronze_ingot"
+    },
+    {
+      "item": "metal_works:bronze_ingot"
+    },
+    {
+      "item": "metal_works:bronze_ingot"
+    },
+    {
+      "item": "metal_works:bronze_ingot"
+    },
+    {
+      "item": "metal_works:bronze_ingot"
+    },
+    {
+      "item": "metal_works:bronze_ingot"
+    },
+    {
+      "item": "metal_works:bronze_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "metal_works:bronze_block"
+  }
+}

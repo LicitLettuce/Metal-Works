@@ -1,0 +1,8 @@
+{
+  "sound_event": "metal_works:underworld",
+  "description": {
+    "translate": "jukebox_song.metal_works.underworld"
+  },
+  "length_in_seconds": 161.0,
+  "comparator_output": 14
+}

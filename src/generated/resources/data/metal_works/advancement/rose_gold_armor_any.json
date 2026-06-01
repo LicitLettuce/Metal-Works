@@ -1,0 +1,66 @@
+{
+  "parent": "metal_works:rose_gold_ingot",
+  "criteria": {
+    "rose_gold_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:rose_gold_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "rose_gold_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:rose_gold_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "rose_gold_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:rose_gold_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "rose_gold_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:rose_gold_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.rose_gold_armor_any.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "metal_works:rose_gold_helmet"
+    },
+    "title": {
+      "translate": "advancements.metal_works.rose_gold_armor_any.title"
+    }
+  },
+  "requirements": [
+    [
+      "rose_gold_helmet",
+      "rose_gold_chestplate",
+      "rose_gold_leggings",
+      "rose_gold_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

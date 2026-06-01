@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "metal_works:block/rose_gold_mosaic",
+    "side": "metal_works:block/rose_gold_mosaic",
+    "top": "metal_works:block/rose_gold_mosaic"
+  }
+}

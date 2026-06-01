@@ -4,19 +4,20 @@ import net.lettuce.metalworks.core.MetalWorks;
 import net.lettuce.metalworks.util.DoorStateUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 
 import java.util.Map;
 
-@Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class DeWaxingEvent {
 
     @SubscribeEvent
@@ -61,7 +62,7 @@ public class DeWaxingEvent {
         level.levelEvent(3004, pos, 0);
 
         if (!player.isCreative()) {
-            heldItem.hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(event.getHand()));
+            heldItem.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
         }
 
         event.setCancellationResult(InteractionResult.SUCCESS);

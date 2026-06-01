@@ -6,6 +6,6 @@ import net.minecraft.resources.ResourceLocation;
 
 public class ModModelLayers {
     public static final ModelLayerLocation MAGE_GOLEM_LAYER = new ModelLayerLocation(
-            new ResourceLocation(MetalWorks.MOD_ID, "mage_golem_layer"), "main");
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "mage_golem_layer"), "main");
 
 }

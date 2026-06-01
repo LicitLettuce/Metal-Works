@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "tag": "minecraft:coals"
+    },
+    "$": {
+      "item": "minecraft:stick"
+    },
+    "@": {
+      "item": "metal_works:mage_powder"
+    }
+  },
+  "pattern": [
+    "#",
+    "$",
+    "@"
+  ],
+  "result": {
+    "count": 4,
+    "id": "metal_works:mage_torch"
+  }
+}

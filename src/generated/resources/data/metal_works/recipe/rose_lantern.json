@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "metal_works:rose_gold_ingot"
+    },
+    "@": {
+      "item": "minecraft:glowstone"
+    }
+  },
+  "pattern": [
+    "#@#",
+    "@ @",
+    "#@#"
+  ],
+  "result": {
+    "count": 4,
+    "id": "metal_works:rose_lantern"
+  }
+}

@@ -5,6 +5,7 @@ import net.lettuce.metalworks.registry.ModBlocks;
 import net.lettuce.metalworks.util.DoorStateUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoneycombItem;
 import net.minecraft.world.item.ItemStack;
@@ -12,19 +13,19 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE) // <-- no Dist filter
+@EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = EventBusSubscriber.Bus.GAME) // <-- no Dist filter
 public class WaxingEvent {
 
     /** From -> Waxed */
-    private static final Map<RegistryObject<Block>, RegistryObject<Block>> waxablePairs = Map.ofEntries(
+    private static final Map<DeferredHolder<Block, Block>, DeferredHolder<Block, Block>> waxablePairs = Map.ofEntries(
             Map.entry(ModBlocks.TIN_BLOCK, ModBlocks.WAXED_TIN_BLOCK),
             Map.entry(ModBlocks.TARNISHED_TIN, ModBlocks.WAXED_TARNISHED_TIN),
 
@@ -126,7 +127,7 @@ public class WaxingEvent {
             if (unwaxed != null) {
                 replace(level, pos, block, unwaxed);
                 level.levelEvent(3004, pos, 0); // scrape sound/particles (same event id vanilla uses)
-                stack.hurtAndBreak(1, event.getEntity(), p -> p.broadcastBreakEvent(event.getHand()));
+                stack.hurtAndBreak(1, event.getEntity(), EquipmentSlot.MAINHAND);
                 event.setCancellationResult(InteractionResult.SUCCESS);
                 event.setCanceled(true);
                 return;
@@ -137,7 +138,7 @@ public class WaxingEvent {
             if (previous != null) {
                 replace(level, pos, block, previous);
                 level.levelEvent(3005, pos, 0); // oxidation scrape particles (vanilla)
-                stack.hurtAndBreak(1, event.getEntity(), p -> p.broadcastBreakEvent(event.getHand()));
+                stack.hurtAndBreak(1, event.getEntity(), EquipmentSlot.MAINHAND);
                 event.setCancellationResult(InteractionResult.SUCCESS);
                 event.setCanceled(true);
             }
@@ -184,6 +185,3 @@ public class WaxingEvent {
         return null;
     }
 }
-
-
-

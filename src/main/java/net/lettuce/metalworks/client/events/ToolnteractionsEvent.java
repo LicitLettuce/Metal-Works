@@ -7,26 +7,27 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.ToolActions;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.level.BlockEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.neoforge.common.ItemAbilities;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 
 import net.minecraft.world.level.block.state.properties.Property;
 import java.util.Optional;
 
-@Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class ToolnteractionsEvent {
 
     @SubscribeEvent
     public static void onToolUse(BlockEvent.BlockToolModificationEvent event) {
-        if (event.getToolAction() != ToolActions.AXE_SCRAPE) return;
+        if (event.getItemAbility() != ItemAbilities.AXE_SCRAPE) return;
 
         BlockState state = event.getState();
         Block block = state.getBlock();
@@ -117,8 +118,8 @@ public class ToolnteractionsEvent {
         }
 
     }
-    @Mod.EventBusSubscriber(modid = "metal_works")
-    public class CommonEvents {
+    @EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
+    public static class CommonEvents {
 
         @SubscribeEvent
         public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
@@ -134,8 +135,7 @@ public class ToolnteractionsEvent {
                     if (level.getBlockState(above).isAir()) {
                         level.setBlockAndUpdate(above, ModBlocks.MAGE_FIRE.get().defaultBlockState());
 
-                        item.hurtAndBreak(1, event.getEntity(), (p) ->
-                                p.broadcastBreakEvent(event.getHand()));
+                        item.hurtAndBreak(1, event.getEntity(), EquipmentSlot.MAINHAND);
 
                         level.playSound(null, above, SoundEvents.FLINTANDSTEEL_USE,
                                 SoundSource.BLOCKS, 1.0F,
@@ -174,4 +174,3 @@ public class ToolnteractionsEvent {
         event.setFinalState(copiedState);
     }
 }
-

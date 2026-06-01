@@ -1,0 +1,33 @@
+{
+  "parent": "metal_works:tin_ingot",
+  "criteria": {
+    "has_tin_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tin_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.tin_block.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "metal_works:tin_block"
+    },
+    "title": {
+      "translate": "advancements.metal_works.tin_block.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_tin_block"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,5 +1,6 @@
 package net.lettuce.metalworks.common.block;
 
+import com.mojang.serialization.MapCodec;
 import net.lettuce.metalworks.registry.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -15,9 +16,15 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class MageFireBlock extends BaseFireBlock {
+    public static final MapCodec<MageFireBlock> CODEC = simpleCodec(MageFireBlock::new);
 
     public MageFireBlock(Properties properties) {
-        super(properties, 3.0f); // Damage per second like soul fire
+        super(properties, 3.0f);
+    }
+
+    @Override
+    protected MapCodec<MageFireBlock> codec() {
+        return CODEC;
     }
 
     @Override
@@ -26,7 +33,7 @@ public class MageFireBlock extends BaseFireBlock {
     }
 
     private boolean canSurviveOnBlock(BlockState blockState) {
-        return blockState.is(ModTags.MAGE_FIRE_BASE_BLOCKS); // Use a block tag
+        return blockState.is(ModTags.MAGE_FIRE_BASE_BLOCKS);
     }
 
     @Override
@@ -65,4 +72,3 @@ public class MageFireBlock extends BaseFireBlock {
         return super.updateShape(state, direction, neighborState, level, pos, neighborPos);
     }
 }
-

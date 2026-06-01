@@ -1,8 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": {
-    "type": "forge:any"
-  },
-  "features": "metal_works:tin_ore_placement",
-  "step": "surface_structures"
-}

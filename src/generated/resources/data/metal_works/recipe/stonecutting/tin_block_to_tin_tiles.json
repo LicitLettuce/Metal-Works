@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "metal_works:tin_block"
+  },
+  "result": {
+    "count": 4,
+    "id": "metal_works:tin_tiles"
+  }
+}

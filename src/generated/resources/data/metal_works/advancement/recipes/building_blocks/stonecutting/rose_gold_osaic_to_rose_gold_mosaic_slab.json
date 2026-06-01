@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rose_gold_mosaic": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:rose_gold_mosaic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "metal_works:stonecutting/rose_gold_osaic_to_rose_gold_mosaic_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rose_gold_mosaic"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "metal_works:stonecutting/rose_gold_osaic_to_rose_gold_mosaic_slab"
+    ]
+  }
+}

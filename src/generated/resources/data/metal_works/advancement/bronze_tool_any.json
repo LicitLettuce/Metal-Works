@@ -1,0 +1,88 @@
+{
+  "parent": "metal_works:bronze_ingot",
+  "criteria": {
+    "bronze_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bronze_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bronze_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bronze_shears": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_shears"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bronze_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bronze_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.bronze_tool_any.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "metal_works:bronze_sword"
+    },
+    "title": {
+      "translate": "advancements.metal_works.bronze_tool_any.title"
+    }
+  },
+  "requirements": [
+    [
+      "bronze_sword",
+      "bronze_pickaxe",
+      "bronze_axe",
+      "bronze_shovel",
+      "bronze_hoe",
+      "bronze_shears"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -18,7 +18,7 @@ public class WeatheringTinTrapdoorBlock extends TrapDoorBlock {
     public WeatheringTinTrapdoorBlock(BlockBehaviour.Properties props,
                                       net.minecraft.world.level.block.state.properties.BlockSetType setType,
                                       Supplier<Block> parentBlock) {
-        super(props, setType);
+        super(setType, props);
         this.parentBlock = parentBlock;
     }
 

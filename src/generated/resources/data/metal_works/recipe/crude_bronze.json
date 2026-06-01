@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "metal_works:raw_tin"
+    },
+    {
+      "item": "metal_works:raw_tin"
+    },
+    {
+      "item": "metal_works:raw_tin"
+    },
+    {
+      "item": "metal_works:raw_tin"
+    },
+    {
+      "item": "minecraft:raw_copper"
+    },
+    {
+      "item": "minecraft:raw_copper"
+    },
+    {
+      "item": "minecraft:raw_copper"
+    },
+    {
+      "item": "minecraft:raw_copper"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "metal_works:crude_bronze"
+  }
+}

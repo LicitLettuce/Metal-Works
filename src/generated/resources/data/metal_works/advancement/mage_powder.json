@@ -1,0 +1,34 @@
+{
+  "parent": "metal_works:rose_gold_ingot",
+  "criteria": {
+    "has_mage_powder": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:mage_powder"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.mage_powder.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "metal_works:mage_fire_advancement_item"
+    },
+    "title": {
+      "translate": "advancements.metal_works.mage_powder.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_mage_powder"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

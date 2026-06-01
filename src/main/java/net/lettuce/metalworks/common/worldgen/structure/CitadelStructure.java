@@ -1,6 +1,6 @@
 package net.lettuce.metalworks.common.worldgen.structure;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import net.lettuce.metalworks.core.MetalWorks;
 import net.lettuce.metalworks.registry.ModStructurePieces;
 import net.lettuce.metalworks.registry.ModStructures;
@@ -24,13 +24,13 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
 import java.util.Optional;
 
 public class CitadelStructure extends Structure {
-    public static final Codec<CitadelStructure> CODEC = simpleCodec(CitadelStructure::new);
+    public static final MapCodec<CitadelStructure> CODEC = simpleCodec(CitadelStructure::new);
 
-    private static final ResourceLocation[] VARIANTS = new ResourceLocation[] {
-            new ResourceLocation(MetalWorks.MOD_ID, "citadel_treasure"),
-            new ResourceLocation(MetalWorks.MOD_ID, "citadel_portal"),
-            new ResourceLocation(MetalWorks.MOD_ID, "citadel_ancient"),
-            new ResourceLocation(MetalWorks.MOD_ID, "citadel_summon")
+    private static final ResourceLocation[] VARIANTS = {
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "citadel_treasure"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "citadel_portal"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "citadel_ancient"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "citadel_summon")
     };
 
     public CitadelStructure(StructureSettings settings) {
