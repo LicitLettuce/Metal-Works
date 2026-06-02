@@ -20,7 +20,7 @@ public class WeatheringTinDoorBlock extends DoorBlock {
     public WeatheringTinDoorBlock(BlockBehaviour.Properties props,
                                   BlockSetType setType,
                                   Supplier<Block> parentBlock) {
-        super(props, setType);
+        super(setType, props);
         this.parentBlock = parentBlock;
     }
 
@@ -42,4 +42,3 @@ public class WeatheringTinDoorBlock extends DoorBlock {
                 && TarnishingChain.getNext(this.parentBlock.get()) != null;
     }
 }
-

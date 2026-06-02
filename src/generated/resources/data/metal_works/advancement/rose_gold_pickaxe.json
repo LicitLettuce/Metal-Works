@@ -1,0 +1,34 @@
+{
+  "parent": "metal_works:rose_gold_ingot",
+  "criteria": {
+    "has_rose_gold_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:mage_powder"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.rose_gold_pickaxe.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "metal_works:rose_gold_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.metal_works.rose_gold_pickaxe.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_rose_gold_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

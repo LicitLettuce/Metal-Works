@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "metal_works:rose_gold_nugget"
+    },
+    "@": {
+      "item": "minecraft:beetroot"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "metal_works:rose_gold_beetroot"
+  }
+}

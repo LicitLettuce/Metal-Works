@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class MageTorchBlock extends TorchBlock {
 
     public MageTorchBlock(Properties properties) {
-        super(properties, ParticleTypes.UNDERWATER);
+        super(ParticleTypes.UNDERWATER, properties);
     }
 
     @Override

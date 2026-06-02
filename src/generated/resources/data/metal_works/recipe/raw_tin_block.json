@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "metal_works:raw_tin"
+    },
+    {
+      "item": "metal_works:raw_tin"
+    },
+    {
+      "item": "metal_works:raw_tin"
+    },
+    {
+      "item": "metal_works:raw_tin"
+    },
+    {
+      "item": "metal_works:raw_tin"
+    },
+    {
+      "item": "metal_works:raw_tin"
+    },
+    {
+      "item": "metal_works:raw_tin"
+    },
+    {
+      "item": "metal_works:raw_tin"
+    },
+    {
+      "item": "metal_works:raw_tin"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "metal_works:raw_tin_block"
+  }
+}

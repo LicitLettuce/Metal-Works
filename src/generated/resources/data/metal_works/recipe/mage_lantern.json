@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "metal_works:mage_torch"
+    },
+    "$": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "$$$",
+    "$#$",
+    "$$$"
+  ],
+  "result": {
+    "count": 1,
+    "id": "metal_works:mage_lantern"
+  }
+}

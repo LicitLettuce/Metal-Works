@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "metal_works:block/rose_gold_mosaic_slab"
+    },
+    "type=double": {
+      "model": "metal_works:block/rose_gold_mosaic"
+    },
+    "type=top": {
+      "model": "metal_works:block/rose_gold_mosaic_slab_top"
+    }
+  }
+}

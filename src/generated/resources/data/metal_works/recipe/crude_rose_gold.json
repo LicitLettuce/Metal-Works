@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:raw_gold"
+    },
+    {
+      "item": "minecraft:raw_gold"
+    },
+    {
+      "item": "minecraft:raw_gold"
+    },
+    {
+      "item": "minecraft:raw_gold"
+    },
+    {
+      "item": "minecraft:raw_copper"
+    },
+    {
+      "item": "minecraft:raw_copper"
+    },
+    {
+      "item": "minecraft:raw_copper"
+    },
+    {
+      "item": "minecraft:raw_copper"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "metal_works:crude_rose_gold"
+  }
+}

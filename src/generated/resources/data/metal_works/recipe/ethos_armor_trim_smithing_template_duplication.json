@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "@": {
+      "item": "minecraft:soul_soil"
+    },
+    "T": {
+      "item": "metal_works:ethos_armor_trim_smithing_template"
+    }
+  },
+  "pattern": [
+    "#T#",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "metal_works:ethos_armor_trim_smithing_template"
+  }
+}

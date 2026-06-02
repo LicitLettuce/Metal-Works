@@ -7,7 +7,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -39,10 +39,6 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.TIN_INGOT.get(),
                         ModItems.BRONZE_INGOT.get(),
                         ModItems.ROSE_GOLD_INGOT.get());
-
-        this.tag(ItemTags.MUSIC_DISCS)
-                .add(ModItems.MUSIC_DISC_ANCIENTS.get(),
-                        ModItems.MUSIC_DISC_UNDERWORLD.get());
 
     }
 }

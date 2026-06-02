@@ -1,0 +1,46 @@
+{
+  "criteria": {
+    "metal_works_related_ingots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tin_ingot"
+          },
+          {
+            "items": "metal_works:bronze_ingot"
+          },
+          {
+            "items": "metal_works:rose_gold_ingot"
+          },
+          {
+            "items": "minecraft:copper_ingot"
+          },
+          {
+            "items": "minecraft:gold_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "metal_works:textures/gui/advancements/backgrounds/tarnished_tin.png",
+    "description": {
+      "translate": "advancements.metal_works.root.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "metal_works:tab_item"
+    },
+    "title": {
+      "translate": "advancements.metal_works.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "metal_works_related_ingots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -30,6 +30,6 @@ public class ModTags {
 
 
     private static TagKey<Block> tag(String name) {
-        return BlockTags.create(new ResourceLocation(MetalWorks.MOD_ID, name));
+        return BlockTags.create(ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, name));
     }
 }

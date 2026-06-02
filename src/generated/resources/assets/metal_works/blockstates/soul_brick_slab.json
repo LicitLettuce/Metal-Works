@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "metal_works:block/soul_brick_slab"
+    },
+    "type=double": {
+      "model": "metal_works:block/soul_bricks"
+    },
+    "type=top": {
+      "model": "metal_works:block/soul_brick_slab_top"
+    }
+  }
+}

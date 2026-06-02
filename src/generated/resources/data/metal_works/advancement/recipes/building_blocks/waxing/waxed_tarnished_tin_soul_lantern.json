@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_honeycomb": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:honeycomb"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_tarnished_tin_soul_lantern": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tarnished_tin_soul_lantern"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "metal_works:waxing/waxed_tarnished_tin_soul_lantern"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_honeycomb",
+      "has_tarnished_tin_soul_lantern"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "metal_works:waxing/waxed_tarnished_tin_soul_lantern"
+    ]
+  }
+}

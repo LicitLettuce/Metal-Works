@@ -5,16 +5,16 @@ import net.lettuce.metalworks.core.MetalWorks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.common.data.ForgeAdvancementProvider;
+import net.neoforged.neoforge.common.data.AdvancementProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 
 
 import java.util.concurrent.CompletableFuture;
 
-@Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
@@ -24,9 +24,9 @@ public class DataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(event.includeServer(),
-                new ModRecipeProvider(packOutput));
+                new ModRecipeProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(),
-                ModLootTableProvider.create(packOutput));
+                ModLootTableProvider.create(packOutput, lookupProvider));
         generator.addProvider(event.includeClient(),
                 new ModBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(),
@@ -37,14 +37,13 @@ public class DataGenerators {
                 new ModItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
 
         generator.addProvider(event.includeServer(),
-                new ModGlobalLootModifiersProvider(packOutput));
+                new ModGlobalLootModifiersProvider(packOutput, lookupProvider));
 
         generator.addProvider(event.includeServer(),
-                new ForgeAdvancementProvider(
+                new AdvancementProvider(
                         packOutput,
                         lookupProvider,
                         existingFileHelper,
-                        // you can add multiple generators here if you want to separate tabs/trees
                         java.util.List.of(new ModAdvancementsGenerator())
                 )
         );

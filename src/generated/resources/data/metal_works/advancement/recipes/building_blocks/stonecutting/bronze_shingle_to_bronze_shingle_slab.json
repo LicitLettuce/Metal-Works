@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bronze_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_shingles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "metal_works:stonecutting/bronze_shingle_to_bronze_shingle_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bronze_shingles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "metal_works:stonecutting/bronze_shingle_to_bronze_shingle_slab"
+    ]
+  }
+}

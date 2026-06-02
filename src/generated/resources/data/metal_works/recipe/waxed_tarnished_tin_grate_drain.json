@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "metal_works:waxed_tarnished_tin_grate"
+    }
+  },
+  "pattern": [
+    "# #",
+    " # "
+  ],
+  "result": {
+    "count": 6,
+    "id": "metal_works:waxed_tarnished_tin_grate_drain"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_soul_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:soul_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "metal_works:smelting/cracked_soul_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_soul_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "metal_works:smelting/cracked_soul_bricks"
+    ]
+  }
+}

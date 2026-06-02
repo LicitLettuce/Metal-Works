@@ -1,0 +1,66 @@
+{
+  "parent": "metal_works:tin_ingot",
+  "criteria": {
+    "tin_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tin_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tin_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tin_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tin_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tin_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tin_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:tin_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.tin_armor_any.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "metal_works:tin_helmet"
+    },
+    "title": {
+      "translate": "advancements.metal_works.tin_armor_any.title"
+    }
+  },
+  "requirements": [
+    [
+      "tin_helmet",
+      "tin_chestplate",
+      "tin_leggings",
+      "tin_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

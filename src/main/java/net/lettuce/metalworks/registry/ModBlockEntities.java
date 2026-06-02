@@ -4,23 +4,22 @@ package net.lettuce.metalworks.registry;
 
 import net.lettuce.metalworks.common.blockentity.MageCampfireBlockEntity;
 import net.lettuce.metalworks.core.MetalWorks;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 public class ModBlockEntities {
 
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
-        DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MetalWorks.MOD_ID);
+        DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, MetalWorks.MOD_ID);
 
-    public static final RegistryObject<BlockEntityType<MageCampfireBlockEntity>> MAGE_CAMPFIRE =
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MageCampfireBlockEntity>> MAGE_CAMPFIRE =
             BLOCK_ENTITIES.register("mage_campfire", () ->
                     BlockEntityType.Builder.of(MageCampfireBlockEntity::new, ModBlocks.MAGE_CAMPFIRE.get()).build(null));
 
-    public static void register() {
-        BLOCK_ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
+    public static void register(IEventBus eventBus) {
+        BLOCK_ENTITIES.register(eventBus);
     }
 }
-

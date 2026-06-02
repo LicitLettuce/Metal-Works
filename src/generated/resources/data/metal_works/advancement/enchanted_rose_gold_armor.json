@@ -1,0 +1,59 @@
+{
+  "parent": "metal_works:rose_gold_armor_any",
+  "criteria": {
+    "enchanted_rose_gold_boots": {
+      "conditions": {
+        "item": {
+          "items": "metal_works:rose_gold_boots"
+        }
+      },
+      "trigger": "minecraft:enchanted_item"
+    },
+    "enchanted_rose_gold_chestplate": {
+      "conditions": {
+        "item": {
+          "items": "metal_works:rose_gold_chestplate"
+        }
+      },
+      "trigger": "minecraft:enchanted_item"
+    },
+    "enchanted_rose_gold_helmet": {
+      "conditions": {
+        "item": {
+          "items": "metal_works:rose_gold_helmet"
+        }
+      },
+      "trigger": "minecraft:enchanted_item"
+    },
+    "enchanted_rose_gold_leggings": {
+      "conditions": {
+        "item": {
+          "items": "metal_works:rose_gold_leggings"
+        }
+      },
+      "trigger": "minecraft:enchanted_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.enchanted_rose_gold_armor.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "metal_works:refined_radiance_item"
+    },
+    "title": {
+      "translate": "advancements.metal_works.enchanted_rose_gold_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "enchanted_rose_gold_helmet",
+      "enchanted_rose_gold_chestplate",
+      "enchanted_rose_gold_leggings",
+      "enchanted_rose_gold_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

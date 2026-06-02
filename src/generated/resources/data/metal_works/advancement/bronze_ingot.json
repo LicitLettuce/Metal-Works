@@ -1,0 +1,34 @@
+{
+  "parent": "metal_works:crude_bronze",
+  "criteria": {
+    "has_bronze_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:bronze_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.bronze_ingot.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "metal_works:bronze_ingot"
+    },
+    "title": {
+      "translate": "advancements.metal_works.bronze_ingot.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_bronze_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

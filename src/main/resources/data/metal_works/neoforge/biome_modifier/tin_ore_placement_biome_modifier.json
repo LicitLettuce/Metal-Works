@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": {
+    "type": "neoforge:any"
+  },
+  "features": "metal_works:tin_ore_placement",
+  "step": "surface_structures"
+}

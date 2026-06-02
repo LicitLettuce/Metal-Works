@@ -3,21 +3,20 @@ package net.lettuce.metalworks.datagen;
 import net.lettuce.metalworks.core.MetalWorks;
 import net.lettuce.metalworks.registry.ModBlocks;
 import net.lettuce.metalworks.registry.ModItems;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     private static final List<ItemLike> TIN_SMELTABLES = List.of(ModItems.RAW_TIN.get(),
@@ -26,14 +25,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             ModBlocks.SOUL_TIN_ORE.get(),
             ModBlocks.CASSITERITE.get());
 
-    public ModRecipeProvider(PackOutput pOutput) {
-        super(pOutput);
+    public ModRecipeProvider(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(pOutput, lookupProvider);
     }
 
 
 
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
+    protected void buildRecipes(RecipeOutput pWriter) {
 
         // Cassiterite Recipes
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CASSITERITE.get(), 1)
@@ -1286,7 +1285,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get())
                 .unlockedBy(getHasName(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get()),
                         has(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
-                .save(pWriter, new ResourceLocation(MetalWorks.MOD_ID,
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID,
                         "ethos_armor_trim_smithing_template_duplication"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get(), 2)
@@ -1298,7 +1297,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get())
                 .unlockedBy(getHasName(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get()),
                         has(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
-                .save(pWriter, new ResourceLocation(MetalWorks.MOD_ID,
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID,
                         "tarnish_armor_trim_smithing_template_duplication"));
 
         buildWaxingRecipes(pWriter);
@@ -1572,7 +1571,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecut(pWriter, ModItems.ROSE_GOLD_MOSAIC.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_GOLD_MOSAIC_SLAB.get(),   2, "rose_gold_osaic_to_rose_gold_mosaic_slab");
     }
 
-    private void buildWaxingRecipes(Consumer<FinishedRecipe> writer) {
+    private void buildWaxingRecipes(RecipeOutput writer) {
         List<Pair<ItemLike, ItemLike>> waxingPairs = List.of(
                 // Tin Block
                 Pair.of(ModBlocks.TIN_BLOCK.get(), ModBlocks.WAXED_TIN_BLOCK.get()),
@@ -1656,7 +1655,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
     }
 
-    private static void smeltDownEquipment(Consumer<FinishedRecipe> writer, List<ItemLike> inputs, ItemLike result, float xp, int cookTime, String material) {
+    private static void smeltDownEquipment(RecipeOutput writer, List<ItemLike> inputs, ItemLike result, float xp, int cookTime, String material) {
         for (ItemLike input : inputs) {
             SimpleCookingRecipeBuilder.smelting(
                             Ingredient.of(input),
@@ -1670,36 +1669,37 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
     }
 
-    private void makeWaxingRecipe(Consumer<FinishedRecipe> writer, ItemLike unwaxed, ItemLike waxed) {
+    private void makeWaxingRecipe(RecipeOutput writer, ItemLike unwaxed, ItemLike waxed) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, waxed)
                 .requires(unwaxed)
                 .requires(Items.HONEYCOMB)
                 .unlockedBy("has_honeycomb", has(Items.HONEYCOMB))
                 .unlockedBy("has_" + getItemName(unwaxed), has(unwaxed))
-                .save(writer, new ResourceLocation(MetalWorks.MOD_ID, "waxing/" + getItemName(waxed)));
+                .save(writer, ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "waxing/" + getItemName(waxed)));
     }
 
-    private void stonecut(Consumer<FinishedRecipe> writer, ItemLike input, RecipeCategory category,
+    private void stonecut(RecipeOutput writer, ItemLike input, RecipeCategory category,
                           ItemLike output, int count, String id) {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), category, output, count)
                 .unlockedBy(getHasName(input), has(input))
                 .save(writer, MetalWorks.MOD_ID + ":stonecutting/" + id);
     }
 
-    protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
-        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
+    protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
+        for (ItemLike itemlike : pIngredients) {
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTIme)
+                    .group(pGroup)
+                    .unlockedBy(getHasName(itemlike), has(itemlike))
+                    .save(recipeOutput, MetalWorks.MOD_ID + ":" + getItemName(pResult) + "_from_smelting_" + getItemName(itemlike));
+        }
     }
 
-    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
-        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
-    }
-
-    protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
-        for(ItemLike itemlike : pIngredients) {
-            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult,
-                            pExperience, pCookingTime, pCookingSerializer)
-                    .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(pFinishedRecipeConsumer,  MetalWorks.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
+    protected static void oreBlasting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
+        for (ItemLike itemlike : pIngredients) {
+            SimpleCookingRecipeBuilder.blasting(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime)
+                    .group(pGroup)
+                    .unlockedBy(getHasName(itemlike), has(itemlike))
+                    .save(recipeOutput, MetalWorks.MOD_ID + ":" + getItemName(pResult) + "_from_blasting_" + getItemName(itemlike));
         }
     }
 }

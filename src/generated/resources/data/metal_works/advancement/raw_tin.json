@@ -1,0 +1,33 @@
+{
+  "parent": "metal_works:root",
+  "criteria": {
+    "has_raw_tin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:raw_tin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.raw_tin.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "metal_works:raw_tin"
+    },
+    "title": {
+      "translate": "advancements.metal_works.raw_tin.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_tin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

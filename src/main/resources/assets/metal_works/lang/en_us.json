@@ -224,6 +224,7 @@
   "item.metal_works.underworld_music_disc": "Music Disc",
   "item.metal_works.ancients_music_disc.desc": "LicitLettuce - Ancients",
   "item.metal_works.underworld_music_disc.desc": "LicitLettuce - Underworld",
+  "jukebox_song.metal_works.ancients": "LicitLettuce - Ancients",
+  "jukebox_song.metal_works.underworld": "LicitLettuce - Underworld",
   "subtitles.metal_works.entity.mage_golem.idle": "Mage Golem hums"
 }
-

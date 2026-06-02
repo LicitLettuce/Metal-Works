@@ -31,6 +31,6 @@ public class MageGolemEmissiveLayer extends RenderLayer<MageGolemEntity, MageGol
         this.getParentModel().renderToBuffer(poseStack, vc,
                 0xF000F0,
                 OverlayTexture.NO_OVERLAY,
-                1.0F, 1.0F, 1.0F, 0.0F);
+                0x00FFFFFF);
     }
 }

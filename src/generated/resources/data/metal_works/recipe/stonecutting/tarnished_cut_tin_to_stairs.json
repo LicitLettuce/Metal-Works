@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "metal_works:tarnished_cut_tin"
+  },
+  "result": {
+    "count": 1,
+    "id": "metal_works:tarnished_cut_tin_stairs"
+  }
+}

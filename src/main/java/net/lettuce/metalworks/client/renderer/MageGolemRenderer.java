@@ -19,25 +19,25 @@ public class MageGolemRenderer extends MobRenderer<MageGolemEntity, MageGolemMod
     }
 
     private static final ResourceLocation[] FRAMES = {
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame0.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame1.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame2.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame3.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame4.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame5.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame6.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame7.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame0.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame1.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame2.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame3.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame4.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame5.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame6.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame7.png"),
     };
 
     private static final ResourceLocation[] GLOW_FRAMES = {
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame0_glow.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame1_glow.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame2_glow.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame3_glow.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame4_glow.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame5_glow.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame6_glow.png"),
-            new ResourceLocation(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame7_glow.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame0_glow.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame1_glow.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame2_glow.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame3_glow.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame4_glow.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame5_glow.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame6_glow.png"),
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "textures/entity/mage_golem/frame7_glow.png"),
     };
 
     @Override

@@ -1,0 +1,34 @@
+{
+  "parent": "metal_works:rose_gold_ingot",
+  "criteria": {
+    "has_rose_gold_beetroot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:rose_gold_beetroot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.rose_gold_beetroot.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "metal_works:rose_gold_beetroot"
+    },
+    "title": {
+      "translate": "advancements.metal_works.rose_gold_beetroot.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_rose_gold_beetroot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

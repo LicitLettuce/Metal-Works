@@ -2,11 +2,9 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
-    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    id 'net.neoforged.gradle.userdev' version '7.1.36'
 }
 
-// Project metadata
 version = mod_version
 group = mod_group_id
 
@@ -14,57 +12,39 @@ base {
     archivesName = mod_id
 }
 
-// Java configuration
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
-println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
+runs {
+    configureEach {
+        systemProperty 'forge.logging.markers', 'REGISTRIES'
+        systemProperty 'forge.logging.console.level', 'debug'
+        workingDirectory project.layout.projectDirectory.dir('run').dir(name)
+        modSource project.sourceSets.main
+    }
 
-// Forge/Minecraft config
-minecraft {
-    mappings channel: mapping_channel, version: mapping_version
-    copyIdeResources = true
+    client {
+        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+    }
 
-    runs {
-        configureEach {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-            property "mixin.env.remapRefMap", "true"
-            property "mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg"
+    server {
+        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        argument '--nogui'
+    }
 
-            mods {
-                "${mod_id}" {
-                    source sourceSets.main
-                }
-            }
-        }
+    gameTestServer {
+        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+    }
 
-        client {
-            property 'forge.enabledGameTestNamespaces', mod_id
-        }
-
-        server {
-            property 'forge.enabledGameTestNamespaces', mod_id
-            args '--nogui'
-        }
-
-        gameTestServer {
-            property 'forge.enabledGameTestNamespaces', mod_id
-        }
-
-        data {
-            workingDirectory project.file('run-data')
-            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-        }
+    data {
+        workingDirectory project.file('run-data')
+        arguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
     }
 }
 
-// Generated resources path
 sourceSets.main.resources {
     srcDir 'src/generated/resources'
 }
 
-// ✅ FIXED: Repositories block
 repositories {
     maven {
         name = "Cursemaven"
@@ -91,22 +71,19 @@ repositories {
     mavenCentral()
 }
 
-// Dependencies
 dependencies {
-    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
-    runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
-    implementation fg.deobf("com.teamabnormals:blueprint:${minecraft_version}-${blueprint_version}")
-
+    implementation "net.neoforged:neoforge:${neoforge_version}"
+    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+    implementation "com.teamabnormals:blueprint:${blueprint_version}"
 }
 
-// Resource processing
 tasks.named('processResources', ProcessResources).configure {
     def replaceProperties = [
             minecraft_version       : minecraft_version,
             minecraft_version_range : minecraft_version_range,
-            forge_version           : forge_version,
-            forge_version_range     : forge_version_range,
+            neoforge_version        : neoforge_version,
+            neoforge_version_range  : neoforge_version_range,
             loader_version_range    : loader_version_range,
             mod_id                  : mod_id,
             mod_name                : mod_name,
@@ -114,16 +91,17 @@ tasks.named('processResources', ProcessResources).configure {
             mod_version             : mod_version,
             mod_authors             : mod_authors,
             mod_description         : mod_description,
+            blueprint_version       : blueprint_version,
+            blueprint_mod_version   : blueprint_mod_version,
     ]
 
     inputs.properties replaceProperties
 
-    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+    filesMatching(['META-INF/neoforge.mods.toml', 'pack.mcmeta']) {
         expand replaceProperties + [project: project]
     }
 }
 
-// Jar task
 tasks.named('jar', Jar).configure {
     manifest {
         attributes([
@@ -136,11 +114,8 @@ tasks.named('jar', Jar).configure {
                 'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
-
-    finalizedBy 'reobfJar'
 }
 
-// Publishing config
 publishing {
     publications {
         register('mavenJava', MavenPublication) {
@@ -154,8 +129,6 @@ publishing {
     }
 }
 
-// Java compilation settings
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
-

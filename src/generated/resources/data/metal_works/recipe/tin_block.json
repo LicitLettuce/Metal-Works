@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    },
+    {
+      "item": "metal_works:tin_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "metal_works:tin_block"
+  }
+}

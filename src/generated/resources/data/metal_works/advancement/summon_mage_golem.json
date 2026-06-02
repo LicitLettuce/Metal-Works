@@ -1,0 +1,38 @@
+{
+  "parent": "metal_works:rose_gold_ingot",
+  "criteria": {
+    "spawn_mage_golem": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "metal_works:mage_golem"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:summoned_entity"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.summon_mage_golem.desc"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:carved_pumpkin"
+    },
+    "title": {
+      "translate": "advancements.metal_works.summon_mage_golem.title"
+    }
+  },
+  "requirements": [
+    [
+      "spawn_mage_golem"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

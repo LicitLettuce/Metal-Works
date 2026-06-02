@@ -5,6 +5,9 @@ import net.lettuce.metalworks.registry.ModParticles;
 import net.lettuce.metalworks.registry.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -24,9 +27,9 @@ import net.minecraft.world.entity.animal.AbstractGolem;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.event.entity.EntityJoinLevelEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import org.jetbrains.annotations.Nullable;
 
 public class MageGolemEntity extends AbstractGolem {
@@ -42,9 +45,9 @@ public class MageGolemEntity extends AbstractGolem {
     }
 
     @Override
-    protected void defineSynchedData() {
-        super.defineSynchedData();
-        this.entityData.define(DATA_GOLEM_LEVEL, 0);
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+        super.defineSynchedData(builder);
+        builder.define(DATA_GOLEM_LEVEL, 0);
     }
 
     public int getGolemLevel() {
@@ -189,11 +192,12 @@ public class MageGolemEntity extends AbstractGolem {
     }
 
     @Override
-    protected ResourceLocation getDefaultLootTable() {
-        return new ResourceLocation(MetalWorks.MOD_ID, "entities/mage_golem");
+    protected ResourceKey<LootTable> getDefaultLootTable() {
+        return ResourceKey.create(Registries.LOOT_TABLE,
+                ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "entities/mage_golem"));
     }
 
-    @Mod.EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+    @EventBusSubscriber(modid = MetalWorks.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
     public static class ModTargetingEvents {
         @SubscribeEvent
         public static void onEntityJoin(EntityJoinLevelEvent event) {
@@ -204,5 +208,4 @@ public class MageGolemEntity extends AbstractGolem {
         }
     }
 }
-
 

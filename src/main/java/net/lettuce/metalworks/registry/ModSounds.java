@@ -1,29 +1,29 @@
 package net.lettuce.metalworks.registry;
 
 import net.lettuce.metalworks.core.MetalWorks;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
-            DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, MetalWorks.MOD_ID);
+            DeferredRegister.create(Registries.SOUND_EVENT, MetalWorks.MOD_ID);
 
     // Music Discs
-    public static final RegistryObject<SoundEvent> ANCIENTS_MUSIC_DISC =
+    public static final DeferredHolder<SoundEvent, SoundEvent> ANCIENTS_MUSIC_DISC =
             registerSoundEvent("ancients");
 
-    public static final RegistryObject<SoundEvent> UNDERWORLD_MUSIC_DISC =
+    public static final DeferredHolder<SoundEvent, SoundEvent> UNDERWORLD_MUSIC_DISC =
             registerSoundEvent("underworld");
 
     // Mage Golem Sounds
-    public static final RegistryObject<SoundEvent> MAGE_GOLEM_IDLE =
+    public static final DeferredHolder<SoundEvent, SoundEvent> MAGE_GOLEM_IDLE =
             registerSoundEvent("entity.mage_golem.idle");
 
-    private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
+    private static DeferredHolder<SoundEvent, SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () ->
-                SoundEvent.createVariableRangeEvent(new ResourceLocation(MetalWorks.MOD_ID, name)));
+                SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, name)));
     }
 }

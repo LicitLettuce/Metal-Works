@@ -1,0 +1,14 @@
+{
+  "type": "metal_works:add_item",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/village/village_armorer"
+    },
+    {
+      "chance": 0.05,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "metal_works:rose_gold_ingot"
+}

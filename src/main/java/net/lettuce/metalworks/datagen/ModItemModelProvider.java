@@ -4,6 +4,7 @@ package net.lettuce.metalworks.datagen;
 import net.lettuce.metalworks.core.MetalWorks;
 import net.lettuce.metalworks.registry.ModBlocks;
 import net.lettuce.metalworks.registry.ModItems;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -13,12 +14,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.LinkedHashMap;
 
@@ -63,7 +63,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE);
         simpleItem(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE);
-        simpleItem(ModItems.MUSIC_DISC_ANCIENTS);
+        // TODO missing ancients_music_disc.png texture
+        // simpleItem(ModItems.MUSIC_DISC_ANCIENTS);
         simpleItem(ModItems.MUSIC_DISC_UNDERWORLD);
 
             // Tin Items
@@ -186,55 +187,55 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.REFINED_RADIANCE_ITEM.getId().getPath(), "item/generated").texture("layer0", modLoc("item/rose_gold_chestplate"));
     }
 
-    private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
+    private ItemModelBuilder simpleItem(DeferredHolder<Item, ? extends Item> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(MetalWorks.MOD_ID,"item/" + item.getId().getPath()));
+                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "item/" + item.getId().getPath()));
     }
 
-    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+    private ItemModelBuilder handheldItem(DeferredHolder<Item, ? extends Item> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/handheld")).texture("layer0",
-                new ResourceLocation(MetalWorks.MOD_ID, "item/" + item.getId().getPath()));
+                ResourceLocation.withDefaultNamespace("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "item/" + item.getId().getPath()));
     }
 
-    public void evenSimplerBlockItem(RegistryObject<Block> block) {
-        this.withExistingParent(MetalWorks.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
-                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
+    public void evenSimplerBlockItem(DeferredHolder<Block, ? extends Block> block) {
+        this.withExistingParent(MetalWorks.MOD_ID + ":" + BuiltInRegistries.BLOCK.getKey(block.get()).getPath(),
+                modLoc("block/" + BuiltInRegistries.BLOCK.getKey(block.get()).getPath()));
     }
 
-    public void trapdoorItem(RegistryObject<Block> block) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
-                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom"));
+    public void trapdoorItem(DeferredHolder<Block, ? extends Block> block) {
+        this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(),
+                modLoc("block/" + BuiltInRegistries.BLOCK.getKey(block.get()).getPath() + "_bottom"));
     }
 
-    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  new ResourceLocation(MetalWorks.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    public void fenceItem(DeferredHolder<Block, ? extends Block> block, DeferredHolder<Block, ? extends Block> baseBlock) {
+        this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "block/" + BuiltInRegistries.BLOCK.getKey(baseBlock.get()).getPath()));
     }
 
-    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  new ResourceLocation(MetalWorks.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    public void buttonItem(DeferredHolder<Block, ? extends Block> block, DeferredHolder<Block, ? extends Block> baseBlock) {
+        this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "block/" + BuiltInRegistries.BLOCK.getKey(baseBlock.get()).getPath()));
     }
 
-    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  new ResourceLocation(MetalWorks.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    public void wallItem(DeferredHolder<Block, ? extends Block> block, DeferredHolder<Block, ? extends Block> baseBlock) {
+        this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "block/" + BuiltInRegistries.BLOCK.getKey(baseBlock.get()).getPath()));
     }
 
-    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+    private ItemModelBuilder simpleBlockItem(DeferredHolder<Block, ? extends Block> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(MetalWorks.MOD_ID,"item/" + item.getId().getPath()));
+                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     // Shoutout to El_Redstoniano for making this
     // Shoutout to Kaupenjoe for showing me this
-    private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
+    private void trimmedArmorItem(DeferredHolder<Item, ? extends Item> itemHolder) {
         final String MOD_ID = MetalWorks.MOD_ID; // Change this to your mod id
 
-        if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
+        if(itemHolder.get() instanceof ArmorItem armorItem) {
             trimMaterials.entrySet().forEach(entry -> {
 
                 ResourceKey<TrimMaterial> trimMaterial = entry.getKey();
@@ -248,12 +249,12 @@ public class ModItemModelProvider extends ItemModelProvider {
                     default -> "";
                 };
 
-                String armorItemPath = "item/" + armorItem;
+                String armorItemPath = "item/" + itemHolder.getId().getPath();
                 String trimPath = "trims/items/" + armorType + "_trim_" + trimMaterial.location().getPath();
                 String currentTrimName = armorItemPath + "_" + trimMaterial.location().getPath() + "_trim";
-                ResourceLocation armorItemResLoc = new ResourceLocation(MOD_ID, armorItemPath);
-                ResourceLocation trimResLoc = new ResourceLocation(trimPath); // minecraft namespace
-                ResourceLocation trimNameResLoc = new ResourceLocation(MOD_ID, currentTrimName);
+                ResourceLocation armorItemResLoc = ResourceLocation.fromNamespaceAndPath(MOD_ID, armorItemPath);
+                ResourceLocation trimResLoc = ResourceLocation.withDefaultNamespace(trimPath); // minecraft namespace
+                ResourceLocation trimNameResLoc = ResourceLocation.fromNamespaceAndPath(MOD_ID, currentTrimName);
 
                 // This is used for making the ExistingFileHelper acknowledge that this texture exist, so this will
                 // avoid an IllegalArgumentException
@@ -266,14 +267,14 @@ public class ModItemModelProvider extends ItemModelProvider {
                         .texture("layer1", trimResLoc);
 
                 // Non-trimmed armorItem file (normal variant)
-                this.withExistingParent(itemRegistryObject.getId().getPath(),
+                this.withExistingParent(itemHolder.getId().getPath(),
                                 mcLoc("item/generated"))
                         .override()
                         .model(new ModelFile.UncheckedModelFile(trimNameResLoc))
                         .predicate(mcLoc("trim_type"), trimValue).end()
                         .texture("layer0",
-                                new ResourceLocation(MOD_ID,
-                                        "item/" + itemRegistryObject.getId().getPath()));
+                                ResourceLocation.fromNamespaceAndPath(MOD_ID,
+                                        "item/" + itemHolder.getId().getPath()));
             });
         }
     }

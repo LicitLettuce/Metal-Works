@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "frozen_peaks",
+    "jagged_peaks",
+    "stony_peaks"
+  ],
+  "features": "metal_works:ore_cassiterite",
+  "step": "underground_ores"
+}

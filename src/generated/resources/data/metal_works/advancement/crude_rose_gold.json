@@ -1,0 +1,33 @@
+{
+  "parent": "metal_works:root",
+  "criteria": {
+    "has_crude_rose_gold": {
+      "conditions": {
+        "items": [
+          {
+            "items": "metal_works:crude_rose_gold"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.metal_works.crude_rose_gold.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "metal_works:crude_rose_gold"
+    },
+    "title": {
+      "translate": "advancements.metal_works.crude_rose_gold.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_crude_rose_gold"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
