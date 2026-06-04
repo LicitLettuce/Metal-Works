@@ -16,6 +16,7 @@ import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
@@ -210,6 +211,7 @@ public class ModItems {
             () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.ETHOS));
     public static final DeferredHolder<Item, Item> TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("tarnish_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.TARNISH));
+
 
     public static final DeferredHolder<Item, Item> MUSIC_DISC_ANCIENTS = ITEMS.register("ancients_music_disc", () -> new Item
             (new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ModJukeboxSongs.ANCIENTS)));

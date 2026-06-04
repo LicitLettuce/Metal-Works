@@ -63,8 +63,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE);
         simpleItem(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE);
-        // TODO missing ancients_music_disc.png texture
-        // simpleItem(ModItems.MUSIC_DISC_ANCIENTS);
+        simpleItem(ModItems.MUSIC_DISC_ANCIENTS);
         simpleItem(ModItems.MUSIC_DISC_UNDERWORLD);
 
             // Tin Items

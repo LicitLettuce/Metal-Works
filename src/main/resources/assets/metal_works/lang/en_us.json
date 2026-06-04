@@ -220,6 +220,8 @@
   "advancements.metal_works.enchanted_rose_gold_armor.desc": "Enchant a piece of rose gold armor. Nothing's touching you in this!",
   "trim_pattern.metal_works.ethos": "Ethos Armor Trim",
   "trim_pattern.metal_works.tarnish": "Tarnish Armor Trim",
+  "item.metal_works.ethos_armor_trim_smithing_template": "Smithing Template",
+  "item.metal_works.tarnish_armor_trim_smithing_template": "Smithing Template",
   "item.metal_works.ancients_music_disc": "Music Disc",
   "item.metal_works.underworld_music_disc": "Music Disc",
   "item.metal_works.ancients_music_disc.desc": "LicitLettuce - Ancients",

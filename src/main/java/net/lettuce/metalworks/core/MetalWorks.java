@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
@@ -53,6 +54,8 @@ public class MetalWorks  {
         ModStructurePieces.STRUCTURE_PIECES.register(modEventBus);
 
     }
+
+
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             TarnishingChain.registerWeatheringChain();

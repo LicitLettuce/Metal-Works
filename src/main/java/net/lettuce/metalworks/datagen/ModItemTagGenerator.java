@@ -39,6 +39,5 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.TIN_INGOT.get(),
                         ModItems.BRONZE_INGOT.get(),
                         ModItems.ROSE_GOLD_INGOT.get());
-
     }
 }
