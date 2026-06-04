@@ -1,5 +1,10 @@
 # Metal Works Changelog
 
+## 1.2.12 - 1.21.1
+### Changes
+- Ported to NeoForge 1.21.1
+
+
 ## 1.2.11 Patch
 ### Changes
 - Actually updated Tarnish Armor Trim chestplate texture.
@@ -11,7 +16,7 @@
 
 
 
-## 1.2.11 Hotfix
+## 1.2.12 Hotfix
 ### Changes
 - Updated Underworld Music Disc texture.
 - Updated Tarnish Armor Trim chestplate texture.
