@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
@@ -28,8 +29,8 @@ public class ModBlocks {
             (ModBlocks.CASSITERITE.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(ModBlocks.CASSITERITE.get())));
     public static final DeferredHolder<Block, Block> CASSITERITE_SLAB = BLOCKS.register("cassiterite_slab", () -> new SlabBlock
             (BlockBehaviour.Properties.ofFullCopy(ModBlocks.CASSITERITE.get())));
-    public static final DeferredHolder<Block, Block> CASSITERITE_WALL = BLOCKS.register("cassiterite_wall", () -> new WallBlock(
-            BlockBehaviour.Properties.ofFullCopy(ModBlocks.CASSITERITE.get())));
+    public static final DeferredHolder<Block, Block> CASSITERITE_WALL = BLOCKS.register("cassiterite_wall", () -> new WallBlock
+            (BlockBehaviour.Properties.ofFullCopy(ModBlocks.CASSITERITE.get())));
 
     public static final DeferredHolder<Block, Block> POLISHED_CASSITERITE = BLOCKS.register("polished_cassiterite", () -> new Block
             (BlockBehaviour.Properties.ofFullCopy(ModBlocks.CASSITERITE.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
@@ -37,8 +38,8 @@ public class ModBlocks {
             (ModBlocks.POLISHED_CASSITERITE.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(ModBlocks.POLISHED_CASSITERITE.get())));
     public static final DeferredHolder<Block, Block> POLISHED_CASSITERITE_SLAB = BLOCKS.register("polished_cassiterite_slab", () -> new SlabBlock
             (BlockBehaviour.Properties.ofFullCopy(ModBlocks.POLISHED_CASSITERITE.get())));
-    public static final DeferredHolder<Block, Block> POLISHED_CASSITERITE_WALL = BLOCKS.register("polished_cassiterite_wall", () -> new WallBlock(
-            BlockBehaviour.Properties.ofFullCopy(ModBlocks.POLISHED_CASSITERITE.get())));
+    public static final DeferredHolder<Block, Block> POLISHED_CASSITERITE_WALL = BLOCKS.register("polished_cassiterite_wall", () -> new WallBlock
+            (BlockBehaviour.Properties.ofFullCopy(ModBlocks.POLISHED_CASSITERITE.get())));
 
     public static final DeferredHolder<Block, Block> CASSITERITE_BRICKS = BLOCKS.register("cassiterite_bricks", () -> new Block
             (BlockBehaviour.Properties.ofFullCopy(ModBlocks.POLISHED_CASSITERITE.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
@@ -48,8 +49,8 @@ public class ModBlocks {
             (ModBlocks.CASSITERITE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(ModBlocks.CASSITERITE_BRICKS.get())));
     public static final DeferredHolder<Block, Block> CASSITERITE_BRICK_SLAB = BLOCKS.register("cassiterite_brick_slab", () -> new SlabBlock
             (BlockBehaviour.Properties.ofFullCopy(ModBlocks.CASSITERITE_BRICKS.get())));
-    public static final DeferredHolder<Block, Block> CASSITERITE_BRICK_WALL = BLOCKS.register("cassiterite_brick_wall", () -> new WallBlock(
-            BlockBehaviour.Properties.ofFullCopy(ModBlocks.CASSITERITE_BRICKS.get())));
+    public static final DeferredHolder<Block, Block> CASSITERITE_BRICK_WALL = BLOCKS.register("cassiterite_brick_wall", () -> new WallBlock
+            (BlockBehaviour.Properties.ofFullCopy(ModBlocks.CASSITERITE_BRICKS.get())));
     public static final DeferredHolder<Block, Block> CHISELED_CASSITERITE_BRICKS = BLOCKS.register("chiseled_cassiterite_bricks", () -> new Block
             (BlockBehaviour.Properties.ofFullCopy(ModBlocks.POLISHED_CASSITERITE.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
 
@@ -69,8 +70,8 @@ public class ModBlocks {
     public static final DeferredHolder<Block, Block> SOUL_TILE_SLAB = BLOCKS.register("soul_tile_slab", () -> new SlabBlock
             (BlockBehaviour.Properties.ofFullCopy(ModBlocks.SOUL_BRICKS.get())));
 
-    public static final DeferredHolder<Block, Block> SUSPICIOUS_SOUL_SOIL = BLOCKS.register("suspicious_soul_soil", () -> new BrushableBlock
-            (Blocks.SOUL_SOIL, SoundEvents.BRUSH_GRAVEL, SoundEvents.BRUSH_GRAVEL_COMPLETED, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.SNARE).strength(0.25F).sound(SoundType.SUSPICIOUS_GRAVEL).pushReaction(PushReaction.DESTROY)));
+    public static final DeferredHolder<Block, Block> SUSPICIOUS_SOUL_SOIL = BLOCKS.register("suspicious_soul_soil", () -> new ModBrushableBlock
+            (Blocks.SOUL_SOIL, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.SNARE).strength(0.25F).sound(SoundType.SUSPICIOUS_GRAVEL).pushReaction(PushReaction.DESTROY), SoundEvents.BRUSH_GRAVEL, SoundEvents.BRUSH_GRAVEL_COMPLETED));
 
         // Natural Tin Blocks
     public static final DeferredHolder<Block, Block> TIN_ORE = BLOCKS.register("tin_ore", () -> new Block
@@ -363,7 +364,9 @@ public class ModBlocks {
     public static final DeferredHolder<Block, Block> MAGE_LANTERN = BLOCKS.register("mage_lantern", () -> new LanternBlock
             (BlockBehaviour.Properties.of().mapColor(MapColor.METAL).forceSolidOn().requiresCorrectToolForDrops().strength(3.5F).sound(SoundType.LANTERN).lightLevel((p_187433_) -> 12).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
-    public static final DeferredHolder<Block, Block> MAGE_CAMPFIRE = BLOCKS.register("mage_campfire", MageCampfireBlock::new);
+    public static final DeferredHolder<Block, Block> MAGE_CAMPFIRE = BLOCKS.register("mage_campfire", () -> new MageCampfireBlock
+            (Block.Properties.ofFullCopy(Blocks.SOUL_CAMPFIRE)));
+
 
         // Helper Methods
     private static ToIntFunction<BlockState> litBlockEmission(int lightLevel) {

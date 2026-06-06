@@ -186,6 +186,7 @@ public class ModCreativeModeTabs {
                                 pOutput.accept(ModItems.ROSE_LANTERN.get());
                                 pOutput.accept(ModItems.MAGE_TORCH.get());
                                 pOutput.accept(ModItems.MAGE_LANTERN.get());;
+                                pOutput.accept(ModItems.MAGE_CAMPFIRE.get());;
                         })
                     .build());
 

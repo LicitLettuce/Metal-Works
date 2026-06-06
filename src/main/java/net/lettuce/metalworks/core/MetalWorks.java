@@ -197,6 +197,8 @@ public class MetalWorks  {
                 event.insertAfter(ModItems.WAXED_TIN_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.insertAfter(ModItems.WAXED_TIN_SOUL_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TARNISHED_TIN_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 event.insertAfter(ModItems.WAXED_TARNISHED_TIN_LANTERN.get().getDefaultInstance(), ModItems.WAXED_TARNISHED_TIN_SOUL_LANTERN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.insertAfter(Items.SOUL_CAMPFIRE.getDefaultInstance(), ModItems.MAGE_CAMPFIRE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
             }
         }
         if (ModConfig.COMMON.populateVanillaTabs.get()) {
