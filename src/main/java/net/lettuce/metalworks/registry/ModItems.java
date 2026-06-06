@@ -6,9 +6,11 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
@@ -207,10 +209,15 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> SOUL_TILE_SLAB = ITEMS.register("soul_tile_slab", () -> new BlockItem
             (ModBlocks.SOUL_TILE_SLAB.get(), new Item.Properties()));
 
-    public static final DeferredHolder<Item, Item> ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("ethos_armor_trim_smithing_template",
-            () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.ETHOS));
-    public static final DeferredHolder<Item, Item> TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("tarnish_armor_trim_smithing_template",
-            () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.TARNISH));
+    public static final DeferredHolder<Item, Item> ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE =
+            ITEMS.register("ethos_armor_trim_smithing_template",
+                    () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.ETHOS));
+
+    public static final DeferredHolder<Item, Item> TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE =
+            ITEMS.register("tarnish_armor_trim_smithing_template",
+                    () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.TARNISH));
+
+
 
 
     public static final DeferredHolder<Item, Item> MUSIC_DISC_ANCIENTS = ITEMS.register("ancients_music_disc", () -> new Item

@@ -1,6 +1,5 @@
 package net.lettuce.metalworks.registry;
 
-
 import net.lettuce.metalworks.core.MetalWorks;
 import net.minecraft.Util;
 import net.minecraft.core.registries.Registries;
@@ -10,18 +9,20 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.JukeboxSong;
 import net.minecraft.world.item.armortrim.TrimPattern;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 public class ModTrimPatterns {
-    public static final ResourceKey<TrimPattern> TARNISH = createKey("tarnish");
-    public static final ResourceKey<TrimPattern> ETHOS = createKey("ethos");
+    public static final ResourceKey<TrimPattern> ETHOS = create("ethos");
+    public static final ResourceKey<TrimPattern> TARNISH = create("tarnish");
 
     public static void bootstrap(BootstrapContext<TrimPattern> context) {
-        register(context, TARNISH, ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get());
         register(context, ETHOS, ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+        register(context, TARNISH, ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get());
     }
 
-    public static ResourceKey<TrimPattern> createKey(String name) {
+    private static ResourceKey<TrimPattern> create(String name) {
         return ResourceKey.create(Registries.TRIM_PATTERN, ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, name));
     }
 

@@ -1,3 +1,4 @@
-// 1.21.1	2026-06-01T12:12:46.2083147	Tags for minecraft:item mod id metal_works
+// 1.21.1	2026-06-06T00:09:01.5914851	Tags for minecraft:item mod id metal_works
 9b260e8526d3f28d35743630081eac9aa1e1e67b data/minecraft/tags/item/trimmable_armor.json
 4522962aca09956e6c66d285d6db01e3a513456a data/minecraft/tags/item/trim_materials.json
+24e4665124ba1fcb5e6143d4b400a5005e94e862 data/minecraft/tags/item/trim_templates.json

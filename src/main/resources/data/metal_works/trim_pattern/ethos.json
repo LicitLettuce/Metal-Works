@@ -1,9 +1,0 @@
-{
-  "asset_id": "metal_works:ethos",
-  "decal": false,
-  "description": {
-    "translate": "trim_pattern.metal_works.ethos"
-  },
-  "template_item": "metal_works:ethos_armor_trim_smithing_template"
-}
-

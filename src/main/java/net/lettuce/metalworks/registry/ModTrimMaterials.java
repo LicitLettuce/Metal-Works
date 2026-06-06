@@ -20,7 +20,7 @@ public class ModTrimMaterials {
     public static final ResourceKey<TrimMaterial> BRONZE =
             ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "bronze"));
     public static final ResourceKey<TrimMaterial> ROSE_GOLD =
-            ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "bronze"));
+            ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "rose_gold"));
 
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
     register(context, TIN, ModItems.TIN_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#031cfc").getOrThrow()), -1.0F);

@@ -12,6 +12,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -1276,6 +1277,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         // Armor Trims
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get(), 2)
                 .pattern("#T#")
                 .pattern("#@#")
@@ -1299,6 +1301,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         has(ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
                 .save(pWriter, ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID,
                         "tarnish_armor_trim_smithing_template_duplication"));
+
+
 
         buildWaxingRecipes(pWriter);
 
@@ -1569,6 +1573,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Rose Gold Mosaic Slab From Rose Gold Mosaic
         stonecut(pWriter, ModItems.ROSE_GOLD_MOSAIC.get(), RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_GOLD_MOSAIC_SLAB.get(),   2, "rose_gold_osaic_to_rose_gold_mosaic_slab");
+
     }
 
     private void buildWaxingRecipes(RecipeOutput writer) {

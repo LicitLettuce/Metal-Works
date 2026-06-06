@@ -39,5 +39,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.TIN_INGOT.get(),
                         ModItems.BRONZE_INGOT.get(),
                         ModItems.ROSE_GOLD_INGOT.get());
+
+        this.tag(ItemTags.TRIM_TEMPLATES)
+                .add(ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get(),
+                        ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE .get());
     }
 }
