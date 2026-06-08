@@ -219,5 +219,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.SOUL_TILE_STAIRS.get(),
                         ModBlocks.SOUL_TILE_SLAB.get(),
                         ModBlocks.SUSPICIOUS_SOUL_SOIL.get());
+
+        // Soul Speed Blocks
+        this.tag(BlockTags.BEACON_BASE_BLOCKS)
+                .add(ModBlocks.BRONZE_BLOCK.get(),
+                        ModBlocks.ROSE_GOLD_BLOCK.get());
     }
 }

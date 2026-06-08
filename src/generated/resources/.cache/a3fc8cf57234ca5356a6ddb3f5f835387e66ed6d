@@ -1,4 +1,19 @@
-// 1.21.1	2026-06-06T00:09:01.5914851	Tags for minecraft:item mod id metal_works
+// 1.21.1	2026-06-07T23:25:54.649148	Tags for minecraft:item mod id metal_works
+dbdc267e241986b5409e3f433f1b629edb21dd21 data/minecraft/tags/item/axes.json
+fe4e35f8d7e28d2f533dc87597bd15ab201c8d87 data/minecraft/tags/item/breaks_decorated_pots.json
+43b1129f25142f8d8ad3636f6082e331df57694f data/minecraft/tags/item/cluster_max_harvestables.json
+9b260e8526d3f28d35743630081eac9aa1e1e67b data/minecraft/tags/item/enchantable/armor.json
+5f3c9b2817e2ca583af4e40f8750b2d1e044bfa9 data/minecraft/tags/item/enchantable/durability.json
+ba6342151c9f6d132969e6c4f38cee506df17203 data/minecraft/tags/item/enchantable/fire_aspect.json
+e95892ce5297969004b7e25d864b3e86ae5b846f data/minecraft/tags/item/enchantable/mining.json
+e75bc112f52e51b088506a7e6bcbeb0b35906887 data/minecraft/tags/item/enchantable/mining_loot.json
+be1913f75b20094ba5c0ac2734e4b9c929b0513d data/minecraft/tags/item/enchantable/sharp_weapon.json
+5f3c9b2817e2ca583af4e40f8750b2d1e044bfa9 data/minecraft/tags/item/enchantable/vanishing.json
+be1913f75b20094ba5c0ac2734e4b9c929b0513d data/minecraft/tags/item/enchantable/weapon.json
+afd9e178ad57b16fac2be7245f51dd28a969813b data/minecraft/tags/item/hoes.json
+43b1129f25142f8d8ad3636f6082e331df57694f data/minecraft/tags/item/pickaxes.json
+66f1c78dab2b60a34d6b30bbc886e31674452fac data/minecraft/tags/item/shovels.json
+ba6342151c9f6d132969e6c4f38cee506df17203 data/minecraft/tags/item/swords.json
 9b260e8526d3f28d35743630081eac9aa1e1e67b data/minecraft/tags/item/trimmable_armor.json
 4522962aca09956e6c66d285d6db01e3a513456a data/minecraft/tags/item/trim_materials.json
 24e4665124ba1fcb5e6143d4b400a5005e94e862 data/minecraft/tags/item/trim_templates.json
