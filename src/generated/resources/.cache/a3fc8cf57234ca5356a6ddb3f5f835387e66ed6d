@@ -1,4 +1,16 @@
-// 1.21.1	2026-06-07T23:25:54.649148	Tags for minecraft:item mod id metal_works
+// 1.21.1	2026-06-13T12:48:58.2414944	Tags for minecraft:item mod id metal_works
+a49f7b108146737c827e424ccbdf45e5bb0679ac data/c/tags/item/ingots/bronze.json
+87ee7471f803fa6814986f0743562f0576c79a0e data/c/tags/item/ingots/rose_gold.json
+4c63d31228590b993ccfba13a4e4cbbcc3087e75 data/c/tags/item/ingots/tin.json
+f5b8a20d1712a2588034889e8b357d9b9d24b95e data/c/tags/item/nuggets/bronze.json
+cabd3a678f68a7dc7aa4c3fcae11274910e73f56 data/c/tags/item/nuggets/rose_gold.json
+08086644598d4b36565e6adfa52fe45d46a837f7 data/c/tags/item/nuggets/tin.json
+de5f2e547a50470056943ed101617b4cf9dfb43d data/c/tags/item/ores/tin.json
+144eaed9ee17cfd24c8d8a5271a9c2cf4b2349d3 data/c/tags/item/raw_materials/tin.json
+b211cb1c7e0ef2bc2e97292e10217f8f116ea39a data/c/tags/item/storage_blocks/bronze.json
+5be7117759a7621a48dc1c1a9177909748f7aa14 data/c/tags/item/storage_blocks/raw_tin.json
+464b1c85f4242e2311e1c8f1e41c2c1e6c52f5a6 data/c/tags/item/storage_blocks/rose_gold.json
+2e8f784300732d32e46feaf01baea2da653b82b2 data/c/tags/item/storage_blocks/tin.json
 dbdc267e241986b5409e3f433f1b629edb21dd21 data/minecraft/tags/item/axes.json
 fe4e35f8d7e28d2f533dc87597bd15ab201c8d87 data/minecraft/tags/item/breaks_decorated_pots.json
 43b1129f25142f8d8ad3636f6082e331df57694f data/minecraft/tags/item/cluster_max_harvestables.json

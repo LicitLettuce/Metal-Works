@@ -5,6 +5,7 @@ import net.lettuce.metalworks.registry.ModBlocks;
 import net.lettuce.metalworks.registry.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
@@ -224,5 +225,52 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.BEACON_BASE_BLOCKS)
                 .add(ModBlocks.BRONZE_BLOCK.get(),
                         ModBlocks.ROSE_GOLD_BLOCK.get());
+
+        tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "ores/tin")))
+                .add(
+                        ModBlocks.TIN_ORE.get(),
+                        ModBlocks.DEEPSLATE_TIN_ORE.get(),
+                        ModBlocks.SOUL_TIN_ORE.get()
+                );
+
+        // Storage blocks
+        tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/tin")))
+                .add(ModBlocks.TIN_BLOCK.get());
+
+        tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/raw_tin")))
+                .add(ModBlocks.RAW_TIN_BLOCK.get());
+
+        tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/bronze")))
+                .add(ModBlocks.BRONZE_BLOCK.get());
+
+        tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/rose_gold")))
+                .add(ModBlocks.ROSE_GOLD_BLOCK.get());
+
+        // Vanilla mining tags
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(
+                        ModBlocks.TIN_ORE.get(),
+                        ModBlocks.DEEPSLATE_TIN_ORE.get(),
+                        ModBlocks.SOUL_TIN_ORE.get(),
+                        ModBlocks.TIN_BLOCK.get(),
+                        ModBlocks.RAW_TIN_BLOCK.get(),
+                        ModBlocks.BRONZE_BLOCK.get(),
+                        ModBlocks.ROSE_GOLD_BLOCK.get()
+                );
+
+        tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(
+                        ModBlocks.TIN_ORE.get(),
+                        ModBlocks.DEEPSLATE_TIN_ORE.get(),
+                        ModBlocks.SOUL_TIN_ORE.get(),
+                        ModBlocks.RAW_TIN_BLOCK.get(),
+                        ModBlocks.TIN_BLOCK.get()
+                );
+
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(
+                        ModBlocks.BRONZE_BLOCK.get(),
+                        ModBlocks.ROSE_GOLD_BLOCK.get()
+                );
     }
 }

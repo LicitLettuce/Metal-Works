@@ -1,7 +1,7 @@
 {
   "type": "metal_works:lost_citadel",
-  "biomes": "#metal_works:has_structure/lost_citadel",
+  "biomes": "#minecraft:has_structure/lost_citadel",
   "step": "surface_structures",
-  "terrain_adaptation": "beard_box",
+  "terrain_adaptation": "beard_thin",
   "spawn_overrides": {}
 }

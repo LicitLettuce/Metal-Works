@@ -7,6 +7,6 @@
     "tag": "minecraft:trimmable_armor"
   },
   "template": {
-    "item": "metal_works:tarnish_armor_trim_smithing_template"
+    "id": "metal_works:tarnish_armor_trim_smithing_template"
   }
 }

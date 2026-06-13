@@ -5,6 +5,7 @@ import net.lettuce.metalworks.registry.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -216,6 +217,51 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.ROSE_GOLD_LEGGINGS .get(),
                         ModItems.BRONZE_SHEARS .get(),
                         ModItems.ROSE_GOLD_BOOTS .get());
+
+        // Ingots
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/tin")))
+                .add(ModItems.TIN_INGOT.get());
+
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/bronze")))
+                .add(ModItems.BRONZE_INGOT.get());
+
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/rose_gold")))
+                .add(ModItems.ROSE_GOLD_INGOT.get());
+
+        // Nuggets
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "nuggets/tin")))
+                .add(ModItems.TIN_NUGGET.get());
+
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "nuggets/bronze")))
+                .add(ModItems.BRONZE_NUGGET.get());
+
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "nuggets/rose_gold")))
+                .add(ModItems.ROSE_GOLD_NUGGET.get());
+
+        // Raw materials
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "raw_materials/tin")))
+                .add(ModItems.RAW_TIN.get());
+
+        // Ores as items
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ores/tin")))
+                .add(
+                        ModItems.TIN_ORE.get(),
+                        ModItems.DEEPSLATE_TIN_ORE.get(),
+                        ModItems.SOUL_TIN_ORE.get()
+                );
+
+        // Storage blocks as items
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/tin")))
+                .add(ModItems.TIN_BLOCK.get());
+
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/raw_tin")))
+                .add(ModItems.RAW_TIN_BLOCK.get());
+
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/bronze")))
+                .add(ModItems.BRONZE_BLOCK.get());
+
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/rose_gold")))
+                .add(ModItems.ROSE_GOLD_BLOCK.get());
 
     }
 }

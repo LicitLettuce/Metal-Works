@@ -105,6 +105,13 @@
     "metal_works:rose_gold_mosaic_slab",
     "metal_works:medium_weighted_pressure_plate",
     "metal_works:rose_lantern",
-    "metal_works:mage_lantern"
+    "metal_works:mage_lantern",
+    "metal_works:tin_ore",
+    "metal_works:deepslate_tin_ore",
+    "metal_works:soul_tin_ore",
+    "metal_works:tin_block",
+    "metal_works:raw_tin_block",
+    "metal_works:bronze_block",
+    "metal_works:rose_gold_block"
   ]
 }

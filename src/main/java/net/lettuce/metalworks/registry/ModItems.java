@@ -6,11 +6,9 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.neoforged.api.distmarker.Dist;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
@@ -18,7 +16,6 @@ import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
@@ -137,8 +134,8 @@ public class ModItems {
                     || stack.is(ModItems.BRONZE_LEGGINGS.get())
                     || stack.is(ModItems.BRONZE_BOOTS.get())) {
 
-                event.getToolTip().add(Component.literal("+0.5 Fire Damage Reduction").withStyle(ChatFormatting.GOLD));
-                event.getToolTip().add(Component.literal("+0.5 Burn Time Reduction").withStyle(ChatFormatting.GOLD));
+                event.getToolTip().add(Component.literal("+0.5 Fire Damage Reduction").withStyle(ChatFormatting.BLUE));
+                event.getToolTip().add(Component.literal("+0.5 Burn Time Reduction").withStyle(ChatFormatting.BLUE));
 
             }
         }
@@ -153,7 +150,7 @@ public class ModItems {
                     || s.is(ModItems.ROSE_GOLD_CHESTPLATE.get())
                     || s.is(ModItems.ROSE_GOLD_LEGGINGS.get())
                     || s.is(ModItems.ROSE_GOLD_BOOTS.get())) {
-                e.getToolTip().add(Component.literal("+0.15 Projectile Protection").withStyle(ChatFormatting.AQUA));
+                e.getToolTip().add(Component.literal("+0.15 Projectile Protection").withStyle(ChatFormatting.BLUE));
             }
         }
     }
