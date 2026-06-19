@@ -134,8 +134,8 @@ public class ModItems {
                     || stack.is(ModItems.BRONZE_LEGGINGS.get())
                     || stack.is(ModItems.BRONZE_BOOTS.get())) {
 
-                event.getToolTip().add(Component.literal("+0.5 Fire Damage Reduction").withStyle(ChatFormatting.GOLD));
-                event.getToolTip().add(Component.literal("+0.5 Burn Time Reduction").withStyle(ChatFormatting.GOLD));
+                event.getToolTip().add(Component.literal("+0.5 Fire Damage Reduction").withStyle(ChatFormatting.BLUE));
+                event.getToolTip().add(Component.literal("+0.5 Burn Time Reduction").withStyle(ChatFormatting.BLUE));
 
             }
         }
@@ -150,7 +150,7 @@ public class ModItems {
                     || s.is(ModItems.ROSE_GOLD_CHESTPLATE.get())
                     || s.is(ModItems.ROSE_GOLD_LEGGINGS.get())
                     || s.is(ModItems.ROSE_GOLD_BOOTS.get())) {
-                e.getToolTip().add(Component.literal("+0.15 Projectile Protection").withStyle(ChatFormatting.AQUA));
+                e.getToolTip().add(Component.literal("+0.15 Projectile Protection").withStyle(ChatFormatting.BLUE));
             }
         }
     }

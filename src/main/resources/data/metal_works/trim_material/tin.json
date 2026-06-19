@@ -1,7 +1,7 @@
 {
   "asset_name": "tin",
   "description": {
-    "color": "#505150",
+    "color": "#96a096",
     "translate": "trim_material.metal_works.tin"
   },
   "ingredient": "metal_works:tin_ingot",

@@ -1,4 +1,19 @@
 # Metal Works Changelog
+## 1.2.12-1.20.1
+### Changes
+- Removed citadel_ancient variant from Lost Citadels.
+- Slight changes to the following variants of the Lost Citadel:
+  - citadel_summon
+  - citadel_treasure
+  - citadel_portal
+    - They are now more unique from each other
+- Updated Mage Golems Sounds
+  - Golem sounds are no longer global
+  - Golem sounds are much quieter
+- Bronze and Rose Gold equipment properties are now blue like the vanilla ones
+### Bug Fixes
+- Fixed Trim material colors having correct texts
+- Fixed Mage Campfire not appearing in creative tabs
 
 ## 1.2.11 Patch
 ### Changes
@@ -8,8 +23,6 @@
 
 ### Bug Fixes
 - Fixed legging trim textures again.
-
-
 
 ## 1.2.11 Hotfix
 ### Changes

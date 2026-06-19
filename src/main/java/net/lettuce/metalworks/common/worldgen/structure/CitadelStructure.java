@@ -29,7 +29,6 @@ public class CitadelStructure extends Structure {
     private static final ResourceLocation[] VARIANTS = new ResourceLocation[] {
             new ResourceLocation(MetalWorks.MOD_ID, "citadel_treasure"),
             new ResourceLocation(MetalWorks.MOD_ID, "citadel_portal"),
-            new ResourceLocation(MetalWorks.MOD_ID, "citadel_ancient"),
             new ResourceLocation(MetalWorks.MOD_ID, "citadel_summon")
     };
 

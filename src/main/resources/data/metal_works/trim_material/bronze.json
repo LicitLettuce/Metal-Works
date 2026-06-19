@@ -1,7 +1,7 @@
 {
   "asset_name": "bronze",
   "description": {
-    "color": "#505150",
+    "color": "#db9d5f",
     "translate": "trim_material.metal_works.bronze"
   },
   "ingredient": "metal_works:bronze_ingot",
