@@ -3,6 +3,7 @@ package net.lettuce.metalworks.common.worldgen.structure;
 import com.mojang.serialization.MapCodec;
 import net.lettuce.metalworks.registry.ModStructures;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;
@@ -10,7 +11,8 @@ import net.minecraft.world.level.levelgen.structure.StructureType;
 import java.util.Optional;
 
 public class LostCitadelStructure extends Structure {
-    public static final MapCodec<LostCitadelStructure> CODEC = simpleCodec(LostCitadelStructure::new);
+    public static final MapCodec<LostCitadelStructure> CODEC =
+            simpleCodec(LostCitadelStructure::new);
 
     public LostCitadelStructure(StructureSettings settings) {
         super(settings);
@@ -19,11 +21,12 @@ public class LostCitadelStructure extends Structure {
     @Override
     public Optional<GenerationStub> findGenerationPoint(GenerationContext context) {
         ChunkPos chunkPos = context.chunkPos();
+        RandomSource random = context.random();
 
         int x = chunkPos.getMiddleBlockX();
         int z = chunkPos.getMiddleBlockZ();
 
-        int y = 70;
+        int y = 32;
 
         BlockPos pos = new BlockPos(x, y, z);
 
@@ -31,7 +34,7 @@ public class LostCitadelStructure extends Structure {
             builder.addPiece(new LostCitadelPiece(
                     context.structureTemplateManager(),
                     pos,
-                    context.random()
+                    random
             ));
         }));
     }

@@ -1,6 +1,5 @@
 package net.lettuce.metalworks.registry;
 
-
 import net.lettuce.metalworks.common.worldgen.structure.LostCitadelPiece;
 import net.lettuce.metalworks.core.MetalWorks;
 import net.minecraft.core.registries.Registries;

@@ -6,7 +6,11 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.StructureManager;
+import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.TemplateStructurePiece;
 import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceSerializationContext;
@@ -15,10 +19,9 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
 
 public class LostCitadelPiece extends TemplateStructurePiece {
     private static final ResourceLocation[] VARIANTS = new ResourceLocation[] {
-            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "lost_citadel/citadel_treasure"),
             ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "lost_citadel/citadel_portal"),
             ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "lost_citadel/citadel_summon"),
-            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "lost_citadel/citadel_ancient")
+            ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "lost_citadel/citadel_treasure")
     };
 
     private final ResourceLocation templateLocation;
@@ -39,6 +42,18 @@ public class LostCitadelPiece extends TemplateStructurePiece {
         );
 
         this.templateLocation = templateLocation;
+    }
+
+    @Override
+    public void postProcess(WorldGenLevel level,
+                            StructureManager structureManager,
+                            ChunkGenerator chunkGenerator,
+                            RandomSource random,
+                            BoundingBox box,
+                            ChunkPos chunkPos,
+                            BlockPos pos) {
+
+        super.postProcess(level, structureManager, chunkGenerator, random, box, chunkPos, pos);
     }
 
     public LostCitadelPiece(StructurePieceSerializationContext context, CompoundTag tag) {
