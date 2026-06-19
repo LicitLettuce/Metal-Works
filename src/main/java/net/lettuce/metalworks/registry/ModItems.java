@@ -6,6 +6,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.neoforged.api.distmarker.Dist;
@@ -16,6 +17,7 @@ import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
@@ -213,8 +215,6 @@ public class ModItems {
     public static final DeferredHolder<Item, Item> TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE =
             ITEMS.register("tarnish_armor_trim_smithing_template",
                     () -> SmithingTemplateItem.createArmorTrimTemplate(ModTrimPatterns.TARNISH));
-
-
 
 
     public static final DeferredHolder<Item, Item> MUSIC_DISC_ANCIENTS = ITEMS.register("ancients_music_disc", () -> new Item

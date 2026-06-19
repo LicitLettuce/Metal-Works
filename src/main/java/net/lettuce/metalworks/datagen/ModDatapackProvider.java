@@ -1,6 +1,7 @@
 package net.lettuce.metalworks.datagen;
 
 import net.lettuce.metalworks.core.MetalWorks;
+import net.lettuce.metalworks.registry.ModTrimMaterials;
 import net.lettuce.metalworks.registry.ModTrimPatterns;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
@@ -13,6 +14,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
+            .add(Registries.TRIM_MATERIAL, ModTrimMaterials::bootstrap)
             .add(Registries.TRIM_PATTERN, ModTrimPatterns::bootstrap);
 
     public ModDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

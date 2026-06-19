@@ -23,12 +23,13 @@ public class ModTrimMaterials {
             ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "rose_gold"));
 
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
-    register(context, TIN, ModItems.TIN_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#031cfc").getOrThrow()), -1.0F);
-    register(context, BRONZE, ModItems.BRONZE_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#031cfc").getOrThrow()), -1.0F);
-    register(context, ROSE_GOLD, ModItems.ROSE_GOLD_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#031cfc").getOrThrow()), -1.0F);
+        register(context, TIN, ModItems.TIN_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#96a096").getOrThrow()), -1.0F);
+        register(context, BRONZE, ModItems.BRONZE_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#db9d5f").getOrThrow()), -1.0F);
+        register(context, ROSE_GOLD, ModItems.ROSE_GOLD_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#ff6c7a").getOrThrow()), -1.0F);
+
+
 
     }
-
 
     private static void register(BootstrapContext<TrimMaterial> context, ResourceKey<TrimMaterial> trimKey, Item item,
                                  Style style, float itemModelIndex) {

@@ -1278,7 +1278,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Armor Trims
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get(), 2)
                 .pattern("#T#")
                 .pattern("#@#")
                 .pattern("###")
@@ -1290,7 +1290,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter, ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID,
                         "ethos_armor_trim_smithing_template_duplication"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get(), 2)
                 .pattern("#T#")
                 .pattern("#@#")
                 .pattern("###")
@@ -1302,6 +1302,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter, ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID,
                         "tarnish_armor_trim_smithing_template_duplication"));
 
+        trimSmithing(pWriter, ModItems.ETHOS_ARMOR_TRIM_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "ethos"));
+
+        trimSmithing(pWriter, ModItems.TARNISH_ARMOR_TRIM_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(MetalWorks.MOD_ID, "tarnish"));
 
 
         buildWaxingRecipes(pWriter);
