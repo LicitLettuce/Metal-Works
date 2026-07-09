@@ -293,6 +293,19 @@ public class ModBlocks {
     public static final DeferredHolder<Block, Block> WAXED_TARNISHED_TIN_SOUL_LANTERN = BLOCKS.register("waxed_tarnished_tin_soul_lantern", () -> new TinLanternBlock
             (BlockBehaviour.Properties.ofFullCopy(ModBlocks.TIN_SOUL_LANTERN.get()).strength(3.5F).explosionResistance(12)));
 
+   // public static final DeferredHolder<Block, Block> TIN_ORE = BLOCKS.register("tin_ore", () -> new Block
+          //  (BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_ORE)));
+   // public static final DeferredHolder<Block, Block> DEEPSLATE_TIN_ORE = BLOCKS.register("deepslate_tin_ore", () -> new Block
+          //  (BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_COPPER_ORE)));
+   // public static final DeferredHolder<Block, Block> SOUL_TIN_ORE = BLOCKS.register("soul_tin_ore", () -> new DropExperienceBlock
+           // (UniformInt.of(0, 1), BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_GOLD_ORE)));
+    //public static final DeferredHolder<Block, Block> RAW_TIN_BLOCK = BLOCKS.register("raw_tin_block", () -> new Block
+           // (BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
+
+    // Tin Block Blocks
+    //public static final DeferredHolder<Block, Block> TIN_BLOCK = BLOCKS.register("tin_block", () -> new WeatheringTinBlock
+            //(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).strength(3.0F)));
+
         // Bronze Blocks
     public static final DeferredHolder<Block, Block> BRONZE_BLOCK = BLOCKS.register("bronze_block", () -> new Block
             (BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.COPPER).mapColor(DyeColor.ORANGE)));

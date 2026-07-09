@@ -11,6 +11,11 @@ public class ModToolTiers {
             223, 5.0F, 1.5F, 15,
             () -> Ingredient.of(ModItems.TIN_INGOT.get())
     );
+    public static final Tier COBALT = new SimpleTier(
+            BlockTags.INCORRECT_FOR_IRON_TOOL,
+            786, 5.0F, 1.5F, 12,
+            () -> Ingredient.of(ModItems.COBALT_INGOT.get())
+    );
     public static final Tier BRONZE = new SimpleTier(
             BlockTags.INCORRECT_FOR_IRON_TOOL,
             964, 7.0F, 2.5F, 10,

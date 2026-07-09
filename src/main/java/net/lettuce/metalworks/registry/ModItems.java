@@ -9,6 +9,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
@@ -531,6 +532,35 @@ public class ModItems {
 
     public static final DeferredHolder<Item, Item> BRONZE_NUGGET = ITEMS.register("bronze_nugget", () -> new Item
             (new Item.Properties().fireResistant()));
+
+        // Cobalt Ingredients
+    public static final DeferredHolder<Item, Item> COBALT_INGOT = ITEMS.register("cobalt_ingot", () -> new Item
+            (new Item.Properties()));
+
+    public static final DeferredHolder<Item, Item> COBALT_NUGGET = ITEMS.register("cobalt_nugget", () -> new Item
+            (new Item.Properties()));
+
+    public static final DeferredHolder<Item, Item> COBALT_DUST = ITEMS.register("cobalt_dust", () -> new Item
+            (new Item.Properties()));
+
+        // Cobalt Gear
+    public static final DeferredHolder<Item, Item> COBALT_SWORD = ITEMS.register("cobalt_sword", () -> new SwordItem
+            (ModToolTiers.COBALT, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.COBALT, 4, -2.0F))));
+    public static final DeferredHolder<Item, Item> COBALT_PICKAXE = ITEMS.register("cobalt_pickaxe", () -> new PickaxeItem
+            (ModToolTiers.COBALT, new Item.Properties().attributes(DiggerItem.createAttributes(ModToolTiers.COBALT, 2, -2.4F))));
+    public static final DeferredHolder<Item, Item> COBALT_AXE = ITEMS.register("cobalt_axe", () -> new AxeItem
+            (ModToolTiers.COBALT, new Item.Properties().attributes(DiggerItem.createAttributes(ModToolTiers.COBALT, 6.5F, -2.7F))));
+    public static final DeferredHolder<Item, Item> COBALT_SHOVEL = ITEMS.register("cobalt_shovel", () -> new ShovelItem
+            (ModToolTiers.COBALT, new Item.Properties().attributes(DiggerItem.createAttributes(ModToolTiers.COBALT, 1.5F, -2.6F))));
+    public static final DeferredHolder<Item, Item> COBALT_HOE = ITEMS.register("cobalt_hoe", () -> new HoeItem
+            (ModToolTiers.COBALT, new Item.Properties().attributes(DiggerItem.createAttributes(ModToolTiers.COBALT, -2, -0.6F))));
+
+    public static final DeferredHolder<Item, Item> COBALT_HORSE_ARMOR = ITEMS.register("cobalt_horse_armor", () -> new AnimalArmorItem
+            (ModArmorMaterials.TIN, AnimalArmorItem.BodyType.EQUESTRIAN, false, new Item.Properties().stacksTo(1)));
+
+        // Cobalt Block Item
+ //   public static final DeferredHolder<Item, BlockItem> COBALT_BLOCK = ITEMS.register("cobalt_block", () -> new BlockItem
+          //  (ModBlocks.COBALT_BLOCK.get(), new Item.Properties().fireResistant()));
 
         // Bronze Gear
     public static final DeferredHolder<Item, Item> BRONZE_SWORD = ITEMS.register("bronze_sword", () -> new SwordItem

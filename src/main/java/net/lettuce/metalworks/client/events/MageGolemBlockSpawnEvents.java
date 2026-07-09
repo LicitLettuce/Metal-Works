@@ -26,6 +26,9 @@ public class MageGolemBlockSpawnEvents {
                 || entity instanceof EnderDragon
                 || entity instanceof Pillager
                 || entity instanceof Vindicator
+                || entity instanceof Ravager
+                || entity instanceof Witch
+                || entity instanceof Vex
                 || entity instanceof Evoker
                 || entity instanceof Illusioner) {
             return;

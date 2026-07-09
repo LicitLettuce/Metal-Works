@@ -228,5 +228,15 @@
   "item.metal_works.underworld_music_disc.desc": "LicitLettuce - Underworld",
   "jukebox_song.metal_works.ancients": "LicitLettuce - Ancients",
   "jukebox_song.metal_works.underworld": "LicitLettuce - Underworld",
-  "subtitles.metal_works.entity.mage_golem.idle": "Mage Golem hums"
+  "subtitles.metal_works.entity.mage_golem.idle": "Mage Golem hums",
+  "item.metal_works.cobalt_ingot": "Cobalt Ingot",
+  "item.metal_works.cobalt_nugget": "Cobalt Nugget",
+  "item.metal_works.cobalt_sword": "Cobalt Sword",
+  "item.metal_works.cobalt_pickaxe": "Cobalt Pickaxe",
+  "item.metal_works.cobalt_axe": "Cobalt Axe",
+  "item.metal_works.cobalt_shovel": "Cobalt Shovel",
+  "item.metal_works.cobalt_hoe": "Cobalt Hoe",
+  "block.metal_works.cobalt_block": "Block of Cobalt",
+  "block.metal_works.cobalt_ore": "Cobalt Ore",
+  "block.metal_works.deepslate_cobalt_ore": "Deepslate Cobalt Ore"
 }
