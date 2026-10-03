@@ -4,5 +4,5 @@
     "type": "neoforge:any"
   },
   "features": "metal_works:tin_ore_placement",
-  "step": "surface_structures"
+  "step": "underground_ores"
 }
